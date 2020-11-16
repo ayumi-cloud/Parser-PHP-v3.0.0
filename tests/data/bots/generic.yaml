@@ -590,3 +590,4 @@
     headers: 'User-Agent: istellabot/t.1.13'
     readable: 'Istellabot 1.13'
     result: { browser: { name: Istellabot, version: '1.13' }, device: { type: bot } }
+x
