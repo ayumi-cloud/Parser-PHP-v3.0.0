@@ -586,3 +586,51 @@
     headers: 'User-Agent: PocketParser/2.0 (+https://getpocket.com/pocketparser_ua)'
     readable: 'Pocket 2.0'
     result: { browser: { name: Pocket, version: '2.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; SeznamBot/3.2; +http://napoveda.seznam.cz/en/seznambot-intro/)'
+    readable: 'Seznam Bot 3.2'
+    result: { browser: { name: 'Seznam Bot', version: '3.2' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; SeznamBot/4.0-RC1; +http://napoveda.seznam.cz/seznambot-intro/)'
+    readable: 'Seznam Bot 4.0'
+    result: { browser: { name: 'Seznam Bot', version: '4.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; SeznamBot/3.2-test1; +http://napoveda.seznam.cz/en/seznambot-intro/)'
+    readable: 'Seznam Test Bot 3.2'
+    result: { browser: { name: 'Seznam Test Bot', version: '3.2' }, device: { type: bot } }
+-
+    headers: 'User-Agent: HomePageBot Rss Reader 1.0'
+    readable: 'Seznam Homepage Rss Reader Bot 1.0'
+    result: { browser: { name: 'Seznam Homepage Rss Reader Bot', version: '1.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: HomePage Rss Reader 1.0'
+    readable: 'Seznam Homepage Rss Reader Bot 1.0'
+    result: { browser: { name: 'Seznam Homepage Rss Reader Bot', version: '1.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: HomePageBot downloader 1.0'
+    readable: 'Seznam Homepage Downloader Bot 1.0'
+    result: { browser: { name: 'Seznam Homepage Downloader Bot', version: '1.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Seznam screenshot-generator 2.1; +http://fulltext.sblog.cz/screenshot/)'
+    readable: 'Seznam Screenshot Generator Bot 2.1'
+    result: { browser: { name: 'Seznam Screenshot Generator Bot', version: '2.1' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 PhantomJS (compatible; Seznam screenshot-generator 2.1; +http://fulltext.sblog.cz/screenshot/)'
+    readable: 'Seznam Screenshot Generator Bot 2.1'
+    result: { browser: { name: 'Seznam Screenshot Generator Bot', version: '2.1' }, device: { type: bot } }
+-
+    headers: 'User-Agent: SeznamReadLaterBot'
+    readable: 'Seznam Read Later Bot'
+    result: { browser: { name: Seznam Read Later Bot }, device: { type: bot } }
+-
+    headers: 'User-Agent: SklikBot/2.0 (sklik@firma.seznam.cz;+http://napoveda.sklik.cz/)'
+    readable: 'Seznam Bot 2.0'
+    result: { browser: { name: 'Seznam Bot', version: '2.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: SeznamBot/2.0 (sklik@firma.seznambot.cz;+http://napoveda.sklik.cz/)'
+    readable: 'Fake Seznam Bot'
+    result: { browser: { name: 'Fake Seznam Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Seznam Bot/2.0 (sklik@firma.seznam.cz;+http://napoveda.sklik.cz/)'
+    readable: 'Fake Seznam Bot'
+    result: { browser: { name: 'Fake Seznam Bot' }, device: { type: bot } }

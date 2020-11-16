@@ -4,6 +4,7 @@ namespace WhichBrowser\Analyser\Header\Useragent;
 
 use WhichBrowser\Constants;
 use WhichBrowser\Data;
+use WhichBrowser\SearchEngines\Seznam;
 
 trait Bot
 {
@@ -40,6 +41,19 @@ trait Bot
             $this->data->device->reset();
 
             $this->data->device->type = Constants\DeviceType::BOT;
+        }
+
+        /* Detect Seznam search engine bots */
+
+        if (preg_match('/Seznam|HomePage/iu', $ua, $match)) {
+            $Seznam = new Seznam($ua);
+            
+            // Only run if the class found a regex match
+            if ($Seznam->found == true) {
+                $this->data->browser->name = $Seznam->name ?? '';
+                $this->data->browser->version = $Seznam->version ?? '';
+                $this->data->device->type = $Seznam->bot ?? '';
+            }
         }
 
         return $this;
