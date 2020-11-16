@@ -4,6 +4,7 @@ namespace WhichBrowser\Analyser\Header\Useragent;
 
 use WhichBrowser\Constants;
 use WhichBrowser\Data;
+use WhichBrowser\SearchEngines\Yahoo;
 
 trait Bot
 {
@@ -40,6 +41,19 @@ trait Bot
             $this->data->device->reset();
 
             $this->data->device->type = Constants\DeviceType::BOT;
+        }
+
+        /* Detect yahoo search engine bots */
+
+        if (preg_match('/(yahoo|Y\!J)/iu', $ua, $match)) {
+            $Yahoo = new Yahoo($ua);
+
+            // Only run if the class found a regex match
+            if ($Yahoo->found == true) {
+                $this->data->browser->name = $Yahoo->name ?? '';
+                $this->data->browser->version = $Yahoo->version ?? '';
+                $this->data->device->type = $Yahoo->bot ?? '';
+            }
         }
 
         return $this;
