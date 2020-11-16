@@ -26,6 +26,7 @@ Applications::$OTHERS = [
     ],
 
     Constants\BrowserType::APP_EMAIL => [
+        [ 'name' => 'Gmail Image Proxy',    'id'    => 'gmailimage',      'regexp' =>'/GoogleImageProxy/u' ],
         [ 'name' => 'Lightning',            'id'    => 'lightning',      'regexp' =>'/Lightning\/([0-9.]*)/u' ],
         [ 'name' => 'Thunderbird',          'id'    => 'thunderbird',      'regexp' =>'/Thunderbird[\/ ]([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Microsoft Outlook',    'id'    => 'outlook',      'regexp' =>'/Microsoft Outlook IMO, Build ([0-9.]*)/u', 'details' => 2, 'type' => Constants\DeviceType::DESKTOP ],
