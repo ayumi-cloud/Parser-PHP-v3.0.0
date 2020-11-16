@@ -71,14 +71,6 @@
     result: { browser: { name: BacklinkCrawler }, device: { type: bot } }
     readable: BacklinkCrawler
 -
-    headers: 'User-Agent: Baiduspider ( http://www.baidu.com/search/spider.htm)'
-    result: { browser: { name: Baiduspider }, device: { type: bot } }
-    readable: Baiduspider
--
-    headers: 'User-Agent: Baiduspider+(+http://www.baidu.com/search/spider_jp.html)'
-    result: { browser: { name: Baiduspider }, device: { type: bot } }
-    readable: Baiduspider
--
     headers: 'User-Agent: Bloglovin/1.0 (http://www.bloglovin.com; 1 subscribers)'
     result: { browser: { name: Bloglovin, version: '1.0' }, device: { type: bot } }
     readable: 'Bloglovin 1.0'
@@ -375,10 +367,6 @@
     result: { browser: { name: Googlebot, version: '2.1' }, device: { type: bot } }
     readable: 'Googlebot 2.1'
 -
-    headers: 'User-Agent: Mozilla/5.0+(compatible;+Baiduspider/2.0;++http://www.baidu.com/search/spider.html)'
-    result: { browser: { name: Baiduspider, version: '2.0' }, device: { type: bot } }
-    readable: 'Baiduspider 2.0'
--
     headers: 'User-Agent: Opera/30.0.1835.59 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/29.16  AppleWebKit/599.0+ (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36 FAST-WebCrawler/3.8'
     result: { browser: { name: 'FAST Web Crawler', version: '3.8' }, device: { type: bot } }
     readable: 'FAST Web Crawler 3.8'
@@ -586,3 +574,79 @@
     headers: 'User-Agent: PocketParser/2.0 (+https://getpocket.com/pocketparser_ua)'
     readable: 'Pocket 2.0'
     result: { browser: { name: Pocket, version: '2.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)'
+    readable: 'Baiduspider Bot 2.0'
+    result: { browser: { name: 'Baiduspider Bot', version: '2.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Linux;u;Android 4.2.2;zh-cn;) AppleWebKit/534.46 (KHTML,like Gecko) Version/5.1 Mobile Safari/10600.6.3 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)'
+    readable: 'Baiduspider Mobile Bot 2.0'
+    result: { browser: { name: 'Baiduspider Mobile Bot', version: '2.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Baiduspider-render/2.0; +http://www.baidu.com/search/spider.html)'
+    readable: 'Baiduspider Render Bot 2.0'
+    result: { browser: { name: 'Baiduspider Render Bot', version: '2.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 (compatible; Baiduspider-render/2.0; +http://www.baidu.com/search/spider.html)'
+    readable: 'Baiduspider Mobile Render Bot 2.0'
+    result: { browser: { name: 'Baiduspider Mobile Render Bot', version: '2.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Baiduspider-image+(+http://www.baidu.com/search/spider.htm)'
+    readable: 'Baiduspider Image Bot'
+    result: { browser: { name: 'Baiduspider Image Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Baiduspider-video/2.0; +http://www.baidu.com/search/spider.html)'
+    readable: 'Baiduspider Video Bot 2.0'
+    result: { browser: { name: 'Baiduspider Video Bot', version: '2.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Baiduspider-news/2.0; +http://www.baidu.com/search/spider.html)'
+    readable: 'Baiduspider News Bot 2.0'
+    result: { browser: { name: 'Baiduspider News Bot', version: '2.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Baiduspider-favo+(+http://www.baidu.com/search/spider.htm)'
+    readable: 'Baiduspider Collection Bot'
+    result: { browser: { name: 'Baiduspider Collection Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Baiduspider-cpro; http://www.baidu.com/search/spider.html)'
+    readable: 'Baiduspider Bookmark Bot'
+    result: { browser: { name: 'Baiduspider Bookmark Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Linux; U; Android 4.1; en-us; GT-N7100 Build/JRO03C;Baiduspider-ads)AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
+    readable: 'Baiduspider Adverts Bot on a Samsung Galaxy Note II running Android 4.1'
+    result: { browser: { name: 'Baiduspider Adverts Bot' }, engine: { name: Webkit, version: '534.30' }, os: { name: Android, version: '4.1' }, device: { type: bot, manufacturer: Samsung, model: 'Galaxy Note II' } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html\x09'
+    readable: 'Fake Baiduspider Bot'
+    result: { browser: { name: 'Fake Baiduspider Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0(compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)'
+    readable: 'Fake Baiduspider Bot'
+    result: { browser: { name: 'Fake Baiduspider Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Baiduspider+(+http://www.baidu.com/search/spider.htm);googlebot\|baiduspider\|baidu\|spider\|sogou\|bingbot\|bot\|yahoo\|soso\|sosospider\|360spider\|youdaobot\|jikeSpider;)'
+    readable: 'Fake Baiduspider Bot'
+    result: { browser: { name: 'Fake Baiduspider Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Baidu Spider(PC)=Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)'
+    readable: 'Fake Baiduspider Bot'
+    result: { browser: { name: 'Fake Baiduspider Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0(compatible;Baiduspider/2.0;+http://www.baidu.com/search/spider.html'
+    readable: 'Fake Baiduspider Bot'
+    result: { browser: { name: 'Fake Baiduspider Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html\xA3\xA9'
+    readable: 'Fake Baiduspider Bot'
+    result: { browser: { name: 'Fake Baiduspider Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0+(compatible;+Baiduspider/2.0;++http://www.baidu.com/search/spider.html)'
+    readable: 'Fake Baiduspider Bot'
+    result: { browser: { name: 'Fake Baiduspider Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Baiduspider/2.0;+http://www.baidu.com/search/spider.html)'
+    readable: 'Fake Baiduspider Bot'
+    result: { browser: { name: 'Fake Baiduspider Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Baiduspider/2.0;+http://www.baidu.com/search/spider.html'
+    readable: 'Fake Baiduspider Bot'
+    result: { browser: { name: 'Fake Baiduspider Bot' }, device: { type: bot } }
