@@ -124,7 +124,6 @@ trait Browser
 
 
 
-
     /* Chrome */
 
     private function detectChrome($ua)
@@ -752,7 +751,6 @@ trait Browser
     /* Firefox */
 
     private function detectFirefox($ua)
-
     {
         if (!preg_match('/(Firefox|Lorentz|GranParadiso|Namoroka|Shiretoko|Minefield|BonEcho|Fennec|Phoenix|Firebird|Minimo|FxiOS|Focus)/ui', $ua)) {
             return;
