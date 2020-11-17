@@ -582,3 +582,7 @@
     headers: 'User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.103 Safari/537.36 JuziBrowser'
     readable: 'Orange Browser on Windows 10'
     result: { browser: { name: 'Orange Browser', family: { name: Chrome, version: 48 }, type: browser }, engine: { name: Blink }, os: { name: Windows, version: { value: '10.0', alias: '10' } }, device: { type: desktop } }
+-
+    headers: 'User-Agent: Mozilla/5.0 X11 (Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.9 NTENTBrowser/4.2.0.184 Safari/537.36'
+    readable: 'NTENT Browser 4.2.0.184 on Linux'
+    result: { browser: { name: 'NTENT Browser', family: { name: Chrome, version: 54 }, version: 4.2.0.184, type: browser }, engine: { name: Blink }, os: { name: Linux }, device: { type: desktop } }
