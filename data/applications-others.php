@@ -69,8 +69,9 @@ Applications::$OTHERS = [
     ],
 
     Constants\BrowserType::APP_CHAT => [
-        [ 'name' => 'Facebook Messenger',   'id'    => 'messenger',      'regexp' =>'/FBAN\/MessengerForiOS/u' ],
-        [ 'name' => 'Facebook Messenger',   'id'    => 'messenger',      'regexp' =>'/FB_IAB\/MESSENGER/u' ],
+        [ 'name' => 'Facebook Messenger',   'id'    => 'messenger',        'regexp' => '/FBAN\/MessengerForiOS/u' ],
+        [ 'name' => 'Facebook Messenger',   'id'    => 'messenger',        'regexp' => '/FBAN\/MessengerLiteForiOS/u' ],
+        [ 'name' => 'Facebook Messenger',   'id'    => 'messenger',        'regexp' => '/FB_IAB\/MESSENGER/u' ],
         [ 'name' => 'KakaoTalk',            'id'    => 'kakao',           'regexp' => '/KAKAOTALK ([0-9.]*)/u' ],
         [ 'name' => 'KakaoTalk',            'id'    => 'kakao',           'regexp' => '/KAKAOTALK/u' ],
         [ 'name' => 'Kik',                  'id'    => 'kik',      'regexp' =>'/Kik\/([0-9.]*?)(\.0)?\.[0-9]{3,4}/u' ],
