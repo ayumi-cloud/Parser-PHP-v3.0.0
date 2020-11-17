@@ -598,3 +598,11 @@
     headers: 'User-Agent: Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/125.5.7 (KHTML, like Gecko) SunriseBrowser/0.853'
     result: { browser: { name: 'Sunrise Browser', version: '0.853', type: browser }, engine: { name: Webkit, version: 125.5.7 }, os: { name: 'OS X' }, device: { type: desktop, manufacturer: Apple, model: Macintosh } }
     readable: 'Sunrise Browser 0.853 on OS X'
+-
+    headers: 'User-Agent: Mozilla/5.0 (Macintosh; U; PPC; en-US; mimic; rv:9.3.0) Gecko/20120117 Firefox/3.6.25 Classilla/CFM'
+    result: { browser: { name: 'Classilla Browser', family: { name: Firefox, version: 3.6.25 }, version: CFM, type: browser }, engine: { name: Gecko, version: 9.3.0 }, os: { name: 'Mac OS' }, device: { type: desktop, manufacturer: Apple, model: Macintosh } }
+    readable: 'Classilla Browser on Mac OS'
+-
+    headers: 'User-Agent: Mozilla/5.0 (Macintosh; U; PPC; en-US; mimic; rv:9.3.0) Clecko/20120101 Classilla/CFM'
+    result: { browser: { name: 'Classilla Browser', version: CFM, type: browser }, os: { name: 'Mac OS' }, device: { type: desktop, manufacturer: Apple, model: Macintosh } }
+    readable: 'Classilla Browser on Mac OS'
