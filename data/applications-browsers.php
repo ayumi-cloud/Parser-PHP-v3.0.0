@@ -100,6 +100,7 @@ Applications::$BROWSERS = [
         [ 'name' => 'GlobalMojo',           'id'    => 'globalmojo',      'regexp' =>'/GlobalMojo\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'GNOME Web',            'id'    => 'epiphany',      'regexp' =>'/Epiphany\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'GreenBrowser',         'id'    => 'greenbrowser',      'regexp' =>'/GreenBrowser/u', 'type' => Constants\DeviceType::DESKTOP ],       
+        [ 'name' => 'Headless Chrome',      'id'    => 'headless',    'regexp' => '/HeadlessChrome\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],               // see: https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md
         [ 'name' => 'Hola Browser',         'id'    => 'hola',        'regexp' => '/ Hola\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                        // see: https://play.google.com/store/apps/details?id=org.hola&hl=en
         [ 'name' => 'Hydra Browser',        'id'    => 'hydra',      'regexp' =>'/Hydra Browser/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'IBrowse',              'id'    => 'ibrowse',      'regexp' =>'/IBrowse[\/ ]([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
