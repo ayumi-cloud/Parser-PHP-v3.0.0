@@ -149,6 +149,7 @@ Applications::$BROWSERS = [
         [ 'name' => 'Pale Moon',            'id'    => 'palemoon',      'regexp' =>'/Pale[mM]oon\/([0-9.]*)/u' ],                                                          // see: https://www.palemoon.org
         [ 'name' => 'Patriott Browser',     'id'    => 'patriott',      'regexp' =>'/Patriott\:\:Browser\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],        // see: 	http://madgroup.x10.mx/patriott1.php
         [ 'name' => 'Perk',                 'id'    => 'perk',      'regexp' =>'/ Perk\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                         // see: http://www.perk.com/
+        [ 'name' => 'Phoenix',              'id'    => 'phoenix',      'regexp' =>'/Phoenix\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Polarity',             'id'    => 'polarity',      'regexp' =>'/Polarity\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Privacy Browser',      'id'    => 'privacy',     'regexp' => '/PrivacyBrowser\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],               // see: https://www.stoutner.com/privacy-browser/
         [ 'name' => 'Qihoo 360',            'id'    => 'qihu',      'regexp' =>'/QIHU THEWORLD/u' ],
