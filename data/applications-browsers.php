@@ -65,6 +65,7 @@ Applications::$BROWSERS = [
         [ 'name' => 'Chim Lac',             'id'    => 'chimlac',     'regexp' => '/chimlac_browser\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],              // see: https://chimlac.com.vn/
         [ 'name' => 'Chimera',              'id'    => 'chimera',     'regexp' => '/ Chimera\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'ChromePlus',           'id'    => 'chromeplus',      'regexp' =>'/ChromePlus(?:\/([0-9.]*))?$/u', 'details' => 3, 'type' => Constants\DeviceType::DESKTOP ],
+        [ 'name' => 'Classilla Browser',    'id'    => 'classilla',   'regexp' => '/Classilla\/([0-9.A-Z]*)/u', 'details' => 3, 'type' => Constants\DeviceType::DESKTOP ], // see: http://www.floodgap.com/software/classilla/
         [ 'name' => 'Colibri',              'id'    => 'colibri',     'regexp' => '/Colibri\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                      // see: https://colibri.opqr.co/
         [ 'name' => 'Columbus',             'id'    => 'columbus',      'regexp' =>'/Columbus\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'CometBird',            'id'    => 'cometbird',      'regexp' =>'/CometBird\/([0-9.]*)/u' ],                                                            // see: http://www.cometbird.com
