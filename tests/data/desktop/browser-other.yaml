@@ -590,3 +590,11 @@
     headers: 'User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 SznProhlizec/6.2.3'
     result: { browser: { name: 'Seznam Browser', using: { name: Chrome, version: '6' }, version: 6.2.3, type: browser }, engine: { name: Blink }, os: { name: Windows, version: { value: '10.0', alias: '10' } }, device: { type: desktop } }
     readable: 'Seznam Browser 6.2.3 on Windows 10'
+-
+    headers: 'User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_4_11; en) AppleWebKit/525.18 (KHTML, like Gecko) Sunrise/1.7.4 like Safari/4525.22'
+    result: { browser: { name: 'Sunrise Browser', version: 1.7.4, type: browser }, engine: { name: Webkit, version: '525.18' }, os: { name: 'OS X', alias: 'Mac OS X', version: '10.4' }, device: { type: desktop, manufacturer: Apple, model: Macintosh } }
+    readable: 'Sunrise Browser 1.7.4 on Mac OS X 10.4'
+-
+    headers: 'User-Agent: Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/125.5.7 (KHTML, like Gecko) SunriseBrowser/0.853'
+    result: { browser: { name: 'Sunrise Browser', version: '0.853', type: browser }, engine: { name: Webkit, version: 125.5.7 }, os: { name: 'OS X' }, device: { type: desktop, manufacturer: Apple, model: Macintosh } }
+    readable: 'Sunrise Browser 0.853 on OS X'
