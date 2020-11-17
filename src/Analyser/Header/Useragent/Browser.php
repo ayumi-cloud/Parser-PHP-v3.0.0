@@ -123,6 +123,8 @@ trait Browser
     }
 
 
+
+
     /* Chrome */
 
     private function detectChrome($ua)
@@ -345,6 +347,57 @@ trait Browser
             $this->data->browser->stock = false;
             $this->data->browser->name = null;
             $this->data->browser->version = null;
+            $this->data->browser->channel = null;
+        }
+
+        /* Seznam Browser */
+
+        if (preg_match('/SznProhlizec\/([0-9.]*)/u', $ua, $match)) {
+            $this->data->browser->using = new Using([ 'name' => 'Chrome', 'version' => new Version([ 'value' => $match[1], 'details' => 1 ]) ]);
+
+            $this->data->browser->type = Constants\BrowserType::BROWSER;
+            $this->data->browser->stock = false;
+            $this->data->browser->name = 'Seznam Browser';
+            $this->data->browser->version = new Version([ 'value' => $match[1] ]);
+            $this->data->browser->channel = null;
+        }
+
+        /* START Internet Browser */
+
+        if (preg_match('/\sStart\/([0-9.]*)/u', $ua, $match)) {
+            $this->data->browser->using = new Using([ 'name' => 'Chrome', 'version' => new Version([ 'value' => $match[1], 'details' => 1 ]) ]);
+
+            $this->data->browser->type = Constants\BrowserType::BROWSER;
+            $this->data->browser->stock = false;
+            $this->data->browser->name = 'START Internet';
+            $this->data->browser->version = new Version([ 'value' => $match[1] ]);
+            $this->data->browser->channel = null;
+        }
+
+        /* Baidu Spark Browser */
+
+        // Ignore Palm Pre devices
+        if (!preg_match('/\sSpark\/fzz/u', $ua)) {
+            if (preg_match('/\s(BDSpark|Spark)\/([0-9.]*)/u', $ua, $match)) {
+                $this->data->browser->using = new Using([ 'name' => 'Chrome', 'version' => new Version([ 'value' => $match[2], 'details' => 1 ]) ]);
+
+                $this->data->browser->type = Constants\BrowserType::BROWSER;
+                $this->data->browser->stock = false;
+                $this->data->browser->name = 'Baidu Spark';
+                $this->data->browser->version = new Version([ 'value' => $match[1] ]);
+                $this->data->browser->channel = null;
+            }
+        }
+
+        /* LieYing Browser */
+
+        if (preg_match('/LieYing\/([0-9.]*)/u', $ua, $match)) {
+            $this->data->browser->using = new Using([ 'name' => 'Chrome', 'version' => new Version([ 'value' => $match[1], 'details' => 1 ]) ]);
+
+            $this->data->browser->type = Constants\BrowserType::BROWSER;
+            $this->data->browser->stock = false;
+            $this->data->browser->name = 'LieYing';
+            $this->data->browser->version = new Version([ 'value' => $match[1] ]);
             $this->data->browser->channel = null;
         }
 
@@ -826,6 +879,17 @@ trait Browser
             $this->data->browser->version = null;
         }
 
+        /* Arctic Fox Browser */
+
+        if (preg_match('/ArcticFox\/([0-9.]*)/u', $ua, $match)) {
+            $this->data->browser->using = new Using([ 'name' => 'Firefox', 'version' => new Version([ 'value' => $match[1], 'details' => 1 ]) ]);
+
+            $this->data->browser->type = Constants\BrowserType::BROWSER;
+            $this->data->browser->stock = false;
+            $this->data->browser->name = 'Arctic Fox';
+            $this->data->browser->version = new Version([ 'value' => $match[1] ]);
+            $this->data->browser->channel = null;
+        }
 
         /* Set the browser family */
 
@@ -1146,6 +1210,7 @@ trait Browser
 
         if (preg_match('/Ucweb\/([0-9]*[.][0-9]*)/u', $ua, $match)) {
             $this->data->browser->stock = false;
+
             $this->data->browser->name = 'UC Browser';
             $this->data->browser->version = new Version([ 'value' => $match[1], 'details' => 3 ]);
             $this->data->browser->type = Constants\BrowserType::BROWSER;
@@ -1637,6 +1702,10 @@ trait Browser
 
             if ($this->data->os->name != 'webOS') {
                 $this->data->os->name = 'webOS';
+            }
+
+            if (preg_match('/ hpwOS\/([0-9.]*)/u', $ua, $match)) {
+                $this->data->browser->version = new Version([ 'value' => $match[1] ]);
             }
 
             if (isset($this->data->device->manufacturer) && $this->data->device->manufacturer == 'Apple') {
