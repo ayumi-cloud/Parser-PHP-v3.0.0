@@ -26,8 +26,10 @@ Applications::$BROWSERS = [
         [ 'name' => 'Acorn Browse',         'id'    => 'acorn',      'regexp' =>'/Acorn Phoenix ([0-9.]+)/u'  ],
         [ 'name' => 'Acoo Browser',         'id'    => 'acoo',       'regexp' =>'/Acoo Browser/u' ],
         [ 'name' => 'Amigo Browser',        'id'    => 'amigo',       'regexp' => '/ Amigo\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                       // see: https://amigo.mail.ru/
-        [ 'name' => 'AOL Desktop',          'id'    => 'aol',      'regexp' =>'/AOL ([0-9.]*); AOLBuild/i' ],
+        [ 'name' => 'AOL Desktop',          'id'    => 'aol',      'regexp' =>'/ AOL\/([0-9.]*)/i', 'type' => Constants\DeviceType::DESKTOP ],
+        [ 'name' => 'AOL Desktop',          'id'    => 'aol',      'regexp' =>'/ AOL ([0-9.]*)/i', 'type' => Constants\DeviceType::DESKTOP ],                    // see: https://discover.aol.com/products-and-services/aol-desktop-for-windows
         [ 'name' => 'AOL Browser',          'id'    => 'america',      'regexp' =>'/America Online Browser (?:[0-9.]*); rev([0-9.]*);/i' ],
+        [ 'name' => 'AOL Shield',           'id'    => 'aolshield',   'regexp' => '/ AOLShield\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ], 
         [ 'name' => 'APUS Browser',         'id'    => 'apus',        'regexp' => '/APUSBrowser\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                  // see: https://www.apusapps.com/en/browser/
         [ 'name' => 'Arachne',              'id'    => 'arachne',      'regexp' =>'/xChaos_Arachne\/[0-9]\.([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],       // see: www.glennmcc.org
         [ 'name' => 'Arora',                'id'    => 'arora',      'regexp' =>'/[Aa]rora\/([0-9.]*)/u' ],                                                             // see: www.arora-browser.org
@@ -89,6 +91,7 @@ Applications::$BROWSERS = [
         [ 'name' => 'DocZilla',             'id'    => 'doczilla',      'regexp' =>'/DocZilla\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Doga Rhodonit',        'id'    => 'rhodonit',      'regexp' =>'/DogaRhodonit/u' ],
         [ 'name' => 'DPlus Browser',        'id'    => 'dplus',      'regexp' =>'/ DPlus ([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
+        [ 'name' => 'Element Browser',      'id'    => 'elementbrow',     'regexp' => '/Element Browser ([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Elements Browser',     'id'    => 'elements',    'regexp' => '/Elements Browser\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ], 
         [ 'name' => 'EudoraWeb',            'id'    => 'eudoraweb',      'regexp' =>'/EudoraWeb ([0-9.]*)/u' ],
         [ 'name' => 'Falkon',               'id'    => 'falkon',      'regexp' => '/ Falkon\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                      // see: https://www.falkon.org/
@@ -100,6 +103,7 @@ Applications::$BROWSERS = [
         [ 'name' => 'GlobalMojo',           'id'    => 'globalmojo',      'regexp' =>'/GlobalMojo\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'GNOME Web',            'id'    => 'epiphany',      'regexp' =>'/Epiphany\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'GreenBrowser',         'id'    => 'greenbrowser',      'regexp' =>'/GreenBrowser/u', 'type' => Constants\DeviceType::DESKTOP ],       
+        [ 'name' => 'Headless Chrome',      'id'    => 'headless',    'regexp' => '/HeadlessChrome\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],               // see: https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md
         [ 'name' => 'Hola Browser',         'id'    => 'hola',        'regexp' => '/ Hola\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                        // see: https://play.google.com/store/apps/details?id=org.hola&hl=en
         [ 'name' => 'Hydra Browser',        'id'    => 'hydra',      'regexp' =>'/Hydra Browser/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'IBrowse',              'id'    => 'ibrowse',      'regexp' =>'/IBrowse[\/ ]([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
@@ -138,11 +142,12 @@ Applications::$BROWSERS = [
         [ 'name' => 'Mypal Browser',        'id'    => 'mypal',       'regexp' => '/ Mypal\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                       // see: https://github.com/Feodor2/Mypal
         [ 'name' => 'Multi-Browser XP',     'id'    => 'multixp',      'regexp' =>'/Multi-Browser ([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],  
         [ 'name' => 'NetPositive',          'id'    => 'netpositive',      'regexp' =>'/NetPositive\/([0-9.]*)/u' ],
+        [ 'name' => 'NTENT Browser',        'id'    => 'ntent',       'regexp' => '/NTENTBrowser\/([0-9.]*)/u' ],                                                             // see: https://en.wikipedia.org/wiki/NTENT
         [ 'name' => 'Nichrome',             'id'    => 'nichrome',    'regexp' => '/Nichrome\/self\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Origyn',               'id'    => 'origyn',      'regexp' =>'/Origyn Web Browser/u' ],
         [ 'name' => 'Odyssey',              'id'    => 'owb',      'regexp' =>'/OWB\/([0-9.]*)/u' ],
         [ 'name' => 'Open Live Writer',     'id'    => 'live',      'regexp' =>'/Open Live Writer ([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],             // see: http://openlivewriter.org/  
-        [ 'name' => 'Orange Browser',       'id'    => 'juzi',      'regexp' =>'/JuziBrowser/u', 'type' => Constants\DeviceType::DESKTOP ],                        // see: http://www.123juzi.com/
+        [ 'name' => 'Orange Browser',       'id'    => 'juzi',      'regexp' =>'/JuziBrowser/u', 'type' => Constants\DeviceType::DESKTOP ],                            // see: http://www.123juzi.com/
         [ 'name' => 'Orca',                 'id'    => 'orca',      'regexp' =>'/Orca\/([0-9.]*)/u' ],
         [ 'name' => 'Oregano',              'id'    => 'oregano',      'regexp' =>'/Oregano ([0-9.]*)/u' ],                                                               // see: http://www.xat.nl/en/riscos/sw/oregano/
         [ 'name' => 'Otter',                'id'    => 'otter',      'regexp' =>'/Otter(?: Browser)?\/([0-9.]*)/u' ],                                                   // see: https://otter-browser.org
@@ -163,6 +168,7 @@ Applications::$BROWSERS = [
         [ 'name' => 'SaaYaa Explorer',      'id'    => 'saayaa',      'regexp' =>'/SaaYaa/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'SalamWeb',             'id'    => 'salam',       'regexp' => '/SalamWeb\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                     // see: https://salamweb.com/
         [ 'name' => 'SalamWeb',             'id'    => 'salam',       'regexp' => '/Salam Browser/u', 'type' => Constants\DeviceType::DESKTOP ],
+        [ 'name' => 'Seznam Browser',       'id'    => 'seznamapp',      'regexp' => '/SznProhlizec\/([0-9.]*)/u' ],            // see: https://play.google.com/store/apps/details?id=cz.seznam.sbrowser&hl=en
         [ 'name' => 'Shiira',               'id'    => 'shiira',      'regexp' => '/Shiira/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Sielo Browser',        'id'    => 'sielo',       'regexp' => '/ Sielo\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                       // see: https://github.com/SieloBrowser/sielo-legacy
         [ 'name' => 'SiteKiosk',            'id'    => 'sitekiosk',   'regexp' => '/SiteKiosk ([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                     // see: https://www.provisio.com/web/us/products/windows-kiosk-software-sitekiosk
@@ -292,6 +298,7 @@ Applications::$BROWSERS = [
         [ 'name' => 'AltiBrowser',          'id'    => 'alti',      'regexp' =>'/AltiBrowser\/([0-9.]*)/i' ],
         [ 'name' => 'Aplix',                'id'    => 'aplix',      'regexp' =>'/Aplix_SANYO_browser\/([0-9](?:.[0-9.]+)?)/u' ],                                    // browser for the Sega Saturn
         [ 'name' => 'AwoX',                 'id'    => 'awox',      'regexp' =>'/AwoX(?:\/([0-9.]*))? Browser/i' ],
+        [ 'name' => 'Freebox Browser',      'id'    => 'freebox',       'regexp' => '/ Navigateur web\/([0-9.]*)/u', 'type' => Constants\DeviceType::TELEVISION ],               // see: https://www.free.fr/freebox
         [ 'name' => 'Isis',                 'id'    => 'browserserver',      'regexp' =>'/BrowserServer/u' ],
         [ 'name' => 'Isis',                 'id'    => 'isis',      'regexp' =>'/ISIS\/([0-9.]*)/u', 'details' => 2 ],
         [ 'name' => 'Netbox',               'id'    => 'netbox',      'regexp' =>'/Netbox\/([0-9.]*)/u', 'type' => Constants\DeviceType::TELEVISION ],
