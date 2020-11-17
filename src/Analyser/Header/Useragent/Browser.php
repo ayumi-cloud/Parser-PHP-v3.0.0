@@ -123,6 +123,7 @@ trait Browser
     }
 
 
+
     /* Chrome */
 
     private function detectChrome($ua)
@@ -370,6 +371,21 @@ trait Browser
             $this->data->browser->name = 'START Internet';
             $this->data->browser->version = new Version([ 'value' => $match[1] ]);
             $this->data->browser->channel = null;
+        }
+
+        /* Baidu Spark Browser */
+
+        // Ignore Palm Pre devices
+        if (!preg_match('/\sSpark\/fzz/u', $ua)) {
+            if (preg_match('/\s(BDSpark|Spark)\/([0-9.]*)/u', $ua, $match)) {
+                $this->data->browser->using = new Using([ 'name' => 'Chrome', 'version' => new Version([ 'value' => $match[2], 'details' => 1 ]) ]);
+
+                $this->data->browser->type = Constants\BrowserType::BROWSER;
+                $this->data->browser->stock = false;
+                $this->data->browser->name = 'Baidu Spark';
+                $this->data->browser->version = new Version([ 'value' => $match[1] ]);
+                $this->data->browser->channel = null;
+            }
         }
 
         /* Set the browser family */
