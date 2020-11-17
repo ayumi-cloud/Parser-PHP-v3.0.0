@@ -42,7 +42,8 @@ Applications::$BROWSERS = [
         [ 'name' => 'Baidu Browser',        'id'    => 'flyflow',      'regexp' =>'/FlyFlow\/([0-9.]*)/u', 'details' => 2 ],
         [ 'name' => 'Baidu Browser',        'id'    => 'bdbrowser',      'regexp' =>'/bdbrowser\/([0-9.]*)/i' ],
         [ 'name' => 'Baidu Browser',        'id'    => 'bdbrowser',      'regexp' =>'/bdbrowser_i18n\/([0-9.]*)/i' ],
-        [ 'name' => 'Baidu Spark',          'id'    => 'bdspark',      'regexp' =>'/BDSpark\/([0-9.]*)/u', 'details' => 2 ],
+        [ 'name' => 'Baidu Spark',          'id'    => 'bdspark',      'regexp' =>'/Spark\/2.x/u', 'type' => Constants\DeviceType::DESKTOP ],
+        [ 'name' => 'Baidu Spark',          'id'    => 'bdspark',      'regexp' =>'/BDSpark\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Basilisk',             'id'    => 'basilisk',    'regexp' => '/ Basilisk\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                    // see: https://basilisk-browser.org/
         [ 'name' => 'Beamrise',             'id'    => 'beamrise',      'regexp' =>'/Beamrise\/([0-9.]*)/u' ],                                                             // see: http://beamrise.com
         [ 'name' => 'Beonex',               'id'    => 'beonex',      'regexp' =>'/Beonex\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                        // see: https://www.beonex.com/
