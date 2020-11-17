@@ -124,7 +124,6 @@ trait Browser
 
 
 
-
     /* Chrome */
 
     private function detectChrome($ua)
@@ -1210,7 +1209,6 @@ trait Browser
 
         if (preg_match('/Ucweb\/([0-9]*[.][0-9]*)/u', $ua, $match)) {
             $this->data->browser->stock = false;
-
             $this->data->browser->name = 'UC Browser';
             $this->data->browser->version = new Version([ 'value' => $match[1], 'details' => 3 ]);
             $this->data->browser->type = Constants\BrowserType::BROWSER;
