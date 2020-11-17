@@ -566,3 +566,7 @@
     headers: 'User-Agent: Mozilla/5.0 Chrome/10.0.613.0 Safari/534.15 Zombie.js/5.0.7'
     result: { browser: { name: Zombie.js, family: { name: Chrome, version: 10 }, version: 5.0.7, type: browser }, device: { type: desktop } }
     readable: 'Zombie.js 5.0.7'
+-
+    headers: 'User-Agent: Mozilla/5.0 (windows nt 6.1; wow64) applewebkit/537.36 (khtml, like gecko) chrome/63.0.3239.132 adventurer/4.0.0.0 safari/537.36'
+    readable: 'Adventurer 4.0.0.0'
+    result: { browser: { name: Adventurer, version: 4.0.0.0, type: browser }, engine: { name: Webkit, version: '537.36' }, device: { type: desktop } }
