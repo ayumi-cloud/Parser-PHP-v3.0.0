@@ -567,6 +567,26 @@
     result: { browser: { name: Zombie.js, family: { name: Chrome, version: 10 }, version: 5.0.7, type: browser }, device: { type: desktop } }
     readable: 'Zombie.js 5.0.7'
 -
+    headers: 'User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 AOLShield/79.0.3945.5'
+    result: { browser: { name: 'AOL Shield', family: { name: Chrome, version: 79.0.3945.130 }, version: 79.0.3945.5, type: browser }, engine: { name: Blink }, os: { name: Windows, version: { value: '6.1', alias: '7' } }, device: { type: desktop } }
+    readable: 'AOL Shield 79.0.3945.5 on Windows 7'
+-
+    headers: 'User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/533+ (KHTML, like Gecko) Element Browser 5.0'
+    result: { browser: { name: 'Element Browser', version: '5.0', type: browser }, engine: { name: Webkit, version: '533' }, os: { name: Windows, version: { value: '6.1', alias: '7' } }, device: { type: desktop } }
+    readable: 'Element Browser 5.0 on Windows 7'
+-
+    headers: 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/80.0.3987.162 Safari/537.36'
+    readable: 'Headless Chrome 80.0.3987.162 on Windows 10'
+    result: { browser: { name: 'Headless Chrome', family: { name: Chrome, version: 80.0.3987.162 }, version: 80.0.3987.162, type: browser }, engine: { name: Blink }, os: { name: Windows, version: { value: '10.0', alias: '10' } }, device: { type: desktop } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.103 Safari/537.36 JuziBrowser'
+    readable: 'Orange Browser on Windows 10'
+    result: { browser: { name: 'Orange Browser', family: { name: Chrome, version: 48 }, type: browser }, engine: { name: Blink }, os: { name: Windows, version: { value: '10.0', alias: '10' } }, device: { type: desktop } }
+-
+    headers: 'User-Agent: Mozilla/5.0 X11 (Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.9 NTENTBrowser/4.2.0.184 Safari/537.36'
+    readable: 'NTENT Browser 4.2.0.184 on Linux'
+    result: { browser: { name: 'NTENT Browser', family: { name: Chrome, version: 54 }, version: 4.2.0.184, type: browser }, engine: { name: Blink }, os: { name: Linux }, device: { type: desktop } }
+-
     headers: 'User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 SznProhlizec/6.2.3'
     result: { browser: { name: 'Seznam Browser', using: { name: Chrome, version: '6' }, version: 6.2.3, type: browser }, engine: { name: Blink }, os: { name: Windows, version: { value: '10.0', alias: '10' } }, device: { type: desktop } }
     readable: 'Seznam Browser 6.2.3 on Windows 10'
