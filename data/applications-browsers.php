@@ -176,6 +176,8 @@ Applications::$BROWSERS = [
         [ 'name' => 'SunChrome',            'id'    => 'sunchrome',      'regexp' =>'/SunChrome\/([0-9.]*)/u' ],
         [ 'name' => 'Sundance',             'id'    => 'sundance',      'regexp' =>'/Sundance\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Sundial',              'id'    => 'sundial',      'regexp' =>'/Sundial\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                      // see: http://www.sundialbrowser.com/
+        [ 'name' => 'Sunrise Browser',      'id'    => 'sunrise',     'regexp' => '/ Sunrise\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                     // see: http://www.sunrisebrowser.com/
+        [ 'name' => 'Sunrise Browser',      'id'    => 'sunrise',     'regexp' => '/SunriseBrowser\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],               // see: http://www.sunrisebrowser.com/
         [ 'name' => 'Superbird',            'id'    => 'superbird',      'regexp' =>'/Super[Bb]ird\/([0-9.]*)/u', 'details' => 2 ],
         [ 'name' => 'Swiftweasel',          'id'    => 'swiftweasel',      'regexp' =>'/Swiftweasel\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],            // see: http://swiftweasel.tuxfamily.org/
         [ 'name' => 'Swiftfox',             'id'    => 'swiftfox',      'regexp' =>'/Swiftfox/u', 'type' => Constants\DeviceType::DESKTOP ],
