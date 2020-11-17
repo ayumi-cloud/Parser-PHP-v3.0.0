@@ -574,3 +574,7 @@
     headers: 'User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/533+ (KHTML, like Gecko) Element Browser 5.0'
     result: { browser: { name: 'Element Browser', version: '5.0', type: browser }, engine: { name: Webkit, version: '533' }, os: { name: Windows, version: { value: '6.1', alias: '7' } }, device: { type: desktop } }
     readable: 'Element Browser 5.0 on Windows 7'
+-
+    headers: 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/80.0.3987.162 Safari/537.36'
+    readable: 'Headless Chrome 80.0.3987.162 on Windows 10'
+    result: { browser: { name: 'Headless Chrome', family: { name: Chrome, version: 80.0.3987.162 }, version: 80.0.3987.162, type: browser }, engine: { name: Blink }, os: { name: Windows, version: { value: '10.0', alias: '10' } }, device: { type: desktop } }
