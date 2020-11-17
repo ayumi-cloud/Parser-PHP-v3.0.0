@@ -578,3 +578,7 @@
     headers: 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/80.0.3987.162 Safari/537.36'
     readable: 'Headless Chrome 80.0.3987.162 on Windows 10'
     result: { browser: { name: 'Headless Chrome', family: { name: Chrome, version: 80.0.3987.162 }, version: 80.0.3987.162, type: browser }, engine: { name: Blink }, os: { name: Windows, version: { value: '10.0', alias: '10' } }, device: { type: desktop } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.103 Safari/537.36 JuziBrowser'
+    readable: 'Orange Browser on Windows 10'
+    result: { browser: { name: 'Orange Browser', family: { name: Chrome, version: 48 }, type: browser }, engine: { name: Blink }, os: { name: Windows, version: { value: '10.0', alias: '10' } }, device: { type: desktop } }
