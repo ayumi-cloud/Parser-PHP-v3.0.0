@@ -630,3 +630,7 @@
     headers: 'User-Agent: Mozilla/5.0 (compatible; HubSpot Crawler; web-crawlers@hubspot.com)'
     readable: 'HubSpot Crawler'
     result: { browser: { name: 'HubSpot Crawler' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) SkypeUriPreview Preview/0.5'
+    readable: 'SkypeUriPreview 0.5'
+    result: { browser: { name: SkypeUriPreview, version: '0.5' }, device: { type: bot } }
