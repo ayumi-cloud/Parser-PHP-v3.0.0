@@ -587,6 +587,18 @@
     readable: 'Pocket 2.0'
     result: { browser: { name: Pocket, version: '2.0' }, device: { type: bot } }
 -
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Wappalyzer; https://www.wappalyzer.com)'
+    readable: 'Wappalyzer'
+    result: { browser: { name: Wappalyzer }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Wappalyzer)'
+    readable: 'Wappalyzer'
+    result: { browser: { name: Wappalyzer }, device: { type: bot } }
+-
+    headers: 'User-Agent: Wappalyzer'
+    readable: 'Wappalyzer'
+    result: { browser: { name: Wappalyzer }, device: { type: bot } }
+-
     headers: 'User-Agent: httpunit/1.5'
     readable: 'HttpUnit 1.5'
     result: { browser: { name: HttpUnit, version: '1.5' }, device: { type: bot } }
