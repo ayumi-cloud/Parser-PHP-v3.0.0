@@ -587,6 +587,126 @@
     readable: 'Pocket 2.0'
     result: { browser: { name: Pocket, version: '2.0' }, device: { type: bot } }
 -
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Wappalyzer; https://www.wappalyzer.com)'
+    readable: 'Wappalyzer'
+    result: { browser: { name: Wappalyzer }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Wappalyzer)'
+    readable: 'Wappalyzer'
+    result: { browser: { name: Wappalyzer }, device: { type: bot } }
+-
+    headers: 'User-Agent: Wappalyzer'
+    readable: 'Wappalyzer'
+    result: { browser: { name: Wappalyzer }, device: { type: bot } }
+-
+    headers: 'User-Agent: httpunit/1.5'
+    readable: 'HttpUnit 1.5'
+    result: { browser: { name: HttpUnit, version: '1.5' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.0 Safari/537.36 (compatible; Linespider/1.1; +https://lin.ee/4dwXkTH)'
+    readable: 'Line Bot 1.1'
+    result: { browser: { name: 'Line Bot', version: '1.1' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; vkShare; +http://vk.com/dev/Share)'
+    readable: 'vkShare'
+    result: { browser: { name: vkShare }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Daum/4.1; +http://cs.daum.net/faq/15/4118.html?faqId=28966)'
+    readable: 'Daum 4.1'
+    result: { browser: { name: Daum, version: '4.1' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; PlurkBot/1.0; +https://www.plurk.com/) Firefox/61.0'
+    readable: 'Plurk Bot 1.0'
+    result: { browser: { name: 'Plurk Bot', version: '1.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: OdklBot/1.0 (share@odnoklassniki.ru)'
+    readable: 'OdklBot 1.0'
+    result: { browser: { name: OdklBot, version: '1.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; OdklBot/1.0 like Linux; klass@odnoklassniki.ru)'
+    readable: 'OdklBot 1.0'
+    result: { browser: { name: OdklBot, version: '1.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; HubSpot Crawler; web-crawlers@hubspot.com)'
+    readable: 'HubSpot Crawler'
+    result: { browser: { name: 'HubSpot Crawler' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) SkypeUriPreview Preview/0.5'
+    readable: 'SkypeUriPreview 0.5'
+    result: { browser: { name: SkypeUriPreview, version: '0.5' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mediumbot-MetaTagFetcher/0.3 (+https://medium.com/)'
+    readable: 'Medium Bot 0.3'
+    result: { browser: { name: 'Medium Bot', version: '0.3' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mediumbot-ProxyFetcher/0.1 (+https://medium.com/)'
+    readable: 'Medium Bot 0.1'
+    result: { browser: { name: 'Medium Bot', version: '0.1' }, device: { type: bot } }
+-
+    headers: 'User-Agent: MindsMediaProxy/3.0 (+http://www.minds.com/)'
+    readable: 'Minds 3.0'
+    result: { browser: { name: Minds, version: '3.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; U; Hootsuite-WebFeed/1.0; mailto:abuse@hootsuite.com)'
+    readable: 'HootSuite 1.0'
+    result: { browser: { name: HootSuite, version: '1.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: HootSuite Image proxy (hosting@hootsuite.com)'
+    readable: 'HootSuite'
+    result: { browser: { name: HootSuite }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; BuzzSumo; +http://www.buzzsumo.com/bot.html)'
+    readable: 'BuzzSumo'
+    result: { browser: { name: BuzzSumo }, device: { type: bot } }
+-
+    headers: 'User-Agent: Tumblr/14.0.835.186'
+    readable: 'Tumblr 14.0.835.186'
+    result: { browser: { name: Tumblr, version: '14.0.835.186' }, device: { type: bot } }
+-
+    headers: 'User-Agent: okhttp/3.4.1'
+    readable: 'OkHttp 3.4.1'
+    result: { browser: { name: OkHttp, version: '3.4.1' }, device: { type: bot } }
+-
+    headers: 'User-Agent: AbtestCenter-okhttp/1.0'
+    readable: 'OkHttp 1.0'
+    result: { browser: { name: OkHttp, version: '1.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Go-http-client/1.1'
+    readable: 'Go Http Client 1.1'
+    result: { browser: { name: 'Go Http Client', version: '1.1' }, device: { type: bot } }
+-
+    headers: 'User-Agent: go-httpclient v0.5.1'
+    readable: 'Go Http Client 0.5.1'
+    result: { browser: { name: 'Go Http Client', version: '0.5.1' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Made by ZmEu @ WhiteHat Team – http://www.whitehat.ro'
+    readable: 'ZmEu'
+    result: { browser: { name: ZmEu }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (X11; Datanyze; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    readable: 'Datanyze'
+    result: { browser: { name: Datanyze }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (iodc; odysseus 24842-138-041020155614-449; +https://iodc.co.uk)'
+    readable: 'Iodc'
+    result: { browser: { name: Iodc }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; IODC-Odysseus Survey 46182-100-271115114504-101; +https://iodc.co.uk)'
+    readable: 'Iodc'
+    result: { browser: { name: Iodc }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Linux; Android 7.0;) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; AspiegelBot)'
+    readable: 'Petal Bot'
+    result: { browser: { name: 'Petal Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Linux; Android 7.0;) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; PetalBot;+https://aspiegel.com/petalbot)'
+    readable: 'Petal Bot'
+    result: { browser: { name: 'Petal Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: (compatible;PetalBot;+https://aspiegel.com/petalbot)'
+    readable: 'Petal Bot'
+    result: { browser: { name: 'Petal Bot' }, device: { type: bot } }
+-
     headers: 'User-Agent: Mozilla/5.0 (compatible; evc-batch/2.0)'
     readable: 'Evc-batch 2.0'
     result: { browser: { name: Evc-batch, version: '2.0' }, device: { type: bot } }
