@@ -682,3 +682,7 @@
     headers: 'User-Agent: Made by ZmEu @ WhiteHat Team – http://www.whitehat.ro'
     readable: 'ZmEu'
     result: { browser: { name: ZmEu }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (X11; Datanyze; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    readable: 'Datanyze'
+    result: { browser: { name: Datanyze }, device: { type: bot } }
