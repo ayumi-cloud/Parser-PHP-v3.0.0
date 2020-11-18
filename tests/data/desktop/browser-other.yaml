@@ -678,3 +678,7 @@
     headers: 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:29.0) Gecko/20100101 Firefox/29.0 SeaMonkey/2.26'
     result: { browser: { name: SeaMonkey, family: { name: Firefox, version: '29.0' }, version: '2.26', type: browser }, engine: { name: Gecko, version: '29.0' }, os: { name: Linux }, device: { type: desktop } }
     readable: 'SeaMonkey 2.26 on Linux'
+-
+    headers: 'User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.4a) Gecko/20030411 Phoenix/0.5'
+    result: { browser: { name: Phoenix, version: '0.5', type: browser }, engine: { name: Gecko, version: 1.4a }, os: { name: Windows, version: { value: '5.1', alias: XP } }, device: { type: desktop } }
+    readable: 'Phoenix 0.5 on Windows XP'
