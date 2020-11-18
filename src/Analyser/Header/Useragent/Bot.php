@@ -4,6 +4,7 @@ namespace WhichBrowser\Analyser\Header\Useragent;
 
 use WhichBrowser\Constants;
 use WhichBrowser\Data;
+use WhichBrowser\Model\Version;
 
 trait Bot
 {
@@ -27,6 +28,31 @@ trait Bot
             $this->data->os->reset();
             $this->data->engine->reset();
             $this->data->device->reset();
+
+            $this->data->device->type = Constants\DeviceType::BOT;
+        }
+        
+        /* Detect bots based on HttpUnit */
+        
+        if (preg_match('/httpunit\/([0-9.]*)/iu', $ua, $result)) {
+            $this->data->browser->reset();
+            $this->data->os->reset();
+            $this->data->engine->reset();
+            $this->data->device->reset();
+            
+            $this->data->browser->name = 'HttpUnit';
+            $this->data->browser->version = $result[1] ?? '';
+            $this->data->device->type = Constants\DeviceType::BOT;
+        }
+
+        /* Detect Go Http Client */
+
+        if (preg_match('/Go-http-client\/([0-9.]*)/iu', $ua, $match)) {
+            $this->data->browser->reset();
+            $this->data->device->reset();
+
+            $this->data->browser->name = 'Go Http Client';
+            $this->data->browser->version = new Version([ 'value' => $match[1] ]);
 
             $this->data->device->type = Constants\DeviceType::BOT;
         }
