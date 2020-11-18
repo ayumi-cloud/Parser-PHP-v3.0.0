@@ -598,3 +598,7 @@
     headers: 'User-Agent: Wappalyzer'
     readable: 'Wappalyzer'
     result: { browser: { name: Wappalyzer }, device: { type: bot } }
+-
+    headers: 'User-Agent: httpunit/1.5'
+    readable: 'HttpUnit 1.5'
+    result: { browser: { name: HttpUnit, version: '1.5' }, device: { type: bot } }
