@@ -662,3 +662,11 @@
     headers: 'User-Agent: Tumblr/14.0.835.186'
     readable: 'Tumblr 14.0.835.186'
     result: { browser: { name: Tumblr, version: '14.0.835.186' }, device: { type: bot } }
+-
+    headers: 'User-Agent: okhttp/3.4.1'
+    readable: 'OkHttp 3.4.1'
+    result: { browser: { name: OkHttp, version: '3.4.1' }, device: { type: bot } }
+-
+    headers: 'User-Agent: AbtestCenter-okhttp/1.0'
+    readable: 'OkHttp 1.0'
+    result: { browser: { name: OkHttp, version: '1.0' }, device: { type: bot } }
