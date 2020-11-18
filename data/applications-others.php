@@ -69,8 +69,10 @@ Applications::$OTHERS = [
     ],
 
     Constants\BrowserType::APP_CHAT => [
-        [ 'name' => 'Facebook Messenger',   'id'    => 'messenger',      'regexp' =>'/FBAN\/MessengerForiOS/u' ],
-        [ 'name' => 'Facebook Messenger',   'id'    => 'messenger',      'regexp' =>'/FB_IAB\/MESSENGER/u' ],
+        [ 'name' => 'Facebook Messenger',   'id'    => 'messenger',        'regexp' => '/FBAN\/MessengerForiOS/u' ],
+        [ 'name' => 'Facebook Messenger',   'id'    => 'messenger',        'regexp' => '/FBAN\/MessengerLiteForiOS/u' ],
+        [ 'name' => 'Facebook Messenger',   'id'    => 'messenger',        'regexp' => '/FB_IAB\/MESSENGER/u' ],
+        [ 'name' => 'Rocket Chat',          'id'    => 'rocketchat',       'regexp' => '/Rocket\.Chat\+?\/([0-9.]*)/u' ],
         [ 'name' => 'KakaoTalk',            'id'    => 'kakao',           'regexp' => '/KAKAOTALK ([0-9.]*)/u' ],
         [ 'name' => 'KakaoTalk',            'id'    => 'kakao',           'regexp' => '/KAKAOTALK/u' ],
         [ 'name' => 'Kik',                  'id'    => 'kik',      'regexp' =>'/Kik\/([0-9.]*?)(\.0)?\.[0-9]{3,4}/u' ],
@@ -88,9 +90,11 @@ Applications::$OTHERS = [
     ],
 
     Constants\BrowserType::APP_SOCIAL => [
-        [ 'name' => 'Facebook',             'id'    => 'fbios',      'regexp' =>'/FBAN\/FBIOS/u' ],
-        [ 'name' => 'Facebook',             'id'    => 'fb4a',      'regexp' =>'/FBAN\/FB4A/u' ],
-        [ 'name' => 'Facebook',             'id'    => 'fb4a',      'regexp' =>'/FB_IAB\/FB4A/u' ],
+        [ 'name' => 'Facebook',             'id'    => 'fbav',             'regexp' => '/FBAV\/([0-9.]*)/u' ], // Facebook uses fbav as their version number this needs to be first one discovered
+        [ 'name' => 'Facebook',             'id'    => 'fbios',            'regexp' => '/FBAN\/FBIOS/u' ],
+        [ 'name' => 'Facebook',             'id'    => 'fb4a',             'regexp' => '/FBAN\/FB4A/u' ],
+        [ 'name' => 'Facebook',             'id'    => 'fb4a',             'regexp' => '/FB_IAB\/FB4A/u' ],
+        [ 'name' => 'Facebook',             'id'    => 'fbsv',             'regexp' => '/FBSV\/([0-9.]*)/u' ],
         [ 'name' => 'Google+',              'id'    => 'googleplus',      'regexp' =>'/com.google.GooglePlus/u'  ],
         [ 'name' => 'Instagram',            'id'    => 'instagram',      'regexp' =>'/Instagram ([0-9.]+)/u' ],
         [ 'name' => 'Pinterest',            'id'    => 'pinterest',      'regexp' =>'/\[Pinterest\/(Android|iOS)\]/u' ],
@@ -140,6 +144,7 @@ Applications::$OTHERS = [
     Constants\BrowserType::APP_GAME => [
         [ 'name' => 'EA Origin',            'id'    => 'origin',      'regexp' =>'/Origin\/([0-9.]*)/u' ],
         [ 'name' => 'SecondLife',           'id'    => 'secondlife',      'regexp' =>'/SecondLife\/([0-9.]*)/u' ],
+        [ 'name' => 'Valve Steam',          'id'    => 'valve',           'regexp' => '/Valve Steam GameOverlay\/([0-9.]*)/u' ],
         [ 'name' => 'Valve Steam',          'id'    => 'valve',      'regexp' =>'/Valve Steam/u' ],
         [ 'name' => 'Raptr',                'id'    => 'raptr',      'regexp' =>'/Raptr/u' ],
     ],
