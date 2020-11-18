@@ -694,3 +694,15 @@
     headers: 'User-Agent: Mozilla/5.0 (compatible; IODC-Odysseus Survey 46182-100-271115114504-101; +https://iodc.co.uk)'
     readable: 'Iodc'
     result: { browser: { name: Iodc }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Linux; Android 7.0;) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; AspiegelBot)'
+    readable: 'Petal Bot'
+    result: { browser: { name: 'Petal Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Linux; Android 7.0;) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; PetalBot;+https://aspiegel.com/petalbot)'
+    readable: 'Petal Bot'
+    result: { browser: { name: 'Petal Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: (compatible;PetalBot;+https://aspiegel.com/petalbot)'
+    readable: 'Petal Bot'
+    result: { browser: { name: 'Petal Bot' }, device: { type: bot } }
