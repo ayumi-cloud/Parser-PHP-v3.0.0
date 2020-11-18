@@ -654,3 +654,7 @@
     headers: 'User-Agent: HootSuite Image proxy (hosting@hootsuite.com)'
     readable: 'HootSuite'
     result: { browser: { name: HootSuite }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; BuzzSumo; +http://www.buzzsumo.com/bot.html)'
+    readable: 'BuzzSumo'
+    result: { browser: { name: BuzzSumo }, device: { type: bot } }
