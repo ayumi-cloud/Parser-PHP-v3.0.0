@@ -706,3 +706,7 @@
     headers: 'User-Agent: (compatible;PetalBot;+https://aspiegel.com/petalbot)'
     readable: 'Petal Bot'
     result: { browser: { name: 'Petal Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; evc-batch/2.0)'
+    readable: 'Evc-batch 2.0'
+    result: { browser: { name: Evc-batch, version: '2.0' }, device: { type: bot } }
