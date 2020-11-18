@@ -587,6 +587,38 @@
     readable: 'Pocket 2.0'
     result: { browser: { name: Pocket, version: '2.0' }, device: { type: bot } }
 -
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Wappalyzer; https://www.wappalyzer.com)'
+    readable: 'Wappalyzer'
+    result: { browser: { name: Wappalyzer }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Wappalyzer)'
+    readable: 'Wappalyzer'
+    result: { browser: { name: Wappalyzer }, device: { type: bot } }
+-
+    headers: 'User-Agent: Wappalyzer'
+    readable: 'Wappalyzer'
+    result: { browser: { name: Wappalyzer }, device: { type: bot } }
+-
+    headers: 'User-Agent: httpunit/1.5'
+    readable: 'HttpUnit 1.5'
+    result: { browser: { name: HttpUnit, version: '1.5' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.0 Safari/537.36 (compatible; Linespider/1.1; +https://lin.ee/4dwXkTH)'
+    readable: 'Line Bot 1.1'
+    result: { browser: { name: 'Line Bot', version: '1.1' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; vkShare; +http://vk.com/dev/Share)'
+    readable: 'vkShare'
+    result: { browser: { name: vkShare }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Daum/4.1; +http://cs.daum.net/faq/15/4118.html?faqId=28966)'
+    readable: 'Daum 4.1'
+    result: { browser: { name: Daum, version: '4.1' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; PlurkBot/1.0; +https://www.plurk.com/) Firefox/61.0'
+    readable: 'Plurk Bot 1.0'
+    result: { browser: { name: 'Plurk Bot', version: '1.0' }, device: { type: bot } }
+-
     headers: 'User-Agent: OdklBot/1.0 (share@odnoklassniki.ru)'
     readable: 'OdklBot 1.0'
     result: { browser: { name: OdklBot, version: '1.0' }, device: { type: bot } }
