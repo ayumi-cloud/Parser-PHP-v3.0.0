@@ -634,3 +634,11 @@
     headers: 'User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) SkypeUriPreview Preview/0.5'
     readable: 'SkypeUriPreview 0.5'
     result: { browser: { name: SkypeUriPreview, version: '0.5' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mediumbot-MetaTagFetcher/0.3 (+https://medium.com/)'
+    readable: 'Medium Bot 0.3'
+    result: { browser: { name: 'Medium Bot', version: '0.3' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mediumbot-ProxyFetcher/0.1 (+https://medium.com/)'
+    readable: 'Medium Bot 0.1'
+    result: { browser: { name: 'Medium Bot', version: '0.1' }, device: { type: bot } }
