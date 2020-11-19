@@ -878,3 +878,19 @@
     headers: 'User-Agent: Mozilla/5.0 (compatible; YioopBot; +https://www.yioop.com/bot.php)'
     readable: 'Yioop Bot'
     result: { browser: { name: 'Yioop Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; YioopBot; +https://www.yioop.com/bot.php)'
+    readable: 'Yioop Bot'
+    result: { browser: { name: 'Yioop Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: psbot/0.1 (+http://www.picsearch.com/bot.html)'
+    readable: 'Picsearch Bot 0.1'
+    result: { browser: { name: 'Picsearch Bot', version: '0.1' }, device: { type: bot } }
+-
+    headers: 'User-Agent: psbot-page (+http://www.picsearch.com/bot.html)'
+    readable: 'Picsearch Bot'
+    result: { browser: { name: 'Picsearch Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: psbot-image (+http://www.picsearch.com/bot.html)'
+    readable: 'Picsearch Bot'
+    result: { browser: { name: 'Picsearch Bot' }, device: { type: bot } }
