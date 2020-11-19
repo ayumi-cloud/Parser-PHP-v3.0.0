@@ -236,6 +236,7 @@ Applications::$BOTS = [
     [ 'name' => 'SafeSearch Microdata',         'id'    => 'safesearch',      'regexp' => '/SafeSearch microdata crawler/u' ],
     [ 'name' => 'Scrapy',                       'id'    => 'scrapy',      'regexp' => '/Scrapy\/([0-9.]*)/u' ],
     [ 'name' => 'ScreenerBot',                  'id'    => 'crawler',      'regexp' => '/ScreenerBot Crawler Beta ([0-9.]*)/u' ],
+    [ 'name' => 'Search Atlas Bot',             'id'    => 'searchatlas',      'regexp' => '/SearchAtlas/iu' ],
     [ 'name' => 'Semrush',                      'id'    => 'semrush',      'regexp' => '/SemrushBot\/([0-9.]*)/u' ],
     [ 'name' => 'Seekport Crawler',             'id'    => 'seekport',      'regexp' => '/Seekport Crawler/u' ],
     [ 'name' => 'Serp Stat',                    'id'    => 'serpstat',      'regexp' => '/serpstatbot\/([0-9.]*)/u' ],
