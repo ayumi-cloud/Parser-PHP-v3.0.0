@@ -850,3 +850,11 @@
     headers: 'User-Agent: istellabot/t.1.13'
     readable: 'Istellabot 1.13'
     result: { browser: { name: Istellabot, version: '1.13' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; coccocbot-web/1.0; +http://help.coccoc.com/searchengine)'
+    readable: 'Coccocbot Web 1.0'
+    result: { browser: { name: 'Coccocbot Web', version: '1.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; coccocbot-image/1.0; +http://help.coccoc.com/searchengine)'
+    readable: 'Coccocbot Image 1.0'
+    result: { browser: { name: 'Coccocbot Image', version: '1.0' }, device: { type: bot } }
