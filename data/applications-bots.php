@@ -226,6 +226,7 @@ Applications::$BOTS = [
     [ 'name' => 'Scrapy',                       'id'    => 'scrapy',      'regexp' => '/Scrapy\/([0-9.]*)/u' ],
     [ 'name' => 'ScreenerBot',                  'id'    => 'crawler',      'regexp' => '/ScreenerBot Crawler Beta ([0-9.]*)/u' ],
     [ 'name' => 'Semrush',                      'id'    => 'semrush',      'regexp' => '/SemrushBot\/([0-9.]*)/u' ],
+    [ 'name' => 'Seekport Crawler',             'id'    => 'seekport',      'regexp' => '/Seekport Crawler/u' ],
     [ 'name' => 'Server Density',               'id'    => 'monitor',      'regexp' => '/Server Density Service Monitoring/u' ],
     [ 'name' => 'ShopWiki',                     'id'    => 'shopwiki',      'regexp' => '/ShopWiki\/([0-9.]*)/u' ],
     [ 'name' => 'SkypeUriPreview',              'id'    => 'skype',      'regexp' => '/SkypeUriPreview Preview\/([0-9.]*)/u' ],
