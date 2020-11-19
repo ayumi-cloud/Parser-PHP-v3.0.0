@@ -874,3 +874,7 @@
     headers: 'User-Agent: Seeker v.1 http://LookSeek.com/seeker/'
     readable: 'LookSeek 1'
     result: { browser: { name: LookSeek, version: '1' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; YioopBot; +https://www.yioop.com/bot.php)'
+    readable: 'Yioop Bot'
+    result: { browser: { name: 'Yioop Bot' }, device: { type: bot } }

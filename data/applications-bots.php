@@ -328,6 +328,7 @@ Applications::$BOTS = [
     [ 'name' => 'Inktomi Slurp',                'id'    => 'slurp',      'regexp' => '/Slurp\.so\/([0-9.]*)/u' ],
     
     [ 'name' => 'Yelp Spider',                  'id'    => 'yelp',      'regexp' => '/yelpspider\-([0-9.]*)/u' ],
+    [ 'name' => 'Yioop Bot',                    'id'    => 'yioop',     'regexp' => '/YioopBot/u' ],
     [ 'name' => 'Yisou Spider',                 'id'    => 'shenma',    'regexp' => '/YisouSpider\/?([0-9.]*)/u' ],
     [ 'name' => 'ZmEu',                         'id'    => 'zmeu',      'regexp' => '/ZmEu/u' ],
 
