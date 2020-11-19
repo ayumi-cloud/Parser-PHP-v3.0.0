@@ -779,6 +779,10 @@
     readable: 'Sputnik Image Bot 2.3'
     result: { browser: { name: 'Sputnik Image Bot', version: '2.3' }, device: { type: bot } }
 -
+    headers: 'User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:38.0) Gecko/20100101 Firefox/38.0 (IndeedBot 1.1)'
+    readable: 'IndeedBot 1.1'
+    result: { browser: { name: IndeedBot, version: '1.1' }, device: { type: bot } }
+-
     headers: 'User-Agent: Mozilla/5.0 (compatible; SeznamBot/3.2; +http://napoveda.seznam.cz/en/seznambot-intro/)'
     readable: 'Seznam Bot 3.2'
     result: { browser: { name: 'Seznam Bot', version: '3.2' }, device: { type: bot } }
