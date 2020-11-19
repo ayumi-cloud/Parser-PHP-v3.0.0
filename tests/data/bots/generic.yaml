@@ -954,3 +954,7 @@
     headers: 'User-Agent: AhrefsBot.Feeds v0.1; http://ahrefs.com/'
     readable: 'Ahrefs Feeds Bot 0.1'
     result: { browser: { name: 'Ahrefs Feeds Bot', version: '0.1' }, device: { type: bot } }
+-
+    headers: 'User-Agent: SearchAtlas.com SEO Crawler'
+    readable: 'Search Atlas Bot'
+    result: { browser: { name: 'Search Atlas Bot' }, device: { type: bot } }
