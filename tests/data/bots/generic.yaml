@@ -826,4 +826,3 @@
     headers: 'User-Agent: Seznam Bot/2.0 (sklik@firma.seznam.cz;+http://napoveda.sklik.cz/)'
     readable: 'Fake Seznam Bot'
     result: { browser: { name: 'Fake Seznam Bot' }, device: { type: bot } }
-v
