@@ -155,6 +155,7 @@ Applications::$BOTS = [
     [ 'name' => 'iAsk Spider',                  'id'    => 'spider',      'regexp' => '/iaskspider\/([0-9.]*)/u' ],
     [ 'name' => 'iAsk Spider',                  'id'    => 'spider',      'regexp' => '/iaskspider2/u' ],
     [ 'name' => 'Ichiro',                       'id'    => 'ichiro',      'regexp' => '/ichiro\/([0-9.]*)/u' ],
+    [ 'name' => 'IndeedBot',                    'id'    => 'indeed',      'regexp' => '/IndeedBot ([0-9.]*)/u' ],
     [ 'name' => 'Internet Archive',             'id'    => 'archive',      'regexp' => '/InternetArchive\/([0-9.]*)/u' ],
     [ 'name' => 'Iodc',                         'id'    => 'iodc',         'regexp' => '/iodc\.co\.uk/u' ],
     [ 'name' => 'JamesBOT',                     'id'    => 'crawler',      'regexp' => '/James BOT - WebCrawler/u' ],
