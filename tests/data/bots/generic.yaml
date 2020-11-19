@@ -955,6 +955,14 @@
     readable: 'Ahrefs Feeds Bot 0.1'
     result: { browser: { name: 'Ahrefs Feeds Bot', version: '0.1' }, device: { type: bot } }
 -
+    headers: 'User-Agent: SearchAtlas.com SEO Crawler'
+    readable: 'Search Atlas Bot'
+    result: { browser: { name: 'Search Atlas Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; LinkpadBot/2.3; +http://linkpad.org/robot/)'
+    readable: 'Linkpad Bot 2.3'
+    result: { browser: { name: 'Linkpad Bot', version: '2.3' }, device: { type: bot } }
+-
     headers: 'User-Agent: Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)'
     readable: 'Majestic MJ12 Bot 1.4.8'
     result: { browser: { name: 'Majestic MJ12 Bot', version: '1.4.8' }, device: { type: bot } }
