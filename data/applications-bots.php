@@ -172,6 +172,7 @@ Applications::$BOTS = [
     [ 'name' => 'Larbin',                       'id'    => 'larbin',      'regexp' => '/[Ll]arbin[\/_]([0-9.]*)/u' ],
     [ 'name' => 'Line Bot',                     'id'    => 'line',        'regexp' => '/Linespider\/([0-9.]*)/u' ],
     [ 'name' => 'Linkedin Bot',                 'id'    => 'linkedin',      'regexp' => '/LinkedInBot\/([0-9.]*)/u' ],
+    [ 'name' => 'LetsearchBot',                 'id'    => 'letsearch',      'regexp' => '/LetsearchBot\/([0-9.]*)/u' ],
     [ 'name' => 'Linkdex Bot',                  'id'    => 'linkdex',      'regexp' => '/linkdexbot-mobile\/([0-9.]*)/u' ],
     [ 'name' => 'Linkdex Bot',                  'id'    => 'linkdex',      'regexp' => '/linkdex.com\/v([0-9.]*)/u' ],
     [ 'name' => 'Livedoor',                     'id'    => 'livedoor',      'regexp' => '/livedoor/u' ],
