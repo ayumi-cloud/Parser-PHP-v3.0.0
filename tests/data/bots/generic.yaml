@@ -918,3 +918,7 @@
     headers: 'User-Agent: AppleNewsBot'
     readable: 'Apple News Bot'
     result: { browser: { name: 'Apple News Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; Dataprovider.com)'
+    readable: 'Dataprovider Bot'
+    result: { browser: { name: 'Dataprovider Bot' }, device: { type: bot } }
