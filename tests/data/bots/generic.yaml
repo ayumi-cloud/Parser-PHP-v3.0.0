@@ -962,3 +962,7 @@
     headers: 'User-Agent: mj12bot'
     readable: 'Majestic MJ12 Bot'
     result: { browser: { name: 'Majestic MJ12 Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; LinkpadBot/2.3; +http://linkpad.org/robot/)'
+    readable: 'Linkpad Bot 2.3'
+    result: { browser: { name: 'Linkpad Bot', version: '2.3' }, device: { type: bot } }
