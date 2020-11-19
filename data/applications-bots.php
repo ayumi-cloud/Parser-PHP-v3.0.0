@@ -266,6 +266,7 @@ Applications::$BOTS = [
     [ 'name' => 'VocusBot',                     'id'    => 'vocus',      'regexp' => '/VocusBot ([0-9.]*)/u' ],
     [ 'name' => 'Vodafone mCrawler',            'id'    => 'mcrawler',      'regexp' => '/Vodafone mCrawler/u' ],
     [ 'name' => 'W3Bot',                        'id'    => 'w3bot',      'regexp' => '/W3Bot ([0-9.]*)/u' ],
+    [ 'name' => 'VuhuvBot',                     'id'    => 'vuhuv',      'regexp' => '/vuhuvBot\/([0-9.]*)/u' ],
     [ 'name' => 'W3C CSS Validator',            'id'    => 'jigsaw',      'regexp' => '/Jigsaw\/([0-9.]*)/u' ],
     [ 'name' => 'W3C Internationalization Checker',     'id'    => 'w3c',      'regexp' => '/W3C_I18n-Checker\/([0-9.]*)/u' ],
     [ 'name' => 'W3C Line Mode',                'id'    => 'w3c',      'regexp' => '/W3CLineMode\/([0-9.]*)/u' ],
