@@ -241,6 +241,7 @@ Applications::$BOTS = [
     [ 'name' => 'Search Atlas Bot',             'id'    => 'searchatlas',      'regexp' => '/SearchAtlas/iu' ],
     [ 'name' => 'Semrush',                      'id'    => 'semrush',      'regexp' => '/SemrushBot\/([0-9.]*)/u' ],
     [ 'name' => 'Seekport Crawler',             'id'    => 'seekport',      'regexp' => '/Seekport Crawler/u' ],
+    [ 'name' => 'SEOkicks Bot',                 'id'    => 'seokicks',      'regexp' => '/SEOkicks/u' ],
     [ 'name' => 'Serp Stat',                    'id'    => 'serpstat',      'regexp' => '/serpstatbot\/([0-9.]*)/u' ],
     [ 'name' => 'Server Density',               'id'    => 'monitor',      'regexp' => '/Server Density Service Monitoring/u' ],
     [ 'name' => 'ShopWiki',                     'id'    => 'shopwiki',      'regexp' => '/ShopWiki\/([0-9.]*)/u' ],
