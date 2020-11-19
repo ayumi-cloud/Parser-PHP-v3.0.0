@@ -76,7 +76,7 @@ Applications::$BOTS = [
     [ 'name' => 'Data Hotel Watchdog',          'id'    => 'watchdog',      'regexp' => '/Data-Hotel-Watchdog\/([0-9.]*)/u' ],
     [ 'name' => 'Datanyze',                     'id'    => 'datanyze',      'regexp' => '/Datanyze/u' ],
     [ 'name' => 'DataparkSearch',               'id'    => 'datasearch',      'regexp' => '/DataparkSearch\/([0-9.]*)/u' ],
-	[ 'name' => 'Dataprovider Bot',             'id'    => 'dataprovider',      'regexp' => '/Dataprovider/u' ],
+    [ 'name' => 'Dataprovider Bot',             'id'    => 'dataprovider',      'regexp' => '/Dataprovider/u' ],
     [ 'name' => 'Daum',                         'id'    => 'daum',      'regexp' => '/Daum\/([0-9.]*)/u' ],
     [ 'name' => 'Daumoa',                       'id'    => 'daumoa',      'regexp' => '/Daumoa ([0-9.]*)/u' ],
     [ 'name' => 'Digg',                         'id'    => 'digg',      'regexp' => '/Digg Deeper\/v([0-9.]*)/u' ],
