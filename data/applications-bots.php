@@ -281,6 +281,7 @@ Applications::$BOTS = [
     [ 'name' => 'TinEye Bot',                   'id'    => 'tineye',      'regexp' => '/TinEye-bot\/([0-9.]*)/u' ],
     [ 'name' => 'Tiny Tiny RSS',                'id'    => 'tiny',      'regexp' => '/Tiny Tiny RSS\/([0-9.]*)/u' ],
     [ 'name' => 'TLSProber',                    'id'    => 'tlsprober',      'regexp' => '/TLSProber\/([0-9.]*)/u' ],
+    [ 'name' => 'TrustedSite',                  'id'    => 'trustedsite',      'regexp' => '/TrustedSite/u' ],
     [ 'name' => 'Typhoeus',                     'id'    => 'typhoeus',      'regexp' => '/Typhoeus/u' ],
     [ 'name' => 'Vagabondo',                    'id'    => 'vagabondo',      'regexp' => '/Vagabondo\/([0-9.]*)/u' ],
     [ 'name' => 'vkShare',                      'id'    => 'vkshare',      'regexp' => '/vkShare/u' ],
