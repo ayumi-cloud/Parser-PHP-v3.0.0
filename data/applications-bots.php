@@ -310,6 +310,7 @@ Applications::$BOTS = [
     [ 'name' => 'Go Http Client',               'id'    => 'gohttpclient', 'regexp' => '/go-httpclient v([0-9.]*)/u' ],
     [ 'name' => 'HttpUnit',                     'id'    => 'httpunit',      'regexp' => '/httpunit\/([0-9.]*)/u' ],
     [ 'name' => 'Java',                         'id'    => 'java',      'regexp' => '/^Java\/([0-9.]*)/u' ],
+    [ 'name' => 'Node Fetch',                   'id'    => 'nodefetch',      'regexp' => '/node-fetch\/([0-9.]*)/u' ],
     [ 'name' => 'OkHttp',                       'id'    => 'okhttp',      'regexp' => '/okhttp\/([0-9.]*)/u' ],
     [ 'name' => 'Perl',                         'id'    => 'simple',      'regexp' => '/LWP::Simple\//u' ],
     [ 'name' => 'Perl',                         'id'    => 'libwww',      'regexp' => '/libwww-perl\//u' ],
