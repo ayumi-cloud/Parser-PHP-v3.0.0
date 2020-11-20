@@ -548,8 +548,8 @@
     result: { browser: { name: Buck, version: '2.2' }, device: { type: bot } }
 -
     headers: 'User-Agent: Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)'
-    readable: 'Netcraft Survey Bot 1.0'
-    result: { browser: { name: 'Netcraft Survey Bot', version: '1.0' }, device: { type: bot } }
+    readable: 'Netcraft Survey Agent Bot 1.0'
+    result: { browser: { name: 'Netcraft Survey Agent Bot', version: '1.0' }, device: { type: bot } }
 -
     headers: 'User-Agent: DomainCrawler/3.0 (info@domaincrawler.com; http://www.domaincrawler.com/example.com)'
     readable: 'DomainCrawler 3.0'
