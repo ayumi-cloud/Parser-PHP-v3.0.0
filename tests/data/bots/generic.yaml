@@ -1530,3 +1530,7 @@
     headers: 'User-Agent: Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots) (compatible; Googlebot/2.1; +http://www.google.com/bot.html) Safari/537.36'
     readable: 'Fake Yandex Bot'
     result: { browser: { name: 'Fake Yandex Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/177.0.3560.1 Safari/537.36 WaiMao_Browser/40.256.139.10 (MyChrome.CN)'
+    readable: 'MyChrome CN'
+    result: { browser: { name: 'MyChrome CN' }, device: { type: bot } }
