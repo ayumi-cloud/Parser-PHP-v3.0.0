@@ -7,6 +7,7 @@ use WhichBrowser\Data;
 use WhichBrowser\Model\Version;
 use WhichBrowser\SearchEngines\Seznam;
 use WhichBrowser\SearchEngines\Facebook;
+use WhichBrowser\SearchEngines\Mailru;
 
 trait Bot
 {
@@ -143,6 +144,19 @@ trait Bot
                 $this->data->browser->name = $Facebook->name ?? '';
                 $this->data->browser->version = $Facebook->version ?? '';
                 $this->data->device->type = $Facebook->bot ?? '';
+            }
+        }
+
+        /* Detect mail.ru search engine bots */
+
+        if (preg_match('/mail\.ru/u', $ua, $match)) {
+            $Mailru = new Mailru($ua);
+
+            // Only run if the class found a regex match
+            if ($Mailru->found == true) {
+                $this->data->browser->name = $Mailru->name ?? '';
+                $this->data->browser->version = $Mailru->version ?? '';
+                $this->data->device->type = $Mailru->bot ?? '';
             }
         }
 
