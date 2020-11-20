@@ -272,4 +272,3 @@ trait Bot
         return $this;
     }
 }
-

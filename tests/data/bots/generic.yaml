@@ -551,7 +551,6 @@
     readable: 'Seznam Homepage Rss Reader Bot 1.0'
     result: { browser: { name: 'Seznam Homepage Rss Reader Bot', version: '1.0' }, device: { type: bot } }
 -
-
     headers: 'User-Agent: HomePageBot downloader 1.0'
     readable: 'Seznam Homepage Downloader Bot 1.0'
     result: { browser: { name: 'Seznam Homepage Downloader Bot', version: '1.0' }, device: { type: bot } }
