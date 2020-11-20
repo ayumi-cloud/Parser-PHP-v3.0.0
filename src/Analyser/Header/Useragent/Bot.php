@@ -11,7 +11,9 @@ use WhichBrowser\SearchEngines\Mailru;
 use WhichBrowser\SearchEngines\Google;
 use WhichBrowser\SearchEngines\Bing;
 use WhichBrowser\SearchEngines\Yahoo;
+use WhichBrowser\SearchEngines\Baidu;
 use WhichBrowser\SearchEngines\Qwantify;
+use WhichBrowser\SearchEngines\Sogou;
 
 trait Bot
 {
@@ -224,6 +226,19 @@ trait Bot
                 $this->data->browser->name = $Qwantify->name ?? '';
                 $this->data->browser->version = $Qwantify->version ?? '';
                 $this->data->device->type = $Qwantify->bot ?? '';
+            }
+        }
+
+        /* Detect sogou search engine bots */
+
+        if (preg_match('/sogou/iu', $ua, $match)) {
+            $Sogou = new Sogou($ua);
+
+            // Only run if the class found a regex match
+            if ($Sogou->found == true) {
+                $this->data->browser->name = $Sogou->name ?? '';
+                $this->data->browser->version = $Sogou->version ?? '';
+                $this->data->device->type = $Sogou->bot ?? '';
             }
         }
 
