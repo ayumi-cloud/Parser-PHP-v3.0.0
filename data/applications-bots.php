@@ -197,8 +197,6 @@ Applications::$BOTS = [
     [ 'name' => 'LTX71',                        'id'    => 'ltx71',      'regexp' => '/ltx71/u' ],
     [ 'name' => 'Magpie RSS',                   'id'    => 'magpie',      'regexp' => '/MagpieRSS\/([0-9.]*)/u' ],
     [ 'name' => 'Mapian News Bot',              'id'    => 'mapion',      'regexp' => '/mapion-news-bot\/([0-9.]*)/u' ],
-    [ 'name' => 'Mail.ru Bot',                  'id'    => 'mail\.ru',      'regexp' => '/Mail\.RU_Bot\/Img\/([0-9.]*)/i' ],
-    [ 'name' => 'Mail.ru Bot',                  'id'    => 'mail\.ru',      'regexp' => '/Mail\.RU_Bot\/([0-9.]*)/i' ],
     [ 'name' => 'Medium Bot',                   'id'    => 'medium',      'regexp' => '/Mediumbot-MetaTagFetcher\/([0-9.]*)/u' ],
     [ 'name' => 'Medium Bot',                   'id'    => 'medium',      'regexp' => '/Mediumbot-ProxyFetcher\/([0-9.]*)/u' ],
     [ 'name' => 'Mega Index Bot',               'id'    => 'megaindex',      'regexp' => '/MegaIndex\.ru\/([0-9.]*)/u' ],
