@@ -1539,6 +1539,10 @@
     readable: 'Node Fetch 1.0'
     result: { browser: { name: 'Node Fetch', version: '1.0' }, device: { type: bot } }
 -
+    headers: 'User-Agent: Mozilla/5.0 (compatible; blogger.com)'
+    readable: 'Blogger Bot'
+    result: { browser: { name: 'Blogger Bot' }, device: { type: bot } }
+-
     headers: 'User-Agent: AppEngine-Google; (+http://code.google.com/appengine; appid: s~snapchat-proxy)'
     readable: 'SnapChat'
     result: { browser: { name: SnapChat }, device: { type: bot } }
