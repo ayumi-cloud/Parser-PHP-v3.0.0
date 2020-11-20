@@ -11,6 +11,7 @@ use WhichBrowser\SearchEngines\Mailru;
 use WhichBrowser\SearchEngines\Google;
 use WhichBrowser\SearchEngines\Bing;
 use WhichBrowser\SearchEngines\Yahoo;
+use WhichBrowser\SearchEngines\Baidu;
 use WhichBrowser\SearchEngines\Qwantify;
 use WhichBrowser\SearchEngines\Sogou;
 
