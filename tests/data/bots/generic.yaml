@@ -1082,3 +1082,23 @@
     headers: 'User-Agent: Mozilla/5.0 (compatible; Linux x86_64; Mail.RU_Bot/2.0; +https://help.mail.ru/webmaster/indexing/robots)'
     readable: 'Mail.ru Bot 2.0'
     result: { browser: { name: 'Mail.ru Bot', version: '2.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: NaverBot'
+    readable: 'Fake Naver Bot'
+    result: { browser: { name: 'Fake Naver Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: archive.org_bot'
+    readable: 'Fake Archive.org Bot'
+    result: { browser: { name: 'Fake Archive.org Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: AhrefsBot'
+    readable: 'Fake Ahrefs Bot'
+    result: { browser: { name: 'Fake Ahrefs Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: LinkedInBot'
+    readable: 'Fake LinkedIn Bot'
+    result: { browser: { name: 'Fake LinkedIn Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (compatible; CloudFlare-AlwaysOnline/1.0;+http://www.cloudflare.com/always-online)'
+    readable: 'Fake CloudFlare Bot'
+    result: { browser: { name: 'Fake CloudFlare Bot' }, device: { type: bot } }
