@@ -91,6 +91,18 @@ trait Bot
             $this->data->device->type = Constants\DeviceType::BOT;
         }
 
+        /* Detect Node Fetch */
+
+        if (preg_match('/node-fetch\/([0-9.]*)/u', $ua, $match)) {
+            $this->data->browser->reset();
+            $this->data->device->reset();
+
+            $this->data->browser->name = 'Node Fetch';
+            $this->data->browser->version = new Version([ 'value' => $match[1] ]);
+
+            $this->data->device->type = Constants\DeviceType::BOT;
+        }
+
         /* Detect Evc-batch */
 
         if (preg_match('/evc-batch\/([0-9.]*)/u', $ua, $match)) {
