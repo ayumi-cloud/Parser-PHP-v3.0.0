@@ -62,6 +62,7 @@ Applications::$BOTS = [
     [ 'name' => 'British Library',              'id'    => 'britishlib',      'regexp' => '/uk_lddc_bot\/([0-9.]*)/u' ],
     [ 'name' => 'Browsershots',                 'id'    => 'browsershots',      'regexp' => '/Browsershots/u' ],
     [ 'name' => 'BUbiNG',                       'id'    => 'bubing',      'regexp' => '/BUbiNG/u' ],
+    [ 'name' => 'BuiltWith',                    'id'    => 'builtwith',      'regexp' => '/BuiltWith\/([0-9.]*)/u' ],
     [ 'name' => 'Buck',                         'id'    => 'buck',      'regexp' => '/Buck\/([0-9.]*)/u' ],
     [ 'name' => 'Butterfly',                    'id'    => 'butterfly',      'regexp' => '/Butterfly\/([0-9.]*)/u' ],
     [ 'name' => 'BuzzSumo',                     'id'    => 'buzzsumo',      'regexp' => '/buzzsumo\.com/u' ],
