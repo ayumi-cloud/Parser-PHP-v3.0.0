@@ -11,7 +11,7 @@ use WhichBrowser\SearchEngines\Mailru;
 use WhichBrowser\SearchEngines\Google;
 use WhichBrowser\SearchEngines\Bing;
 use WhichBrowser\SearchEngines\Yahoo;
-use WhichBrowser\SearchEngines\Baidu;
+use WhichBrowser\SearchEngines\Qwantify;
 
 trait Bot
 {
@@ -214,16 +214,16 @@ trait Bot
             }
         }
 
-        /* Detect baidu search engine bots */
+        /* Detect qwantify search engine bots */
 
-        if (preg_match('/Baiduspider/iu', $ua, $match)) {
-            $Baidu = new Baidu($ua);
+        if (preg_match('/qwant/iu', $ua, $match)) { // News bot only uses `qwant` and not `qwantify`
+            $Qwantify = new Qwantify($ua);
 
             // Only run if the class found a regex match
-            if ($Baidu->found == true) {
-                $this->data->browser->name = $Baidu->name ?? '';
-                $this->data->browser->version = $Baidu->version ?? '';
-                $this->data->device->type = $Baidu->bot ?? '';
+            if ($Qwantify->found == true) {
+                $this->data->browser->name = $Qwantify->name ?? '';
+                $this->data->browser->version = $Qwantify->version ?? '';
+                $this->data->device->type = $Qwantify->bot ?? '';
             }
         }
 
