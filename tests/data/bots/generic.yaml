@@ -1544,5 +1544,5 @@
     result: { browser: { name: 'Blogger Bot' }, device: { type: bot } }
 -
     headers: 'User-Agent: AppEngine-Google; (+http://code.google.com/appengine; appid: s~snapchat-proxy)'
-    readable: 'SnapChat'
-    result: { browser: { name: SnapChat }, device: { type: bot } }
+    readable: 'Snapchat Bot'
+    result: { browser: { name: 'Snapchat Bot' }, device: { type: bot } }
