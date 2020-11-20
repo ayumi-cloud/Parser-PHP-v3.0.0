@@ -216,6 +216,19 @@ trait Bot
             }
         }
 
+        /* Detect baidu search engine bots */
+
+        if (preg_match('/Baiduspider/iu', $ua, $match)) {
+            $Baidu = new Baidu($ua);
+
+            // Only run if the class found a regex match
+            if ($Baidu->found == true) {
+                $this->data->browser->name = $Baidu->name ?? '';
+                $this->data->browser->version = $Baidu->version ?? '';
+                $this->data->device->type = $Baidu->bot ?? '';
+            }
+        }
+
         /* Detect qwantify search engine bots */
 
         if (preg_match('/qwant/iu', $ua, $match)) { // News bot only uses `qwant` and not `qwantify`
