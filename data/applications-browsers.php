@@ -8,6 +8,9 @@ Applications::$BROWSERS = [
 
     Constants\BrowserType::BROWSER => [
 
+    /* Fake tests */
+    [ 'name' => 'XYZ',                        'id' => 'xyz',           'regexp' => '/xyz\/([0-9.]*)/u' ],
+
         /* Desktop browsers */
         [ 'name' => '115 Browser',               'id' => '115',           'regexp' => '/115Browser\/([0-9.]*)/u' ],
         [ 'name' => '115 Chrome',                'id' => '115',           'regexp' => '/115Chrome\/([0-9.]*)/u' ],
