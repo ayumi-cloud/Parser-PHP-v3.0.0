@@ -1550,3 +1550,7 @@
     headers: 'User-Agent: Mozilla/5.0+(compatible; UptimeRobot/2.0; http://www.uptimerobot.com/)'
     readable: 'UptimeRobot 2.0'
     result: { browser: { name: UptimeRobot, version: '2.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0+(compatible; abc/2.0; http://www.fake-tests.com/)'
+    readable: 'ABC 2.0'
+    result: { browser: { name: ABC, version: '2.0' }, device: { type: bot } }
