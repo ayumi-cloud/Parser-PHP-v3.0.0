@@ -16,8 +16,8 @@
     readable: 'Internet Explorer 3.0.1 on Windows 95'
 -
     headers: 'User-Agent: Mozilla/2.0 (compatible; MSIE 3.02; Update a; AOL 3.0; Windows 95)'
-    result: { browser: { name: 'AOL Desktop', version: '3.0', type: browser }, os: { name: Windows, version: { value: '4.0', alias: '95' } }, device: { type: desktop } }
-    readable: 'AOL Desktop 3.0 on Windows 95'
+    result: { browser: { name: 'Internet Explorer', version: 3.0.2, type: browser }, os: { name: Windows, version: { value: '4.0', alias: '95' } }, device: { type: desktop } }
+    readable: 'Internet Explorer 3.0.2 on Windows 95'
 -
     headers: 'User-Agent: Mozilla/2.0 (compatible; MSIE 3.0; Windows 3.1)'
     result: { browser: { name: 'Internet Explorer', version: '3.0', type: browser }, os: { name: Windows, version: '3.1' }, device: { type: desktop } }
@@ -102,19 +102,3 @@
     headers: 'User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; Trident/8.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; SLCC2)'
     readable: 'Internet Explorer 11.0 on Windows 10'
     result: { browser: { name: 'Internet Explorer', version: '11.0', type: browser }, engine: { name: Trident, version: '8.0' }, os: { name: Windows, version: { value: '10.0', alias: '10' } }, device: { type: desktop } }
--
-    headers: 'User-Agent: Mozilla/5.0 (Windows NT 6.2; Trident/7.0; BOIE9;ZHCN; rv:11.0; JuziBrowser) like Gecko'
-    readable: 'Orange Browser on Windows 8'
-    result: { browser: { name: 'Orange Browser', type: browser }, engine: { name: Trident, version: '7.0' }, os: { name: Windows, version: { value: '6.2', alias: '8' } }, device: { type: desktop } }
--
-    headers: 'User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; TCO_20161009144936; JuziBrowser)'
-    readable: 'Orange Browser on Windows 7'
-    result: { browser: { name: 'Orange Browser', type: browser }, engine: { name: Trident, version: '5.0' }, os: { name: Windows, version: { value: '6.1', alias: '7' } }, device: { type: desktop } }
--
-    headers: 'User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; MATP; JuziBrowser)'
-    readable: 'Orange Browser on Windows 7'
-    result: { browser: { name: 'Orange Browser', type: browser }, engine: { name: Trident, version: '5.0' }, os: { name: Windows, version: { value: '6.1', alias: '7' } }, device: { type: desktop, manufacturer: Toshiba } }
--
-    headers: 'User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; Sicent; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E; Media Center PC 6.0; JuziBrowser)'
-    readable: 'Orange Browser on Windows 7'
-    result: { browser: { name: 'Orange Browser', type: browser }, engine: { name: Trident, version: '4.0' }, os: { name: Windows, version: { value: '6.1', alias: '7' } }, device: { type: desktop } }
