@@ -242,7 +242,6 @@ trait Bot
                 $this->data->browser->version = $Yandex->version ?? '';
                 $this->data->device->type = $Yandex->bot ?? '';
             }
-        }
 
         /* Detect based on a predefined list or markers */
         } elseif ($bot = Data\Applications::identifyBot($ua)) {
