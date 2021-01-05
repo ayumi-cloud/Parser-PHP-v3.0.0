@@ -40,8 +40,17 @@ trait Bot
             $this->data->device->type = Constants\DeviceType::BOT;
         }
 
+        /* Detect based on a predefined list or markers */
+        if ($bot = Data\Applications::identifyBot($ua)) {
+            $this->data->browser = $bot;
+            $this->data->os->reset();
+            $this->data->engine->reset();
+            $this->data->device->reset();
+
+            $this->data->device->type = Constants\DeviceType::BOT;
+
         /* Detect fake browser chinese bot */
-        if (preg_match('/(WaiMao_Browser|MyChrome\.CN)/u', $ua, $match)) {
+        } elseif (preg_match('/(WaiMao_Browser|MyChrome\.CN)/u', $ua, $match)) {
             $this->data->browser->reset();
             $this->data->os->reset();
             $this->data->engine->reset();
@@ -111,15 +120,6 @@ trait Bot
 
             $this->data->device->type = Constants\DeviceType::BOT;
 
-        /* Detect based on a predefined list or markers */
-        } elseif ($bot = Data\Applications::identifyBot($ua)) {
-            $this->data->browser = $bot;
-            $this->data->os->reset();
-            $this->data->engine->reset();
-            $this->data->device->reset();
-
-            $this->data->device->type = Constants\DeviceType::BOT;
-
         /* Detect petal and aspiegel bots */
         } elseif (preg_match('/(PetalBot|Aspiegel)/iu', $ua, $match)) {
             $this->data->browser->reset();
@@ -154,7 +154,6 @@ trait Bot
             $this->data->device->type = Constants\DeviceType::BOT;
 
         /* Detect facebook bots */
-
         } elseif (preg_match('/(facebook|cortex|adreview)/iu', $ua, $match)) {
             $Facebook = new Facebook($ua);
 
