@@ -8,7 +8,7 @@ trait Using
 {
     private function &detectUsing($ua)
     {
-        if (!preg_match('/(AdobeAIR|Awesomium|Embedded|bsalsa|Canvace|Ekioh|AtomShell|Electron|JavaFX|GFXe|luakit|Titanium|Maple|OpenWebKitSharp|Prism|Qt|Reqwireless|RhoSimulator|UWebKit|nw-tests|WebKit2)/ui', $ua)) {
+        if (!preg_match('/(AdobeAIR|Awesomium|Embedded|bsalsa|Canvace|Ekioh|AtomShell|Electron|JavaFX|GFXe|luakit|Titanium|OpenWebKitSharp|Prism|Qt|Reqwireless|RhoSimulator|UWebKit|nw-tests|WebKit2)/ui', $ua)) {
             return $this;
         }
 
@@ -26,7 +26,6 @@ trait Using
             [ 'name' => 'GFXe',                             'regexp' => '/GFXe\/([0-9.]*)/u' ],
             [ 'name' => 'LuaKit',                           'regexp' => '/luakit/u' ],
             [ 'name' => 'Titanium',                         'regexp' => '/Titanium\/([0-9.]*)/u' ],
-            [ 'name' => 'Maple',                            'regexp' => '/ Maple ([0-9.]*)/u' ],
             [ 'name' => 'OpenWebKitSharp',                  'regexp' => '/OpenWebKitSharp/u' ],
             [ 'name' => 'Prism',                            'regexp' => '/Prism\/([0-9.]*)/u' ],
             [ 'name' => 'Qt',                               'regexp' => '/Qt\/([0-9.]*)/u' ],
@@ -43,11 +42,9 @@ trait Using
         $count = count($items);
         for ($i = 0; $i < $count; $i++) {
             if (preg_match($items[$i]['regexp'], $ua, $match)) {
-                $this->data->browser->using = new \WhichBrowser\Model\Using(
-                    [
+                $this->data->browser->using = new \WhichBrowser\Model\Using([
                     'name' => $items[$i]['name']
-                    ]
-                );
+                ]);
 
                 if (isset($match[1]) && $match[1]) {
                     $this->data->browser->using->version = new Version([ 'value' => $match[1], 'details' => isset($items[$i]['details']) ? $items[$i]['details'] : null ]);

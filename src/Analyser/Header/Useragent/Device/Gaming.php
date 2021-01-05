@@ -31,70 +31,60 @@ trait Gaming
 
         if (preg_match('/Nintendo Switch/u', $ua)) {
             $this->data->os->reset();
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Nintendo',
                 'model'         =>  'Switch',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::CONSOLE
-                ]
-            );
+            ]);
         }
 
         /* Wii */
 
         if (preg_match('/Nintendo Wii/u', $ua)) {
             $this->data->os->reset();
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Nintendo',
                 'model'         =>  'Wii',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::CONSOLE
-                ]
-            );
+            ]);
         }
 
         /* Wii U */
 
         if (preg_match('/Nintendo Wii ?U/u', $ua)) {
             $this->data->os->reset();
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Nintendo',
                 'model'         =>  'Wii U',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::CONSOLE
-                ]
-            );
+            ]);
         }
 
         /* DS */
 
         if (preg_match('/Nintendo DS/u', $ua) || preg_match('/Nitro.*Opera/u', $ua)) {
             $this->data->os->reset();
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Nintendo',
                 'model'         =>  'DS',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::PORTABLE
-                ]
-            );
+            ]);
         }
 
         /* DSi */
 
         if (preg_match('/Nintendo DSi/u', $ua)) {
             $this->data->os->reset();
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Nintendo',
                 'model'         =>  'DSi',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::PORTABLE
-                ]
-            );
+            ]);
         }
 
         /* 3DS */
@@ -103,20 +93,16 @@ trait Gaming
             $this->data->os->reset();
             $this->data->os->identifyVersion('/Version\/([0-9.]*[0-9])/u', $ua);
 
-            $this->data->engine->set(
-                [
+            $this->data->engine->set([
                 'name'          => 'WebKit'
-                ]
-            );
+            ]);
 
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Nintendo',
                 'model'         =>  '3DS',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::PORTABLE
-                ]
-            );
+            ]);
         }
 
         /* New 3DS */
@@ -125,14 +111,12 @@ trait Gaming
             $this->data->os->reset();
             $this->data->os->identifyVersion('/Version\/([0-9.]*[0-9])/u', $ua);
 
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Nintendo',
                 'model'         =>  'New 3DS',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::PORTABLE
-                ]
-            );
+            ]);
         }
     }
 
@@ -146,20 +130,16 @@ trait Gaming
         if (preg_match('/PlayStation Portable/u', $ua)) {
             $this->data->os->reset();
 
-            $this->data->engine->set(
-                [
+            $this->data->engine->set([
                 'name'          => 'NetFront'
-                ]
-            );
+            ]);
 
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Sony',
                 'model'         =>  'Playstation Portable',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::PORTABLE
-                ]
-            );
+            ]);
         }
 
         /* PlayStation Vita */
@@ -168,14 +148,12 @@ trait Gaming
             $this->data->os->reset();
             $this->data->os->identifyVersion('/PlayStation Vita ([0-9.]*)/u', $ua);
 
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Sony',
                 'model'         =>  'Playstation Vita',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::PORTABLE
-                ]
-            );
+            ]);
 
             if (preg_match('/VTE\//u', $ua)) {
                 $this->data->device->model = 'Playstation TV';
@@ -188,14 +166,12 @@ trait Gaming
         if (preg_match('/Playstation2/u', $ua) || preg_match('/\(PS2/u', $ua)) {
             $this->data->os->reset();
 
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Sony',
                 'model'         =>  'Playstation 2',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::CONSOLE
-                ]
-            );
+            ]);
         }
 
         /* PlayStation 3 */
@@ -205,21 +181,17 @@ trait Gaming
             $this->data->os->identifyVersion('/PLAYSTATION 3;? ([0-9.]*)/u', $ua);
 
             if (preg_match('/PLAYSTATION 3; [123]/', $ua)) {
-                $this->data->engine->set(
-                    [
+                $this->data->engine->set([
                     'name'          => 'NetFront'
-                    ]
-                );
+                ]);
             }
 
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Sony',
                 'model'         =>  'Playstation 3',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::CONSOLE
-                ]
-            );
+            ]);
         }
 
         /* PlayStation 4 */
@@ -228,14 +200,12 @@ trait Gaming
             $this->data->os->reset();
             $this->data->os->identifyVersion('/PlayStation 4 ([0-9.]*)/u', $ua);
 
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Sony',
                 'model'         =>  'Playstation 4',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::CONSOLE
-                ]
-            );
+            ]);
         }
     }
 
@@ -248,14 +218,12 @@ trait Gaming
 
         if (preg_match('/Xbox\)$/u', $ua, $match)) {
             $this->data->os->reset();
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Microsoft',
                 'model'         =>  'Xbox 360',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::CONSOLE
-                ]
-            );
+            ]);
         }
 
         /* Xbox One */
@@ -270,14 +238,12 @@ trait Gaming
                 $this->data->os->reset();
             }
 
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Microsoft',
                 'model'         =>  'Xbox One',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::CONSOLE
-                ]
-            );
+            ]);
         }
     }
 
@@ -290,28 +256,24 @@ trait Gaming
 
         if (preg_match('/SEGASATURN/u', $ua, $match)) {
             $this->data->os->reset();
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Sega',
                 'model'         =>  'Saturn',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::CONSOLE
-                ]
-            );
+            ]);
         }
 
         /* Sega Dreamcast */
 
         if (preg_match('/Dreamcast/u', $ua, $match)) {
             $this->data->os->reset();
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Sega',
                 'model'         =>  'Dreamcast',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::CONSOLE
-                ]
-            );
+            ]);
         }
     }
 }

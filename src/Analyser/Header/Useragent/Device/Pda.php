@@ -143,15 +143,15 @@ trait Pda
 
             if (preg_match('/\(([A-Z0-9]+)\)/u', $ua, $match)) {
                 switch ($match[1]) {
-                case 'S5':
-                    $this->data->device->model = 'Series 5mx';
-                    break;
-                case 'S7':
-                    $this->data->device->model = 'Series 7';
-                    break;
-                case 'RV':
-                    $this->data->device->model = 'Revo';
-                    break;
+                    case 'S5':
+                        $this->data->device->model = 'Series 5mx';
+                        break;
+                    case 'S7':
+                        $this->data->device->model = 'Series 7';
+                        break;
+                    case 'RV':
+                        $this->data->device->model = 'Revo';
+                        break;
                 }
             }
         }

@@ -58,10 +58,10 @@ class Main
      *
      * @internal
      *
-     * @param string   The name of the property, such as 'browser', 'engine' or 'os'
-     * @param string   The name of the browser that is checked
-     * @param string   Optional, the operator, must be <, <=, =, >= or >
-     * @param mixed    Optional, the value, can be an integer, float or string with a version number
+     * @param  string   The name of the property, such as 'browser', 'engine' or 'os'
+     * @param  string   The name of the browser that is checked
+     * @param  string   Optional, the operator, must be <, <=, =, >= or >
+     * @param  mixed    Optional, the value, can be an integer, float or string with a version number
      *
      * @return boolean
      */
@@ -100,9 +100,9 @@ class Main
     /**
      * Check the name of the browser and optionally is a specific version
      *
-     * @param string   The name of the browser that is checked
-     * @param string   Optional, the operator, must be <, <=, =, >= or >
-     * @param mixed    Optional, the value, can be an integer, float or string with a version number
+     * @param  string   The name of the browser that is checked
+     * @param  string   Optional, the operator, must be <, <=, =, >= or >
+     * @param  mixed    Optional, the value, can be an integer, float or string with a version number
      *
      * @return boolean
      */
@@ -118,9 +118,9 @@ class Main
     /**
      * Check the name of the rendering engine and optionally is a specific version
      *
-     * @param string   The name of the rendering engine that is checked
-     * @param string   Optional, the operator, must be <, <=, =, >= or >
-     * @param mixed    Optional, the value, can be an integer, float or string with a version number
+     * @param  string   The name of the rendering engine that is checked
+     * @param  string   Optional, the operator, must be <, <=, =, >= or >
+     * @param  mixed    Optional, the value, can be an integer, float or string with a version number
      *
      * @return boolean
      */
@@ -136,9 +136,9 @@ class Main
     /**
      * Check the name of the operating system and optionally is a specific version
      *
-     * @param string   The name of the operating system that is checked
-     * @param string   Optional, the operator, must be <, <=, =, >= or >
-     * @param mixed    Optional, the value, can be an integer, float or string with a version number
+     * @param  string   The name of the operating system that is checked
+     * @param  string   Optional, the operator, must be <, <=, =, >= or >
+     * @param  mixed    Optional, the value, can be an integer, float or string with a version number
      *
      * @return boolean
      */
@@ -154,7 +154,7 @@ class Main
     /**
      * Check if the detected browser is of the specified type
      *
-     * @param string $model The type, or a combination of type and subtime joined with a semicolon.
+     * @param  string   $model      The type, or a combination of type and subtime joined with a semicolon.
      *
      * @return boolean
      */
@@ -180,8 +180,8 @@ class Main
     /**
      * Check if the detected browser is of the specified type
      *
-     * @param string   The type, or a combination of type and subtype joined with a semicolon.
-     * @param string   Unlimited optional types to check
+     * @param  string   The type, or a combination of type and subtype joined with a semicolon.
+     * @param  string   Unlimited optional types to check
      *
      * @return boolean
      */
@@ -237,7 +237,7 @@ class Main
      *
      * @internal
      *
-     * @param string $s The string that will be prefixed
+     * @param  string   $s      The string that will be prefixed
      *
      * @return string
      */

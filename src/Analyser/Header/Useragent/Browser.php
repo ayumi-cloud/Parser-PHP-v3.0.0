@@ -123,7 +123,6 @@ trait Browser
     }
 
 
-
     /* Chrome */
 
     private function detectChrome($ua)
@@ -349,78 +348,13 @@ trait Browser
             $this->data->browser->channel = null;
         }
 
-        /* Seznam Browser */
-
-        if (preg_match('/SznProhlizec\/([0-9.]*)/u', $ua, $match)) {
-            $this->data->browser->using = new Using([ 'name' => 'Chrome', 'version' => new Version([ 'value' => $match[1], 'details' => 1 ]) ]);
-
-            $this->data->browser->type = Constants\BrowserType::BROWSER;
-            $this->data->browser->stock = false;
-            $this->data->browser->name = 'Seznam Browser';
-            $this->data->browser->version = new Version([ 'value' => $match[1] ]);
-            $this->data->browser->channel = null;
-        }
-
-        /* START Internet Browser */
-
-        if (preg_match('/\sStart\/([0-9.]*)/u', $ua, $match)) {
-            $this->data->browser->using = new Using([ 'name' => 'Chrome', 'version' => new Version([ 'value' => $match[1], 'details' => 1 ]) ]);
-
-            $this->data->browser->type = Constants\BrowserType::BROWSER;
-            $this->data->browser->stock = false;
-            $this->data->browser->name = 'START Internet';
-            $this->data->browser->version = new Version([ 'value' => $match[1] ]);
-            $this->data->browser->channel = null;
-        }
-
-        /* Baidu Spark Browser */
-
-        // Ignore Palm Pre devices
-        if (!preg_match('/\sSpark\/fzz/u', $ua)) {
-            if (preg_match('/\s(BDSpark|Spark)\/([0-9.]*)/u', $ua, $match)) {
-                $this->data->browser->using = new Using([ 'name' => 'Chrome', 'version' => new Version([ 'value' => $match[2], 'details' => 1 ]) ]);
-
-                $this->data->browser->type = Constants\BrowserType::BROWSER;
-                $this->data->browser->stock = false;
-                $this->data->browser->name = 'Baidu Spark';
-                $this->data->browser->version = new Version([ 'value' => $match[1] ]);
-                $this->data->browser->channel = null;
-            }
-        }
-
-        /* LieYing Browser */
-
-        if (preg_match('/LieYing\/([0-9.]*)/u', $ua, $match)) {
-            $this->data->browser->using = new Using([ 'name' => 'Chrome', 'version' => new Version([ 'value' => $match[1], 'details' => 1 ]) ]);
-
-            $this->data->browser->type = Constants\BrowserType::BROWSER;
-            $this->data->browser->stock = false;
-            $this->data->browser->name = 'LieYing';
-            $this->data->browser->version = new Version([ 'value' => $match[1] ]);
-            $this->data->browser->channel = null;
-        }
-
-        /* Avast Secure Browser */
-
-        if (preg_match('/\sSecure\/([0-9.]*)/u', $ua, $match)) {
-            $this->data->browser->using = new Using([ 'name' => 'Chrome', 'version' => new Version([ 'value' => $match[1], 'details' => 1 ]) ]);
-
-            $this->data->browser->type = Constants\BrowserType::BROWSER;
-            $this->data->browser->stock = false;
-            $this->data->browser->name = 'Avast Secure';
-            $this->data->browser->version = new Version([ 'value' => $match[1] ]);
-            $this->data->browser->channel = null;
-        }
-
         /* Set the browser family */
 
         if ($this->data->isBrowser('Chrome') || $this->data->isBrowser('Chromium')) {
-            $this->data->browser->family = new Family(
-                [
+            $this->data->browser->family = new Family([
                 'name'      => 'Chrome',
                 'version'   => !empty($this->data->browser->version) ? new Version([ 'value' => $this->data->browser->version->getMajor() ]) : null
-                ]
-            );
+            ]);
         }
     }
 
@@ -880,17 +814,6 @@ trait Browser
             $this->data->browser->version = null;
         }
 
-        /* Arctic Fox Browser */
-
-        if (preg_match('/ArcticFox\/([0-9.]*)/u', $ua, $match)) {
-            $this->data->browser->using = new Using([ 'name' => 'Firefox', 'version' => new Version([ 'value' => $match[1], 'details' => 1 ]) ]);
-
-            $this->data->browser->type = Constants\BrowserType::BROWSER;
-            $this->data->browser->stock = false;
-            $this->data->browser->name = 'Arctic Fox';
-            $this->data->browser->version = new Version([ 'value' => $match[1] ]);
-            $this->data->browser->channel = null;
-        }
 
         /* Set the browser family */
 
@@ -1179,18 +1102,18 @@ trait Browser
 
                 if (preg_match('/wds ([0-9]+\.[0-9])/u', $ua, $match)) {
                     switch ($match[1]) {
-                    case '7.1':
-                        $this->data->os->version = new Version([ 'value' => '7.5' ]);
-                        break;
-                    case '8.0':
-                        $this->data->os->version = new Version([ 'value' => '8.0' ]);
-                        break;
-                    case '8.1':
-                        $this->data->os->version = new Version([ 'value' => '8.1' ]);
-                        break;
-                    case '10.0':
-                        $this->data->os->version = new Version([ 'value' => '10.0' ]);
-                        break;
+                        case '7.1':
+                            $this->data->os->version = new Version([ 'value' => '7.5' ]);
+                            break;
+                        case '8.0':
+                            $this->data->os->version = new Version([ 'value' => '8.0' ]);
+                            break;
+                        case '8.1':
+                            $this->data->os->version = new Version([ 'value' => '8.1' ]);
+                            break;
+                        case '10.0':
+                            $this->data->os->version = new Version([ 'value' => '10.0' ]);
+                            break;
                     }
                 }
 
@@ -1395,11 +1318,9 @@ trait Browser
 
             if (preg_match('/NF[0-9][0-9](?:WMPRO|PPC)\//ui', $ua, $match)) {
                 if (!$this->data->isOs('Windows Mobile')) {
-                    $this->data->os->reset(
-                        [
+                    $this->data->os->reset([
                         'name' => 'Windows Mobile'
-                        ]
-                    );
+                    ]);
                 }
             }
         }
@@ -1422,35 +1343,33 @@ trait Browser
 
             if (preg_match('/Category=([^\);]+)[\);]/u', $ua, $match)) {
                 switch ($match[1]) {
-                case 'WebPhone':
-                    $this->data->device->type = Constants\DeviceType::MOBILE;
-                    $this->data->device->subtype = Constants\DeviceSubType::DESKTOP;
-                    break;
-                case 'WP':
-                case 'Home Mail Tool':
-                case 'PDA':
-                    $this->data->device->type = Constants\DeviceType::PDA;
-                    break;
-                case 'STB':
-                    $this->data->device->type = Constants\DeviceType::TELEVISION;
-                    break;
-                case 'GAME':
-                    $this->data->device->type = Constants\DeviceType::GAMING;
-                    $this->data->device->subtype = Constants\DeviceSubType::CONSOLE;
-                    break;
+                    case 'WebPhone':
+                        $this->data->device->type = Constants\DeviceType::MOBILE;
+                        $this->data->device->subtype = Constants\DeviceSubType::DESKTOP;
+                        break;
+                    case 'WP':
+                    case 'Home Mail Tool':
+                    case 'PDA':
+                        $this->data->device->type = Constants\DeviceType::PDA;
+                        break;
+                    case 'STB':
+                        $this->data->device->type = Constants\DeviceType::TELEVISION;
+                        break;
+                    case 'GAME':
+                        $this->data->device->type = Constants\DeviceType::GAMING;
+                        $this->data->device->subtype = Constants\DeviceSubType::CONSOLE;
+                        break;
                 }
             }
 
             if (preg_match('/Product=([^\);]+)[\);]/u', $ua, $match)) {
                 if (in_array($match[1], [ 'ACCESS/NFPS', 'SUNSOFT/EnjoyMagic' ])) {
-                    $this->data->device->setIdentification(
-                        [
+                    $this->data->device->setIdentification([
                         'manufacturer'  =>  'Sony',
                         'model'         =>  'Playstation 2',
                         'type'          =>  Constants\DeviceType::GAMING,
                         'subtype'       =>  Constants\DeviceSubType::CONSOLE
-                        ]
-                    );
+                    ]);
                 }
             }
         }
@@ -1477,12 +1396,10 @@ trait Browser
         /* The Sony Mylo 2 identifies as Firefox 2, but is NetFront */
 
         if (preg_match('/Sony\/COM2/u', $ua, $match)) {
-            $this->data->browser->reset(
-                [
+            $this->data->browser->reset([
                 'name' => 'NetFront',
                 'type' => Constants\BrowserType::BROWSER
-                ]
-            );
+            ]);
         }
     }
 
@@ -1710,10 +1627,6 @@ trait Browser
                 $this->data->os->name = 'webOS';
             }
 
-            if (preg_match('/ hpwOS\/([0-9.]*)/u', $ua, $match)) {
-                $this->data->browser->version = new Version([ 'value' => $match[1] ]);
-            }
-
             if (isset($this->data->device->manufacturer) && $this->data->device->manufacturer == 'Apple') {
                 unset($this->data->device->manufacturer);
                 unset($this->data->device->model);
@@ -1931,11 +1844,9 @@ trait Browser
                 $this->data->browser->version = new Version([ 'value' => $match[1], 'details' => 3 ]);
             }
 
-            $this->data->device->reset(
-                [
+            $this->data->device->reset([
                 'type' => Constants\DeviceType::DESKTOP
-                ]
-            );
+            ]);
 
             if (!empty($this->data->browser->version)) {
                 if ($this->data->browser->version->is('<', 3)) {
@@ -2157,12 +2068,10 @@ trait Browser
             }
 
             if (preg_match('/MQQBrowser\/[0-9\.]+\/Adr \(Linux; U; ([0-9\.]+); [^;]+; (.+) Build/u', $ua, $match)) {
-                $this->data->os->reset(
-                    [
+                $this->data->os->reset([
                     'name'      => 'Android',
                     'version'   => new Version([ 'value' => $match[1] ])
-                    ]
-                );
+                ]);
 
                 $this->data->device->type = Constants\DeviceType::MOBILE;
                 $this->data->device->model = $match[2];
@@ -2176,12 +2085,10 @@ trait Browser
             }
 
             if (preg_match('/MQQBrowser\/[0-9\.]+\/WP7 \([^;]+;WPOS:([0-9]\.[0-9])[0-9\.]*;([^;]+); ([^\)]+)\)/u', $ua, $match)) {
-                $this->data->os->reset(
-                    [
+                $this->data->os->reset([
                     'name'      => 'Windows Phone',
                     'version'   => new Version([ 'value' => $match[1] ])
-                    ]
-                );
+                ]);
 
                 $this->data->device->type = Constants\DeviceType::MOBILE;
                 $this->data->device->manufacturer = $match[2];
@@ -2228,11 +2135,9 @@ trait Browser
 
             if (!$this->data->os->isFamily('Android')) {
                 $this->data->device->type = Constants\DeviceType::MOBILE;
-                $this->data->os->reset(
-                    [
+                $this->data->os->reset([
                     'name' => 'Android'
-                    ]
-                );
+                ]);
             }
         }
 
@@ -2257,11 +2162,9 @@ trait Browser
 
             if (!$this->data->isOs('iOS')) {
                 $this->data->device->type = Constants\DeviceType::MOBILE;
-                $this->data->os->reset(
-                    [
+                $this->data->os->reset([
                     'name' => 'iOS'
-                    ]
-                );
+                ]);
             }
         }
 
@@ -2312,39 +2215,39 @@ trait Browser
 
             if (isset($match[2])) {
                 switch ($match[2]) {
-                case 'A':
-                    if (!$this->data->isOs('Android')) {
-                        $this->data->os->reset([ 'name' => 'Android' ]);
-                    }
-                    break;
+                    case 'A':
+                        if (!$this->data->isOs('Android')) {
+                            $this->data->os->reset([ 'name' => 'Android' ]);
+                        }
+                        break;
 
-                case 'I':
-                    if (!$this->data->isOs('iOS')) {
-                        $this->data->os->reset([ 'name' => 'iOS' ]);
-                    }
-                    break;
+                    case 'I':
+                        if (!$this->data->isOs('iOS')) {
+                            $this->data->os->reset([ 'name' => 'iOS' ]);
+                        }
+                        break;
                 }
             }
 
             if (isset($match[3])) {
                 switch ($match[3]) {
-                case 'P':
-                    $this->data->device->type = Constants\DeviceType::MOBILE;
-                    if ($this->data->os->name == 'iOS' && empty($this->data->device->model)) {
-                        $this->data->device->manufacturer = 'Apple';
-                        $this->data->device->model = 'iPhone';
-                        $this->data->device->identified = Constants\Id::MATCH_UA;
-                    }
-                    break;
+                    case 'P':
+                        $this->data->device->type = Constants\DeviceType::MOBILE;
+                        if ($this->data->os->name == 'iOS' && empty($this->data->device->model)) {
+                            $this->data->device->manufacturer = 'Apple';
+                            $this->data->device->model = 'iPhone';
+                            $this->data->device->identified = Constants\Id::MATCH_UA;
+                        }
+                        break;
 
-                case 'T':
-                    $this->data->device->type = Constants\DeviceType::TABLET;
-                    if ($this->data->os->name == 'iOS' && empty($this->data->device->model)) {
-                        $this->data->device->manufacturer = 'Apple';
-                        $this->data->device->model = 'iPad';
-                        $this->data->device->identified = Constants\Id::MATCH_UA;
-                    }
-                    break;
+                    case 'T':
+                        $this->data->device->type = Constants\DeviceType::TABLET;
+                        if ($this->data->os->name == 'iOS' && empty($this->data->device->model)) {
+                            $this->data->device->manufacturer = 'Apple';
+                            $this->data->device->model = 'iPad';
+                            $this->data->device->identified = Constants\Id::MATCH_UA;
+                        }
+                        break;
                 }
             }
         }
@@ -2495,14 +2398,12 @@ trait Browser
             $this->data->browser->version = new Version([ 'value' => $match[1] ]);
             $this->data->browser->type = Constants\BrowserType::BROWSER;
 
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Sega',
                 'model'         =>  'Dreamcast',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::CONSOLE
-                ]
-            );
+            ]);
         }
 
         /* Dream Passport */
@@ -2512,14 +2413,12 @@ trait Browser
             $this->data->browser->version = new Version([ 'value' => $match[1] ]);
             $this->data->browser->type = Constants\BrowserType::BROWSER;
 
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Sega',
                 'model'         =>  'Dreamcast',
                 'type'          =>  Constants\DeviceType::GAMING,
                 'subtype'       =>  Constants\DeviceSubType::CONSOLE
-                ]
-            );
+            ]);
         }
 
         /* Planetweb */
@@ -2530,25 +2429,21 @@ trait Browser
             $this->data->browser->type = Constants\BrowserType::BROWSER;
 
             if (preg_match('/Dreamcast/u', $ua, $match)) {
-                $this->data->device->setIdentification(
-                    [
+                $this->data->device->setIdentification([
                     'manufacturer'  =>  'Sega',
                     'model'         =>  'Dreamcast',
                     'type'          =>  Constants\DeviceType::GAMING,
                     'subtype'       =>  Constants\DeviceSubType::CONSOLE
-                    ]
-                );
+                ]);
             }
 
             if (preg_match('/SPS/u', $ua, $match)) {
-                $this->data->device->setIdentification(
-                    [
+                $this->data->device->setIdentification([
                     'manufacturer'  =>  'Sony',
                     'model'         =>  'Playstation 2',
                     'type'          =>  Constants\DeviceType::GAMING,
                     'subtype'       =>  Constants\DeviceSubType::CONSOLE
-                    ]
-                );
+                ]);
             }
         }
     }

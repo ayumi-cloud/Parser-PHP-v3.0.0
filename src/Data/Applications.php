@@ -19,10 +19,10 @@ class Applications
 
     public static function identifyBrowser($ua)
     {
-        include_once __DIR__ . '/../../data/regexes/applications-browsers.php';
+        require_once __DIR__ . '/../../data/regexes/applications-browsers.php';
 
         if (preg_match(self::$BROWSERS_REGEX, $ua)) {
-            include_once __DIR__ . '/../../data/applications-browsers.php';
+            require_once __DIR__ . '/../../data/applications-browsers.php';
 
             foreach (self::$BROWSERS as $type => $list) {
                 foreach ($list as $i => $item) {
@@ -50,10 +50,10 @@ class Applications
 
     public static function identifyOther($ua)
     {
-        include_once __DIR__ . '/../../data/regexes/applications-others.php';
+        require_once __DIR__ . '/../../data/regexes/applications-others.php';
 
         if (preg_match(self::$OTHERS_REGEX, $ua)) {
-            include_once __DIR__ . '/../../data/applications-others.php';
+            require_once __DIR__ . '/../../data/applications-others.php';
 
             foreach (self::$OTHERS as $type => $list) {
                 foreach ($list as $i => $item) {
@@ -80,20 +80,18 @@ class Applications
     }
     public static function identifyBot($ua)
     {
-        include_once __DIR__ . '/../../data/regexes/applications-bots.php';
+        require_once __DIR__ . '/../../data/regexes/applications-bots.php';
 
         if (preg_match(self::$BOTS_REGEX, $ua)) {
-            include_once __DIR__ . '/../../data/applications-bots.php';
+            require_once __DIR__ . '/../../data/applications-bots.php';
 
             foreach (self::$BOTS as $i => $item) {
                 if (preg_match($item['regexp'], $ua, $match)) {
-                    return new Browser(
-                        [
+                    return new Browser([
                         'name'      => $item['name'],
                         'stock'     => false,
                         'version'   => isset($match[1]) && $match[1] ? new Version([ 'value' => $match[1], 'details' => isset($item['details']) ? $item['details'] : null ]) : null
-                        ]
-                    );
+                    ]);
                 }
             }
         }

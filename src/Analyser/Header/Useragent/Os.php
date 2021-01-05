@@ -98,11 +98,11 @@ trait Os
         elseif (preg_match('/Mac OS X/u', $ua) || preg_match('/;os=Mac/u', $ua)) {
             $this->data->os->name = 'OS X';
 
-            if (preg_match('/Mac OS X (1[0-9][0-9\._]*)/u', $ua, $match)) {
+            if (preg_match('/Mac OS X (10[0-9\._]*)/u', $ua, $match)) {
                 $this->data->os->version = new Version([ 'value' => str_replace('_', '.', $match[1]), 'details' => 2 ]);
             }
 
-            if (preg_match('/;os=Mac (1[0-9][0-9[\.,]*)/u', $ua, $match)) {
+            if (preg_match('/;os=Mac (10[0-9[\.,]*)/u', $ua, $match)) {
                 $this->data->os->version = new Version([ 'value' => str_replace(',', '.', $match[1]), 'details' => 2 ]);
             }
 
@@ -545,12 +545,12 @@ trait Os
 
             if (preg_match('/RemixOS ([0-9]\.[0-9])/u', $ua, $match)) {
                 switch ($match[1]) {
-                case '5.1':
-                    $this->data->os->version = new Version([ 'value' => '1.0' ]);
-                    break;
-                case '6.0':
-                    $this->data->os->version = new Version([ 'value' => '2.0' ]);
-                    break;
+                    case '5.1':
+                        $this->data->os->version = new Version([ 'value' => '1.0' ]);
+                        break;
+                    case '6.0':
+                        $this->data->os->version = new Version([ 'value' => '2.0' ]);
+                        break;
                 }
             }
 
@@ -607,46 +607,46 @@ trait Os
                 $this->data->os->version = new Version([ 'value' => $match[1] ]);
 
                 switch ($match[1]) {
-                case '10.1':
-                case '10.0':
-                case '6.4':
-                    $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => '10' ]);
-                    break;
+                    case '10.1':
+                    case '10.0':
+                    case '6.4':
+                        $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => '10' ]);
+                        break;
 
-                case '6.3':
-                    if (preg_match('/; ARM;/u', $ua)) {
-                        $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => 'RT 8.1' ]);
-                    } else {
-                        $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => '8.1' ]);
-                    }
-                    break;
+                    case '6.3':
+                        if (preg_match('/; ARM;/u', $ua)) {
+                            $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => 'RT 8.1' ]);
+                        } else {
+                            $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => '8.1' ]);
+                        }
+                        break;
 
-                case '6.2':
-                    if (preg_match('/; ARM;/u', $ua)) {
-                        $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => 'RT' ]);
-                    } else {
-                        $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => '8' ]);
-                    }
-                    break;
+                    case '6.2':
+                        if (preg_match('/; ARM;/u', $ua)) {
+                            $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => 'RT' ]);
+                        } else {
+                            $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => '8' ]);
+                        }
+                        break;
 
-                case '6.1':
-                    $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => '7' ]);
-                    break;
-                case '6.0':
-                    $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => 'Vista' ]);
-                    break;
-                case '5.2':
-                    $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => 'Server 2003' ]);
-                    break;
-                case '5.1':
-                    $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => 'XP' ]);
-                    break;
-                case '5.0':
-                    $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => '2000' ]);
-                    break;
-                default:
-                    $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => 'NT ' . $match[1] ]);
-                    break;
+                    case '6.1':
+                        $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => '7' ]);
+                        break;
+                    case '6.0':
+                        $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => 'Vista' ]);
+                        break;
+                    case '5.2':
+                        $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => 'Server 2003' ]);
+                        break;
+                    case '5.1':
+                        $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => 'XP' ]);
+                        break;
+                    case '5.0':
+                        $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => '2000' ]);
+                        break;
+                    default:
+                        $this->data->os->version = new Version([ 'value' => $match[1], 'alias' => 'NT ' . $match[1] ]);
+                        break;
                 }
 
                 $this->detectWindowsOemManufacturer($ua);
@@ -678,15 +678,15 @@ trait Os
                 $this->data->os->version = new Version([ 'value' => $match[1] ]);
 
                 switch ($match[2]) {
-                case '4.0':
-                    $this->data->os->version = new Version([ 'value' => '4.0', 'alias' => '95' ]);
-                    break;
-                case '4.1':
-                    $this->data->os->version = new Version([ 'value' => '4.1', 'alias' => '98' ]);
-                    break;
-                case '4.9':
-                    $this->data->os->version = new Version([ 'value' => '4.9', 'alias' => 'ME' ]);
-                    break;
+                    case '4.0':
+                        $this->data->os->version = new Version([ 'value' => '4.0', 'alias' => '95' ]);
+                        break;
+                    case '4.1':
+                        $this->data->os->version = new Version([ 'value' => '4.1', 'alias' => '98' ]);
+                        break;
+                    case '4.9':
+                        $this->data->os->version = new Version([ 'value' => '4.9', 'alias' => 'ME' ]);
+                        break;
                 }
             }
 
@@ -1842,18 +1842,18 @@ trait Os
                     $this->data->os->name = 'Solaris';
 
                     switch ($match[1]) {
-                    case '1':
-                        $this->data->os->version = new Version([ 'value' => '1.0' ]);
-                        break;
-                    case '2':
-                        $this->data->os->version = new Version([ 'value' => '1.0.1' ]);
-                        break;
-                    case '3':
-                        $this->data->os->version = new Version([ 'value' => '1.1' ]);
-                        break;
-                    case '4':
-                        $this->data->os->version = new Version([ 'value' => '1.1.2' ]);
-                        break;
+                        case '1':
+                            $this->data->os->version = new Version([ 'value' => '1.0' ]);
+                            break;
+                        case '2':
+                            $this->data->os->version = new Version([ 'value' => '1.0.1' ]);
+                            break;
+                        case '3':
+                            $this->data->os->version = new Version([ 'value' => '1.1' ]);
+                            break;
+                        case '4':
+                            $this->data->os->version = new Version([ 'value' => '1.1.2' ]);
+                            break;
                     }
                 }
             }

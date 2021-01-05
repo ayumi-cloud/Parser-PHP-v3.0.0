@@ -96,27 +96,21 @@ trait Corrections
         }
 
         if ($this->data->os->name == 'Tizen' && $this->data->browser->name == 'Chrome') {
-            $this->data->browser->reset(
-                [
+            $this->data->browser->reset([
                 'family' => isset($this->data->browser->family) ? $this->data->browser->family : null
-                ]
-            );
+            ]);
         }
 
         if ($this->data->os->name == 'Ubuntu Touch' && $this->data->browser->name == 'Chromium') {
-            $this->data->browser->reset(
-                [
+            $this->data->browser->reset([
                 'family' => isset($this->data->browser->family) ? $this->data->browser->family : null
-                ]
-            );
+            ]);
         }
 
         if ($this->data->os->name == 'KaiOS' && $this->data->browser->name == 'Firefox Mobile') {
-            $this->data->browser->reset(
-                [
+            $this->data->browser->reset([
                 'family' => isset($this->data->browser->family) ? $this->data->browser->family : null
-                ]
-            );
+            ]);
         }
     }
 
@@ -130,44 +124,44 @@ trait Corrections
     private function hideBrowserOnDeviceTypeTelevision()
     {
         switch ($this->data->browser->name) {
-        case 'Firefox':
-            if (!$this->data->isOs('Firefox OS')) {
-                unset($this->data->browser->name);
-                unset($this->data->browser->version);
-            }
-            break;
+            case 'Firefox':
+                if (!$this->data->isOs('Firefox OS')) {
+                    unset($this->data->browser->name);
+                    unset($this->data->browser->version);
+                }
+                break;
 
-        case 'Internet Explorer':
-            $valid = false;
+            case 'Internet Explorer':
+                $valid = false;
 
-            if (isset($this->data->device->model) && in_array($this->data->device->model, [ 'WebTV' ])) {
-                $valid = true;
-            }
+                if (isset($this->data->device->model) && in_array($this->data->device->model, [ 'WebTV' ])) {
+                    $valid = true;
+                }
 
-            if (!$valid) {
-                unset($this->data->browser->name);
-                unset($this->data->browser->version);
-            }
+                if (!$valid) {
+                    unset($this->data->browser->name);
+                    unset($this->data->browser->version);
+                }
 
-            break;
+                break;
 
-        case 'Chrome':
-        case 'Chromium':
-            $valid = false;
+            case 'Chrome':
+            case 'Chromium':
+                $valid = false;
 
-            if (isset($this->data->os->name) && in_array($this->data->os->name, [ 'Google TV', 'Android' ])) {
-                $valid = true;
-            }
-            if (isset($this->data->device->model) && in_array($this->data->device->model, [ 'Chromecast' ])) {
-                $valid = true;
-            }
+                if (isset($this->data->os->name) && in_array($this->data->os->name, [ 'Google TV', 'Android' ])) {
+                    $valid = true;
+                }
+                if (isset($this->data->device->model) && in_array($this->data->device->model, [ 'Chromecast' ])) {
+                    $valid = true;
+                }
 
-            if (!$valid) {
-                unset($this->data->browser->name);
-                unset($this->data->browser->version);
-            }
+                if (!$valid) {
+                    unset($this->data->browser->name);
+                    unset($this->data->browser->version);
+                }
 
-            break;
+                break;
         }
     }
 

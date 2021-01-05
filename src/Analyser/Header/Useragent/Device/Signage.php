@@ -16,13 +16,11 @@ trait Signage
 
         if (preg_match('/BrightSign\/[0-9\.]+(?:-[a-z0-9\-]+)? \(([^\)]+)/u', $ua, $match)) {
             $this->data->os->reset();
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'BrightSign',
                 'model'         =>  $match[1],
                 'type'          =>  Constants\DeviceType::SIGNAGE
-                ]
-            );
+            ]);
         }
 
 
@@ -33,13 +31,11 @@ trait Signage
                 $this->data->os->reset();
             }
 
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'IAdea',
                 'model'         =>  $match[1],
                 'type'          =>  Constants\DeviceType::SIGNAGE
-                ]
-            );
+            ]);
         }
     }
 }

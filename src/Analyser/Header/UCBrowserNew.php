@@ -50,18 +50,18 @@ class UCBrowserNew
                 $this->data->os->name = 'Windows Phone';
 
                 switch ($match[1]) {
-                case '7.1':
-                    $this->data->os->version = new Version([ 'value' => '7.5' ]);
-                    break;
-                case '8.0':
-                    $this->data->os->version = new Version([ 'value' => '8.0' ]);
-                    break;
-                case '8.1':
-                    $this->data->os->version = new Version([ 'value' => '8.1' ]);
-                    break;
-                case '10.0':
-                    $this->data->os->version = new Version([ 'value' => '10.0' ]);
-                    break;
+                    case '7.1':
+                        $this->data->os->version = new Version([ 'value' => '7.5' ]);
+                        break;
+                    case '8.0':
+                        $this->data->os->version = new Version([ 'value' => '8.0' ]);
+                        break;
+                    case '8.1':
+                        $this->data->os->version = new Version([ 'value' => '8.1' ]);
+                        break;
+                    case '10.0':
+                        $this->data->os->version = new Version([ 'value' => '10.0' ]);
+                        break;
                 }
             }
         }

@@ -25,13 +25,11 @@ trait Cars
     {
         if (preg_match('/QtCarBrowser/u', $ua)) {
             $this->data->os->reset();
-            $this->data->device->setIdentification(
-                [
+            $this->data->device->setIdentification([
                 'manufacturer'  =>  'Tesla',
                 'model'         =>  'Model S',
                 'type'          =>  Constants\DeviceType::CAR
-                ]
-            );
+            ]);
         }
     }
 }

@@ -113,10 +113,9 @@ trait Television
 
         /* NetCast */
 
-        if ($ua == "Mozilla/5.0 (X11; Linux; ko-KR) AppleWebKit/534.26+ (KHTML, like Gecko) Version/5.0 Safari/534.26+" 
-            || $ua == "Mozilla/5.0 (DirectFB; Linux; ko-KR) AppleWebKit/534.26 (KHTML, like Gecko) Version/5.0 Safari/534.26" 
-            || $ua == "Mozilla/5.0 (DirectFB; Linux; ko-KR) AppleWebKit/534.26+ (KHTML, like Gecko) Version/5.0 Safari/534.26+"
-        ) {
+        if ($ua == "Mozilla/5.0 (X11; Linux; ko-KR) AppleWebKit/534.26+ (KHTML, like Gecko) Version/5.0 Safari/534.26+" ||
+            $ua == "Mozilla/5.0 (DirectFB; Linux; ko-KR) AppleWebKit/534.26 (KHTML, like Gecko) Version/5.0 Safari/534.26" ||
+            $ua == "Mozilla/5.0 (DirectFB; Linux; ko-KR) AppleWebKit/534.26+ (KHTML, like Gecko) Version/5.0 Safari/534.26+") {
             $this->data->device->manufacturer = 'LG';
             $this->data->device->series = 'NetCast TV 2012';
             $this->data->device->type = Constants\DeviceType::TELEVISION;
@@ -136,12 +135,10 @@ trait Television
             } else {
                 $this->data->device->series = 'webOS TV';
                 
-                $this->data->os->reset(
-                    [
+                $this->data->os->reset([
                     'name'   => 'webOS',
                     'hidden' => true
-                    ]
-                );
+                ]);
             }
         }
 
@@ -153,12 +150,10 @@ trait Television
             $this->data->device->type = Constants\DeviceType::TELEVISION;
             $this->data->device->identified |= Constants\Id::MATCH_UA;
 
-            $this->data->os->reset(
-                [
+            $this->data->os->reset([
                 'name'   => 'webOS',
                 'hidden' => true
-                ]
-            );
+            ]);
         }
 
         if (preg_match('/Web[O0]S; Linux\/SmartTV/u', $ua)) {
@@ -167,12 +162,10 @@ trait Television
             $this->data->device->type = Constants\DeviceType::TELEVISION;
             $this->data->device->identified |= Constants\Id::MATCH_UA;
 
-            $this->data->os->reset(
-                [
+            $this->data->os->reset([
                 'name'   => 'webOS',
                 'hidden' => true
-                ]
-            );
+            ]);
         }
 
         if (preg_match('/webOS\.TV-([0-9]+)/u', $ua, $match)) {
@@ -187,12 +180,10 @@ trait Television
                 }
             }
 
-            $this->data->os->reset(
-                [
+            $this->data->os->reset([
                 'name'   => 'webOS',
                 'hidden' => true
-                ]
-            );
+            ]);
         }
 
         if (preg_match('/PBRM\//u', $ua)) {
@@ -210,12 +201,10 @@ trait Television
                 }
             }
 
-            $this->data->os->reset(
-                [
+            $this->data->os->reset([
                 'name'   => 'webOS',
                 'hidden' => true
-                ]
-            );
+            ]);
         }
     }
 
@@ -348,15 +337,15 @@ trait Television
             $this->data->device->identified |= Constants\Id::MATCH_UA;
 
             switch ($match[1]) {
-            case '5.0':
-                $this->data->device->series = 'Smart TV 2009';
-                break;
-            case '5.1':
-                $this->data->device->series = 'Smart TV 2010';
-                break;
-            case '6.0':
-                $this->data->device->series = 'Smart TV 2011';
-                break;
+                case '5.0':
+                    $this->data->device->series = 'Smart TV 2009';
+                    break;
+                case '5.1':
+                    $this->data->device->series = 'Smart TV 2010';
+                    break;
+                case '6.0':
+                    $this->data->device->series = 'Smart TV 2011';
+                    break;
             }
         }
 
@@ -628,22 +617,22 @@ trait Television
             $this->data->device->type = Constants\DeviceType::TELEVISION;
 
             switch ($match[1]) {
-            case '02':
-                $this->data->device->model = '2 XS';
-                $this->data->device->generic = false;
-                break;
-            case '04':
-                $this->data->device->model = '3';
-                $this->data->device->generic = false;
-                break;
-            case '07':
-                $this->data->device->model = 'LT';
-                $this->data->device->generic = false;
-                break;
-            case '09':
-                $this->data->device->model = 'Streaming Stick';
-                $this->data->device->generic = false;
-                break;
+                case '02':
+                    $this->data->device->model = '2 XS';
+                    $this->data->device->generic = false;
+                    break;
+                case '04':
+                    $this->data->device->model = '3';
+                    $this->data->device->generic = false;
+                    break;
+                case '07':
+                    $this->data->device->model = 'LT';
+                    $this->data->device->generic = false;
+                    break;
+                case '09':
+                    $this->data->device->model = 'Streaming Stick';
+                    $this->data->device->generic = false;
+                    break;
             }
 
             $this->data->device->identified |= Constants\Id::MATCH_UA;
@@ -710,60 +699,60 @@ trait Television
             }
 
             switch ($vendorName) {
-            case 'ARRIS':
-                $this->data->device->manufacturer = 'Arris';
-                $this->data->device->model = $modelName;
-                break;
-
-            case 'LG':
-                $this->data->device->manufacturer = 'LG';
-
-                switch ($modelName) {
-                case 'WEBOS1':
-                case 'webOS.TV':
-                    $this->data->device->series = 'webOS TV';
+                case 'ARRIS':
+                    $this->data->device->manufacturer = 'Arris';
+                    $this->data->device->model = $modelName;
                     break;
-                case 'NETCAST4':
-                case 'NetCast4.0':
-                case 'GLOBAL-PLAT4':
-                    $this->data->device->series = 'NetCast TV 2013';
+
+                case 'LG':
+                    $this->data->device->manufacturer = 'LG';
+
+                    switch ($modelName) {
+                        case 'WEBOS1':
+                        case 'webOS.TV':
+                            $this->data->device->series = 'webOS TV';
+                            break;
+                        case 'NETCAST4':
+                        case 'NetCast4.0':
+                        case 'GLOBAL-PLAT4':
+                            $this->data->device->series = 'NetCast TV 2013';
+                            break;
+                        default:
+                            $this->data->device->model = $modelName;
+                            break;
+                    }
+
                     break;
+
+                case 'Google Fiber':
+                    $this->data->device->manufacturer = $vendorName;
+                    $this->data->device->model = 'TV Box';
+                    break;
+
+                case 'Sagemcom':
+                    $this->data->device->manufacturer = $vendorName;
+                    $this->data->device->series = 'Settopbox';
+
+                    if (preg_match('/^([A-Z]+[0-9]+)/ui', $modelName, $match)) {
+                        $this->data->device->model = $match[1];
+                        unset($this->data->device->series);
+                    }
+
+                    break;
+
+                case 'TiVo':
+                    $this->data->device->manufacturer = 'TiVo';
+                    $this->data->device->series = 'DVR';
+                    break;
+
                 default:
-                    $this->data->device->model = $modelName;
+                    $this->data->device->manufacturer = $vendorName;
+
+                    if (!in_array($modelName, [ 'dvb' ])) {
+                        $this->data->device->model = $modelName;
+                    }
+
                     break;
-                }
-
-                break;
-
-            case 'Google Fiber':
-                $this->data->device->manufacturer = $vendorName;
-                $this->data->device->model = 'TV Box';
-                break;
-
-            case 'Sagemcom':
-                $this->data->device->manufacturer = $vendorName;
-                $this->data->device->series = 'Settopbox';
-
-                if (preg_match('/^([A-Z]+[0-9]+)/ui', $modelName, $match)) {
-                    $this->data->device->model = $match[1];
-                    unset($this->data->device->series);
-                }
-
-                break;
-
-            case 'TiVo':
-                $this->data->device->manufacturer = 'TiVo';
-                $this->data->device->series = 'DVR';
-                break;
-
-            default:
-                $this->data->device->manufacturer = $vendorName;
-
-                if (!in_array($modelName, [ 'dvb' ])) {
-                    $this->data->device->model = $modelName;
-                }
-
-                break;
             }
         }
     }
@@ -817,16 +806,16 @@ trait Television
 
                     if ($this->data->device->manufacturer == 'LG') {
                         switch ($modelName) {
-                        case 'LGE2D2012M':
-                            $this->data->device->series = 'NetCast TV 2012';
-                            break;
-                        case 'LGE3D2012M':
-                            $this->data->device->series = 'NetCast TV 2012';
-                            break;
-                        case 'LGwebOSTV':
-                        case 'webOSTV3_0':
-                            $this->data->device->series = 'webOS TV';
-                            break;
+                            case 'LGE2D2012M':
+                                $this->data->device->series = 'NetCast TV 2012';
+                                break;
+                            case 'LGE3D2012M':
+                                $this->data->device->series = 'NetCast TV 2012';
+                                break;
+                            case 'LGwebOSTV':
+                            case 'webOSTV3_0':
+                                $this->data->device->series = 'webOS TV';
+                                break;
                         }
                     }
 
@@ -894,151 +883,151 @@ trait Television
                 $this->data->device->identified |= Constants\Id::PATTERN;
 
                 switch ($vendorName) {
-                case 'LG':
-                    $this->data->device->manufacturer = 'LG';
+                    case 'LG':
+                        $this->data->device->manufacturer = 'LG';
 
-                    switch ($modelName) {
-                    case 'NetCast 3.0':
-                    case 'GLOBAL_PLAT3':
-                        $this->data->device->series = 'NetCast TV 2012';
-                        break;
-                    case 'NetCast 4.0':
-                    case 'GLOBAL-PLAT4':
-                        $this->data->device->series = 'NetCast TV 2013';
-                        break;
-                    case 'WEBOS1':
-                    case 'WEBOS2.0':
-                    case 'WEBOS3':
-                        $this->data->device->series = 'webOS TV';
-                        break;
-                    }
-
-                    break;
-
-                case 'Samsung':
-                    $this->data->device->manufacturer = 'Samsung';
-
-                    switch ($modelName) {
-                    case 'SmartTV2012':
-                        $this->data->device->series = 'Smart TV 2012';
-                        break;
-                    case 'SmartTV2013':
-                        $this->data->device->series = 'Smart TV 2013';
-                        break;
-                    case 'SmartTV2014':
-                        $this->data->device->series = 'Smart TV 2014';
-                        break;
-                    case 'SmartTV2015':
-                        $this->data->device->series = 'Smart TV 2015';
-                        break;
-                    case 'SmartTV2016':
-                        $this->data->device->series = 'Smart TV 2016';
-                        break;
-                    case 'SmartTV2017':
-                        $this->data->device->series = 'Smart TV 2017';
-                        break;
-                    case 'OTV-SMT-E5015':
-                        $this->data->device->model = 'Olleh SkyLife Smart Settopbox';
-                        unset($this->data->device->series);
-                        break;
-                    }
-
-                    break;
-
-                case 'Panasonic':
-                    $this->data->device->manufacturer = 'Panasonic';
-
-                    switch ($modelName) {
-                    case 'VIERA 2011':
-                        $this->data->device->series = 'Viera 2011';
-                        break;
-                    case 'VIERA 2012':
-                        $this->data->device->series = 'Viera 2012';
-                        break;
-                    case 'VIERA 2013':
-                        $this->data->device->series = 'Viera 2013';
-                        break;
-                    case 'VIERA 2014':
-                        $this->data->device->series = 'Viera 2014';
-                        break;
-                    case 'VIERA 2015':
-                    case 'Viera2015.mid':
-                        $this->data->device->series = 'Viera 2015';
-                        break;
-                    case 'VIERA 2016':
-                        $this->data->device->series = 'Viera 2016';
-                        break;
-                    case 'VIERA 2017':
-                        $this->data->device->series = 'Viera 2017';
-                        break;
-                    case 'SmartTV2018mid':
-                        $this->data->device->series = 'Viera 2018';
-                        break;
-                    default:
-                        $this->data->device->model = $modelName;
-        
-                        if (substr($modelName, 0, 4) == 'DIGA') {
-                            $this->data->device->series = 'Diga';
-                            $this->data->device->model = null;
+                        switch ($modelName) {
+                            case 'NetCast 3.0':
+                            case 'GLOBAL_PLAT3':
+                                $this->data->device->series = 'NetCast TV 2012';
+                                break;
+                            case 'NetCast 4.0':
+                            case 'GLOBAL-PLAT4':
+                                $this->data->device->series = 'NetCast TV 2013';
+                                break;
+                            case 'WEBOS1':
+                            case 'WEBOS2.0':
+                            case 'WEBOS3':
+                                $this->data->device->series = 'webOS TV';
+                                break;
                         }
 
                         break;
-                    }
 
-                    break;
+                    case 'Samsung':
+                        $this->data->device->manufacturer = 'Samsung';
 
-                case 'TV2N':
-                    $this->data->device->manufacturer = 'TV2N';
+                        switch ($modelName) {
+                            case 'SmartTV2012':
+                                $this->data->device->series = 'Smart TV 2012';
+                                break;
+                            case 'SmartTV2013':
+                                $this->data->device->series = 'Smart TV 2013';
+                                break;
+                            case 'SmartTV2014':
+                                $this->data->device->series = 'Smart TV 2014';
+                                break;
+                            case 'SmartTV2015':
+                                $this->data->device->series = 'Smart TV 2015';
+                                break;
+                            case 'SmartTV2016':
+                                $this->data->device->series = 'Smart TV 2016';
+                                break;
+                            case 'SmartTV2017':
+                                $this->data->device->series = 'Smart TV 2017';
+                                break;
+                            case 'OTV-SMT-E5015':
+                                $this->data->device->model = 'Olleh SkyLife Smart Settopbox';
+                                unset($this->data->device->series);
+                                break;
+                        }
 
-                    switch ($modelName) {
-                    case 'videoweb':
-                        $this->data->device->model = 'Videoweb';
                         break;
-                    }
 
-                    break;
+                    case 'Panasonic':
+                        $this->data->device->manufacturer = 'Panasonic';
 
-                default:
-                    if ($vendorName != '' && !in_array($vendorName, [ 'OEM', 'vendorName' ])) {
-                        $this->data->device->manufacturer = $vendorName;
-                    }
+                        switch ($modelName) {
+                            case 'VIERA 2011':
+                                $this->data->device->series = 'Viera 2011';
+                                break;
+                            case 'VIERA 2012':
+                                $this->data->device->series = 'Viera 2012';
+                                break;
+                            case 'VIERA 2013':
+                                $this->data->device->series = 'Viera 2013';
+                                break;
+                            case 'VIERA 2014':
+                                $this->data->device->series = 'Viera 2014';
+                                break;
+                            case 'VIERA 2015':
+                            case 'Viera2015.mid':
+                                $this->data->device->series = 'Viera 2015';
+                                break;
+                            case 'VIERA 2016':
+                                $this->data->device->series = 'Viera 2016';
+                                break;
+                            case 'VIERA 2017':
+                                $this->data->device->series = 'Viera 2017';
+                                break;
+                            case 'SmartTV2018mid':
+                                $this->data->device->series = 'Viera 2018';
+                                break;
+                            default:
+                                $this->data->device->model = $modelName;
+        
+                                if (substr($modelName, 0, 4) == 'DIGA') {
+                                    $this->data->device->series = 'Diga';
+                                    $this->data->device->model = null;
+                                }
 
-                    if ($modelName != '' && !in_array($modelName, [ 'dvb', 'modelName', 'undefined-model-name', 'N/A' ])) {
-                        $this->data->device->model = $modelName;
-                    }
+                                break;
+                        }
 
-                    break;
+                        break;
+
+                    case 'TV2N':
+                        $this->data->device->manufacturer = 'TV2N';
+
+                        switch ($modelName) {
+                            case 'videoweb':
+                                $this->data->device->model = 'Videoweb';
+                                break;
+                        }
+
+                        break;
+
+                    default:
+                        if ($vendorName != '' && !in_array($vendorName, [ 'OEM', 'vendorName' ])) {
+                            $this->data->device->manufacturer = $vendorName;
+                        }
+
+                        if ($modelName != '' && !in_array($modelName, [ 'dvb', 'modelName', 'undefined-model-name', 'N/A' ])) {
+                            $this->data->device->model = $modelName;
+                        }
+
+                        break;
                 }
 
                 switch ($modelName) {
-                case 'hdr1000s':
-                    $this->data->device->manufacturer = 'Humax';
-                    $this->data->device->model = 'HDR-1000S';
-                    $this->data->device->identified |= Constants\Id::MATCH_UA;
-                    $this->data->device->generic = false;
-                    break;
+                    case 'hdr1000s':
+                        $this->data->device->manufacturer = 'Humax';
+                        $this->data->device->model = 'HDR-1000S';
+                        $this->data->device->identified |= Constants\Id::MATCH_UA;
+                        $this->data->device->generic = false;
+                        break;
 
-                case 'hdr4000t':
-                    $this->data->device->manufacturer = 'Humax';
-                    $this->data->device->model = 'HDR-4000T';
-                    $this->data->device->identified |= Constants\Id::MATCH_UA;
-                    $this->data->device->generic = false;
-                    break;
+                    case 'hdr4000t':
+                        $this->data->device->manufacturer = 'Humax';
+                        $this->data->device->model = 'HDR-4000T';
+                        $this->data->device->identified |= Constants\Id::MATCH_UA;
+                        $this->data->device->generic = false;
+                        break;
 
-                case 'hgs1000s':
-                    $this->data->device->manufacturer = 'Humax';
-                    $this->data->device->model = 'HGS-1000S';
-                    $this->data->device->identified |= Constants\Id::MATCH_UA;
-                    $this->data->device->generic = false;
-                    break;
+                    case 'hgs1000s':
+                        $this->data->device->manufacturer = 'Humax';
+                        $this->data->device->model = 'HGS-1000S';
+                        $this->data->device->identified |= Constants\Id::MATCH_UA;
+                        $this->data->device->generic = false;
+                        break;
 
-                case 'hms1000s':
-                case 'hms1000sph2':
-                    $this->data->device->manufacturer = 'Humax';
-                    $this->data->device->model = 'HMS-1000S';
-                    $this->data->device->identified |= Constants\Id::MATCH_UA;
-                    $this->data->device->generic = false;
-                    break;
+                    case 'hms1000s':
+                    case 'hms1000sph2':
+                        $this->data->device->manufacturer = 'Humax';
+                        $this->data->device->model = 'HMS-1000S';
+                        $this->data->device->identified |= Constants\Id::MATCH_UA;
+                        $this->data->device->generic = false;
+                        break;
                 }
             }
         }
