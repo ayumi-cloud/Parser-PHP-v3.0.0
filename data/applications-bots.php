@@ -6,8 +6,8 @@ Applications::$BOTS = [
     /* Fake bots (detect fake ones first) */
     [ 'name' => 'Fake Archive.org Bot',             'id' => 'fake',          'regexp' => '/^archive.org_bot/u' ],
     [ 'name' => 'Fake Ahrefs Bot',                  'id' => 'fake',          'regexp' => '/^AhrefsBot$/u' ],
-    [ 'name' => 'Fake LinkedIn Bot',                'id' => 'fake',          'regexp' => '/LinkedInBot$/u' ],    
-    [ 'name' => 'Fake CloudFlare Bot',              'id' => 'fake',          'regexp' => '/\;\+http\:\/\/www\.cloudflare/u' ],  
+    [ 'name' => 'Fake LinkedIn Bot',                'id' => 'fake',          'regexp' => '/LinkedInBot$/u' ],
+    [ 'name' => 'Fake CloudFlare Bot',              'id' => 'fake',          'regexp' => '/\;\+http\:\/\/www\.cloudflare/u' ],
 
     /* Real bots */
     [ 'name' => '80legs',                           'id' => '008',           'regexp' => '/(?:^|\s)008\/([0-9.]*)/u' ],
@@ -163,7 +163,7 @@ Applications::$BOTS = [
     [ 'name' => 'Linkdex Bot',                      'id' => 'linkdex',       'regexp' => '/linkdexbot-mobile\/([0-9.]*)/u' ],
     [ 'name' => 'Linkdex Bot',                      'id' => 'linkdex',       'regexp' => '/linkdex.com\/v([0-9.]*)/u' ],
     [ 'name' => 'Livedoor',                         'id' => 'livedoor',      'regexp' => '/livedoor/u' ],
-    [ 'name' => 'LookSeek',                         'id' => 'seeker',        'regexp' => '/Seeker v\.([0-9.]*)/u' ],  
+    [ 'name' => 'LookSeek',                         'id' => 'seeker',        'regexp' => '/Seeker v\.([0-9.]*)/u' ],
     [ 'name' => 'LTX71',                            'id' => 'ltx71',         'regexp' => '/ltx71/u' ],
     [ 'name' => 'Magpie RSS',                       'id' => 'magpie',        'regexp' => '/MagpieRSS\/([0-9.]*)/u' ],
     [ 'name' => 'Mapian News Bot',                  'id' => 'mapion',        'regexp' => '/mapion-news-bot\/([0-9.]*)/u' ],
@@ -255,7 +255,7 @@ Applications::$BOTS = [
     [ 'name' => 'TLSProber',                        'id' => 'tlsprober',     'regexp' => '/TLSProber\/([0-9.]*)/u' ],
     [ 'name' => 'TrustedSite',                      'id' => 'trustedsite',   'regexp' => '/TrustedSite/u' ],
     [ 'name' => 'Typhoeus',                         'id' => 'typhoeus',      'regexp' => '/Typhoeus/u' ],
-    [ 'name' => 'UptimeRobot',                      'id' => 'uptime',        'regexp' => '/UptimeRobot\/([0-9.]*)/u' ],   
+    [ 'name' => 'UptimeRobot',                      'id' => 'uptime',        'regexp' => '/UptimeRobot\/([0-9.]*)/u' ],
     [ 'name' => 'Vagabondo',                        'id' => 'vagabondo',     'regexp' => '/Vagabondo\/([0-9.]*)/u' ],
     [ 'name' => 'vkShare',                          'id' => 'vkshare',       'regexp' => '/vkShare/u' ],
     [ 'name' => 'VelenPublicWebCrawler',            'id' => 'velen',         'regexp' => '/VelenPublicWebCrawler\/([0-9.]*)/u' ],
@@ -275,7 +275,7 @@ Applications::$BOTS = [
     [ 'name' => 'W3C Robot',                        'id' => 'w3c',           'regexp' => '/W3CRobot\/([0-9.]*)/u' ],
     [ 'name' => 'W3C Unified Validator',            'id' => 'w3c',           'regexp' => '/W3C_Unicorn\/([0-9.]*)/u' ],
     [ 'name' => 'W3C Validator.nu',                 'id' => 'validator',     'regexp' => '/Validator.nu\//u' ],
-    [ 'name' => 'Wappalyzer',                       'id' => 'wappalyzer',    'regexp' => '/Wappalyzer/u' ], 
+    [ 'name' => 'Wappalyzer',                       'id' => 'wappalyzer',    'regexp' => '/Wappalyzer/u' ],
     [ 'name' => 'Wayback Archive',                  'id' => 'wayback',       'regexp' => '/waybackarchive.org\/([0-9.]*)/u' ],
     [ 'name' => 'WebbCrawler',                      'id' => 'crawler',       'regexp' => '/WebbCrawler ([0-9.]*)/u' ],
     [ 'name' => 'WebIndexer',                       'id' => 'webindexer',    'regexp' => '/WebIndexer\//u' ],

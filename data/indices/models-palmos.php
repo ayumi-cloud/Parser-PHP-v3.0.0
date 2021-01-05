@@ -2,37 +2,37 @@
 
 namespace WhichBrowser\Data;
 
-DeviceModels::$PALMOS_INDEX = array (
-  '@AC' => 
-  array (
+DeviceModels::$PALMOS_INDEX = array(
+  '@AC' =>
+  array(
     0 => 'acer-momo',
     1 => 'acer-coco',
     2 => 'Acea-MZ01',
     3 => 'Acea-PD01',
   ),
-  '@GR' => 
-  array (
+  '@GR' =>
+  array(
     0 => 'grmn-3200',
     1 => 'grmn-3600',
     2 => 'grmn-3700',
   ),
-  '@GS' => 
-  array (
+  '@GS' =>
+  array(
     0 => 'gsRl-zicn',
     1 => 'gsRl-zcn2',
     2 => 'gsRl-zcn5',
   ),
-  '@HS' => 
-  array (
+  '@HS' =>
+  array(
     0 => 'hspr-H101',
     1 => 'hspr-H102',
   ),
-  '@KW' => 
-  array (
+  '@KW' =>
+  array(
     0 => 'kwc.-7135',
   ),
-  '@PA' => 
-  array (
+  '@PA' =>
+  array(
     0 => 'Palm-D061',
     1 => 'Palm-D062',
     2 => 'Palm-TunX',
@@ -61,20 +61,20 @@ DeviceModels::$PALMOS_INDEX = array (
     25 => 'Palm-Zpth',
     26 => 'Palm-Zi72',
   ),
-  '@QC' => 
-  array (
+  '@QC' =>
+  array(
     0 => 'qcom-qc20',
   ),
-  '@SM' => 
-  array (
+  '@SM' =>
+  array(
     0 => 'smsn-phix',
     1 => 'smsn-Phx2',
     2 => 'smsn-blch',
     3 => 'smsn-BLFM',
     4 => 'smsn-glxy',
   ),
-  '@SO' => 
-  array (
+  '@SO' =>
+  array(
     0 => 'sony-ystn',
     1 => 'sony-ysmt',
     2 => 'sony-ysm2',
@@ -103,12 +103,12 @@ DeviceModels::$PALMOS_INDEX = array (
     25 => 'sony-prmr',
     26 => 'sony-ancy',
   ),
-  '@TP' => 
-  array (
+  '@TP' =>
+  array(
     0 => 'Tpwv-Rdog',
   ),
-  '@TR' => 
-  array (
+  '@TR' =>
+  array(
     0 => 'trgp-trg1',
     1 => 'trgp-trg2',
   ),

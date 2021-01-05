@@ -2,48 +2,48 @@
 
 namespace WhichBrowser\Data;
 
-DeviceModels::$TIZEN_INDEX = array (
-  '@AR' => 
-  array (
+DeviceModels::$TIZEN_INDEX = array(
+  '@AR' =>
+  array(
     0 => '(ARMV7 )?SM-Z9005!',
   ),
-  '@BA' => 
-  array (
+  '@BA' =>
+  array(
     0 => 'Baltic',
   ),
-  '@EM' => 
-  array (
+  '@EM' =>
+  array(
     0 => 'Emulator',
   ),
-  '@FA' => 
-  array (
+  '@FA' =>
+  array(
     0 => 'FamilyHub',
   ),
-  '@GT' => 
-  array (
+  '@GT' =>
+  array(
     0 => 'GT-I8800!',
     1 => 'GT-I8805!',
     2 => 'GT-I9500!',
   ),
-  '@HA' => 
-  array (
+  '@HA' =>
+  array(
     0 => 'hawkp',
   ),
-  '@KI' => 
-  array (
+  '@KI' =>
+  array(
     0 => 'KIRAN',
   ),
-  '@MO' => 
-  array (
+  '@MO' =>
+  array(
     0 => 'Mobile-RD-PQ',
     1 => 'Mobile-Emulator',
   ),
-  '@NX' => 
-  array (
+  '@NX' =>
+  array(
     0 => 'NX300',
   ),
-  '@RF' => 
-  array (
+  '@RF' =>
+  array(
     0 => 'RF10M9995!',
     1 => 'RF23M8590!',
     2 => 'RF265BEAE!',
@@ -52,29 +52,29 @@ DeviceModels::$TIZEN_INDEX = array (
     5 => 'RF85K9993!',
     6 => 'RF85M95A2!',
   ),
-  '@RH' => 
-  array (
+  '@RH' =>
+  array(
     0 => 'RH81M8090!',
   ),
-  '@SC' => 
-  array (
+  '@SC' =>
+  array(
     0 => 'SC-03F',
   ),
-  '@SD' => 
-  array (
+  '@SD' =>
+  array(
     0 => 'sdk',
   ),
-  '@SE' => 
-  array (
+  '@SE' =>
+  array(
     0 => 'SEC SC-001',
     1 => 'SEC SC-03F',
   ),
-  '@SG' => 
-  array (
+  '@SG' =>
+  array(
     0 => 'SGH-N099',
   ),
-  '@SM' => 
-  array (
+  '@SM' =>
+  array(
     0 => 'SM-HIGGS',
     1 => '(ARMV7 )?SM-Z9005!',
     2 => 'SM-Z130!',
@@ -99,22 +99,22 @@ DeviceModels::$TIZEN_INDEX = array (
     21 => 'SM-R770!',
     22 => 'SM-R805!',
   ),
-  '@TI' => 
-  array (
+  '@TI' =>
+  array(
     0 => 'TIZEN SM-Z130!',
     1 => 'TIZEN SM-Z300!',
     2 => 'TIZEN Emulator',
   ),
-  '@TM' => 
-  array (
+  '@TM' =>
+  array(
     0 => 'TM1',
   ),
-  '@XU' => 
-  array (
+  '@XU' =>
+  array(
     0 => 'xu3',
   ),
-  '@Z3' => 
-  array (
+  '@Z3' =>
+  array(
     0 => 'Z3 Z910F',
   ),
 );

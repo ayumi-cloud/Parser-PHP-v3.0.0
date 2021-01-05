@@ -2,9 +2,9 @@
 
 namespace WhichBrowser\Data;
 
-DeviceModels::$BADA_INDEX = array (
-  '@GT' => 
-  array (
+DeviceModels::$BADA_INDEX = array(
+  '@GT' =>
+  array(
     0 => 'GT- ?S52(50|53)!',
     1 => 'GT-S53(30|33)!',
     2 => 'GT-S5380!',
@@ -16,12 +16,12 @@ DeviceModels::$BADA_INDEX = array (
     8 => 'GT- ?S8530!',
     9 => 'GT- ?S8600!',
   ),
-  '@SC' => 
-  array (
+  '@SC' =>
+  array(
     0 => 'SCH-F859!',
   ),
-  '@SH' => 
-  array (
+  '@SH' =>
+  array(
     0 => 'SHW-M410',
   ),
 );

@@ -11,7 +11,6 @@ trait Camouflage
     private function &detectCamouflage()
     {
         if ($ua = $this->getHeader('User-Agent')) {
-
             $this
                 ->detectCamouflagedAndroidBrowser($ua)
                 ->detectCamouflagedAndroidAsusBrowser($ua)
@@ -125,7 +124,6 @@ trait Camouflage
             if (preg_match('/(?:Chrome|CrMo|CriOS)\//u', $ua)
                 && !preg_match('/(?:Chrome|CrMo|CriOS)\/([0-9]{1,2}\.[0-9]\.[0-9]{3,4}\.[0-9]+)/u', $ua)
             ) {
-
                 $this->data->features[] = 'wrongVersion';
                 $this->data->camouflage = true;
             }
@@ -137,7 +135,6 @@ trait Camouflage
     private function &detectCamouflagedUCBrowser($ua)
     {
         if ($ua == 'Mozilla/5.0 (X11; U; Linux i686; zh-CN; rv:1.2.3.4) Gecko/') {
-
             if (!$this->data->isBrowser('UC Browser')) {
                 $this->data->browser->name = 'UC Browser';
                 $this->data->browser->version = null;
@@ -268,7 +265,6 @@ trait Camouflage
     {
         if (isset($this->data->browser->name) && isset($this->data->os->name)) {
             if ($this->data->os->name == 'iOS' && $this->data->browser->name != 'Opera Mini' && $this->data->browser->name != 'UC Browser' && isset($this->data->os->version)) {
-
                 if ($this->data->os->version->toFloat() < 4.0 && $this->options->features & Constants\Feature::SANDBOX) {
                     $this->data->features[] = 'foundSandbox';
                     $this->data->camouflage = true;
@@ -286,7 +282,6 @@ trait Camouflage
             }
 
             if ($this->data->os->name != 'iOS' && $this->data->browser->name == 'Safari' && isset($this->data->browser->version)) {
-
                 if ($this->data->browser->version->toFloat() < 4.0 && $this->options->features & Constants\Feature::APPCACHE) {
                     $this->data->features[] = 'foundAppCache';
                     $this->data->camouflage = true;

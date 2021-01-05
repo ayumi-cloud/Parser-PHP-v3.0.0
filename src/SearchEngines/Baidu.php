@@ -92,7 +92,7 @@ class Baidu
                 $this->found = true;
             }
 
-        /* Baiduspider Render Bot (place second to the end) */
+            /* Baiduspider Render Bot (place second to the end) */
         } elseif (preg_match('/Baiduspider-render\/([0-9.]*)/u', $ua, $match)) {
             $this->name = 'Baiduspider Render Bot';
             $this->version = new Version([ 'value' => $match[1] ]);

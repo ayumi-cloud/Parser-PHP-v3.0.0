@@ -196,7 +196,6 @@ class Yandex
             $this->found = true;
 
         /* Yandex Favicons */
-
         } elseif (preg_match('/YandexFavicons\/([0-9.]*)/u', $ua, $match)) {
             $this->name = 'Yandex Favicons Bot';
             $this->version = new Version([ 'value' => $match[1] ]);

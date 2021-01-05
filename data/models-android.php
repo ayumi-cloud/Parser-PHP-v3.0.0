@@ -8448,7 +8448,7 @@ DeviceModels::$ANDROID_MODELS = [
         'Lenovo S8-50LC'                            => [ 'Lenovo', 'Tab S8', DeviceType::TABLET ],
     ],
 
-    'Lenovo TB-7304F'                           => [ 'Lenovo', 'Tab 7 Essential', DeviceType::TABLET ], 
+    'Lenovo TB-7304F'                           => [ 'Lenovo', 'Tab 7 Essential', DeviceType::TABLET ],
     'Lenovo TB-X103F'                           => [ 'Lenovo', 'Tab 10', DeviceType::TABLET ],
     'TB-X103F'                                  => [ 'Lenovo', 'Tab 10', DeviceType::TABLET ],
     'Lenovo TB2-X30F'                           => [ 'Lenovo', 'Tab 2 A10', DeviceType::TABLET ],
@@ -8461,9 +8461,9 @@ DeviceModels::$ANDROID_MODELS = [
     'Lenovo TB3-850M'                           => [ 'Lenovo', 'Tab 3 8', DeviceType::TABLET ],
     'Lenovo TB3-X70F'                           => [ 'Lenovo', 'Tab 3 10 Business', DeviceType::TABLET ],
     'Lenovo TB3-X70L'                           => [ 'Lenovo', 'Tab 3 10 Business', DeviceType::TABLET ],
-    'Lenovo TB-8504F'                           => [ 'Lenovo', 'Tab 4 8', DeviceType::TABLET ], 
-    'Lenovo TB-8703F'                           => [ 'Lenovo', 'Tab 4 8 Plus', DeviceType::TABLET ], 
-    'Lenovo TB-8704F'                           => [ 'Lenovo', 'Tab 4 8 Plus', DeviceType::TABLET ], 
+    'Lenovo TB-8504F'                           => [ 'Lenovo', 'Tab 4 8', DeviceType::TABLET ],
+    'Lenovo TB-8703F'                           => [ 'Lenovo', 'Tab 4 8 Plus', DeviceType::TABLET ],
+    'Lenovo TB-8704F'                           => [ 'Lenovo', 'Tab 4 8 Plus', DeviceType::TABLET ],
     'Lenovo TB-X304F'                           => [ 'Lenovo', 'Tab 4 10', DeviceType::TABLET ],
     'Lenovo TB-X704F'                           => [ 'Lenovo', 'Tab 4 10 Plus', DeviceType::TABLET ],
     'Lenovo TB-X704L'                           => [ 'Lenovo', 'Tab 4 10 Plus', DeviceType::TABLET ],
@@ -14452,10 +14452,10 @@ DeviceModels::$ANDROID_MODELS = [
         'SOV34'                                     => [ 'Sony', 'Xperia XZ SOV34', 'carrier' => 'au' ],                     // ...
         'SOV35'                                     => [ 'Sony', 'Xperia XZs SOV35', 'carrier' => 'au' ],                     // ...
         'SOV36'                                     => [ 'Sony', 'Xperia XZ1 SOV36', 'carrier' => 'au' ],                     // ...
-        'SOV37'                                     => [ 'Sony', 'Xperia XZ2 SOV37', 'carrier' => 'au' ],                    // ...     
-        'SOV38'                                     => [ 'Sony', 'Xperia XZ2 Premium SOV38', 'carrier' => 'au' ],                    // ...     
-        'SOV39'                                     => [ 'Sony', 'Xperia XZ3 SOV39', 'carrier' => 'au' ],                    // ...     
-        'SOV40'                                     => [ 'Sony', 'Xperia 1 SOV40', 'carrier' => 'au' ],                    // ...     
+        'SOV37'                                     => [ 'Sony', 'Xperia XZ2 SOV37', 'carrier' => 'au' ],                    // ...
+        'SOV38'                                     => [ 'Sony', 'Xperia XZ2 Premium SOV38', 'carrier' => 'au' ],                    // ...
+        'SOV39'                                     => [ 'Sony', 'Xperia XZ3 SOV39', 'carrier' => 'au' ],                    // ...
+        'SOV40'                                     => [ 'Sony', 'Xperia 1 SOV40', 'carrier' => 'au' ],                    // ...
     ],
 
     '40[0-9]SO!!' => [

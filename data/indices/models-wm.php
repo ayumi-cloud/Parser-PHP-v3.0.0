@@ -2,9 +2,9 @@
 
 namespace WhichBrowser\Data;
 
-DeviceModels::$WM_INDEX = array (
-  '@' => 
-  array (
+DeviceModels::$WM_INDEX = array(
+  '@' =>
+  array(
     0 => '.*T5555!',
     1 => '.*T8585!',
     2 => '.*S521!',
@@ -16,13 +16,13 @@ DeviceModels::$WM_INDEX = array (
     8 => '.*T7272!',
     9 => '.*T2223!',
   ),
-  '@-G' => 
-  array (
+  '@-G' =>
+  array(
     0 => '-GalaxyII',
     1 => '-GalaxyMini',
   ),
-  '@-P' => 
-  array (
+  '@-P' =>
+  array(
     0 => '-P525!',
     1 => '-P526!',
     2 => '-P527!',
@@ -31,51 +31,51 @@ DeviceModels::$WM_INDEX = array (
     5 => '-P565!',
     6 => '-P735!',
   ),
-  '@12' => 
-  array (
+  '@12' =>
+  array(
     0 => 1210,
   ),
-  '@A3' => 
-  array (
+  '@A3' =>
+  array(
     0 => 'A3100',
     1 => 'A3300c',
   ),
-  '@A4' => 
-  array (
+  '@A4' =>
+  array(
     0 => 'A4500!',
   ),
-  '@AL' => 
-  array (
+  '@AL' =>
+  array(
     0 => 'Alltel HTC PPC6800',
     1 => 'Alltel HTC Touch',
     2 => 'Alltel HTC Touch Diamond',
   ),
-  '@AM' => 
-  array (
+  '@AM' =>
+  array(
     0 => 'Ameo!',
   ),
-  '@BI' => 
-  array (
+  '@BI' =>
+  array(
     0 => 'Bird T900',
   ),
-  '@C6' => 
-  array (
+  '@C6' =>
+  array(
     0 => 'C6625',
   ),
-  '@CH' => 
-  array (
+  '@CH' =>
+  array(
     0 => 'CHT 9100!',
   ),
-  '@CO' => 
-  array (
+  '@CO' =>
+  array(
     0 => 'Coolpad F800',
   ),
-  '@DA' => 
-  array (
+  '@DA' =>
+  array(
     0 => 'Datalogic Memor',
   ),
-  '@DO' => 
-  array (
+  '@DO' =>
+  array(
     0 => 'Dopod838Pro',
     1 => 'DopodD810',
     2 => 'dopod-S900c',
@@ -83,37 +83,37 @@ DeviceModels::$WM_INDEX = array (
     4 => 'dopodT8388',
     5 => 'dopodT8588',
   ),
-  '@DX' => 
-  array (
+  '@DX' =>
+  array(
     0 => 'DX900',
   ),
-  '@E1' => 
-  array (
+  '@E1' =>
+  array(
     0 => 'E100',
   ),
-  '@ES' => 
-  array (
+  '@ES' =>
+  array(
     0 => 'ES405B!',
   ),
-  '@F9' => 
-  array (
+  '@F9' =>
+  array(
     0 => 'F900',
   ),
-  '@GA' => 
-  array (
+  '@GA' =>
+  array(
     0 => 'garmin-asus-Nuvifone-M10',
   ),
-  '@GI' => 
-  array (
+  '@GI' =>
+  array(
     0 => 'GIGABYTE-MS800',
   ),
-  '@GM' => 
-  array (
+  '@GM' =>
+  array(
     0 => 'GM730',
     1 => 'GM750Q',
   ),
-  '@GT' => 
-  array (
+  '@GT' =>
+  array(
     0 => 'GT-B5722',
     1 => 'GT-B6520',
     2 => 'GT-B7300',
@@ -124,22 +124,22 @@ DeviceModels::$WM_INDEX = array (
     7 => 'GT-C6625',
     8 => 'GT-I8000!',
   ),
-  '@GW' => 
-  array (
+  '@GW' =>
+  array(
     0 => 'GW550',
     1 => 'GW825',
   ),
-  '@H-' => 
-  array (
+  '@H-' =>
+  array(
     0 => 'H-21',
   ),
-  '@HD' => 
-  array (
+  '@HD' =>
+  array(
     0 => '(HTC )?HD mini!',
     1 => '(HTC )?HD2!',
   ),
-  '@HP' => 
-  array (
+  '@HP' =>
+  array(
     0 => 'HP iPAQ 510',
     1 => 'HPiPAQ510!',
     2 => 'HPiPAQ610',
@@ -154,8 +154,8 @@ DeviceModels::$WM_INDEX = array (
     11 => 'HPiPAQGlisten',
     12 => 'HP KB1',
   ),
-  '@HT' => 
-  array (
+  '@HT' =>
+  array(
     0 => 'HTC8500',
     1 => 'HTC P3300',
     2 => 'HTC love',
@@ -223,8 +223,8 @@ DeviceModels::$WM_INDEX = array (
     64 => 'HTC VPACompactIV',
     65 => 'HT01A',
   ),
-  '@I-' => 
-  array (
+  '@I-' =>
+  array(
     0 => 'i-mate JAMA',
     1 => 'i-mate JAMAQ',
     2 => 'i-mate JAMin',
@@ -238,25 +238,25 @@ DeviceModels::$WM_INDEX = array (
     10 => 'i-mate 8502',
     11 => 'i-mate 9502!',
   ),
-  '@K-' => 
-  array (
+  '@K-' =>
+  array(
     0 => 'K-Touch W366!',
   ),
-  '@KD' => 
-  array (
+  '@KD' =>
+  array(
     0 => 'KDDI-HT01',
   ),
-  '@KY' => 
-  array (
+  '@KY' =>
+  array(
     0 => 'Kyocera-E4000',
   ),
-  '@LE' => 
-  array (
+  '@LE' =>
+  array(
     0 => 'Lenovo ET860',
     1 => 'LENOVO-ET980',
   ),
-  '@LG' => 
-  array (
+  '@LG' =>
+  array(
     0 => 'LG-GM730!',
     1 => 'LG-GM750!',
     2 => 'LG-GW550!',
@@ -264,25 +264,25 @@ DeviceModels::$WM_INDEX = array (
     4 => 'LG-MS25',
     5 => 'LGE VS750',
   ),
-  '@M1' => 
-  array (
+  '@M1' =>
+  array(
     0 => 'M1i',
   ),
-  '@M5' => 
-  array (
+  '@M5' =>
+  array(
     0 => 'M530w!',
   ),
-  '@M9' => 
-  array (
+  '@M9' =>
+  array(
     0 => 'M930!',
   ),
-  '@MC' => 
-  array (
+  '@MC' =>
+  array(
     0 => 'MC45!',
     1 => 'MC659B!',
   ),
-  '@MD' => 
-  array (
+  '@MD' =>
+  array(
     0 => 'MDA III!',
     1 => 'MDA compact II!',
     2 => 'MDA compact!',
@@ -290,83 +290,83 @@ DeviceModels::$WM_INDEX = array (
     4 => 'MDA Touch!',
     5 => 'MDA Vario!',
   ),
-  '@NU' => 
-  array (
+  '@NU' =>
+  array(
     0 => 'Nuvifone-M10',
     1 => 'Nuvifone-M20',
   ),
-  '@O2' => 
-  array (
+  '@O2' =>
+  array(
     0 => 'o2 Xda comet',
     1 => 'O2 Xda 2mini',
     2 => 'O2 Xda 2s',
   ),
-  '@P3' => 
-  array (
+  '@P3' =>
+  array(
     0 => 'P3470!',
     1 => 'P3450',
     2 => 'P3650',
     3 => 'P3650t',
     4 => 'P3600!',
   ),
-  '@P4' => 
-  array (
+  '@P4' =>
+  array(
     0 => 'P400',
     1 => 'P4350!',
     2 => 'P4550',
   ),
-  '@P5' => 
-  array (
+  '@P5' =>
+  array(
     0 => 'P550',
   ),
-  '@P7' => 
-  array (
+  '@P7' =>
+  array(
     0 => 'P750',
   ),
-  '@PA' => 
-  array (
+  '@PA' =>
+  array(
     0 => 'Palm500!',
     1 => 'Palm750',
     2 => 'Palm850!',
     3 => 'Palm Treo850e',
     4 => 'PANTECH-C810',
   ),
-  '@PP' => 
-  array (
+  '@PP' =>
+  array(
     0 => 'PPC6850!',
   ),
-  '@Q-' => 
-  array (
+  '@Q-' =>
+  array(
     0 => 'Q-UMTS',
   ),
-  '@Q8' => 
-  array (
+  '@Q8' =>
+  array(
     0 => 'Q8',
   ),
-  '@Q9' => 
-  array (
+  '@Q9' =>
+  array(
     0 => 'Q9',
     1 => 'Q9c!',
     2 => 'Q9m!',
   ),
-  '@S0' => 
-  array (
+  '@S0' =>
+  array(
     0 => 'S01SH',
     1 => 'S01SH2',
   ),
-  '@S1' => 
-  array (
+  '@S1' =>
+  array(
     0 => 'S11HT',
     1 => 'S12HT',
   ),
-  '@S2' => 
-  array (
+  '@S2' =>
+  array(
     0 => 'S200',
     1 => 'S21HT',
     2 => 'S22HT',
   ),
-  '@SC' => 
-  array (
+  '@SC' =>
+  array(
     0 => 'SCH-M490',
     1 => 'SCH-M710',
     2 => 'SCH-M715',
@@ -378,12 +378,12 @@ DeviceModels::$WM_INDEX = array (
     8 => 'SCH-i920',
     9 => 'SC-01B',
   ),
-  '@SF' => 
-  array (
+  '@SF' =>
+  array(
     0 => 'SFR v3650!',
   ),
-  '@SG' => 
-  array (
+  '@SG' =>
+  array(
     0 => 'SGH-i600!',
     1 => 'SGH-i601!',
     2 => 'SGH-I607',
@@ -398,13 +398,13 @@ DeviceModels::$WM_INDEX = array (
     11 => 'SGH-i900!',
     12 => 'SGH-i908E',
   ),
-  '@SI' => 
-  array (
+  '@SI' =>
+  array(
     0 => 'SIE-SX66',
     1 => 'sigmarion3',
   ),
-  '@SP' => 
-  array (
+  '@SP' =>
+  array(
     0 => 'Sprint:MotoQ9c',
     1 => 'Sprint Treo850e',
     2 => 'SPH-M7200',
@@ -427,8 +427,8 @@ DeviceModels::$WM_INDEX = array (
     19 => 'Sprint MP6900SP',
     20 => 'Sprint MP6950SP',
   ),
-  '@T-' => 
-  array (
+  '@T-' =>
+  array(
     0 => 'T-Mobile Atlas',
     1 => 'T-Mobile Dash',
     2 => 'T-Mobile LEO',
@@ -436,52 +436,52 @@ DeviceModels::$WM_INDEX = array (
     4 => 'T-01A!',
     5 => 'T-01B!',
   ),
-  '@T5' => 
-  array (
+  '@T5' =>
+  array(
     0 => 'T5388',
   ),
-  '@T9' => 
-  array (
+  '@T9' =>
+  array(
     0 => 'T9188',
     1 => 'T9199',
   ),
-  '@TG' => 
-  array (
+  '@TG' =>
+  array(
     0 => '(Toshiba[- ])?TG01!',
   ),
-  '@TO' => 
-  array (
+  '@TO' =>
+  array(
     0 => '(Toshiba[- ])?TG01!',
   ),
-  '@TR' => 
-  array (
+  '@TR' =>
+  array(
     0 => 'Treo800w',
   ),
-  '@V1' => 
-  array (
+  '@V1' =>
+  array(
     0 => 'v1415',
     1 => 'v1240',
     2 => 'v1210',
     3 => 'v1640',
   ),
-  '@VE' => 
-  array (
+  '@VE' =>
+  array(
     0 => 'Velocity',
   ),
-  '@VI' => 
-  array (
+  '@VI' =>
+  array(
     0 => 'VIP12!',
   ),
-  '@VP' => 
-  array (
+  '@VP' =>
+  array(
     0 => 'VPA Touch',
   ),
-  '@W3' => 
-  array (
+  '@W3' =>
+  array(
     0 => 'W366',
   ),
-  '@WS' => 
-  array (
+  '@WS' =>
+  array(
     0 => 'WS003SH',
     1 => 'WS004SH',
     2 => 'WS007SH',
@@ -489,8 +489,8 @@ DeviceModels::$WM_INDEX = array (
     4 => 'WS020SH',
     5 => 'WS027SH',
   ),
-  '@X0' => 
-  array (
+  '@X0' =>
+  array(
     0 => 'X01T',
     1 => 'X02T!',
     2 => 'X01HT',
@@ -500,18 +500,18 @@ DeviceModels::$WM_INDEX = array (
     6 => 'X05HT',
     7 => 'X01SC',
   ),
-  '@X1' => 
-  array (
+  '@X1' =>
+  array(
     0 => 'X1',
     1 => 'X1[ia]!',
   ),
-  '@X2' => 
-  array (
+  '@X2' =>
+  array(
     0 => 'X2',
     1 => 'X2[ia]!',
   ),
-  '@XD' => 
-  array (
+  '@XD' =>
+  array(
     0 => 'Xda diamond',
     1 => 'Xda neo',
     2 => 'Xda nova',
@@ -519,16 +519,16 @@ DeviceModels::$WM_INDEX = array (
     4 => 'Xda terra',
     5 => 'Xda trion',
   ),
-  '@XV' => 
-  array (
+  '@XV' =>
+  array(
     0 => 'XV6175!',
     1 => 'XV6850!',
     2 => 'XV6875!',
     3 => 'XV6900',
     4 => 'XV6975',
   ),
-  '@ZT' => 
-  array (
+  '@ZT' =>
+  array(
     0 => 'ZTE E N72',
     1 => 'ZTE E X70',
   ),

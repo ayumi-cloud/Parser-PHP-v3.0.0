@@ -2,9 +2,9 @@
 
 namespace WhichBrowser\Data;
 
-DeviceModels::$KDDI_INDEX = array (
-  '@CA' => 
-  array (
+DeviceModels::$KDDI_INDEX = array(
+  '@CA' =>
+  array(
     0 => 'CA11',
     1 => 'CA12',
     2 => 'CA13',
@@ -38,21 +38,21 @@ DeviceModels::$KDDI_INDEX = array (
     30 => 'CA3J',
     31 => 'CA3K',
   ),
-  '@DN' => 
-  array (
+  '@DN' =>
+  array(
     0 => 'DN01',
     1 => 'DN11',
   ),
-  '@ER' => 
-  array (
+  '@ER' =>
+  array(
     0 => 'ERK0',
   ),
-  '@FJ' => 
-  array (
+  '@FJ' =>
+  array(
     0 => 'FJ31',
   ),
-  '@HI' => 
-  array (
+  '@HI' =>
+  array(
     0 => 'HI01',
     1 => 'HI02',
     2 => 'HI11',
@@ -80,8 +80,8 @@ DeviceModels::$KDDI_INDEX = array (
     24 => 'HI3G',
     25 => 'HI3H',
   ),
-  '@KC' => 
-  array (
+  '@KC' =>
+  array(
     0 => 'KC3Q',
     1 => 'KC3S',
     2 => 'KC3V',
@@ -154,8 +154,8 @@ DeviceModels::$KDDI_INDEX = array (
     69 => 'KCTB',
     70 => 'KCTC',
   ),
-  '@MA' => 
-  array (
+  '@MA' =>
+  array(
     0 => 'MA11',
     1 => 'MA12',
     2 => 'MA13',
@@ -173,12 +173,12 @@ DeviceModels::$KDDI_INDEX = array (
     14 => 'MAT2',
     15 => 'MAT3',
   ),
-  '@MI' => 
-  array (
+  '@MI' =>
+  array(
     0 => 'MIT1',
   ),
-  '@PT' => 
-  array (
+  '@PT' =>
+  array(
     0 => 'PT21',
     1 => 'PT23',
     2 => 'PT33',
@@ -186,8 +186,8 @@ DeviceModels::$KDDI_INDEX = array (
     4 => 'PT35',
     5 => 'PT36',
   ),
-  '@SA' => 
-  array (
+  '@SA' =>
+  array(
     0 => 'SA21',
     1 => 'SA22',
     2 => 'SA24',
@@ -212,8 +212,8 @@ DeviceModels::$KDDI_INDEX = array (
     21 => 'SA3D',
     22 => 'SA3E',
   ),
-  '@SH' => 
-  array (
+  '@SH' =>
+  array(
     0 => 'SH31',
     1 => 'SH32',
     2 => 'SH33',
@@ -236,8 +236,8 @@ DeviceModels::$KDDI_INDEX = array (
     19 => 'SH3K',
     20 => 'SH3L',
   ),
-  '@SN' => 
-  array (
+  '@SN' =>
+  array(
     0 => 'SN3K',
     1 => 'SN3T',
     2 => 'SN11',
@@ -285,8 +285,8 @@ DeviceModels::$KDDI_INDEX = array (
     44 => 'SN3U',
     45 => 'SN3V',
   ),
-  '@ST' => 
-  array (
+  '@ST' =>
+  array(
     0 => 'ST22',
     1 => 'ST33',
     2 => 'ST11',
@@ -308,8 +308,8 @@ DeviceModels::$KDDI_INDEX = array (
     18 => 'ST32',
     19 => 'ST34',
   ),
-  '@SY' => 
-  array (
+  '@SY' =>
+  array(
     0 => 'SY12',
     1 => 'SY13',
     2 => 'SY14',
@@ -324,8 +324,8 @@ DeviceModels::$KDDI_INDEX = array (
     11 => 'SY03',
     12 => 'SY11',
   ),
-  '@TS' => 
-  array (
+  '@TS' =>
+  array(
     0 => 'TS3Q',
     1 => 'TS3U',
     2 => 'TS3W',

@@ -24,7 +24,7 @@ class Useragent
              ->detectUsing($header)
              ->detectEngine($header);
 
-         /* Detect bots */
+        /* Detect bots */
 
         if (!isset($this->options->detectBots) || $this->options->detectBots === true) {
             $this->detectBot($header);

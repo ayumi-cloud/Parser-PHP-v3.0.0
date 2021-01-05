@@ -242,7 +242,7 @@ class Google
                 $this->found = true;
             }
 
-        /* Google Bot (place last) */
+            /* Google Bot (place last) */
         } elseif (preg_match('/Googlebot\/([0-9.]*)/u', $ua, $match)) {
             $this->name = 'Google Bot';
             $this->version = new Version([ 'value' => $match[1] ]);

@@ -2,9 +2,9 @@
 
 namespace WhichBrowser\Data;
 
-DeviceModels::$TOUCHWIZ_INDEX = array (
-  '@GT' => 
-  array (
+DeviceModels::$TOUCHWIZ_INDEX = array(
+  '@GT' =>
+  array(
     0 => 'GT-B5310!',
     1 => 'GT-B3410',
     2 => 'GT-B7722',
@@ -41,12 +41,12 @@ DeviceModels::$TOUCHWIZ_INDEX = array (
     33 => 'GT-S8000c',
     34 => 'GT-S8003',
   ),
-  '@S8' => 
-  array (
+  '@S8' =>
+  array(
     0 => 'S80(00|03)!',
   ),
-  '@SG' => 
-  array (
+  '@SG' =>
+  array(
     0 => 'SGH-A597',
     1 => 'SGH-F480',
     2 => 'SGH-F480I',

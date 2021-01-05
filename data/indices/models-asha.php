@@ -2,9 +2,9 @@
 
 namespace WhichBrowser\Data;
 
-DeviceModels::$ASHA_INDEX = array (
-  '@50' => 
-  array (
+DeviceModels::$ASHA_INDEX = array(
+  '@50' =>
+  array(
     0 => 500,
     1 => 501,
     2 => '501s',
@@ -14,8 +14,8 @@ DeviceModels::$ASHA_INDEX = array (
     6 => 503,
     7 => '503s',
   ),
-  '@AS' => 
-  array (
+  '@AS' =>
+  array(
     0 => 'Asha230SingleSIM',
     1 => 'Asha230DualSIM',
     2 => 'Asha500SingleSIM',

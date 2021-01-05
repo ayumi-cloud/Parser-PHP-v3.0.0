@@ -156,7 +156,6 @@ class BrowserTest extends PHPUnit_Framework_TestCase
         ]);
 
         $this->assertEquals('', $browser->toString());
-
     }
 
     public function testIdentifyVersion()

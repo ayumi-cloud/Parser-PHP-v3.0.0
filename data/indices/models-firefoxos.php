@@ -2,14 +2,14 @@
 
 namespace WhichBrowser\Data;
 
-DeviceModels::$FIREFOXOS_INDEX = array (
-  '@' => 
-  array (
+DeviceModels::$FIREFOXOS_INDEX = array(
+  '@' =>
+  array(
     0 => '.LYF\\/.F30C!',
     1 => '.LYF\\/.F101K!',
   ),
-  '@AL' => 
-  array (
+  '@AL' =>
+  array(
     0 => 'ALCATEL ONE TOUCH FIRE',
     1 => 'ALCATEL ONE TOUCH 4012A',
     2 => 'ALCATEL ONE TOUCH 4012X',
@@ -24,18 +24,18 @@ DeviceModels::$FIREFOXOS_INDEX = array (
     11 => 'ALCATEL4044[MNOTVW]!',
     12 => 'ALCATEL4044C!',
   ),
-  '@HU' => 
-  array (
+  '@HU' =>
+  array(
     0 => 'HUAWEI Ascend Y300-F1',
     1 => 'HUAWEIY300-F1',
   ),
-  '@LG' => 
-  array (
+  '@LG' =>
+  array(
     0 => 'LG-D3(00|01)!',
     1 => 'LGL25',
   ),
-  '@LY' => 
-  array (
+  '@LY' =>
+  array(
     0 => 'LYF\\/F30C!',
     1 => 'LYF\\/F41T!',
     2 => 'LYF\\/F50Y!',
@@ -44,29 +44,29 @@ DeviceModels::$FIREFOXOS_INDEX = array (
     5 => 'LYF\\/F90M!',
     6 => 'LYF\\/F101K!',
   ),
-  '@MA' => 
-  array (
+  '@MA' =>
+  array(
     0 => 'madai',
   ),
-  '@ON' => 
-  array (
+  '@ON' =>
+  array(
     0 => 'OneTouch4019A',
   ),
-  '@OP' => 
-  array (
+  '@OP' =>
+  array(
     0 => 'OPEN',
     1 => 'OpenC',
     2 => 'Open C',
     3 => 'OPENC2',
     4 => 'OPEN2',
   ),
-  '@OR' => 
-  array (
+  '@OR' =>
+  array(
     0 => 'Orange KLIF',
     1 => 'Orange KLIFD',
   ),
-  '@ZT' => 
-  array (
+  '@ZT' =>
+  array(
     0 => 'ZTEOPEN',
   ),
 );

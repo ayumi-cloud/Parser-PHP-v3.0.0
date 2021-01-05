@@ -51,5 +51,4 @@ class ParserTest extends PHPUnit_Framework_TestCase
 
         $this->assertTrue($parser->isBrowser('Internet Explorer', '=', '6.0'));
     }
-
 }

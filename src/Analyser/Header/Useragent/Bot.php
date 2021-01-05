@@ -140,7 +140,7 @@ trait Bot
                 $this->data->device->type = $Seznam->bot ?? '';
             }
 
-        /* Detect majestic mj12 bot detection */
+            /* Detect majestic mj12 bot detection */
         } elseif (preg_match('/mj12bot/iu', $ua, $match)) {
             $this->data->browser->reset();
             $this->data->device->reset();
@@ -154,7 +154,6 @@ trait Bot
             $this->data->device->type = Constants\DeviceType::BOT;
 
         /* Detect facebook bots */
-
         } elseif (preg_match('/(facebook|cortex|adreview)/iu', $ua, $match)) {
             $Facebook = new Facebook($ua);
 
@@ -165,7 +164,7 @@ trait Bot
                 $this->data->device->type = $Facebook->bot ?? '';
             }
 
-        /* Detect mail.ru search engine bots */
+            /* Detect mail.ru search engine bots */
         } elseif (preg_match('/mail\.ru/u', $ua, $match)) {
             $Mailru = new Mailru($ua);
 
@@ -176,7 +175,7 @@ trait Bot
                 $this->data->device->type = $Mailru->bot ?? '';
             }
 
-        /* Detect google search engine bots */
+            /* Detect google search engine bots */
         } elseif (preg_match('/google/iu', $ua, $match)) {
             $Google = new Google($ua);
 
@@ -187,7 +186,7 @@ trait Bot
                 $this->data->device->type = $Google->bot ?? '';
             }
 
-        /* Detect bing search engine bots */
+            /* Detect bing search engine bots */
         } elseif (preg_match('/(bing|msnbot)/iu', $ua, $match)) {
             $Bing = new Bing($ua);
 
@@ -198,7 +197,7 @@ trait Bot
                 $this->data->device->type = $Bing->bot ?? '';
             }
 
-        /* Detect yahoo search engine bots */
+            /* Detect yahoo search engine bots */
         } elseif (preg_match('/(yahoo|Y\!J)/iu', $ua, $match)) {
             $Yahoo = new Yahoo($ua);
 
@@ -209,7 +208,7 @@ trait Bot
                 $this->data->device->type = $Yahoo->bot ?? '';
             }
 
-        /* Detect baidu search engine bots */
+            /* Detect baidu search engine bots */
         } elseif (preg_match('/Baiduspider/iu', $ua, $match)) {
             $Baidu = new Baidu($ua);
 
@@ -220,7 +219,7 @@ trait Bot
                 $this->data->device->type = $Baidu->bot ?? '';
             }
 
-        /* Detect qwantify search engine bots */
+            /* Detect qwantify search engine bots */
         } elseif (preg_match('/qwant/iu', $ua, $match)) { // News bot only uses `qwant` and not `qwantify`
             $Qwantify = new Qwantify($ua);
 
@@ -231,7 +230,7 @@ trait Bot
                 $this->data->device->type = $Qwantify->bot ?? '';
             }
 
-        /* Detect sogou search engine bots */
+            /* Detect sogou search engine bots */
         } elseif (preg_match('/sogou/iu', $ua, $match)) {
             $Sogou = new Sogou($ua);
 
@@ -242,7 +241,7 @@ trait Bot
                 $this->data->device->type = $Sogou->bot ?? '';
             }
 
-        /* Detect yandex search engine bots */
+            /* Detect yandex search engine bots */
         } elseif (preg_match('/yandex/iu', $ua, $match)) {
             $Yandex = new Yandex($ua);
 

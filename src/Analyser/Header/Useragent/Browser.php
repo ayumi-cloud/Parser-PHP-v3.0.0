@@ -2563,7 +2563,6 @@ trait Browser
             if (isset($match[1])) {
                 $this->data->browser->version = new Version([ 'value' => $match[1] ]);
             }
-
         }
 
         if (preg_match('/WAP Browser\/MAUI/ui', $ua, $match)) {

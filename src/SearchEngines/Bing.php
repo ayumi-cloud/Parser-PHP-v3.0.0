@@ -90,7 +90,7 @@ class Bing
                 $this->found = true;
             }
 
-        /* Bing Msnbot Bot (place second to last) */
+            /* Bing Msnbot Bot (place second to last) */
         } elseif (preg_match('/msnbot\/([0-9.]*)/u', $ua, $match)) {
             $this->name = 'Bing Msnbot Bot';
             $this->version = new Version([ 'value' => $match[1] ]);

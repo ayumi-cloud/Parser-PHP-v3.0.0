@@ -119,7 +119,8 @@ class VersionTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(1, $version->getPatch());
     }
 
-    public function testToValue() {
+    public function testToValue()
+    {
         $version = new Version();
 
         $version->value = '4';
@@ -135,7 +136,8 @@ class VersionTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(10.00100003, $this->invokeMethod($version, 'toValue'));
     }
 
-    public function testToFloat() {
+    public function testToFloat()
+    {
         $version = new Version();
 
         $version->value = '4.1.1';
@@ -145,7 +147,8 @@ class VersionTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(10.1, $version->toFloat());
     }
 
-    public function testToNumber() {
+    public function testToNumber()
+    {
         $version = new Version();
 
         $version->value = '4.1.1';
@@ -155,7 +158,8 @@ class VersionTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(10, $version->toNumber());
     }
 
-    public function testToString() {
+    public function testToString()
+    {
         $version = new Version();
 
         $version->set([ 'value' => '4.1.1' ]);

@@ -114,8 +114,8 @@ class Testrunner
         echo "\033[0m";
         echo str_repeat(' ', 16 - strlen($counter));
         echo $name;
-        echo (!$found ? "\t\t\033[0;31m => file not found!\033[0m" : "");
-        echo ($rebase ? "\t\t\033[0;31m => rebase required!\033[0m" : "");
+        echo(!$found ? "\t\t\033[0;31m => file not found!\033[0m" : "");
+        echo($rebase ? "\t\t\033[0;31m => rebase required!\033[0m" : "");
         echo "\n";
 
         return $success == $total && !$rebase;
