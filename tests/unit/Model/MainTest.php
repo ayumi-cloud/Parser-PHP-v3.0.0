@@ -31,12 +31,10 @@ class MainTest extends PHPUnit_Framework_TestCase
         $this->assertFalse($main->isEngine('WebKit'));
 
 
-        $main->browser->set(
-            [
+        $main->browser->set([
             'name'      => 'Chrome',
             'version'   => new Version([ 'value' => '40.0.2214', 'details' => 1 ])
-            ]
-        );
+        ]);
 
         $this->assertTrue($main->isBrowser('Chrome'));
 
@@ -56,12 +54,10 @@ class MainTest extends PHPUnit_Framework_TestCase
         $this->assertFalse($main->isBrowser('Chrome', '<', '40'));
 
 
-        $main->os->set(
-            [
+        $main->os->set([
             'name'      => 'OS X',
             'version'   => new Version([ 'value' => '10.11.1', 'details' => 2 ])
-            ]
-        );
+        ]);
 
         $this->assertTrue($main->isOs('OS X'));
 
@@ -81,11 +77,9 @@ class MainTest extends PHPUnit_Framework_TestCase
         $this->assertFalse($main->isOs('OS X', '>', '10.11'));
 
 
-        $main->engine->set(
-            [
+        $main->engine->set([
             'name'      => 'WebKit'
-            ]
-        );
+        ]);
 
         $this->assertTrue($main->isEngine('WebKit'));
         $this->assertFalse($main->isEngine('WebKit', '=', '523'));
@@ -95,13 +89,11 @@ class MainTest extends PHPUnit_Framework_TestCase
     {
         $main = new Main();
 
-        $main->device->setIdentification(
-            [
+        $main->device->setIdentification([
             'manufacturer'  =>  'Sony',
             'model'         =>  'PRS-T2',
             'series'        =>  'Reader'
-            ]
-        );
+        ]);
 
         $this->assertTrue($main->isDevice('Reader'));
         $this->assertTrue($main->isDevice('PRS-T2'));
@@ -122,47 +114,37 @@ class MainTest extends PHPUnit_Framework_TestCase
     {
         $main = new Main();
 
-        $main->device->setIdentification(
-            [
+        $main->device->setIdentification([
             'type'          =>  Constants\DeviceType::GAMING,
             'subtype'       =>  Constants\DeviceSubType::CONSOLE
-            ]
-        );
+        ]);
 
         $this->assertFalse($main->isMobile());
 
-        $main->device->reset(
-            [
+        $main->device->reset([
             'type'          =>  Constants\DeviceType::GAMING,
             'subtype'       =>  Constants\DeviceSubType::PORTABLE
-            ]
-        );
+        ]);
 
         $this->assertTrue($main->isMobile());
 
-        $main->device->reset(
-            [
+        $main->device->reset([
             'type'          =>  Constants\DeviceType::MOBILE,
             'subtype'       =>  Constants\DeviceSubType::SMART
-            ]
-        );
+        ]);
 
         $this->assertTrue($main->isMobile());
 
-        $main->device->reset(
-            [
+        $main->device->reset([
             'type'          =>  Constants\DeviceType::MOBILE,
             'subtype'       =>  Constants\DeviceSubType::FEATURE
-            ]
-        );
+        ]);
 
         $this->assertTrue($main->isMobile());
 
-        $main->device->reset(
-            [
+        $main->device->reset([
             'type'          =>  Constants\DeviceType::DESKTOP,
-            ]
-        );
+        ]);
 
         $this->assertFalse($main->isMobile());
     }
@@ -171,14 +153,12 @@ class MainTest extends PHPUnit_Framework_TestCase
     {
         $main = new Main();
 
-        $main->device->setIdentification(
-            [
+        $main->device->setIdentification([
             'manufacturer'  =>  'Nintendo',
             'model'         =>  'Wii',
             'type'          =>  Constants\DeviceType::GAMING,
             'subtype'       =>  Constants\DeviceSubType::CONSOLE
-            ]
-        );
+        ]);
 
         $this->assertTrue($main->isType('gaming'));
         $this->assertTrue($main->isType('gaming:console'));
@@ -196,55 +176,43 @@ class MainTest extends PHPUnit_Framework_TestCase
     {
         $main = new Main();
 
-        $main->device->reset(
-            [
+        $main->device->reset([
             'type'          =>  Constants\DeviceType::GAMING
-            ]
-        );
+        ]);
 
         $this->assertEquals('gaming', $main->getType());
 
-        $main->device->reset(
-            [
+        $main->device->reset([
             'type'          =>  Constants\DeviceType::GAMING,
             'subtype'       =>  Constants\DeviceSubType::CONSOLE
-            ]
-        );
+        ]);
 
         $this->assertEquals('gaming:console', $main->getType());
 
-        $main->device->reset(
-            [
+        $main->device->reset([
             'type'          =>  Constants\DeviceType::GAMING,
             'subtype'       =>  Constants\DeviceSubType::PORTABLE
-            ]
-        );
+        ]);
 
         $this->assertEquals('gaming:portable', $main->getType());
 
-        $main->device->reset(
-            [
+        $main->device->reset([
             'type'          =>  Constants\DeviceType::MOBILE
-            ]
-        );
+        ]);
 
         $this->assertEquals('mobile', $main->getType());
 
-        $main->device->reset(
-            [
+        $main->device->reset([
             'type'          =>  Constants\DeviceType::MOBILE,
             'subtype'       =>  Constants\DeviceSubType::SMART
-            ]
-        );
+        ]);
 
         $this->assertEquals('mobile:smart', $main->getType());
 
-        $main->device->reset(
-            [
+        $main->device->reset([
             'type'          =>  Constants\DeviceType::MOBILE,
             'subtype'       =>  Constants\DeviceSubType::FEATURE
-            ]
-        );
+        ]);
 
         $this->assertEquals('mobile:feature', $main->getType());
     }
@@ -366,8 +334,7 @@ EOD;
         $main->engine->set([ 'name' => 'WebKit' ]);
         $main->os->set([ 'name' => 'iOS', 'version' => new Version([ 'value' => '8.0' ]) ]);
         $main->device->setIdentification([ 'manufacturer' => 'Apple', 'model' => 'iPhone 6', 'type' => Constants\DeviceType::MOBILE ]);
-        $this->assertEquals(
-            [
+        $this->assertEquals([
             'browser' => [
                 'name'      => 'Safari',
                 'version'   => '8.0'
@@ -384,7 +351,6 @@ EOD;
                 'manufacturer'  => 'Apple',
                 'model'         => 'iPhone 6'
             ]
-            ], $main->toArray()
-        );
+        ], $main->toArray());
     }
 }

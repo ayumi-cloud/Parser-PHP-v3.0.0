@@ -218,28 +218,26 @@ class Testrunner
 
     private static function sortRules($rules)
     {
-        usort(
-            $rules, function ($a, $b) {
-                $ah = $a['headers'];
-                $bh = $b['headers'];
+        usort($rules, function ($a, $b) {
+            $ah = $a['headers'];
+            $bh = $b['headers'];
 
-                $as = '';
-                $bs = '';
+            $as = '';
+            $bs = '';
 
-                if (isset($ah['User-Agent'])) {
-                    $as = $ah['User-Agent'];
-                }
-                if (isset($bh['User-Agent'])) {
-                    $bs = $bh['User-Agent'];
-                }
-
-                if ($ah == $bh) {
-                    return 0;
-                }
-
-                return ($ah > $bh) ? +1 : -1;
+            if (isset($ah['User-Agent'])) {
+                $as = $ah['User-Agent'];
             }
-        );
+            if (isset($bh['User-Agent'])) {
+                $bs = $bh['User-Agent'];
+            }
+
+            if ($ah == $bh) {
+                return 0;
+            }
+
+            return ($ah > $bh) ? +1 : -1;
+        });
 
         return $rules;
     }

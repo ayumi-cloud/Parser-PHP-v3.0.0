@@ -17,8 +17,7 @@ class CacheTest extends PHPUnit_Framework_TestCase
             return;
         }
 
-        function countCachedItems($pool)
-        {
+        function countCachedItems($pool) {
             $items = 0;
 
             $reflector = new \ReflectionClass($pool);

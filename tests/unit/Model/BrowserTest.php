@@ -25,14 +25,12 @@ class BrowserTest extends PHPUnit_Framework_TestCase
 
     public function testReset()
     {
-        $browser = new Browser(
-            [
+        $browser = new Browser([
             'stock'     => false,
             'hidden'    => true,
             'mode'      => 'xxxx',
             'type'      => 'xxxx'
-            ]
-        );
+        ]);
 
         $browser->reset();
 
@@ -48,12 +46,10 @@ class BrowserTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $browser->getName());
 
-        $browser->reset(
-            [
+        $browser->reset([
             'name'      => 'Chrome',
             'version'   => new Version([ 'value' => '47.0.2526.73', 'details' => 1 ])
-            ]
-        );
+        ]);
 
         $this->assertEquals('Chrome', $browser->getName());
     }
@@ -64,21 +60,17 @@ class BrowserTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $browser->getVersion());
 
-        $browser->reset(
-            [
+        $browser->reset([
             'name'      => 'Chrome',
             'version'   => new Version([ 'value' => '47.0.2524.23' ])
-            ]
-        );
+        ]);
 
         $this->assertEquals('47.0.2524.23', $browser->getVersion());
 
-        $browser->reset(
-            [
+        $browser->reset([
             'name'      => 'Chrome',
             'version'   => new Version([ 'value' => '47.0.2526.73', 'details' => 1 ])
-            ]
-        );
+        ]);
 
         $this->assertEquals('47', $browser->getVersion());
     }
@@ -89,12 +81,10 @@ class BrowserTest extends PHPUnit_Framework_TestCase
 
         $this->assertFalse($browser->isDetected());
 
-        $browser->reset(
-            [
+        $browser->reset([
             'name'      => 'Chrome',
             'version'   => new Version([ 'value' => '47.0.2526.73', 'details' => 1 ])
-            ]
-        );
+        ]);
 
         $this->assertTrue($browser->isDetected());
     }
@@ -105,29 +95,23 @@ class BrowserTest extends PHPUnit_Framework_TestCase
 
         $this->assertFalse($browser->isFamily('Chrome'));
 
-        $browser->reset(
-            [
+        $browser->reset([
             'name'      => 'Chrome'
-            ]
-        );
+        ]);
 
         $this->assertTrue($browser->isFamily('Chrome'));
 
-        $browser->reset(
-            [
+        $browser->reset([
             'name'      => 'Opera',
             'family'    => new Family([ 'name' => 'Chrome' ])
-            ]
-        );
+        ]);
 
         $this->assertTrue($browser->isFamily('Chrome'));
 
-        $browser->reset(
-            [
+        $browser->reset([
             'name'      => 'Opera',
             'family'    => new Family([ 'name' => 'Chrome' ])
-            ]
-        );
+        ]);
 
         $this->assertFalse($browser->isFamily('Firefox'));
     }
@@ -138,48 +122,38 @@ class BrowserTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $browser->toString());
 
-        $browser->reset(
-            [
+        $browser->reset([
             'name'      => 'Chrome',
             'version'   => new Version([ 'value' => '47.0.2526.73', 'details' => 1 ])
-            ]
-        );
+        ]);
 
         $this->assertEquals('Chrome 47', $browser->toString());
 
-        $browser->reset(
-            [
+        $browser->reset([
             'name'      => 'Safari',
             'version'   => new Version([ 'value' => '8.0' ]),
             'hidden'    => true
-            ]
-        );
+        ]);
 
         $this->assertEquals('', $browser->toString());
 
-        $browser->reset(
-            [
+        $browser->reset([
             'name'      => 'TestBrowser',
             'using'     => new Using([ 'name' => 'Crosswalk Webview' ])
-            ]
-        );
+        ]);
 
         $this->assertEquals('TestBrowser', $browser->toString());
 
-        $browser->reset(
-            [
+        $browser->reset([
             'using'     => new Using([ 'name' => 'Crosswalk Webview' ])
-            ]
-        );
+        ]);
 
         $this->assertEquals('Crosswalk Webview', $browser->toString());
 
-        $browser->reset(
-            [
+        $browser->reset([
             'name'      => 'BlackBerry Browser',
             'hidden'    => true
-            ]
-        );
+        ]);
 
         $this->assertEquals('', $browser->toString());
 
@@ -214,68 +188,50 @@ class BrowserTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $browser->toArray());
 
-        $browser->set(
-            [
+        $browser->set([
             'name'      => ''
-            ]
-        );
+        ]);
 
         $this->assertEquals([], $browser->toArray());
 
-        $browser->reset(
-            [
+        $browser->reset([
             'name'      => 'Chrome',
             'version'   => new Version([ 'value' => '47.0.2526.73', 'details' => 1 ])
-            ]
-        );
+        ]);
 
-        $this->assertEquals(
-            [
+        $this->assertEquals([
             'name'      => 'Chrome',
             'version'   => '47'
-            ], $browser->toArray()
-        );
+        ], $browser->toArray());
 
-        $browser->reset(
-            [
+        $browser->reset([
             'name'      => 'TestBrowser',
             'alias'     => 'Alias'
-            ]
-        );
+        ]);
 
-        $this->assertEquals(
-            [
+        $this->assertEquals([
             'name'      => 'TestBrowser',
             'alias'     => 'Alias'
-            ], $browser->toArray()
-        );
+        ], $browser->toArray());
 
-        $browser->reset(
-            [
+        $browser->reset([
             'name'      => 'Opera',
             'family'    => new Family([ 'name' => 'Chrome' ])
-            ]
-        );
+        ]);
 
-        $this->assertEquals(
-            [
+        $this->assertEquals([
             'name'      => 'Opera',
             'family'    => 'Chrome'
-            ], $browser->toArray()
-        );
+        ], $browser->toArray());
 
-        $browser->reset(
-            [
+        $browser->reset([
             'name'      => 'TestBrowser',
             'using'     => new Using([ 'name' => 'Crosswalk WebView' ])
-            ]
-        );
+        ]);
 
-        $this->assertEquals(
-            [
+        $this->assertEquals([
             'name'      => 'TestBrowser',
             'using'     => 'Crosswalk WebView'
-            ], $browser->toArray()
-        );
+        ], $browser->toArray());
     }
 }

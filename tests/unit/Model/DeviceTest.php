@@ -49,12 +49,10 @@ class DeviceTest extends PHPUnit_Framework_TestCase
     {
         $device = new Device();
 
-        $device->setIdentification(
-            [
+        $device->setIdentification([
             'manufacturer'  =>  'Microsoft',
             'model'         =>  'Xbox One'
-            ]
-        );
+        ]);
 
         $this->assertEquals('Microsoft', $device->getManufacturer());
         $this->assertEquals('Xbox One', $device->getModel());
@@ -65,12 +63,10 @@ class DeviceTest extends PHPUnit_Framework_TestCase
     {
         $device = new Device();
 
-        $device->setIdentification(
-            [
+        $device->setIdentification([
             'manufacturer'  =>  'Nintendo',
             'model'         =>  'Wii'
-            ]
-        );
+        ]);
 
         $this->assertEquals('Nintendo', $device->getManufacturer());
         $this->assertEquals('Wii', $device->getModel());
@@ -106,12 +102,10 @@ class DeviceTest extends PHPUnit_Framework_TestCase
     {
         $device = new Device();
 
-        $device->setIdentification(
-            [
+        $device->setIdentification([
             'manufacturer'  =>  'Nintendo',
             'model'         =>  'Wii'
-            ]
-        );
+        ]);
 
         $this->assertEquals('Nintendo', $device->getManufacturer());
         $this->assertEquals('Wii', $device->getModel());
@@ -125,12 +119,10 @@ class DeviceTest extends PHPUnit_Framework_TestCase
     {
         $device = new Device();
 
-        $device->setIdentification(
-            [
+        $device->setIdentification([
             'manufacturer'  =>  'Kobo',
             'series'        =>  'eReader'
-            ]
-        );
+        ]);
 
         $this->assertEquals('Kobo', $device->getManufacturer());
         $this->assertEquals('eReader', $device->getModel());
@@ -144,13 +136,11 @@ class DeviceTest extends PHPUnit_Framework_TestCase
     {
         $device = new Device();
 
-        $device->setIdentification(
-            [
+        $device->setIdentification([
             'manufacturer'  =>  'Sony',
             'model'         =>  'PRS-T2',
             'series'        =>  'Reader'
-            ]
-        );
+        ]);
 
         $this->assertEquals('Sony', $device->getManufacturer());
         $this->assertEquals('PRS-T2 Reader', $device->getModel());
@@ -165,13 +155,11 @@ class DeviceTest extends PHPUnit_Framework_TestCase
     {
         $device = new Device();
 
-        $device->setIdentification(
-            [
+        $device->setIdentification([
             'manufacturer'  =>  'NEC',
             'model'         =>  'N2002',
             'carrier'       =>  'DoCoMo',
-            ]
-        );
+        ]);
 
         $this->assertEquals('DoCoMo', $device->getCarrier());
         $this->assertEquals('DoCoMo', $device->carrier);
@@ -183,12 +171,10 @@ class DeviceTest extends PHPUnit_Framework_TestCase
     {
         $device = new Device();
 
-        $device->set(
-            [
+        $device->set([
             'manufacturer'  =>  'Microsoft',
             'model'         =>  'Xbox One',
-            ]
-        );
+        ]);
 
         $this->assertEquals('', $device->getManufacturer());
         $this->assertEquals('Xbox One', $device->getModel());
@@ -201,59 +187,47 @@ class DeviceTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $device->toString());
 
-        $device->setIdentification(
-            [
+        $device->setIdentification([
             'manufacturer'  =>  'Kobo',
             'series'        =>  'eReader'
-            ]
-        );
+        ]);
 
         $this->assertEquals('Kobo eReader', $device->toString());
 
-        $device->setIdentification(
-            [
+        $device->setIdentification([
             'manufacturer'  =>  'Nintendo',
             'model'         =>  'Wii'
-            ]
-        );
+        ]);
 
         $this->assertEquals('Nintendo Wii', $device->toString());
 
-        $device->setIdentification(
-            [
+        $device->setIdentification([
             'manufacturer'  =>  'Sony',
             'model'         =>  'PRS-T2',
             'series'        =>  'Reader'
-            ]
-        );
+        ]);
 
         $this->assertEquals('Sony PRS-T2 Reader', $device->toString());
 
-        $device->setIdentification(
-            [
+        $device->setIdentification([
             'manufacturer'  =>  'Apple',
             'model'         =>  'AppleTV'
-            ]
-        );
+        ]);
 
         $this->assertEquals('AppleTV', $device->toString());
 
-        $device->setIdentification(
-            [
+        $device->setIdentification([
             'manufacturer'  =>  'OUYA',
             'model'         =>  'OUYA'
-            ]
-        );
+        ]);
 
         $this->assertEquals('OUYA', $device->toString());
         
-        $device->setIdentification(
-            [
+        $device->setIdentification([
             'manufacturer'  =>  'Apple',
             'model'         =>  'Macintosh',
             'hidden'        =>  true
-            ]
-        );
+        ]);
 
         $this->assertEquals('', $device->toString());
     }
@@ -264,12 +238,10 @@ class DeviceTest extends PHPUnit_Framework_TestCase
 
         $this->assertFalse($device->isDetected());
 
-        $device->set(
-            [
+        $device->set([
             'manufacturer'  =>  'Microsoft',
             'model'         =>  'Xbox One',
-            ]
-        );
+        ]);
 
         $this->assertTrue($device->isDetected());
 
@@ -292,43 +264,35 @@ class DeviceTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $device->toArray());
 
-        $device->setIdentification(
-            [
+        $device->setIdentification([
             'manufacturer'  =>  'Sony',
             'model'         =>  'Playstation 4',
             'type'          =>  Constants\DeviceType::GAMING,
             'subtype'       =>  Constants\DeviceSubType::CONSOLE
-            ]
-        );
+        ]);
 
-        $this->assertEquals(
-            [
+        $this->assertEquals([
             'manufacturer'  =>  'Sony',
             'model'         =>  'Playstation 4',
             'type'          =>  Constants\DeviceType::GAMING,
             'subtype'       =>  Constants\DeviceSubType::CONSOLE
-            ], $device->toArray()
-        );
+        ], $device->toArray());
 
 
-        $device->setIdentification(
-            [
+        $device->setIdentification([
             'manufacturer'  =>  'NEC',
             'model'         =>  'N2002',
             'carrier'       =>  'DoCoMo',
             'type'          =>  Constants\DeviceType::MOBILE,
             'subtype'       =>  Constants\DeviceSubType::FEATURE
-            ]
-        );
+        ]);
 
-        $this->assertEquals(
-            [
+        $this->assertEquals([
             'manufacturer'  =>  'NEC',
             'model'         =>  'N2002',
             'carrier'       =>  'DoCoMo',
             'type'          =>  Constants\DeviceType::MOBILE,
             'subtype'       =>  Constants\DeviceSubType::FEATURE
-            ], $device->toArray()
-        );
+        ], $device->toArray());
     }
 }

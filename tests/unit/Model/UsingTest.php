@@ -17,12 +17,10 @@ class UsingTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $using->getName());
 
-        $using->reset(
-            [
+        $using->reset([
             'name'      => 'Crosswalk WebView',
             'version'   => new Version([ 'value' => '11' ])
-            ]
-        );
+        ]);
 
         $this->assertEquals('Crosswalk WebView', $using->getName());
     }
@@ -33,12 +31,10 @@ class UsingTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $using->getVersion());
 
-        $using->reset(
-            [
+        $using->reset([
             'name'      => 'Crosswalk WebView',
             'version'   => new Version([ 'value' => '11' ])
-            ]
-        );
+        ]);
 
         $this->assertEquals('11', $using->getVersion());
     }
@@ -49,12 +45,10 @@ class UsingTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $using->toString());
 
-        $using->reset(
-            [
+        $using->reset([
             'name'      => 'Crosswalk WebView',
             'version'   => new Version([ 'value' => '11' ])
-            ]
-        );
+        ]);
 
         $this->assertEquals('Crosswalk WebView 11', $using->toString());
     }
@@ -65,18 +59,14 @@ class UsingTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $using->toArray());
 
-        $using->set(
-            [
+        $using->set([
             'name'      => 'Crosswalk WebView',
             'version'   => new Version([ 'value' => '11' ])
-            ]
-        );
+        ]);
 
-        $this->assertEquals(
-            [
+        $this->assertEquals([
             'name'      => 'Crosswalk WebView',
             'version'   => '11'
-            ], $using->toArray()
-        );
+        ], $using->toArray());
     }
 }

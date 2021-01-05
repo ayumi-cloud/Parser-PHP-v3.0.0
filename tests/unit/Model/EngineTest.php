@@ -17,22 +17,18 @@ class EngineTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $engine->getName());
 
-        $engine->reset(
-            [
+        $engine->reset([
             'name'      => 'WebKit',
             'version'   => new Version([ 'value' => '601.3.9' ])
-            ]
-        );
+        ]);
 
         $this->assertEquals('WebKit', $engine->getName());
 
-        $engine->reset(
-            [
+        $engine->reset([
             'name'      => 'WebKit',
             'alias'     => 'Blink',
             'version'   => new Version([ 'value' => '601.3.9' ])
-            ]
-        );
+        ]);
 
         $this->assertEquals('Blink', $engine->getName());
     }
@@ -43,21 +39,17 @@ class EngineTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $engine->getVersion());
 
-        $engine->reset(
-            [
+        $engine->reset([
             'name'      => 'WebKit',
             'version'   => new Version([ 'value' => '601.3.9' ])
-            ]
-        );
+        ]);
 
         $this->assertEquals('601.3.9', $engine->getVersion());
 
-        $engine->reset(
-            [
+        $engine->reset([
             'name'      => 'WebKit',
             'version'   => new Version([ 'value' => '601.3.9', 'details' => 1 ])
-            ]
-        );
+        ]);
 
         $this->assertEquals('601', $engine->getVersion());
     }
@@ -68,12 +60,10 @@ class EngineTest extends PHPUnit_Framework_TestCase
 
         $this->assertFalse($engine->isDetected());
 
-        $engine->reset(
-            [
+        $engine->reset([
             'name'      => 'WebKit',
             'version'   => new Version([ 'value' => '601.3.9' ])
-            ]
-        );
+        ]);
 
         $this->assertTrue($engine->isDetected());
     }
@@ -84,22 +74,18 @@ class EngineTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $engine->toString());
 
-        $engine->reset(
-            [
+        $engine->reset([
             'name'      => 'WebKit',
             'version'   => new Version([ 'value' => '601.3.9' ])
-            ]
-        );
+        ]);
 
         $this->assertEquals('WebKit 601.3.9', $engine->toString());
 
-        $engine->reset(
-            [
+        $engine->reset([
             'name'      => 'WebKit',
             'alias'     => 'Blink',
             'version'   => new Version([ 'value' => '601.3.9' ])
-            ]
-        );
+        ]);
 
         $this->assertEquals('Blink 601.3.9', $engine->toString());
     }
@@ -133,26 +119,20 @@ class EngineTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $engine->toArray());
 
-        $engine->set(
-            [
+        $engine->set([
             'name'      => null
-            ]
-        );
+        ]);
 
         $this->assertEquals([], $engine->toArray());
 
-        $engine->reset(
-            [
+        $engine->reset([
             'name'      => 'WebKit',
             'version'   => new Version([ 'value' => '601.3.9' ])
-            ]
-        );
+        ]);
 
-        $this->assertEquals(
-            [
+        $this->assertEquals([
             'name'      => 'WebKit',
             'version'   => '601.3.9'
-            ], $engine->toArray()
-        );
+        ], $engine->toArray());
     }
 }
