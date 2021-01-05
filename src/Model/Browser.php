@@ -165,8 +165,7 @@ class Browser extends NameVersion
         }
 
         if (!empty($this->version)) {
-            //$result['version'] = $this->version->toArray();
-            $result['version'] = $this->version;
+            $result['version'] = $this->version->toArray();
         }
 
         if (!empty($this->type)) {
