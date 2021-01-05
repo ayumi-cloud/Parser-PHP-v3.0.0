@@ -9,22 +9,22 @@ use WhichBrowser\Model\Version;
 class Mailru
 {
     /**
-     * @var string 
+     * @var string
      */
     public $name;
     
     /**
-     * @var array 
+     * @var array
      */
     public $version;
 
     /**
-     * @var string 
+     * @var string
      */
     public $bot;
     
     /**
-     * @var string default set to false 
+     * @var string default set to false
      */
     public $found = false;
 
