@@ -40,17 +40,8 @@ trait Bot
             $this->data->device->type = Constants\DeviceType::BOT;
         }
 
-        /* Detect based on a predefined list or markers */
-        if ($bot = Data\Applications::identifyBot($ua)) {
-            $this->data->browser = $bot;
-            $this->data->os->reset();
-            $this->data->engine->reset();
-            $this->data->device->reset();
-
-            $this->data->device->type = Constants\DeviceType::BOT;
-
         /* Detect fake browser chinese bot */
-        } elseif (preg_match('/(WaiMao_Browser|MyChrome\.CN)/u', $ua, $match)) {
+        if (preg_match('/(WaiMao_Browser|MyChrome\.CN)/u', $ua, $match)) {
             $this->data->browser->reset();
             $this->data->os->reset();
             $this->data->engine->reset();
@@ -252,6 +243,15 @@ trait Bot
                 $this->data->device->type = $Yandex->bot ?? '';
             }
         }
+
+        /* Detect based on a predefined list or markers */
+        } elseif ($bot = Data\Applications::identifyBot($ua)) {
+            $this->data->browser = $bot;
+            $this->data->os->reset();
+            $this->data->engine->reset();
+            $this->data->device->reset();
+
+            $this->data->device->type = Constants\DeviceType::BOT;
 
         return $this;
     }
