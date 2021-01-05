@@ -28,7 +28,7 @@ class NameVersion extends Base
     /**
      * Set the properties to the default values
      *
-     * @param   array|null  $properties  An optional array of properties to set after setting it to the default values
+     * @param array|null $properties An optional array of properties to set after setting it to the default values
      *
      * @internal
      */
@@ -48,9 +48,9 @@ class NameVersion extends Base
     /**
      * Identify the version based on a pattern
      *
-     * @param   string      $pattern   The regular expression that defines the group that matches the version string
-     * @param   string      $subject   The string the regular expression is matched with
-     * @param   array|null  $defaults  An optional array of properties to set together with the value
+     * @param string     $pattern  The regular expression that defines the group that matches the version string
+     * @param string     $subject  The string the regular expression is matched with
+     * @param array|null $defaults An optional array of properties to set together with the value
      *
      * @return string
      */
@@ -62,12 +62,12 @@ class NameVersion extends Base
 
             if (isset($defaults['type'])) {
                 switch ($defaults['type']) {
-                    case 'underscore':
-                        $version = str_replace('_', '.', $version);
-                        break;
-                    case 'legacy':
-                        $version = preg_replace("/([0-9])([0-9])/", '$1.$2', $version);
-                        break;
+                case 'underscore':
+                    $version = str_replace('_', '.', $version);
+                    break;
+                case 'legacy':
+                    $version = preg_replace("/([0-9])([0-9])/", '$1.$2', $version);
+                    break;
                 }
             }
 

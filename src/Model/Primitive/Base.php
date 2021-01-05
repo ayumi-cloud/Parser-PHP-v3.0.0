@@ -11,7 +11,7 @@ class Base
     /**
      * Set the properties of the object the the values specified in the array
      *
-     * @param  array|null   An array, the key of an element determines the name of the property
+     * @param array|null   An array, the key of an element determines the name of the property
      */
     public function __construct($defaults = null)
     {
@@ -24,7 +24,7 @@ class Base
     /**
      * Set the properties of the object the the values specified in the array
      *
-     * @param  array  $properties  An array, the key of an element determines the name of the property
+     * @param array $properties An array, the key of an element determines the name of the property
      *
      * @internal
      */
@@ -60,15 +60,15 @@ class Base
                     $line .= 'new Using({ ' . $value->toJavaScript() . ' })';
                 } else {
                     switch (gettype($value)) {
-                        case 'boolean':
-                            $line .= $value ? 'true' : 'false';
-                            break;
-                        case 'string':
-                            $line .= '"' . addslashes($value) . '"';
-                            break;
-                        case 'integer':
-                            $line .= $value;
-                            break;
+                    case 'boolean':
+                        $line .= $value ? 'true' : 'false';
+                        break;
+                    case 'string':
+                        $line .= '"' . addslashes($value) . '"';
+                        break;
+                    case 'integer':
+                        $line .= $value;
+                        break;
                     }
                 }
 

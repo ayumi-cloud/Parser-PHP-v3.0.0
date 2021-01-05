@@ -11,17 +11,21 @@ class Os extends NameVersion
      */
     public $family;
 
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $edition;
 
-    /** @var boolean */
+    /**
+     * @var boolean 
+     */
     public $hidden = false;
 
 
     /**
      * Set the properties to the default values
      *
-     * @param   array|null  $properties  An optional array of properties to set after setting it to the default values
+     * @param array|null $properties An optional array of properties to set after setting it to the default values
      *
      * @internal
      */
@@ -60,7 +64,7 @@ class Os extends NameVersion
     /**
      * Is the operating from the specified family
      *
-     * @param  string   $name   The name of the family
+     * @param string $name The name of the family
      *
      * @return boolean
      */
@@ -93,8 +97,10 @@ class Os extends NameVersion
             return '';
         }
         
-        return trim($this->getName() .
-            (!empty($this->version) && !$this->version->hidden ? ' ' . $this->getVersion() : '')) .
+        return trim(
+            $this->getName() .
+            (!empty($this->version) && !$this->version->hidden ? ' ' . $this->getVersion() : '')
+        ) .
             (!empty($this->edition) ? ' ' . $this->edition : '');
     }
 

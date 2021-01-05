@@ -6,22 +6,34 @@ use WhichBrowser\Model\Primitive\Base;
 
 class Version extends Base
 {
-    /** @var string|null */
+    /**
+     * @var string|null 
+     */
     public $value = null;
 
-    /** @var boolean */
+    /**
+     * @var boolean 
+     */
     public $hidden = false;
 
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $nickname;
 
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $alias;
 
-    /** @var int */
+    /**
+     * @var int 
+     */
     public $details;
 
-    /** @var boolean */
+    /**
+     * @var boolean 
+     */
     public $builds;
 
 
@@ -29,8 +41,8 @@ class Version extends Base
     /**
      * Determine if the version is lower, equal or higher than the specified value
      *
-     * @param  string   The operator, must be <, <=, =, >= or >
-     * @param  mixed    The value, can be an integer, float or string with a version number
+     * @param string   The operator, must be <, <=, =, >= or >
+     * @param mixed    The value, can be an integer, float or string with a version number
      *
      * @return boolean
      */
@@ -60,21 +72,21 @@ class Version extends Base
                 $v2 = $this->toValue($compare, $min);
 
                 switch ($operator) {
-                    case '<':
-                        $valid = $v1 < $v2;
-                        break;
-                    case '<=':
-                        $valid = $v1 <= $v2;
-                        break;
-                    case '=':
-                        $valid = $v1 == $v2;
-                        break;
-                    case '>':
-                        $valid = $v1 > $v2;
-                        break;
-                    case '>=':
-                        $valid = $v1 >= $v2;
-                        break;
+                case '<':
+                    $valid = $v1 < $v2;
+                    break;
+                case '<=':
+                    $valid = $v1 <= $v2;
+                    break;
+                case '=':
+                    $valid = $v1 == $v2;
+                    break;
+                case '>':
+                    $valid = $v1 > $v2;
+                    break;
+                case '>=':
+                    $valid = $v1 >= $v2;
+                    break;
                 }
             }
         }
@@ -142,8 +154,8 @@ class Version extends Base
      *
      * @internal
      *
-     * @param  string   Version string, with elements seperated by a dot
-     * @param  int      The maximum precision
+     * @param string   Version string, with elements seperated by a dot
+     * @param int      The maximum precision
      *
      * @return float
      */

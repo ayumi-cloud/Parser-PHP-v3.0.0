@@ -9,19 +9,19 @@ class CFNetwork
 
     public static function getVersion($platform, $version)
     {
-        require_once __DIR__ . '/../../data/os-cfnetwork.php';
+        include_once __DIR__ . '/../../data/os-cfnetwork.php';
 
         switch ($platform) {
-            case 'osx':
-                if (isset(CFNetwork::$OSX[$version])) {
-                    return CFNetwork::$OSX[$version];
-                }
-                break;
-            case 'ios':
-                if (isset(CFNetwork::$IOS[$version])) {
-                    return CFNetwork::$IOS[$version];
-                }
-                break;
+        case 'osx':
+            if (isset(CFNetwork::$OSX[$version])) {
+                return CFNetwork::$OSX[$version];
+            }
+            break;
+        case 'ios':
+            if (isset(CFNetwork::$IOS[$version])) {
+                return CFNetwork::$IOS[$version];
+            }
+            break;
         }
     }
 }

@@ -19,8 +19,8 @@ trait Cache
     /**
      * Enable caching of results
      *
-     * @param  object   $cache     An PSR-6 cache pool (an object that implements Psr\Cache\CacheItemPoolInterface)
-     * @param  int      $expires   Optional the number of seconds after which a cached item expires, default is 15 minutes
+     * @param object $cache   An PSR-6 cache pool (an object that implements Psr\Cache\CacheItemPoolInterface)
+     * @param int    $expires Optional the number of seconds after which a cached item expires, default is 15 minutes
      */
 
     public function setCache($cache, $expires = 900)
@@ -35,7 +35,7 @@ trait Cache
      *
      * @internal
      *
-     * @param  array    $data      An array with a key for every property it needs to apply
+     * @param array $data An array with a key for every property it needs to apply
      */
 
     private function applyCachedData($data)
@@ -53,7 +53,7 @@ trait Cache
      *
      * @internal
      *
-     * @return  array    An array with a key for every property that will be cached
+     * @return array    An array with a key for every property that will be cached
      */
 
     private function retrieveCachedData()
@@ -74,9 +74,9 @@ trait Cache
      *
      * @internal
      *
-     * @param  array|string     $headers   An array with all of the headers or a string with just the User-Agent header
+     * @param array|string $headers An array with all of the headers or a string with just the User-Agent header
      *
-     * @return  boolean         did we actually retrieve or analyse results
+     * @return boolean         did we actually retrieve or analyse results
      */
 
     private function analyseWithCache($headers, $options = [])

@@ -8,16 +8,24 @@ use WhichBrowser\Model\Version;
 
 class Mailru
 {
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $name;
     
-    /** @var array */
+    /**
+     * @var array 
+     */
     public $version;
 
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $bot;
     
-    /** @var string default set to false */
+    /**
+     * @var string default set to false 
+     */
     public $found = false;
 
     /**
@@ -35,42 +43,42 @@ class Mailru
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Mail.ru Fast Bot */
+            /* Mail.ru Fast Bot */
         } elseif (preg_match('/Mail\.RU\_Bot\/Fast\/([0-9.]*)/u', $ua, $match)) {
             $this->name = 'Mail.ru Fast Bot';
             $this->version = new Version([ 'value' => $match[1] ]);
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Mail.ru Image Bot */
+            /* Mail.ru Image Bot */
         } elseif (preg_match('/Mail\.RU\_Bot\/Img\/([0-9.]*)/u', $ua, $match)) {
             $this->name = 'Mail.ru Image Bot';
             $this->version = new Version([ 'value' => $match[1] ]);
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Mail.ru Video Bot */
+            /* Mail.ru Video Bot */
         } elseif (preg_match('/Mail\.RU\_Bot\/Video\/([0-9.]*)/u', $ua, $match)) {
             $this->name = 'Mail.ru Video Bot';
             $this->version = new Version([ 'value' => $match[1] ]);
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Mail.ru Robots.txt Bot */
+            /* Mail.ru Robots.txt Bot */
         } elseif (preg_match('/Mail\.RU\_Bot\/Robots\/([0-9.]*)/u', $ua, $match)) {
             $this->name = 'Mail.ru Robots.txt Bot';
             $this->version = new Version([ 'value' => $match[1] ]);
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Mail.ru Mail Bot */
+            /* Mail.ru Mail Bot */
         } elseif (preg_match('/Mail\.RU\_Bot\/Mail\/([0-9.]*)/u', $ua, $match)) {
             $this->name = 'Mail.ru Mail Bot';
             $this->version = new Version([ 'value' => $match[1] ]);
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Mail.ru Bot (place at end) */
+            /* Mail.ru Bot (place at end) */
         } elseif (preg_match('/Mail\.RU\_Bot\/([0-9.]*)/u', $ua, $match)) {
             $this->name = 'Mail.ru Bot';
             $this->version = new Version([ 'value' => $match[1] ]);

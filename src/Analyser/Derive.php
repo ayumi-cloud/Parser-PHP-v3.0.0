@@ -137,33 +137,33 @@ trait Derive
 
         if (isset($this->data->os->name) && $this->data->os->name == 'Firefox OS' && $this->data->engine->name == 'Gecko') {
             switch ($this->data->engine->getVersion()) {
-                case '18.0':
-                    $this->data->os->version = new Version([ 'value' => '1.0.1' ]);
-                    break;
-                case '18.1':
-                    $this->data->os->version = new Version([ 'value' => '1.1' ]);
-                    break;
-                case '26.0':
-                    $this->data->os->version = new Version([ 'value' => '1.2' ]);
-                    break;
-                case '28.0':
-                    $this->data->os->version = new Version([ 'value' => '1.3' ]);
-                    break;
-                case '30.0':
-                    $this->data->os->version = new Version([ 'value' => '1.4' ]);
-                    break;
-                case '32.0':
-                    $this->data->os->version = new Version([ 'value' => '2.0' ]);
-                    break;
-                case '34.0':
-                    $this->data->os->version = new Version([ 'value' => '2.1' ]);
-                    break;
-                case '37.0':
-                    $this->data->os->version = new Version([ 'value' => '2.2' ]);
-                    break;
-                case '44.0':
-                    $this->data->os->version = new Version([ 'value' => '2.5' ]);
-                    break;
+            case '18.0':
+                $this->data->os->version = new Version([ 'value' => '1.0.1' ]);
+                break;
+            case '18.1':
+                $this->data->os->version = new Version([ 'value' => '1.1' ]);
+                break;
+            case '26.0':
+                $this->data->os->version = new Version([ 'value' => '1.2' ]);
+                break;
+            case '28.0':
+                $this->data->os->version = new Version([ 'value' => '1.3' ]);
+                break;
+            case '30.0':
+                $this->data->os->version = new Version([ 'value' => '1.4' ]);
+                break;
+            case '32.0':
+                $this->data->os->version = new Version([ 'value' => '2.0' ]);
+                break;
+            case '34.0':
+                $this->data->os->version = new Version([ 'value' => '2.1' ]);
+                break;
+            case '37.0':
+                $this->data->os->version = new Version([ 'value' => '2.2' ]);
+                break;
+            case '44.0':
+                $this->data->os->version = new Version([ 'value' => '2.5' ]);
+                break;
             }
         }
     }
@@ -223,28 +223,28 @@ trait Derive
 
             if (isset($this->data->os->version) && isset($this->data->os->version->value)) {
                 switch ($this->data->os->version->value) {
-                    case '2.3.3':
-                    case '2.3.4':
-                        $this->data->os->version = new Version([ 'value' => '1' ]);
-                        break;
-                    case '4.0.3':
-                        $this->data->os->version = new Version([ 'value' => '2' ]);
-                        break;
-                    case '4.2.2':
-                        $this->data->os->version = new Version([ 'value' => '3' ]);
-                        break;
-                    case '4.4.2':
-                        $this->data->os->version = new Version([ 'value' => '4' ]);
-                        break;
-                    case '4.4.3':
-                        $this->data->os->version = new Version([ 'value' => '4.5' ]);
-                        break;
-                    case '5.1.1':
-                        $this->data->os->version = new Version([ 'value' => '5' ]);
-                        break;
-                    default:
-                        unset($this->data->os->version);
-                        break;
+                case '2.3.3':
+                case '2.3.4':
+                    $this->data->os->version = new Version([ 'value' => '1' ]);
+                    break;
+                case '4.0.3':
+                    $this->data->os->version = new Version([ 'value' => '2' ]);
+                    break;
+                case '4.2.2':
+                    $this->data->os->version = new Version([ 'value' => '3' ]);
+                    break;
+                case '4.4.2':
+                    $this->data->os->version = new Version([ 'value' => '4' ]);
+                    break;
+                case '4.4.3':
+                    $this->data->os->version = new Version([ 'value' => '4.5' ]);
+                    break;
+                case '5.1.1':
+                    $this->data->os->version = new Version([ 'value' => '5' ]);
+                    break;
+                default:
+                    unset($this->data->os->version);
+                    break;
                 }
             }
 

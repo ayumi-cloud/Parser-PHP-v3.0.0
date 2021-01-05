@@ -18,11 +18,11 @@ class Useragent
         /* Detect the basic information */
 
         $this->detectOperatingSystem($header)
-             ->detectDevice($header)
-             ->detectBrowser($header)
-             ->detectApplication($header)
-             ->detectUsing($header)
-             ->detectEngine($header);
+            ->detectDevice($header)
+            ->detectBrowser($header)
+            ->detectApplication($header)
+            ->detectUsing($header)
+            ->detectEngine($header);
 
          /* Detect bots */
 
@@ -33,7 +33,7 @@ class Useragent
         /* Refine some of the information */
 
         $this->refineBrowser($header)
-             ->refineOperatingSystem($header);
+            ->refineOperatingSystem($header);
     }
 
     private function removeKnownPrefixes($ua)

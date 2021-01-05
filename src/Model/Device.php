@@ -8,45 +8,67 @@ use WhichBrowser\Model\Primitive\Base;
 
 class Device extends Base
 {
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $manufacturer;
 
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $model;
 
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $series;
 
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $carrier;
 
-    /** @var int */
+    /**
+     * @var int 
+     */
     public $identifier;
 
-    /** @var mixed */
+    /**
+     * @var mixed 
+     */
     public $flag;
 
 
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $type = '';
 
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $subtype = '';
 
-    /** @var int */
+    /**
+     * @var int 
+     */
     public $identified = Constants\Id::NONE;
 
-    /** @var boolean */
+    /**
+     * @var boolean 
+     */
     public $generic = true;
 
-    /** @var boolean */
+    /**
+     * @var boolean 
+     */
     public $hidden = false;
 
 
     /**
      * Set the properties to the default values
      *
-     * @param   array|null  $properties  An optional array of properties to set after setting it to the default values
+     * @param array|null $properties An optional array of properties to set after setting it to the default values
      *
      * @internal
      */
@@ -74,9 +96,9 @@ class Device extends Base
     /**
      * Identify the manufacturer and model based on a pattern
      *
-     * @param   string      $pattern   The regular expression that defines the group that matches the model
-     * @param   string      $subject   The string the regular expression is matched with
-     * @param   array|null  $defaults  An optional array of properties to set together
+     * @param string     $pattern  The regular expression that defines the group that matches the model
+     * @param string     $subject  The string the regular expression is matched with
+     * @param array|null $defaults An optional array of properties to set together
      *
      * @return string
      */
@@ -114,7 +136,7 @@ class Device extends Base
     /**
      * Declare an positive identification
      *
-     * @param  array  $properties  An array, the key of an element determines the name of the property
+     * @param array $properties An array, the key of an element determines the name of the property
      *
      * @return string
      */

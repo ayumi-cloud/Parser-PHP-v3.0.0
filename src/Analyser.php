@@ -40,9 +40,9 @@ class Analyser
         /* Start the actual analysing steps */
 
         $this->analyseHeaders()
-             ->deriveInformation()
-             ->applyCorrections()
-             ->detectCamouflage()
-             ->deriveDeviceSubType();
+            ->deriveInformation()
+            ->applyCorrections()
+            ->detectCamouflage()
+            ->deriveDeviceSubType();
     }
 }

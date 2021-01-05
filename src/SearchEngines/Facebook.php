@@ -8,16 +8,24 @@ use WhichBrowser\Model\Version;
 
 class Facebook
 {
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $name;
 
-    /** @var array */
+    /**
+     * @var array 
+     */
     public $version;
 
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $bot;
 
-    /** @var string default set to false */
+    /**
+     * @var string default set to false 
+     */
     public $found = false;
 
     /**
@@ -35,34 +43,34 @@ class Facebook
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Facebook External Hit */
+            /* Facebook External Hit */
         } elseif (preg_match('/facebookexternalhit\/([0-9.]*)/u', $ua, $match)) {
             $this->name = 'Facebook External Hit Bot';
             $this->version = new Version([ 'value' => $match[1] ]);
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Facebook Platform */
+            /* Facebook Platform */
         } elseif (preg_match('/facebookplatform\/([0-9.]*)/u', $ua, $match)) {
             $this->name = 'Facebook Platform Bot';
             $this->version = new Version([ 'value' => $match[1] ]);
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Facebook External UA */
+            /* Facebook External UA */
         } elseif (preg_match('/facebookexternalua/u', $ua, $match)) {
             $this->name = 'Facebook External UA Bot';
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Facebook Ad Review */
+            /* Facebook Ad Review */
         } elseif (preg_match('/adreview\/([0-9.]*)/u', $ua, $match)) {
             $this->name = 'Facebook Ad Review Bot';
             $this->version = new Version([ 'value' => $match[1] ]);
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
         
-        /* Facebook Cortex */
+            /* Facebook Cortex */
         } elseif (preg_match('/cortex\/([0-9.]*)/u', $ua, $match)) {
             $this->name = 'Facebook Cortex Bot';
             $this->version = new Version([ 'value' => $match[1] ]);

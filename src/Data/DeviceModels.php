@@ -44,49 +44,49 @@ class DeviceModels
 
     public static function identify($type, $model)
     {
-        require_once __DIR__ . '/../../data/models-' . $type . '.php';
+        include_once __DIR__ . '/../../data/models-' . $type . '.php';
 
         if ($type != 'blackberry' && $type != 'ios') {
-            require_once __DIR__ . '/../../data/indices/models-' . $type . '.php';
+            include_once __DIR__ . '/../../data/indices/models-' . $type . '.php';
         }
 
         switch ($type) {
-            case 'android':
-                return self::identifyAndroid($model);
-            case 'asha':
-                return self::identifyList(self::$ASHA_INDEX, self::$ASHA_MODELS, $model);
-            case 'bada':
-                return self::identifyList(self::$BADA_INDEX, self::$BADA_MODELS, $model);
-            case 'blackberry':
-                return self::identifyBlackBerry($model);
-            case 'brew':
-                return self::identifyList(self::$BREW_INDEX, self::$BREW_MODELS, $model);
-            case 'firefoxos':
-                return self::identifyList(self::$FIREFOXOS_INDEX, self::$FIREFOXOS_MODELS, $model, false);
-            case 'ios':
-                return self::identifyIOS($model);
-            case 'tizen':
-                return self::identifyList(self::$TIZEN_INDEX, self::$TIZEN_MODELS, $model);
-            case 'touchwiz':
-                return self::identifyList(self::$TOUCHWIZ_INDEX, self::$TOUCHWIZ_MODELS, $model);
-            case 'wm':
-                return self::identifyWindowsMobile($model);
-            case 'wp':
-                return self::identifyList(self::$WP_INDEX, self::$WP_MODELS, $model);
-            case 's30plus':
-                return self::identifyList(self::$S30PLUS_INDEX, self::$S30PLUS_MODELS, $model);
-            case 's40':
-                return self::identifyList(self::$S40_INDEX, self::$S40_MODELS, $model);
-            case 'symbian':
-                return self::identifyList(self::$SYMBIAN_INDEX, self::$SYMBIAN_MODELS, $model);
-            case 'palmos':
-                return self::identifyList(self::$PALMOS_INDEX, self::$PALMOS_MODELS, $model);
-            case 'kddi':
-                return self::identifyList(self::$KDDI_INDEX, self::$KDDI_MODELS, $model);
+        case 'android':
+            return self::identifyAndroid($model);
+        case 'asha':
+            return self::identifyList(self::$ASHA_INDEX, self::$ASHA_MODELS, $model);
+        case 'bada':
+            return self::identifyList(self::$BADA_INDEX, self::$BADA_MODELS, $model);
+        case 'blackberry':
+            return self::identifyBlackBerry($model);
+        case 'brew':
+            return self::identifyList(self::$BREW_INDEX, self::$BREW_MODELS, $model);
+        case 'firefoxos':
+            return self::identifyList(self::$FIREFOXOS_INDEX, self::$FIREFOXOS_MODELS, $model, false);
+        case 'ios':
+            return self::identifyIOS($model);
+        case 'tizen':
+            return self::identifyList(self::$TIZEN_INDEX, self::$TIZEN_MODELS, $model);
+        case 'touchwiz':
+            return self::identifyList(self::$TOUCHWIZ_INDEX, self::$TOUCHWIZ_MODELS, $model);
+        case 'wm':
+            return self::identifyWindowsMobile($model);
+        case 'wp':
+            return self::identifyList(self::$WP_INDEX, self::$WP_MODELS, $model);
+        case 's30plus':
+            return self::identifyList(self::$S30PLUS_INDEX, self::$S30PLUS_MODELS, $model);
+        case 's40':
+            return self::identifyList(self::$S40_INDEX, self::$S40_MODELS, $model);
+        case 'symbian':
+            return self::identifyList(self::$SYMBIAN_INDEX, self::$SYMBIAN_MODELS, $model);
+        case 'palmos':
+            return self::identifyList(self::$PALMOS_INDEX, self::$PALMOS_MODELS, $model);
+        case 'kddi':
+            return self::identifyList(self::$KDDI_INDEX, self::$KDDI_MODELS, $model);
         }
 
-        require_once __DIR__ . '/../../data/models-feature.php';
-        require_once __DIR__ . '/../../data/indices/models-feature.php';
+        include_once __DIR__ . '/../../data/models-feature.php';
+        include_once __DIR__ . '/../../data/indices/models-feature.php';
         return self::identifyList(self::$FEATURE_INDEX, self::$FEATURE_MODELS, $model);
     }
     
@@ -104,14 +104,16 @@ class DeviceModels
         $model = preg_replace("/iPh([0-9],[0-9])/", 'iPhone\\1', $model);
         $model = preg_replace("/iPd([0-9],[0-9])/", 'iPod\\1', $model);
 
-        $device = new Device([
+        $device = new Device(
+            [
             'type'          => Constants\DeviceType::MOBILE,
             'identified'    => Constants\Id::NONE,
             'manufacturer'  => null,
             'model'         => $model,
             'identifier'    => $original,
             'generic'       => false
-        ]);
+            ]
+        );
 
         if (isset(self::$IOS_MODELS[$model])) {
             $match = self::$IOS_MODELS[$model];
@@ -139,14 +141,16 @@ class DeviceModels
             $model = $match[1];
         }
 
-        $device = new Device([
+        $device = new Device(
+            [
             'type'          => Constants\DeviceType::MOBILE,
             'identified'    => Constants\Id::NONE,
             'manufacturer'  => null,
             'model'         => $model,
             'identifier'    => $original,
             'generic'       => false
-        ]);
+            ]
+        );
 
         if (preg_match("/^[1-9][0-9][0-9][0-9][ei]?$/u", $model)) {
             $device->manufacturer = 'RIM';
@@ -169,13 +173,15 @@ class DeviceModels
         if (!$result->identified) {
             $model = self::cleanup($model);
             if (preg_match('/AndroVM/iu', $model)  || $model == 'Emulator' || $model == 'x86 Emulator' || $model == 'x86 VirtualBox' || $model == 'vm') {
-                return new Device([
+                return new Device(
+                    [
                     'type'          => Constants\DeviceType::EMULATOR,
                     'identified'    => Constants\Id::PATTERN,
                     'manufacturer'  => null,
                     'model'         => null,
                     'generic'       => false
-                ]);
+                    ]
+                );
             }
         }
 
@@ -190,14 +196,16 @@ class DeviceModels
             $model = self::cleanup($model);
         }
 
-        $device = new Device([
+        $device = new Device(
+            [
             'type'          => Constants\DeviceType::MOBILE,
             'identified'    => Constants\Id::NONE,
             'manufacturer'  => null,
             'model'         => $model,
             'identifier'    => $original,
             'generic'       => false
-        ]);
+            ]
+        );
 
         $keys = [ '@' . strtoupper(substr($model, 0, 2)), '@' ];
 

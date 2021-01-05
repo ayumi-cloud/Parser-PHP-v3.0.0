@@ -8,16 +8,24 @@ use WhichBrowser\Model\Version;
 
 class Sogou
 {
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $name;
     
-    /** @var array */
+    /**
+     * @var array 
+     */
     public $version;
 
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $bot;
     
-    /** @var string default set to false */
+    /**
+     * @var string default set to false 
+     */
     public $found = false;
 
     /**
@@ -35,62 +43,62 @@ class Sogou
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Sogou Image Bot */
+            /* Sogou Image Bot */
         } elseif (preg_match('/Sogou Pic Spider\/([0-9.]*)/iu', $ua, $match)) {
             $this->name = 'Sogou Image Bot';
             $this->version = new Version([ 'value' => $match[1] ]);
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Sogou News Bot */
+            /* Sogou News Bot */
         } elseif (preg_match('/Sogou News Spider\/([0-9.]*)/iu', $ua, $match)) {
             $this->name = 'Sogou News Bot';
             $this->version = new Version([ 'value' => $match[1] ]);
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Sogou Video Bot */
+            /* Sogou Video Bot */
         } elseif (preg_match('/Sogou Video Spider\/([0-9.]*)/iu', $ua, $match)) {
             $this->name = 'Sogou Video Bot';
             $this->version = new Version([ 'value' => $match[1] ]);
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Sogou Push Bot */
+            /* Sogou Push Bot */
         } elseif (preg_match('/Sogou Push Spider\/([0-9.]*)/iu', $ua, $match)) {
             $this->name = 'Sogou Push Bot';
             $this->version = new Version([ 'value' => $match[1] ]);
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Sogou Mobile Bot 1 */
+            /* Sogou Mobile Bot 1 */
         } elseif (preg_match('/Sogou mobile spider\/([0-9.]*)/iu', $ua, $match)) {
             $this->name = 'Sogou Mobile Bot';
             $this->version = new Version([ 'value' => $match[1] ]);
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Sogou Mobile Bot 2 */
+            /* Sogou Mobile Bot 2 */
         } elseif (preg_match('/Sogou wap spider/iu', $ua, $match)) {
             $this->name = 'Sogou Mobile Bot';
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
             
-        /* Sogou Bot 1 */
+            /* Sogou Bot 1 */
         } elseif (preg_match('/Sogou inst spider\/([0-9.]*)/iu', $ua, $match)) {
             $this->name = 'Sogou Bot';
             $this->version = new Version([ 'value' => $match[1] ]);
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
             
-        /* Sogou Bot 2 */
+            /* Sogou Bot 2 */
         } elseif (preg_match('/Sogou web spider\/([0-9.]*)/iu', $ua, $match)) {
             $this->name = 'Sogou Bot';
             $this->version = new Version([ 'value' => $match[1] ]);
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Sogou Bot 3 */
+            /* Sogou Bot 3 */
         } elseif (preg_match('/Sogou spider/iu', $ua, $match)) {
             $this->name = 'Sogou Bot';
             $this->bot = Constants\DeviceType::BOT;

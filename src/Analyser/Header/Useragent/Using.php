@@ -43,9 +43,11 @@ trait Using
         $count = count($items);
         for ($i = 0; $i < $count; $i++) {
             if (preg_match($items[$i]['regexp'], $ua, $match)) {
-                $this->data->browser->using = new \WhichBrowser\Model\Using([
+                $this->data->browser->using = new \WhichBrowser\Model\Using(
+                    [
                     'name' => $items[$i]['name']
-                ]);
+                    ]
+                );
 
                 if (isset($match[1]) && $match[1]) {
                     $this->data->browser->using->version = new Version([ 'value' => $match[1], 'details' => isset($items[$i]['details']) ? $items[$i]['details'] : null ]);

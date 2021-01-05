@@ -30,9 +30,11 @@ trait Application
             $this->data->browser->version = null;
             $this->data->browser->type = Constants\BrowserType::APP;
 
-            $this->data->os->reset([
+            $this->data->os->reset(
+                [
                 'name'      => 'Android'
-            ]);
+                ]
+            );
 
             $this->data->device->model = $match[1];
             $this->data->device->identified |= Constants\Id::PATTERN;
@@ -50,10 +52,12 @@ trait Application
         if (preg_match('/Android [0-9\.]+; (.*) Sony\/.*SonySelectSDK\/([0-9\.]+)/iu', $ua, $match)) {
             $this->data->browser->reset();
             $this->data->browser->type = Constants\BrowserType::APP;
-            $this->data->browser->using = new \WhichBrowser\Model\Using([
+            $this->data->browser->using = new \WhichBrowser\Model\Using(
+                [
                 'name' => 'Sony Select SDK',
                 'version' => new Version([ 'value' => $match[2], 'details' => 2 ])
-            ]);
+                ]
+            );
 
             $this->data->device->model = $match[1];
             $this->data->device->identified |= Constants\Id::PATTERN;
@@ -73,10 +77,12 @@ trait Application
             $this->data->browser->version = null;
             $this->data->browser->type = Constants\BrowserType::APP_MEDIAPLAYER;
 
-            $this->data->os->reset([
+            $this->data->os->reset(
+                [
                 'name'      => 'Android',
                 'version'   => new Version([ 'value' => $match[2] ])
-            ]);
+                ]
+            );
 
             $this->data->device->model = $match[1];
             $this->data->device->identified |= Constants\Id::PATTERN;
@@ -97,9 +103,11 @@ trait Application
                 $this->data->browser->version = null;
                 $this->data->browser->type = Constants\BrowserType::APP;
 
-                $this->data->os->reset([
+                $this->data->os->reset(
+                    [
                     'name'      => 'Android'
-                ]);
+                    ]
+                );
 
                 $this->data->device->model = $match[2];
                 $this->data->device->identified |= Constants\Id::PATTERN;
@@ -117,9 +125,11 @@ trait Application
                 $this->data->browser->version = null;
                 $this->data->browser->type = Constants\BrowserType::APP;
 
-                $this->data->os->reset([
+                $this->data->os->reset(
+                    [
                     'name'      => 'Android'
-                ]);
+                    ]
+                );
 
                 $version = Data\BuildIds::identify($match[3]);
                 if ($version) {
@@ -142,9 +152,11 @@ trait Application
                 $this->data->browser->version = null;
                 $this->data->browser->type = Constants\BrowserType::APP;
 
-                $this->data->os->reset([
+                $this->data->os->reset(
+                    [
                     'name'      => 'Android'
-                ]);
+                    ]
+                );
 
                 $this->data->device->model = $match[2];
                 $this->data->device->identified |= Constants\Id::PATTERN;
@@ -165,10 +177,12 @@ trait Application
             $this->data->browser->version = null;
             $this->data->browser->type = Constants\BrowserType::APP;
 
-            $this->data->os->reset([
+            $this->data->os->reset(
+                [
                 'name'      => 'Android',
                 'version'   => new Version([ 'value' => $match[1] ])
-            ]);
+                ]
+            );
 
             $this->data->device->model = $match[2];
             $this->data->device->identified |= Constants\Id::PATTERN;
@@ -188,10 +202,12 @@ trait Application
             $this->data->browser->version = new Version([ 'value' => $match[1] ]);
             $this->data->browser->type = Constants\BrowserType::APP_SOCIAL;
 
-            $this->data->os->reset([
+            $this->data->os->reset(
+                [
                 'name'      => 'Android',
                 'version'   => new Version([ 'value' => $match[2] ])
-            ]);
+                ]
+            );
 
             $this->data->device->model = $match[3];
             $this->data->device->identified |= Constants\Id::PATTERN;
@@ -211,10 +227,12 @@ trait Application
             $this->data->browser->version = new Version([ 'value' => $match[2] ]);
             $this->data->browser->type = Constants\BrowserType::APP_SOCIAL;
 
-            $this->data->os->reset([
+            $this->data->os->reset(
+                [
                 'name'      => 'Android',
                 'version'   => new Version([ 'value' => $match[4] ])
-            ]);
+                ]
+            );
 
             $this->data->device->model = $match[3];
             $this->data->device->identified |= Constants\Id::PATTERN;
@@ -234,10 +252,12 @@ trait Application
             $this->data->browser->version = new Version([ 'value' => $match[1], 'details' => 2 ]);
             $this->data->browser->type = Constants\BrowserType::APP_ANTIVIRUS;
 
-            $this->data->os->reset([
+            $this->data->os->reset(
+                [
                 'name'      => 'Android',
                 'version'   => new Version([ 'value' => $match[3] ])
-            ]);
+                ]
+            );
 
             $this->data->device->type = Constants\DeviceType::MOBILE;
 
@@ -255,10 +275,12 @@ trait Application
             $this->data->browser->version = new Version([ 'value' => $match[1], 'details' => 2 ]);
             $this->data->browser->type = Constants\BrowserType::APP;
 
-            $this->data->os->reset([
+            $this->data->os->reset(
+                [
                 'name'      => 'Android',
                 'version'   => new Version([ 'value' => $match[3] ])
-            ]);
+                ]
+            );
 
             $this->data->device->type = Constants\DeviceType::MOBILE;
 
@@ -276,10 +298,12 @@ trait Application
             $this->data->browser->version = new Version([ 'value' => $match[1], 'details' => 2 ]);
             $this->data->browser->type = Constants\BrowserType::APP_SHOPPING;
 
-            $this->data->os->reset([
+            $this->data->os->reset(
+                [
                 'name'      => 'Android',
                 'version'   => new Version([ 'value' => $match[2] ])
-            ]);
+                ]
+            );
 
             $this->data->device->type = Constants\DeviceType::MOBILE;
             $this->data->device->model = $match[3];
@@ -304,10 +328,12 @@ trait Application
             $this->data->device->identified |= Constants\Id::PATTERN;
 
             if ($match[2] == 'Android') {
-                $this->data->os->reset([
+                $this->data->os->reset(
+                    [
                     'name'      => 'Android',
                     'version'   => new Version([ 'value' => str_replace('_', '.', $match[3]) ])
-                ]);
+                    ]
+                );
 
                 $device = Data\DeviceModels::identify('android', $match[5]);
                 if ($device->identified) {
@@ -317,10 +343,12 @@ trait Application
             }
 
             if ($match[2] == 'WP7') {
-                $this->data->os->reset([
+                $this->data->os->reset(
+                    [
                     'name'      => 'Windows Phone',
                     'version'   => new Version([ 'value' => $match[3], 'details' => 2 ])
-                ]);
+                    ]
+                );
 
                 $device = Data\DeviceModels::identify('wp', $match[5]);
                 if ($device->identified) {
@@ -330,11 +358,13 @@ trait Application
             }
 
             if ($match[2] == 'S60Version') {
-                $this->data->os->reset([
+                $this->data->os->reset(
+                    [
                     'name'      => 'Series60',
                     'version'   => new Version([ 'value' => $match[3] ]),
                     'family'    => new Family([ 'name' => 'Symbian' ])
-                ]);
+                    ]
+                );
 
                 $device = Data\DeviceModels::identify('symbian', $match[5]);
                 if ($device->identified) {
@@ -344,10 +374,12 @@ trait Application
             }
 
             if ($match[2] == 'WP7') {
-                $this->data->os->reset([
+                $this->data->os->reset(
+                    [
                     'name'      => 'Windows Phone',
                     'version'   => new Version([ 'value' => $match[3], 'details' => 2 ])
-                ]);
+                    ]
+                );
 
                 $device = Data\DeviceModels::identify('wp', $match[5]);
                 if ($device->identified) {
@@ -364,21 +396,23 @@ trait Application
             $this->data->browser->version = new Version([ 'value' => $match[2], 'details' => 3 ]);
 
             switch ($match[1]) {
-                case 'Messenger':
-                    $this->data->browser->type = Constants\BrowserType::APP_CHAT;
-                    break;
-                case 'Mail':
-                    $this->data->browser->type = Constants\BrowserType::APP_EMAIL;
-                    break;
-                case 'Weather':
-                    $this->data->browser->type = Constants\BrowserType::APP_NEWS;
-                    break;
+            case 'Messenger':
+                $this->data->browser->type = Constants\BrowserType::APP_CHAT;
+                break;
+            case 'Mail':
+                $this->data->browser->type = Constants\BrowserType::APP_EMAIL;
+                break;
+            case 'Weather':
+                $this->data->browser->type = Constants\BrowserType::APP_NEWS;
+                break;
             }
 
-            $this->data->os->reset([
+            $this->data->os->reset(
+                [
                 'name'      => 'Android',
                 'version'   => new Version([ 'value' => $match[4] ])
-            ]);
+                ]
+            );
 
             $this->data->device->type = Constants\DeviceType::MOBILE;
 
@@ -396,10 +430,12 @@ trait Application
             $this->data->browser->version = new Version([ 'value' => $match[1], 'details' => 3 ]);
             $this->data->browser->type = Constants\BrowserType::APP_SEARCH;
 
-            $this->data->os->reset([
+            $this->data->os->reset(
+                [
                 'name'      => 'Android',
                 'version'   => new Version([ 'value' => $match[3] ])
-            ]);
+                ]
+            );
 
             $this->data->device->type = Constants\DeviceType::MOBILE;
 
@@ -417,10 +453,12 @@ trait Application
             $this->data->browser->version = new Version([ 'value' => $match[1], 'details' => 3 ]);
             $this->data->browser->type = Constants\BrowserType::APP_CHAT;
 
-            $this->data->os->reset([
+            $this->data->os->reset(
+                [
                 'name'      => 'Android',
                 'version'   => new Version([ 'value' => $match[2] ])
-            ]);
+                ]
+            );
 
             $this->data->device->type = Constants\DeviceType::MOBILE;
 
@@ -446,10 +484,12 @@ trait Application
                 $this->data->browser->type = Constants\BrowserType::APP_SOCIAL;
             }
 
-            $this->data->os->reset([
+            $this->data->os->reset(
+                [
                 'name'      => 'Android',
                 'version'   => new Version([ 'value' => $match[3] ])
-            ]);
+                ]
+            );
 
             $this->data->device->type = Constants\DeviceType::MOBILE;
 
@@ -467,10 +507,12 @@ trait Application
             $this->data->browser->version = new Version([ 'value' => $match[1], 'details' => 2 ]);
             $this->data->browser->type = Constants\BrowserType::APP_SOCIAL;
 
-            $this->data->os->reset([
+            $this->data->os->reset(
+                [
                 'name'      => 'Android',
                 'version'   => new Version([ 'value' => $match[2] ])
-            ]);
+                ]
+            );
 
             $this->data->device->model = $match[3];
             $this->data->device->identified |= Constants\Id::PATTERN;

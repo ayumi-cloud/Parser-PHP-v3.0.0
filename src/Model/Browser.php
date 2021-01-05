@@ -14,26 +14,36 @@ class Browser extends NameVersion
     public $family;
 
 
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $channel;
 
-    /** @var boolean */
+    /**
+     * @var boolean 
+     */
     public $stock = true;
 
-    /** @var boolean */
+    /**
+     * @var boolean 
+     */
     public $hidden = false;
 
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $mode = '';
 
-    /** @var string */
+    /**
+     * @var string 
+     */
     public $type = '';
 
 
     /**
      * Set the properties to the default values
      *
-     * @param   array|null  $properties  An optional array of properties to set after setting it to the default values
+     * @param array|null $properties An optional array of properties to set after setting it to the default values
      *
      * @internal
      */
@@ -73,7 +83,7 @@ class Browser extends NameVersion
     /**
      * Is the browser from the specified family
      *
-     * @param  string   $name   The name of the family
+     * @param string $name The name of the family
      *
      * @return boolean
      */
@@ -97,7 +107,7 @@ class Browser extends NameVersion
     /**
      * Is the browser using the specified webview
      *
-     * @param  string   $name   The name of the webview
+     * @param string $name The name of the webview
      *
      * @return boolean
      */
