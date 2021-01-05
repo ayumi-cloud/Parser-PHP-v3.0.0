@@ -1,6 +1,6 @@
 <?php
 
-include_once __DIR__ . '/bootstrap.php';
+require_once __DIR__ . '/bootstrap.php';
 
 use WhichBrowser\Data\Applications;
 
@@ -17,37 +17,39 @@ if (count($argv)) {
         } elseif (substr($argument, 0, 2) == '--') {
             $options[] = substr($argument, 2);
         } else {
-			$types[] = $argument;
+            $types[] = $argument;
         }
     }
 }
 
 if (in_array('all', $options)) {
-	$types = [
+    $types = [
         'applications-bots',
         'applications-browsers',
         'applications-others'
-	];
+    ];
 }
 
 
 foreach ($types as $i => $type) {
-	command($command, $type);
+    command($command, $type);
 }
 
 
-function command($command, $type) {
-	switch($command) {
-		case 'list':
-			command_list($type);
-			break;
-	}
+function command($command, $type)
+{
+    switch($command) {
+    case 'list':
+        command_list($type);
+        break;
+    }
 }
 
-function command_list($type) {
-	echo "Creating regex for 'data/{$type}.php'...\n";
+function command_list($type)
+{
+    echo "Creating regex for 'data/{$type}.php'...\n";
 
-    require_once __DIR__ . '/../data/' . $type . '.php';
+    include_once __DIR__ . '/../data/' . $type . '.php';
 
     if ($type == 'applications-bots') {
         $list = Applications::$BOTS;

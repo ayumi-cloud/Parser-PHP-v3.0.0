@@ -18,18 +18,22 @@ class OsTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $os->getName());
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'iOS',
             'version'   => new Version([ 'value' => '8.0' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('iOS', $os->getName());
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'iOS',
             'alias'     => 'iPhone OS',
             'version'   => new Version([ 'value' => '3.0' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('iPhone OS', $os->getName());
     }
@@ -40,24 +44,30 @@ class OsTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $os->getVersion());
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'iOS',
             'version'   => new Version([ 'value' => '8.0' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('8.0', $os->getVersion());
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'OS X',
             'version'   => new Version([ 'value' => '10.11', 'nickname' => 'El Capitan' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('El Capitan 10.11', $os->getVersion());
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'Windows',
             'version'   => new Version([ 'value' => '5.1', 'alias' => 'XP' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('XP', $os->getVersion());
     }
@@ -68,10 +78,12 @@ class OsTest extends PHPUnit_Framework_TestCase
 
         $this->assertFalse($os->isDetected());
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'iOS',
             'version'   => new Version([ 'value' => '8.0' ])
-        ]);
+            ]
+        );
 
         $this->assertTrue($os->isDetected());
     }
@@ -82,23 +94,29 @@ class OsTest extends PHPUnit_Framework_TestCase
 
         $this->assertFalse($os->isFamily('Android'));
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'Android'
-        ]);
+            ]
+        );
 
         $this->assertTrue($os->isFamily('Android'));
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'FireOS',
             'family'    => new Family([ 'name' => 'Android' ])
-        ]);
+            ]
+        );
 
         $this->assertTrue($os->isFamily('Android'));
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'FireOS',
             'family'    => new Family([ 'name' => 'Android' ])
-        ]);
+            ]
+        );
 
         $this->assertFalse($os->isFamily('iOS'));
     }
@@ -109,52 +127,64 @@ class OsTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $os->toString());
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'iOS',
             'version'   => new Version([ 'value' => '8.0' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('iOS 8.0', $os->toString());
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'iOS',
             'alias'     => 'iPhone OS',
             'version'   => new Version([ 'value' => '3.0' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('iPhone OS 3.0', $os->toString());
 
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'OS X',
             'version'   => new Version([ 'value' => '10.11', 'nickname' => 'El Capitan' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('OS X El Capitan 10.11', $os->toString());
 
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'Windows',
             'version'   => new Version([ 'value' => '5.1', 'alias' => 'XP' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('Windows XP', $os->toString());
 
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'Windows Phone',
             'alias'     => 'Windows',
             'edition'   => 'Mobile',
             'version'   => new Version([ 'value' => '10.0', 'alias' => '10' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('Windows 10 Mobile', $os->toString());
 
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'webOS',
             'hidden'    => true
-        ]);
+            ]
+        );
 
         $this->assertEquals('', $os->toString());
     }
@@ -188,68 +218,89 @@ class OsTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $os->toArray());
 
-        $os->set([
+        $os->set(
+            [
             'name'      => ''
-        ]);
+            ]
+        );
 
         $this->assertEquals([], $os->toArray());
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'iOS',
             'version'   => new Version([ 'value' => '8.0' ])
-        ]);
+            ]
+        );
 
-        $this->assertEquals([
+        $this->assertEquals(
+            [
             'name'      => 'iOS',
             'version'   => '8.0'
-        ], $os->toArray());
+            ], $os->toArray()
+        );
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'iOS',
             'alias'     => 'iPhone OS',
             'version'   => new Version([ 'value' => '3.0' ])
-        ]);
+            ]
+        );
 
-        $this->assertEquals([
+        $this->assertEquals(
+            [
             'name'      => 'iOS',
             'alias'     => 'iPhone OS',
             'version'   => '3.0'
-        ], $os->toArray());
+            ], $os->toArray()
+        );
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'OS X',
             'version'   => new Version([ 'value' => '10.11', 'nickname' => 'El Capitan' ])
-        ]);
+            ]
+        );
 
-        $this->assertEquals([
+        $this->assertEquals(
+            [
             'name'      => 'OS X',
             'version'   => [
                 'value'     => '10.11',
                 'nickname'  => 'El Capitan'
             ]
-        ], $os->toArray());
+            ], $os->toArray()
+        );
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'Windows',
             'version'   => new Version([ 'value' => '5.1', 'alias' => 'XP' ])
-        ]);
+            ]
+        );
 
-        $this->assertEquals([
+        $this->assertEquals(
+            [
             'name'      => 'Windows',
             'version'   => [
                 'value'     => '5.1',
                 'alias'     => 'XP'
             ]
-        ], $os->toArray());
+            ], $os->toArray()
+        );
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'Windows Phone',
             'alias'     => 'Windows',
             'edition'   => 'Mobile',
             'version'   => new Version([ 'value' => '10.0', 'alias' => '10' ])
-        ]);
+            ]
+        );
 
-        $this->assertEquals([
+        $this->assertEquals(
+            [
             'name'      => 'Windows Phone',
             'alias'     => 'Windows',
             'edition'   => 'Mobile',
@@ -257,16 +308,21 @@ class OsTest extends PHPUnit_Framework_TestCase
                 'value'     => '10.0',
                 'alias'     => '10'
             ]
-        ], $os->toArray());
+            ], $os->toArray()
+        );
 
-        $os->reset([
+        $os->reset(
+            [
             'name'      => 'FireOS',
             'family'   => new Family([ 'name' => 'Android' ])
-        ]);
+            ]
+        );
 
-        $this->assertEquals([
+        $this->assertEquals(
+            [
             'name'      => 'FireOS',
             'family'    => 'Android'
-        ], $os->toArray());
+            ], $os->toArray()
+        );
     }
 }

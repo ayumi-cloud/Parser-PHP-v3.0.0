@@ -17,10 +17,12 @@ class FamilyTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $family->getName());
 
-        $family->reset([
+        $family->reset(
+            [
             'name'      => 'Android',
             'version'   => new Version([ 'value' => '4.1.1' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('Android', $family->getName());
     }
@@ -31,10 +33,12 @@ class FamilyTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $family->getVersion());
 
-        $family->reset([
+        $family->reset(
+            [
             'name'      => 'Android',
             'version'   => new Version([ 'value' => '4.1.1' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('4.1.1', $family->getVersion());
     }
@@ -45,10 +49,12 @@ class FamilyTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $family->toString());
 
-        $family->reset([
+        $family->reset(
+            [
             'name'      => 'Android',
             'version'   => new Version([ 'value' => '4.1.1' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('Android 4.1.1', $family->toString());
     }
@@ -59,14 +65,18 @@ class FamilyTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $family->toArray());
 
-        $family->set([
+        $family->set(
+            [
             'name'      => 'Android',
             'version'   => new Version([ 'value' => '4.1.1' ])
-        ]);
+            ]
+        );
 
-        $this->assertEquals([
+        $this->assertEquals(
+            [
             'name'      => 'Android',
             'version'   => '4.1.1'
-        ], $family->toArray());
+            ], $family->toArray()
+        );
     }
 }

@@ -16,18 +16,22 @@ class NameVersionTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $nameversion->getName());
 
-        $nameversion->reset([
+        $nameversion->reset(
+            [
             'name'      => 'Generic',
             'version'   => new Version([ 'value' => '1.0' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('Generic', $nameversion->getName());
 
-        $nameversion->reset([
+        $nameversion->reset(
+            [
             'name'      => 'Generic',
             'alias'     => 'Alias',
             'version'   => new Version([ 'value' => '1.0' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('Alias', $nameversion->getName());
     }
@@ -38,17 +42,21 @@ class NameVersionTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $nameversion->getVersion());
 
-        $nameversion->reset([
+        $nameversion->reset(
+            [
             'name'      => 'Generic',
             'version'   => new Version([ 'value' => '1.0' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('1.0', $nameversion->getVersion());
 
-        $nameversion->reset([
+        $nameversion->reset(
+            [
             'name'      => 'Generic',
             'version'   => new Version([ 'value' => '1.0', 'details' => 1 ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('1', $nameversion->getVersion());
     }
@@ -59,10 +67,12 @@ class NameVersionTest extends PHPUnit_Framework_TestCase
 
         $this->assertFalse($nameversion->isDetected());
 
-        $nameversion->reset([
+        $nameversion->reset(
+            [
             'name'      => 'Generic',
             'version'   => new Version([ 'value' => '1.0' ])
-        ]);
+            ]
+        );
 
         $this->assertTrue($nameversion->isDetected());
     }
@@ -73,18 +83,22 @@ class NameVersionTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $nameversion->toString());
 
-        $nameversion->reset([
+        $nameversion->reset(
+            [
             'name'      => 'Generic',
             'version'   => new Version([ 'value' => '1.0' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('Generic 1.0', $nameversion->toString());
 
-        $nameversion->reset([
+        $nameversion->reset(
+            [
             'name'      => 'Generic',
             'alias'     => 'Alias',
             'version'   => new Version([ 'value' => '1.0' ])
-        ]);
+            ]
+        );
 
         $this->assertEquals('Alias 1.0', $nameversion->toString());
     }

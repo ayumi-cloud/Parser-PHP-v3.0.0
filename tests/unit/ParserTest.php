@@ -20,9 +20,11 @@ class ParserTest extends PHPUnit_Framework_TestCase
 
     public function testCreatingParserWithHeaders()
     {
-        $parser = new Parser([
+        $parser = new Parser(
+            [
             'User-Agent' => 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; InfoPath.1)'
-        ]);
+            ]
+        );
 
         $this->assertTrue($parser instanceof \WhichBrowser\Parser);
 
@@ -31,11 +33,13 @@ class ParserTest extends PHPUnit_Framework_TestCase
 
     public function testCreatingParserWithOptions()
     {
-        $parser = new Parser([
+        $parser = new Parser(
+            [
             'headers' => [
                 'User-Agent' => 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; InfoPath.1)'
             ]
-        ]);
+            ]
+        );
 
         $this->assertTrue($parser instanceof \WhichBrowser\Parser);
 
