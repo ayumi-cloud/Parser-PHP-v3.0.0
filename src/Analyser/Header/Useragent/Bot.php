@@ -251,6 +251,7 @@ trait Bot
             $this->data->device->reset();
 
             $this->data->device->type = Constants\DeviceType::BOT;
+        }
 
         return $this;
     }
