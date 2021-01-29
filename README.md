@@ -1,3 +1,7 @@
+
+> WARNING:  This repo is being used as a testing ground and adding the unreleased pr's created on the main repo.
+> This repo needs to be updated with the latest rounds of updates.
+
 <img src="https://api.whichbrowser.net/whichbrowser.svg" width="400">
 
 This is an extremely complicated and almost completely useless browser sniffing library. Useless because you shouldn't use browser sniffing. So stop right now and go read something about feature detecting instead. I'm serious. Go away. You'll thank me later.
