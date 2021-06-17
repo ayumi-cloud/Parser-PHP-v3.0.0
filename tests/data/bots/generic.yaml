@@ -1002,3 +1002,7 @@
     headers: 'User-Agent: GRequests/0.10'
     readable: 'GRequests 0.10'
     result: { browser: { name: GRequests, version: '0.10' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Pandalytics/1.0 (https://domainsbot.com/pandalytics/)'
+    readable: 'Pandalytics 1.0'
+    result: { browser: { name: Pandalytics, version: '1.0' }, device: { type: bot } }
