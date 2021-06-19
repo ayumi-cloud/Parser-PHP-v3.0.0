@@ -225,7 +225,6 @@ trait Gaming
                 'type'          => Constants\DeviceType::GAMING,
                 'subtype'       => Constants\DeviceSubType::CONSOLE
             ]);
-        }
 
         /* Xbox Series X */
         } elseif (preg_match('/Xbox Series X\)/u', $ua, $match)) {
