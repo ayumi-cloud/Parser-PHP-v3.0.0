@@ -333,6 +333,7 @@ Applications::$BOTS = [
     [ 'name' => 'WWW Mechanize',                'id'    => 'mechanize',      'regexp' => '/WWW-Mechanize\/([0-9.]*)/u' ],
     [ 'name' => 'Xenu Link Sleuth',             'id'    => 'xenu',      'regexp' => '/Xenu Link Sleuth\/([0-9.]*)/u' ],
     [ 'name' => 'Xerka WebBot',                 'id'    => 'xerka',      'regexp' => '/Xerka WebBot v([0-9.]*)/u' ],
+    [ 'name' => 'ZoomInfo Bot',                 'id'    => 'zoominfo',    'regexp' => '/ZoominfoBot/u' ],
     [ 'name' => 'XML Sitemaps Generator',       'id'    => 'sitemap',      'regexp' => '/XML-Sitemaps\/([0-9.]*)/u' ],
     [ 'name' => 'XMLSitemapGenerator',          'id'    => 'sitemap',      'regexp' => '/XmlSitemapGenerator/u' ],
     [ 'name' => 'YaCy Bot',                     'id'    => 'yacy',      'regexp' => '/yacy(?:\/|\s|bot)/u' ],

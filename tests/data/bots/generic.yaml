@@ -1042,3 +1042,7 @@
     headers: 'User-Agent: SafeDNSBot (https://www.safedns.com/searchbot)'
     readable: 'SafeDNS Bot'
     result: { browser: { name: 'SafeDNS Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: ZoominfoBot (zoominfobot at zoominfo dot com)'
+    readable: 'ZoomInfo Bot'
+    result: { browser: { name: 'ZoomInfo Bot' }, device: { type: bot } }
