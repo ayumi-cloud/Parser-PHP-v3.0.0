@@ -3,43 +3,43 @@
     result: { engine: { name: NetFront }, device: { type: gaming, subtype: portable, manufacturer: Sony, model: 'PlayStation Portable' } }
     readable: 'a Sony PlayStation Portable'
 -
-    headers: 'User-Agent: Mozilla/5.0 (PlayStation 3 4.10) AppleWebKit/531.22.8 (KHTML, like Gecko)'
+    headers: 'User-Agent: Mozilla/5.0 (PLAYSTATION 3 4.10) AppleWebKit/531.22.8 (KHTML, like Gecko)'
     result: { engine: { name: Webkit, version: 531.22.8 }, os: { version: '4.10' }, device: { type: gaming, subtype: console, manufacturer: Sony, model: 'PlayStation 3' } }
     readable: 'a Sony PlayStation 3 running 4.10'
 -
-    headers: 'User-Agent: Mozilla/5.0 (PlayStation 3 4.11) AppleWebKit/531.22.8 (KHTML, like Gecko)'
+    headers: 'User-Agent: Mozilla/5.0 (PLAYSTATION 3 4.11) AppleWebKit/531.22.8 (KHTML, like Gecko)'
     result: { engine: { name: Webkit, version: 531.22.8 }, os: { version: '4.11' }, device: { type: gaming, subtype: console, manufacturer: Sony, model: 'PlayStation 3' } }
     readable: 'a Sony PlayStation 3 running 4.11'
 -
-    headers: 'User-Agent: Mozilla/5.0 (PlayStation 3 4.31) AppleWebKit/531.22.8 (KHTML, like Gecko)'
+    headers: 'User-Agent: Mozilla/5.0 (PLAYSTATION 3 4.31) AppleWebKit/531.22.8 (KHTML, like Gecko)'
     result: { engine: { name: Webkit, version: 531.22.8 }, os: { version: '4.31' }, device: { type: gaming, subtype: console, manufacturer: Sony, model: 'PlayStation 3' } }
     readable: 'a Sony PlayStation 3 running 4.31'
 -
-    headers: 'User-Agent: Mozilla/5.0 (PlayStation 3 4.41) AppleWebKit/531.22.8 (KHTML, like Gecko)'
+    headers: 'User-Agent: Mozilla/5.0 (PLAYSTATION 3 4.41) AppleWebKit/531.22.8 (KHTML, like Gecko)'
     result: { engine: { name: Webkit, version: 531.22.8 }, os: { version: '4.41' }, device: { type: gaming, subtype: console, manufacturer: Sony, model: 'PlayStation 3' } }
     readable: 'a Sony PlayStation 3 running 4.41'
 -
-    headers: 'User-Agent: Mozilla/5.0 (PlayStation 3 4.50) AppleWebKit/531.22.8 (KHTML, like Gecko)'
+    headers: 'User-Agent: Mozilla/5.0 (PLAYSTATION 3 4.50) AppleWebKit/531.22.8 (KHTML, like Gecko)'
     result: { engine: { name: Webkit, version: 531.22.8 }, os: { version: '4.50' }, device: { type: gaming, subtype: console, manufacturer: Sony, model: 'PlayStation 3' } }
     readable: 'a Sony PlayStation 3 running 4.50'
 -
-    headers: 'User-Agent: Mozilla/5.0 (PlayStation 3 4.53) AppleWebKit/531.22.8 (KHTML, like Gecko)'
+    headers: 'User-Agent: Mozilla/5.0 (PLAYSTATION 3 4.53) AppleWebKit/531.22.8 (KHTML, like Gecko)'
     result: { engine: { name: Webkit, version: 531.22.8 }, os: { version: '4.53' }, device: { type: gaming, subtype: console, manufacturer: Sony, model: 'PlayStation 3' } }
     readable: 'a Sony PlayStation 3 running 4.53'
 -
-    headers: 'User-Agent: Mozilla/5.0 (PlayStation 3 4.55) AppleWebKit/531.22.8 (KHTML, like Gecko)'
+    headers: 'User-Agent: Mozilla/5.0 (PLAYSTATION 3 4.55) AppleWebKit/531.22.8 (KHTML, like Gecko)'
     result: { engine: { name: Webkit, version: 531.22.8 }, os: { version: '4.55' }, device: { type: gaming, subtype: console, manufacturer: Sony, model: 'PlayStation 3' } }
     readable: 'a Sony PlayStation 3 running 4.55'
 -
-    headers: 'User-Agent: Mozilla/5.0 (PlayStation 3; 1.00)'
+    headers: 'User-Agent: Mozilla/5.0 (PLAYSTATION 3; 1.00)'
     result: { engine: { name: NetFront }, os: { version: '1.00' }, device: { type: gaming, subtype: console, manufacturer: Sony, model: 'PlayStation 3' } }
     readable: 'a Sony PlayStation 3 running 1.00'
 -
-    headers: 'User-Agent: Mozilla/5.0 (PlayStation 3; 2.00)'
+    headers: 'User-Agent: Mozilla/5.0 (PLAYSTATION 3; 2.00)'
     result: { engine: { name: NetFront }, os: { version: '2.00' }, device: { type: gaming, subtype: console, manufacturer: Sony, model: 'PlayStation 3' } }
     readable: 'a Sony PlayStation 3 running 2.00'
 -
-    headers: 'User-Agent: Mozilla/5.0 (PlayStation 3; 3.55)'
+    headers: 'User-Agent: Mozilla/5.0 (PLAYSTATION 3; 3.55)'
     result: { engine: { name: NetFront }, os: { version: '3.55' }, device: { type: gaming, subtype: console, manufacturer: Sony, model: 'PlayStation 3' } }
     readable: 'a Sony PlayStation 3 running 3.55'
 -
@@ -147,11 +147,11 @@
     result: { engine: { name: Webkit, version: '537.73' }, os: { version: '3.20' }, device: { type: gaming, subtype: portable, manufacturer: Sony, model: 'PlayStation Vita' } }
     readable: 'a Sony PlayStation Vita running 3.20'
 -
-    headers: 'User-Agent: Sony PlayStation2 (Utility Disc Ver.2.03c/for PS-modem)[jp]'
+    headers: 'User-Agent: Sony Playstation2 (Utility Disc Ver.2.03c/for PS-modem)[jp]'
     result: { device: { type: gaming, subtype: console, manufacturer: Sony, model: 'PlayStation 2' } }
     readable: 'a Sony PlayStation 2'
 -
-    headers: 'User-Agent: Mozilla/5.0 [ja] (PlayStation2; Linux 2.4.20 MIPS; ja-JP; rv:1.8a2) Gecko/20040630'
+    headers: 'User-Agent: Mozilla/5.0 [ja] (Playstation2; Linux 2.4.20 MIPS; ja-JP; rv:1.8a2) Gecko/20040630'
     result: { engine: { name: Gecko, version: 1.8a2 }, device: { type: gaming, subtype: console, manufacturer: Sony, model: 'PlayStation 2' } }
     readable: 'a Sony PlayStation 2'
 -
@@ -202,3 +202,11 @@
     headers: 'User-Agent: Mozilla/5.0 (PS3; PPU 4.2.0) AppleWebKit/537.21+ (KHTML, like Gecko) AmazonSpark/0.1.0'
     readable: 'a Sony PlayStation 3'
     result: { engine: { name: Webkit, version: '537.21' }, device: { type: gaming, subtype: console, manufacturer: Sony, model: 'PlayStation 3' } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (PlayStation 5/SmartTV) AppleWebKit/605.1.15 (KHTML, like Gecko)'
+    readable: 'a Sony PlayStation 5'
+    result: { engine: { name: Webkit, version: 605.1.15 }, device: { type: gaming, subtype: console, manufacturer: Sony, model: 'PlayStation 5' } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (PlayStation 5 3.03/SmartTV) AppleWebKit/605.1.15 (KHTML, like Gecko)'
+    readable: 'a Sony PlayStation 5 running 3.03'
+    result: { engine: { name: Webkit, version: 605.1.15 }, os: { version: '3.03' }, device: { type: gaming, subtype: console, manufacturer: Sony, model: 'PlayStation 5' } }
