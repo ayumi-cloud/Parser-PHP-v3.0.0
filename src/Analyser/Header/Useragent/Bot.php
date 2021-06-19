@@ -31,6 +31,14 @@ trait Bot
             $this->data->device->type = Constants\DeviceType::BOT;
         }
 
+        /* Detect 80legs bots based on url in the UA string */
+
+        if (preg_match('/80?legs/iu', $ua)) {
+            $this->data->browser->name = '80legs';
+
+            $this->data->device->type = Constants\DeviceType::BOT;
+        }
+
         /* Detect based on a predefined list or markers */
 
         if ($bot = Data\Applications::identifyBot($ua)) {
