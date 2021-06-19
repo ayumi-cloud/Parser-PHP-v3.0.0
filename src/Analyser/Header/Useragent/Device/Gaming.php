@@ -175,7 +175,7 @@ trait Gaming
             $this->data->os->reset();
             $this->data->os->identifyVersion('/PLAYSTATION 3;? ([0-9.]*)/u', $ua);
 
-            if (preg_match('/PLAYSTATION 3; [123]/', $ua)) {
+            if (preg_match('/PLAYSTATION 3; [123]/ui', $ua)) {
                 $this->data->engine->set([
                     'name'          => 'NetFront'
                 ]);
@@ -193,7 +193,7 @@ trait Gaming
 
         if (preg_match('/PlayStation 4/ui', $ua) || preg_match('/\(PS4/u', $ua)) {
             $this->data->os->reset();
-            $this->data->os->identifyVersion('/PlayStation 4 ([0-9.]*)/u', $ua);
+            $this->data->os->identifyVersion('/PlayStation 4 ([0-9.]*)/ui', $ua);
 
             $this->data->device->setIdentification([
                 'manufacturer'  => 'Sony',
@@ -207,7 +207,7 @@ trait Gaming
 
         if (preg_match('/PlayStation 5/ui', $ua) || preg_match('/\(PS5/u', $ua)) {
             $this->data->os->reset();
-            $this->data->os->identifyVersion('/PlayStation 5 ([0-9.]*)/u', $ua);
+            $this->data->os->identifyVersion('/PlayStation 5 ([0-9.]*)/ui', $ua);
 
             $this->data->device->setIdentification([
                 'manufacturer'  => 'Sony',
