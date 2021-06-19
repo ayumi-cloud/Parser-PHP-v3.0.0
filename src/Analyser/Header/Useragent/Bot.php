@@ -6,6 +6,7 @@ use WhichBrowser\Constants;
 use WhichBrowser\Data;
 use WhichBrowser\Model\Version;
 use WhichBrowser\SearchEngines\Facebook;
+use WhichBrowser\SearchEngines\Mailru;
 
 trait Bot
 {
@@ -43,19 +44,17 @@ trait Bot
             $this->data->browser->version = new Version([ 'value' => $match[1] ]);
 
             $this->data->device->type = Constants\DeviceType::BOT;
-        }
 
         /* Detect 80legs bots based on url in the UA string */
 
-        if (preg_match('/80?legs/iu', $ua)) {
+        } elseif (preg_match('/80?legs/iu', $ua)) {
             $this->data->browser->name = '80legs';
 
             $this->data->device->type = Constants\DeviceType::BOT;
-        }
 
         /* Detect facebook bots */
 
-        if (preg_match('/(facebook|cortex|adreview)/iu', $ua, $match)) {
+        } elseif (preg_match('/(facebook|cortex|adreview)/iu', $ua, $match)) {
             $Facebook = new Facebook($ua);
 
             // Only run if the class found a regex match
@@ -63,6 +62,17 @@ trait Bot
                 $this->data->browser->name = $Facebook->name ?? '';
                 $this->data->browser->version = $Facebook->version ?? '';
                 $this->data->device->type = $Facebook->bot ?? '';
+
+        /* Detect mail.ru search engine bots */
+
+        } elseif (preg_match('/mail\.ru/u', $ua, $match)) {
+            $Mailru = new Mailru($ua);
+
+            // Only run if the class found a regex match
+            if ($Mailru->found == true) {
+                $this->data->browser->name = $Mailru->name ?? '';
+                $this->data->browser->version = $Mailru->version ?? '';
+                $this->data->device->type = $Mailru->bot ?? '';
             }
         }
 
