@@ -5,6 +5,7 @@ namespace WhichBrowser\Analyser\Header\Useragent;
 use WhichBrowser\Constants;
 use WhichBrowser\Data;
 use WhichBrowser\Model\Version;
+use WhichBrowser\SearchEngines\Facebook;
 
 trait Bot
 {
@@ -50,6 +51,19 @@ trait Bot
             $this->data->browser->name = '80legs';
 
             $this->data->device->type = Constants\DeviceType::BOT;
+        }
+
+        /* Detect facebook bots */
+
+        if (preg_match('/(facebook|cortex|adreview)/iu', $ua, $match)) {
+            $Facebook = new Facebook($ua);
+
+            // Only run if the class found a regex match
+            if ($Facebook->found == true) {
+                $this->data->browser->name = $Facebook->name ?? '';
+                $this->data->browser->version = $Facebook->version ?? '';
+                $this->data->device->type = $Facebook->bot ?? '';
+            }
         }
 
         /* Detect based on a predefined list or markers */
