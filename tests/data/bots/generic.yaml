@@ -1050,3 +1050,7 @@
     headers: 'User-Agent: Jetty/9.4.15.v20190215'
     readable: 'Jetty 9'
     result: { browser: { name: Jetty, version: '9' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari/600.1. 4 (compatible; HyScore/1.0; +https://hyscore.io/crawler/)'
+    readable: 'HyScore 1.0'
+    result: { browser: { name: HyScore, version: '1.0' }, device: { type: bot } }
