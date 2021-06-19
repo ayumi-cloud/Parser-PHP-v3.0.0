@@ -187,6 +187,7 @@ Applications::$BOTS = [
     [ 'name' => 'Istellabot',                   'id'    => 'istellabot',      'regexp' => '/istellabot\/t\.([0-9.]*)/u' ],
     [ 'name' => 'JamesBOT',                     'id'    => 'crawler',      'regexp' => '/James BOT - WebCrawler/u' ],
     [ 'name' => 'Jayde',                        'id'    => 'crawler',      'regexp' => '/Jayde Crawler./u' ],
+    [ 'name' => 'Jetty',                        'id'    => 'jetty',          'regexp' => '/Jetty\/([0-9]*)/u' ],
     [ 'name' => 'KakaoTalk Bot',                'id'    => 'kakao',              'regexp' => '/kakaotalk-scrap\/([0-9.]*)/u' ],
     [ 'name' => 'Komodia Bot',                  'id'    => 'komodia',        'regexp' => '/KomodiaBot\/([0-9.]*)/u' ],
     [ 'name' => 'Kouio',                        'id'    => 'kouio',      'regexp' => '/kouio.com/u' ],

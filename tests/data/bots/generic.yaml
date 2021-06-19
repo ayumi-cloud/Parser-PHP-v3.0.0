@@ -1046,3 +1046,7 @@
     headers: 'User-Agent: ZoominfoBot (zoominfobot at zoominfo dot com)'
     readable: 'ZoomInfo Bot'
     result: { browser: { name: 'ZoomInfo Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Jetty/9.4.15.v20190215'
+    readable: 'Jetty 9'
+    result: { browser: { name: Jetty, version: '9' }, device: { type: bot } }
