@@ -178,6 +178,7 @@ Applications::$BOTS = [
     [ 'name' => 'HubPages',                     'id'    => 'hubpages',      'regexp' => '/HubPages V([0-9.]*)/u' ],
     [ 'name' => 'HubSpot Crawler',              'id'    => 'hubspot',      'regexp' => '/hubspot\.com/u' ],
     [ 'name' => 'Huawei Web Cat Bot',           'id'    => 'huaweibot',    'regexp' => '/HuaweiWebCatBot\/([0-9.]+)/u' ],
+    [ 'name' => 'HyScore',                      'id'    => 'hyscore',      'regexp' => '/HyScore\/([0-9.]+)/u' ],
     [ 'name' => 'iAsk Spider',                  'id'    => 'spider',      'regexp' => '/iaskspider\/([0-9.]*)/u' ],
     [ 'name' => 'iAsk Spider',                  'id'    => 'spider',      'regexp' => '/iaskspider2/u' ],
     [ 'name' => 'Ichiro',                       'id'    => 'ichiro',      'regexp' => '/ichiro\/([0-9.]*)/u' ],
