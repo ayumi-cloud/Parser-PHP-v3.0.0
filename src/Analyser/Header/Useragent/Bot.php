@@ -31,6 +31,18 @@ trait Bot
             $this->data->device->type = Constants\DeviceType::BOT;
         }
 
+        /* Detect Async Http Client bot */
+
+        if (preg_match('/^AHC\/([0-9.]+)/ui', $ua, $match)) {
+            $this->data->browser->reset();
+            $this->data->device->reset();
+
+            $this->data->browser->name = 'Async Http Client';
+            $this->data->browser->version = new Version([ 'value' => $match[1] ]);
+
+            $this->data->device->type = Constants\DeviceType::BOT;
+        }
+
         /* Detect 80legs bots based on url in the UA string */
 
         if (preg_match('/80?legs/iu', $ua)) {

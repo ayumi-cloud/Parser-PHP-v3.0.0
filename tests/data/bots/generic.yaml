@@ -1034,3 +1034,7 @@
     headers: 'User-Agent: Go http package'
     readable: Go
     result: { browser: { name: Go }, device: { type: bot } }
+-
+    headers: 'User-Agent: AHC/2.0'
+    readable: 'Async Http Client 2.0'
+    result: { browser: { name: 'Async Http Client', version: '2.0' }, device: { type: bot } }
