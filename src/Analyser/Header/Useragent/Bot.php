@@ -6,6 +6,7 @@ use WhichBrowser\Constants;
 use WhichBrowser\Data;
 use WhichBrowser\Model\Version;
 use WhichBrowser\SearchEngines\Facebook;
+use WhichBrowser\SearchEngines\Mailru;
 
 trait Bot
 {
