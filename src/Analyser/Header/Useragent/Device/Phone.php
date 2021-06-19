@@ -14,10 +14,6 @@ trait Phone
         $this->detectSnom($ua);
     }
 
-
-
-
-
     /* NTT Teless */
 
     private function detectNttTeless($ua)

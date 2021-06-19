@@ -13,10 +13,6 @@ trait Tablet
         $this->detectWebTab($ua);
     }
 
-
-
-
-
     /* WeTab */
 
     private function detectWebTab($ua)

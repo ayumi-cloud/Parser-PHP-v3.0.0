@@ -27,10 +27,6 @@ trait Pda
         $this->detectNttPetitWeb($ua);
     }
 
-
-
-
-
     /* Casio */
 
     private function detectCasio($ua)
@@ -40,17 +36,16 @@ trait Pda
             $this->data->device->identified |= Constants\Id::MATCH_UA;
             $this->data->device->type = Constants\DeviceType::PDA;
 
-            if ($match[1] == 'CASSIOPEIA BE') {
+            if ($match[1] === 'CASSIOPEIA BE') {
                 $this->data->device->model = 'Cassiopeia';
             }
 
-            if ($match[1] == 'PPP101') {
+            if ($match[1] === 'PPP101') {
                 $this->data->device->model = 'Pocket PostPet';
                 $this->data->device->carrier = 'DoCoMo';
             }
         }
     }
-
 
     /* Palm */
 
@@ -124,7 +119,6 @@ trait Pda
         }
     }
 
-
     /* PSION */
 
     private function detectPsion($ua)
@@ -157,7 +151,6 @@ trait Pda
         }
     }
 
-
     /* Sony Mylo */
 
     private function detectSonyMylo($ua)
@@ -175,7 +168,6 @@ trait Pda
             }
         }
     }
-
 
     /* Sony Airboard */
 
@@ -195,7 +187,6 @@ trait Pda
             $this->data->device->type = Constants\DeviceType::PDA;
         }
     }
-
 
     /* Sharp Zaurus */
 
@@ -222,7 +213,6 @@ trait Pda
         }
     }
 
-
     /* Sharp Shoin (Word Processor) */
 
     private function detectSharpShoin($ua)
@@ -240,7 +230,6 @@ trait Pda
         }
     }
 
-
     /* Panasonic POCKET・E */
 
     private function detectPanasonicPocketE($ua)
@@ -253,7 +242,6 @@ trait Pda
             $this->data->device->generic = false;
         }
     }
-
 
     /* Fujitsu OASYS */
 
@@ -273,7 +261,6 @@ trait Pda
             }
         }
     }
-
 
     /* PetitWeb */
 
