@@ -54,6 +54,7 @@ trait Browser
         $this->detectMobileBrowsers($ua);
         $this->detectTelevisionBrowsers($ua);
         $this->detectRemainingBrowsers($ua);
+        $this->detectCdnBrowsers($ua);
 
         return $this;
     }
@@ -2444,6 +2445,19 @@ trait Browser
                     'subtype'       =>  Constants\DeviceSubType::CONSOLE
                 ]);
             }
+        }
+    }
+
+    private function detectCdnBrowsers($ua)
+    {
+        /* Cloudflare Railgun */
+
+        if (preg_match('/^Railgun\/([0-9\.]+)/u', $ua, $match)) {
+            $this->data->browser->name = 'Cloudflare Railgun';
+            $this->data->browser->version = new Version([ 'value' => $match[1] ]);
+            $this->data->browser->mode = 'proxy';
+            $this->data->browser->channel = '';
+            $this->data->browser->type = Constants\BrowserType::BROWSER;
         }
     }
 
