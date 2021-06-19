@@ -393,6 +393,7 @@ Applications::$BOTS = [
     [ 'name' => 'Curl',                         'id'    => 'curl',      'regexp' => '/^curl\/([0-9.]*)/u' ],
 
     [ 'name' => 'Go',                           'id'    => 'package',      'regexp' => '/Go [0-9\.]+ package http/u' ],
+    [ 'name' => 'Go',                           'id'    => 'package',    'regexp' => '/Go http package/u' ],
     [ 'name' => 'Java',                         'id'    => 'java',      'regexp' => '/^Java\/([0-9.]*)/u' ],
     [ 'name' => 'Perl',                         'id'    => 'simple',      'regexp' => '/LWP::Simple\//u' ],
     [ 'name' => 'Perl',                         'id'    => 'libwww',      'regexp' => '/libwww-perl\//u' ],
