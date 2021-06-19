@@ -1006,3 +1006,7 @@
     headers: 'User-Agent: Pandalytics/1.0 (https://domainsbot.com/pandalytics/)'
     readable: 'Pandalytics 1.0'
     result: { browser: { name: Pandalytics, version: '1.0' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Cloudflare-SSLDetector'
+    readable: 'Cloudflare SSL Detector'
+    result: { browser: { name: 'Cloudflare SSL Detector' }, device: { type: bot } }
