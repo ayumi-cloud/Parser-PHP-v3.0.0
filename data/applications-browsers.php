@@ -178,6 +178,8 @@ Applications::$BROWSERS = [
         [ 'name' => 'Sundance',             'id'    => 'sundance',      'regexp' =>'/Sundance\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Sundial',              'id'    => 'sundial',      'regexp' =>'/Sundial\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                      // see: http://www.sundialbrowser.com/
         [ 'name' => 'Superbird',            'id'    => 'superbird',      'regexp' =>'/Super[Bb]ird\/([0-9.]*)/u', 'details' => 2 ],
+        [ 'name' => 'Surf',                 'id'    => 'surf',          'regexp' => '/SurfBrowser\/([0-9.]*)/u', 'type' => Constants\DeviceType::MOBILE ],
+        [ 'name' => 'Surf',                 'id'    => 'surf',          'regexp' => '/Surf\/([0-9.]*)/u' ],
         [ 'name' => 'Swiftweasel',          'id'    => 'swiftweasel',      'regexp' =>'/Swiftweasel\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],            // see: http://swiftweasel.tuxfamily.org/
         [ 'name' => 'Swiftfox',             'id'    => 'swiftfox',      'regexp' =>'/Swiftfox/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Swing Browser',        'id'    => 'swing',      'regexp' =>'/Swing(?:\(And\))?\/([0-9.]*)/u', 'details' => 3 ],                                    // see: http://swing-browser.com
@@ -348,7 +350,7 @@ Applications::$BROWSERS = [
         [ 'name' => 'Wyzo',                 'id'    => 'wyzo',      'regexp' =>'/Wyzo\/([0-9.]*)/u', 'details' => 3 ],
         [ 'name' => 'Yelang',               'id'    => 'yelang',      'regexp' =>'/Yelang\/([0-9.]*)/u', 'details' => 3 ],                           // see: wellgo.org
         [ 'name' => 'YRC Weblink',          'id'    => 'yrcweb',      'regexp' =>'/YRCWeblink\/([0-9.]*)/u' ],
-        [ 'name' => '冲浪浏览器',             'id'    => 'surf',      'regexp' =>'/CMSurfClient-Android/u' ],
+        [ 'name' => 'Surf Chinese browser', 'id'    => 'surfchina', 'regexp' =>'/CMSurfClient-Android/u' ],
     ],
 
     Constants\BrowserType::BROWSER_TEXT => [
@@ -364,7 +366,7 @@ Applications::$BROWSERS = [
         [ 'name' => 'PhantomJS',            'id'    => 'phantom',      'regexp' =>'/PhantomJS\/([0-9.]*)/u' ],
         [ 'name' => 'Nimbus',               'id'    => 'nimbus',      'regexp' =>'/Nimbus\/([0-9.]*)/u' ],
         [ 'name' => 'McAfee Web Gateway',   'id'    => 'Webwasher',      'regexp' =>'/Webwasher\/([0-9.]*)/u' ],
-        [ 'name' => 'Open Sankoré',         'id'    => 'sankore',      'regexp' =>'/Open-Sankore\/([0-9.]*)/u', 'type' => Constants\DeviceType::WHITEBOARD ],
+        [ 'name' => 'Open Sankore',         'id'    => 'sankore',      'regexp' =>'/Open-Sankore\/([0-9.]*)/u', 'type' => Constants\DeviceType::WHITEBOARD ],
         [ 'name' => 'Adapi',                'id'    => 'adapi',      'regexp' =>'/ ADAPI\/([0-9.]*)/u', 'hidden' => true, 'type' => Constants\DeviceType::SIGNAGE ],
         [ 'name' => 'BrightSign',           'id'    => 'brightsign',      'regexp' =>'/BrightSign\/([0-9.]*)/u', 'type' => Constants\DeviceType::SIGNAGE ],
         [ 'name' => 'Coship MMCP',          'id'    => 'coship',      'regexp' =>'/Coship_MMCP_([0-9.]*)/u', 'type' => Constants\DeviceType::SIGNAGE ],

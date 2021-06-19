@@ -122,3 +122,11 @@
     headers: 'User-Agent: Mozilla/5.0 (Linux; Android 10; YAL-L21; HMSCore 5.2.0.318; GMSCore 21.09.15) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 HuaweiBrowser/11.0.6.305 Mobile Safari/537.36'
     result: { browser: { name: 'Huawei Browser', family: { name: Chrome, version: 83 }, version: 11.0.6.305, type: browser }, engine: { name: Blink }, os: { name: Android, version: '10'}, device: { type: mobile, subtype: smart, manufacturer: Huawei, model: Browser } }
     readable: 'Huawei Browser 11.0.6.305 on a Huawei Browser running Android 10'
+-
+    headers: 'User-Agent: Mozilla/5.0 (Android 6.0; HUAWEI ALE-L21) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36 SurfBrowser/3.0'
+    readable: 'Surf 3.0 on a Huawei P8 Lite running Android 6.0'
+    result: { browser: { name: 'Surf', using: { name: 'Chromium WebView', version: '30' }, version: 3.0, type: browser }, engine: { name: Blink }, os: { name: Android, version: '6.0' }, device: { type: mobile, subtype: smart, manufacturer: Huawei, model: 'P8 Lite' } }
+-
+    headers: 'User-Agent: CMSurfClient-Android-W480/android/Mozilla/5.0 (Linux; U; Android 2.3; xx; XT535 Build/V1.47I) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'
+    result: { browser: { name: 'Surf Chinese browser', type: browser }, engine: { name: Webkit, version: '533.1' }, os: { name: Android, version: '2.3' }, device: { type: mobile, subtype: smart, manufacturer: Motorola, model: DEFY } }
+    readable: 'Surf Chinese browser on a Motorola DEFY running Android 2.3'
