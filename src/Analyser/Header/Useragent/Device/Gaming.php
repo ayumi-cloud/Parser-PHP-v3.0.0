@@ -14,7 +14,7 @@ trait Gaming
         }
 
         $this->detectNintendo($ua);
-        $this->detectPlaystation($ua);
+        $this->detectPlayStation($ua);
         $this->detectXbox($ua);
         $this->detectSega($ua);
     }
@@ -118,11 +118,11 @@ trait Gaming
 
     /* Sony PlayStation */
 
-    private function detectPlaystation($ua)
+    private function detectPlayStation($ua)
     {
         /* PlayStation Portable */
 
-        if (preg_match('/PlayStation Portable/u', $ua)) {
+        if (preg_match('/PlayStation Portable/ui', $ua)) {
             $this->data->os->reset();
 
             $this->data->engine->set([
@@ -131,7 +131,7 @@ trait Gaming
 
             $this->data->device->setIdentification([
                 'manufacturer'  => 'Sony',
-                'model'         => 'Playstation Portable',
+                'model'         => 'PlayStation Portable',
                 'type'          => Constants\DeviceType::GAMING,
                 'subtype'       => Constants\DeviceSubType::PORTABLE
             ]);
@@ -139,31 +139,31 @@ trait Gaming
 
         /* PlayStation Vita */
 
-        if (preg_match('/PlayStation Vita/iu', $ua)) {
+        if (preg_match('/PlayStation Vita/ui', $ua)) {
             $this->data->os->reset();
             $this->data->os->identifyVersion('/PlayStation Vita ([0-9.]*)/u', $ua);
 
             $this->data->device->setIdentification([
                 'manufacturer'  => 'Sony',
-                'model'         => 'Playstation Vita',
+                'model'         => 'PlayStation Vita',
                 'type'          => Constants\DeviceType::GAMING,
                 'subtype'       => Constants\DeviceSubType::PORTABLE
             ]);
 
             if (preg_match('/VTE\//u', $ua)) {
-                $this->data->device->model = 'Playstation TV';
+                $this->data->device->model = 'PlayStation TV';
                 $this->data->device->subtype = Constants\DeviceSubType::CONSOLE;
             }
         }
 
         /* PlayStation 2 */
 
-        if (preg_match('/Playstation2/u', $ua) || preg_match('/\(PS2/u', $ua)) {
+        if (preg_match('/PlayStation2/ui', $ua) || preg_match('/\(PS2/u', $ua)) {
             $this->data->os->reset();
 
             $this->data->device->setIdentification([
                 'manufacturer'  => 'Sony',
-                'model'         => 'Playstation 2',
+                'model'         => 'PlayStation 2',
                 'type'          => Constants\DeviceType::GAMING,
                 'subtype'       => Constants\DeviceSubType::CONSOLE
             ]);
@@ -183,7 +183,7 @@ trait Gaming
 
             $this->data->device->setIdentification([
                 'manufacturer'  => 'Sony',
-                'model'         => 'Playstation 3',
+                'model'         => 'PlayStation 3',
                 'type'          => Constants\DeviceType::GAMING,
                 'subtype'       => Constants\DeviceSubType::CONSOLE
             ]);
@@ -197,7 +197,21 @@ trait Gaming
 
             $this->data->device->setIdentification([
                 'manufacturer'  => 'Sony',
-                'model'         => 'Playstation 4',
+                'model'         => 'PlayStation 4',
+                'type'          => Constants\DeviceType::GAMING,
+                'subtype'       => Constants\DeviceSubType::CONSOLE
+            ]);
+        }
+
+        /* PlayStation 5 */
+
+        if (preg_match('/PlayStation 5/ui', $ua) || preg_match('/\(PS5/u', $ua)) {
+            $this->data->os->reset();
+            $this->data->os->identifyVersion('/PlayStation 5 ([0-9.]*)/u', $ua);
+
+            $this->data->device->setIdentification([
+                'manufacturer'  => 'Sony',
+                'model'         => 'PlayStation 5',
                 'type'          => Constants\DeviceType::GAMING,
                 'subtype'       => Constants\DeviceSubType::CONSOLE
             ]);

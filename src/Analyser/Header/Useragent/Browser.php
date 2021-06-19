@@ -1366,7 +1366,7 @@ trait Browser
                 if (in_array($match[1], [ 'ACCESS/NFPS', 'SUNSOFT/EnjoyMagic' ])) {
                     $this->data->device->setIdentification([
                         'manufacturer'  =>  'Sony',
-                        'model'         =>  'Playstation 2',
+                        'model'         =>  'PlayStation 2',
                         'type'          =>  Constants\DeviceType::GAMING,
                         'subtype'       =>  Constants\DeviceSubType::CONSOLE
                     ]);
@@ -2440,7 +2440,7 @@ trait Browser
             if (preg_match('/SPS/u', $ua, $match)) {
                 $this->data->device->setIdentification([
                     'manufacturer'  =>  'Sony',
-                    'model'         =>  'Playstation 2',
+                    'model'         =>  'PlayStation 2',
                     'type'          =>  Constants\DeviceType::GAMING,
                     'subtype'       =>  Constants\DeviceSubType::CONSOLE
                 ]);
