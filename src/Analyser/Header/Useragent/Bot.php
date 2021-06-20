@@ -54,6 +54,17 @@ trait Bot
             $this->data->device->type = Constants\DeviceType::BOT;
         }
 
+        /* Detect fake naver bot */
+
+        if (preg_match('/NaverBot/iu', $ua, $match)) {
+            $this->data->browser->reset();
+            $this->data->device->reset();
+
+            $this->data->browser->name = 'Fake Naver Bot';
+
+            $this->data->device->type = Constants\DeviceType::BOT;
+        }
+
         /* Detect facebook bots */
 
         if (preg_match('/(facebook|cortex|adreview)/iu', $ua, $match)) {
