@@ -15,6 +15,7 @@ use WhichBrowser\SearchEngines\Baidu;
 use WhichBrowser\SearchEngines\Qwantify;
 use WhichBrowser\SearchEngines\Sogou;
 use WhichBrowser\SearchEngines\Yandex;
+use WhichBrowser\SearchEngines\Seznam;
 
 trait Bot
 {
@@ -155,6 +156,17 @@ trait Bot
                 $this->data->browser->name = $Sogou->name ?? '';
                 $this->data->browser->version = $Sogou->version ?? '';
                 $this->data->device->type = $Sogou->bot ?? '';
+            }
+
+        // Detect Seznam search engine bots
+        } elseif (preg_match('/Seznam|HomePage/iu', $ua, $match)) {
+            $Seznam = new Seznam($ua);
+
+            // Only run if the class found a regex match
+            if ($Seznam->found == true) {
+                $this->data->browser->name = $Seznam->name ?? '';
+                $this->data->browser->version = $Seznam->version ?? '';
+                $this->data->device->type = $Seznam->bot ?? '';
             }
 
         // Detect facebook bots
