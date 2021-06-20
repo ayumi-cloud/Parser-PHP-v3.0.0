@@ -16,8 +16,7 @@ trait Bot
 {
     private function &detectBot($ua)
     {
-        /* Detect bots based on url in the UA string */
-
+        // Detect bots based on url in the UA string
         if (preg_match('/\+https?:\/\//iu', $ua)) {
             $this->data->browser->reset();
             $this->data->os->reset();
@@ -27,8 +26,7 @@ trait Bot
             $this->data->device->type = Constants\DeviceType::BOT;
         }
 
-        /* Detect bots based on common markers */
-
+        // Detect bots based on common markers
         if (preg_match('/(?:Bot|Robot|Spider|Crawler)([\/\);]|$)/iu', $ua) && !preg_match('/CUBOT/iu', $ua)) {
             $this->data->browser->reset();
             $this->data->os->reset();
@@ -38,8 +36,7 @@ trait Bot
             $this->data->device->type = Constants\DeviceType::BOT;
         }
 
-        /* Detect Async Http Client bot */
-
+        // Detect Async Http Client bot
         if (preg_match('/^AHC\/([0-9.]+)/ui', $ua, $match)) {
             $this->data->browser->reset();
             $this->data->device->reset();
@@ -49,15 +46,13 @@ trait Bot
 
             $this->data->device->type = Constants\DeviceType::BOT;
 
-        /* Detect 80legs bots based on url in the UA string */
-
+        // Detect 80legs bots based on url in the UA string
         } elseif (preg_match('/80?legs/iu', $ua)) {
             $this->data->browser->name = '80legs';
 
             $this->data->device->type = Constants\DeviceType::BOT;
 
-        /* Detect fake naver bot */
-
+        // Detect fake naver bot
         } elseif (preg_match('/NaverBot/iu', $ua, $match)) {
             $this->data->browser->reset();
             $this->data->device->reset();
@@ -66,8 +61,7 @@ trait Bot
 
             $this->data->device->type = Constants\DeviceType::BOT;
 
-        /* Detect ahrefs bots */
-
+        // Detect ahrefs bots
         } elseif (preg_match('/Ahrefs/iu', $ua, $match)) {
             $Ahrefs = new Ahrefs($ua);
 
@@ -78,8 +72,7 @@ trait Bot
                 $this->data->device->type = $Ahrefs->bot ?? '';
             }
 
-        /* Detect google search engine bots */
-
+        // Detect google search engine bots
         } elseif (preg_match('/google/iu', $ua, $match)) {
             $Google = new Google($ua);
 
@@ -90,8 +83,7 @@ trait Bot
                 $this->data->device->type = $Google->bot ?? '';
             }
 
-        /* Detect bing search engine bots */
-
+        // Detect bing search engine bots
         } elseif (preg_match('/(bing|msnbot)/iu', $ua, $match)) {
             $Bing = new Bing($ua);
 
@@ -102,8 +94,7 @@ trait Bot
                 $this->data->device->type = $Bing->bot ?? '';
             }
 
-        /* Detect yahoo search engine bots */
-
+        // Detect yahoo search engine bots
         } elseif (preg_match('/(yahoo|Y\!J)/iu', $ua, $match)) {
             $Yahoo = new Yahoo($ua);
 
@@ -114,8 +105,7 @@ trait Bot
                 $this->data->device->type = $Yahoo->bot ?? '';
             }
 
-        /* Detect facebook bots */
-
+        // Detect facebook bots
         } elseif (preg_match('/(facebook|cortex|adreview)/iu', $ua, $match)) {
             $Facebook = new Facebook($ua);
 
@@ -126,8 +116,7 @@ trait Bot
                 $this->data->device->type = $Facebook->bot ?? '';
             }
 
-        /* Detect mail.ru search engine bots */
-
+        // Detect mail.ru search engine bots
         } elseif (preg_match('/mail\.ru/u', $ua, $match)) {
             $Mailru = new Mailru($ua);
 
@@ -138,8 +127,7 @@ trait Bot
                 $this->data->device->type = $Mailru->bot ?? '';
             }
 
-        /* Detect based on a predefined list or markers */
-
+        // Detect based on a predefined list or markers
         } elseif ($bot = Data\Applications::identifyBot($ua)) {
             $this->data->browser = $bot;
             $this->data->os->reset();
