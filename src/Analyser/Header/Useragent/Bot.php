@@ -11,6 +11,7 @@ use WhichBrowser\SearchEngines\Ahrefs;
 use WhichBrowser\SearchEngines\Google;
 use WhichBrowser\SearchEngines\Bing;
 use WhichBrowser\SearchEngines\Yahoo;
+use WhichBrowser\SearchEngines\Baidu;
 
 trait Bot
 {
@@ -106,6 +107,17 @@ trait Bot
                 $this->data->browser->name = $Yahoo->name ?? '';
                 $this->data->browser->version = $Yahoo->version ?? '';
                 $this->data->device->type = $Yahoo->bot ?? '';
+            }
+
+        // Detect baidu search engine bots
+        } elseif (preg_match('/Baiduspider/iu', $ua, $match)) {
+            $Baidu = new Baidu($ua);
+
+            // Only run if the class found a regex match
+            if ($Baidu->found == true) {
+                $this->data->browser->name = $Baidu->name ?? '';
+                $this->data->browser->version = $Baidu->version ?? '';
+                $this->data->device->type = $Baidu->bot ?? '';
             }
 
         // Detect facebook bots
