@@ -1364,8 +1364,8 @@
     result: { browser: { name: 'Inktomi Slurp' }, device: { type: bot } }
 -
     headers: 'User-Agent: yahoo/Nutch-1.2 (yahoo; yahoo.com)'
-    readable: 'Apache Nutch 1.2'
-    result: { browser: { name: 'Apache Nutch', version: '1.2' }, device: { type: bot } }
+    readable: 'Fake Yahoo! Bot'
+    result: { browser: { name: 'Fake Yahoo! Bot' }, device: { type: bot } }
 -
     headers: 'User-Agent: YahooBot/1.0'
     readable: 'Fake Yahoo! Bot'
