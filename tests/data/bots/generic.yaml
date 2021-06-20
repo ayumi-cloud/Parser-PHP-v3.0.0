@@ -247,18 +247,6 @@
     result: { browser: { name: 360spider }, device: { type: bot } }
     readable: 360spider
 -
-    headers: 'User-Agent: Mozilla/5.0 (compatible; bingbot/2.0 +http://www.bing.com/bingbot.htm)'
-    result: { browser: { name: Bing, version: '2.0' }, device: { type: bot } }
-    readable: 'Bing 2.0'
--
-    headers: 'User-Agent: Mozilla/5.0 (compatible; bingbot/2.0; )"'
-    result: { browser: { name: Bing, version: '2.0' }, device: { type: bot } }
-    readable: 'Bing 2.0'
--
-    headers: 'User-Agent: Mozilla/5.0 (compatible; bingbot/2.1; +http://www.bing.com/bingbot.htm)'
-    result: { browser: { name: Bing, version: '2.1' }, device: { type: bot } }
-    readable: 'Bing 2.1'
--
     headers: 'User-Agent: Mozilla/5.0 (compatible; heritrix/1.14.4 +http://netarkivet.dk/webcrawler/)'
     result: { browser: { name: CiteSeerX, version: 1.14.4 }, device: { type: bot } }
     readable: 'CiteSeerX 1.14.4'
