@@ -12,6 +12,7 @@ use WhichBrowser\SearchEngines\Google;
 use WhichBrowser\SearchEngines\Bing;
 use WhichBrowser\SearchEngines\Yahoo;
 use WhichBrowser\SearchEngines\Baidu;
+use WhichBrowser\SearchEngines\Qwantify;
 
 trait Bot
 {
@@ -118,6 +119,18 @@ trait Bot
                 $this->data->browser->name = $Baidu->name ?? '';
                 $this->data->browser->version = $Baidu->version ?? '';
                 $this->data->device->type = $Baidu->bot ?? '';
+            }
+
+        // Detect qwantify search engine bots
+        // News bot only uses `qwant` and not `qwantify`
+        } elseif (preg_match('/qwant/iu', $ua, $match)) {
+            $Qwantify = new Qwantify($ua);
+
+            // Only run if the class found a regex match
+            if ($Qwantify->found == true) {
+                $this->data->browser->name = $Qwantify->name ?? '';
+                $this->data->browser->version = $Qwantify->version ?? '';
+                $this->data->device->type = $Qwantify->bot ?? '';
             }
 
         // Detect facebook bots
