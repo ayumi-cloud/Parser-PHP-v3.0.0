@@ -292,16 +292,6 @@ Applications::$BOTS = [
     [ 'name' => 'XML Sitemaps Generator',       'id'    => 'sitemap',      'regexp' => '/XML-Sitemaps\/([0-9.]*)/u' ],
     [ 'name' => 'XMLSitemapGenerator',          'id'    => 'sitemap',      'regexp' => '/XmlSitemapGenerator/u' ],
     [ 'name' => 'YaCy Bot',                     'id'    => 'yacy',      'regexp' => '/yacy(?:\/|\s|bot)/u' ],
-    [ 'name' => 'Yandex Anti Virus',            'id'    => 'yandex',      'regexp' => '/YandexAntivirus\/([0-9.]*)/u' ],
-    [ 'name' => 'Yandex Blogs',                 'id'    => 'yandex',      'regexp' => '/YandexBlogs\/([0-9.]*)/u' ],
-    [ 'name' => 'Yandex Bot',                   'id'    => 'yandex',      'regexp' => '/YandexBot\/([0-9.]*)/u' ],
-    [ 'name' => 'Yandex Direct',                'id'    => 'yandex',      'regexp' => '/YandexDirect\/([0-9.]*)/u' ],
-    [ 'name' => 'Yandex Favicons',              'id'    => 'yandex',      'regexp' => '/YandexFavicons\/([0-9.]*)/u' ],
-    [ 'name' => 'Yandex Image Resizer',         'id'    => 'yandex',      'regexp' => '/YandexImageResizer\/([0-9.]*)/u' ],
-    [ 'name' => 'Yandex Images',                'id'    => 'yandex',      'regexp' => '/YandexImages\/([0-9.]*)/u' ],
-    [ 'name' => 'Yandex Metrika',               'id'    => 'yandex',      'regexp' => '/YandexMetrika\/([0-9.]*)/u' ],
-    [ 'name' => 'Yandex News',                  'id'    => 'yandex',      'regexp' => '/YandexNews\/([0-9.]*)/u' ],
-    [ 'name' => 'Yandex Newslinks',             'id'    => 'yandex',      'regexp' => '/YandexNewslinks(?:\/([0-9.]*))?/u' ],
 
     [ 'name' => 'Inktomi Slurp',                'id'    => 'slurp',      'regexp' => '/slurp\@inktomi/u' ],
     [ 'name' => 'Inktomi Slurp',                'id'    => 'slurp',      'regexp' => '/Slurp\.so\/([0-9.]*)/iu' ], // ua tests show upper and lower case

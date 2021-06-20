@@ -14,6 +14,7 @@ use WhichBrowser\SearchEngines\Yahoo;
 use WhichBrowser\SearchEngines\Baidu;
 use WhichBrowser\SearchEngines\Qwantify;
 use WhichBrowser\SearchEngines\Sogou;
+use WhichBrowser\SearchEngines\Yandex;
 
 trait Bot
 {
@@ -109,6 +110,17 @@ trait Bot
                 $this->data->browser->name = $Yahoo->name ?? '';
                 $this->data->browser->version = $Yahoo->version ?? '';
                 $this->data->device->type = $Yahoo->bot ?? '';
+            }
+
+        // Detect yandex search engine bots
+        } elseif (preg_match('/yandex/iu', $ua, $match)) {
+            $Yandex = new Yandex($ua);
+
+            // Only run if the class found a regex match
+            if ($Yandex->found == true) {
+                $this->data->browser->name = $Yandex->name ?? '';
+                $this->data->browser->version = $Yandex->version ?? '';
+                $this->data->device->type = $Yandex->bot ?? '';
             }
 
         // Detect baidu search engine bots
