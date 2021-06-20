@@ -1411,10 +1411,6 @@
     readable: 'Fake Baiduspider Bot'
     result: { browser: { name: 'Fake Baiduspider Bot' }, device: { type: bot } }
 -
-    headers: 'User-Agent: Baiduspider+(+http://www.baidu.com/search/spider.htm);googlebot\|baiduspider\|baidu\|spider\|sogou\|bingbot\|bot\|yahoo\|soso\|sosospider\|360spider\|youdaobot\|jikeSpider;)'
-    readable: 'Fake Baiduspider Bot'
-    result: { browser: { name: 'Fake Baiduspider Bot' }, device: { type: bot } }
--
     headers: 'User-Agent: Baidu Spider(PC)=Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)'
     readable: 'Fake Baiduspider Bot'
     result: { browser: { name: 'Fake Baiduspider Bot' }, device: { type: bot } }
