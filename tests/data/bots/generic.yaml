@@ -23,10 +23,6 @@
     result: { browser: { name: AddThis.com }, device: { type: bot } }
     readable: AddThis.com
 -
-    headers: 'User-Agent: AdsBot-Google (+http://www.google.com/adsbot.html)'
-    result: { browser: { name: 'Fake Google Bot' }, device: { type: bot } }
-    readable: 'Google Ads Bot'
--
     headers: 'User-Agent: AdsBot-Google ( http://www.google.com/adsbot.html)'
     result: { browser: { name: 'Fake Google Bot' }, device: { type: bot } }
     readable: 'Fake Google Bot'
@@ -191,17 +187,13 @@
     result: { browser: { name: 'Ask Jeeves' }, device: { type: bot } }
     readable: 'Ask Jeeves'
 -
-    headers: 'User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Google Wireless Transcoder;)'
-    result: { browser: { name: 'Google Wireless Transcoder' }, device: { type: bot } }
-    readable: 'Google Wireless Transcoder'
--
     headers: 'User-Agent: Mozilla/5.0 (Android; Mobile; rv:29.0) Gecko/29.0 Firefox/29.0 AppEngine-Google; (+http://code.google.com/appengine; appid: s~oldecreator)'
     result: { browser: { name: 'Google App Engine Bot' }, device: { type: bot } }
     readable: 'Google App Engine Bot'
 -
     headers: 'User-Agent: Mozilla/5.0 (Linux; U; Android 2.3.4; generic) AppleWebKit/537.4 (KHTML, like Gecko; Google Web Preview) Version/4.0 Mobile Safari/537.4'
-    result: { browser: { name: 'Google Web Preview' }, device: { type: bot } }
-    readable: 'Google Web Preview'
+    result: { browser: { name: 'Google Web Preview Bot' }, engine: { name: Webkit, version: '537.4' }, os: { name: Android, version: 2.3.4 }, device: { type: bot, model: 'Google Web Preview' } }
+    readable: 'Google Web Preview Bot on a Google Web Preview running Android 2.3.4'
 -
     headers: 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.11067 BingPreview/1.0b'
     result: { browser: { name: 'Bing Preview', version: '1.0' }, device: { type: bot } }
@@ -232,12 +224,12 @@
     readable: 'Bing Preview 1.0'
 -
     headers: 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; Google Page Speed Insights) Chrome/27.0.1453 Safari/537.36'
-    result: { browser: { name: 'Google Page Speed' }, device: { type: bot } }
-    readable: 'Google Page Speed'
+    result: { browser: { name: 'Google Page Speed Insights Bot', family: { name: Chrome, version: 27 }, type: browser }, engine: { name: Blink }, os: { name: Linux }, device: { type: bot } }
+    readable: 'Google Page Speed Insights Bot on Linux'
 -
     headers: 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; Google Web Preview) Chrome/27.0.1453 Safari/537.36'
-    result: { browser: { name: 'Google Web Preview Bot' }, engine: { name: Webkit, version: '537.4' }, os: { name: Android, version: 2.3.4 }, device: { type: bot, model: 'Google Web Preview' } }
-    readable: 'Google Web Preview Bot on a Google Web Preview running Android 2.3.4'
+    result: { browser: { name: 'Google Web Preview Bot', family: { name: Chrome, version: 27 }, type: browser }, engine: { name: Blink }, os: { name: Linux }, device: { type: bot } }
+    readable: 'Google Web Preview Bot on Linux'
 -
     headers: 'User-Agent: Mozilla/5.0 (X11; U; Linux i686; xx; rv:1.9.2.18) Gecko/20110622 HeartRails_Capture/1.0.5 (+http://capture.heartrails.com/) Namoroka/3.6.18'
     result: { browser: { name: 'HeartRails Capture', version: 1.0.5 }, device: { type: bot } }
@@ -296,12 +288,8 @@
     readable: Archive.org
 -
     headers: 'User-Agent: Mozilla/5.0 (en-us) AppleWebKit/525.13 (KHTML, like Gecko; Google Web Preview) Version/3.1 Safari/525.13'
-    result: { browser: { name: 'Google Web Preview' }, device: { type: bot } }
-    readable: 'Google Web Preview'
--
-    headers: 'User-Agent: Mozilla/5.0 (en-us) AppleWebKit/534.14 (KHTML, like Gecko; Google Wireless Transcoder) Chrome/9.0.597 Safari/534.14'
-    result: { browser: { name: 'Google Wireless Transcoder' }, device: { type: bot } }
-    readable: 'Google Wireless Transcoder'
+    result: { browser: { name: 'Google Web Preview Bot' }, device: { type: bot } }
+    readable: 'Google Web Preview Bot'
 -
     headers: 'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)'
     result: { browser: { name: Bing, version: '2.0' }, device: { type: bot } }
@@ -900,8 +888,8 @@
     result: { browser: { name: HttpUnit, version: '1.5' }, device: { type: bot } }
 -
     headers: 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36 Google Favicon'
-    readable: 'Google Favicon'
-    result: { browser: { name: 'Google Favicon' }, device: { type: bot } }
+    readable: 'Google Favicon Bot on Linux'
+    result: { browser: { name: 'Google Favicon Bot', family: { name: Chrome, version: 49 }, type: browser }, engine: { name: Blink }, os: { name: Linux }, device: { type: bot } }
 -
     headers: 'User-Agent: Mozilla/5.0 zgrab/0.x'
     readable: Zgrab
