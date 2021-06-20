@@ -30,7 +30,7 @@ class Yandex
     public function __construct($ua)
     {
         /* Detect `fake` and `dead` bots before real bots */
-        if (preg_match('/(MSIE\s(2|3|4|5|6|7|8|9|10)|google|bing|baidu|yandex\.(info|net|ru)|yandexbots|yandexbot\.com)/iu', $ua, $match)) {
+        if (preg_match('/(MSIE\s(2|3|4|5|6|7|8|9|10)|google|bing|baidu|yandex\.(info|net|ru)|yandexbots|yandexbot\.com|\+http\:\/\/yandex\.com\/bots(\syabs01))\)$)/iu', $ua, $match)) {
             $this->name = 'Fake Yandex Bot';
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
