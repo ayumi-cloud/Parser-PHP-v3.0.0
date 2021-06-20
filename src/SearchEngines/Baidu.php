@@ -34,15 +34,13 @@ class Baidu
             $this->name = 'Fake Baiduspider Bot';
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
+        }
 
-
-if ($ua === 'Baiduspider+(+http://www.baidu.com/search/spider.htm);googlebot\|baiduspider\|baidu\|spider\|sogou\|bingbot\|bot\|yahoo\|soso\|sosospider\|360spider\|youdaobot\|jikeSpider;)') {
+        if ($ua === 'Baiduspider+(+http://www.baidu.com/search/spider.htm);googlebot\|baiduspider\|baidu\|spider\|sogou\|bingbot\|bot\|yahoo\|soso\|sosospider\|360spider\|youdaobot\|jikeSpider;)') {
             $this->name = 'test Bot';
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
-}
-
-
+        }
 
         /* Baiduspider Image Bot */
         } elseif (preg_match('/Baiduspider-image\/?([0-9.]*)/u', $ua, $match)) { // Some bots have versions and some do not
