@@ -29,7 +29,7 @@ class Baidu
      */
     public function __construct($ua)
     {
-        if ($ua === 'Baiduspider+(+http://www.baidu.com/search/spider.htm);googlebot\|baiduspider\|baidu\|spider\|sogou\|bingbot\|bot\|yahoo\|soso\|sosospider\|360spider\|youdaobot\|jikeSpider;)') {
+        if (preg_match('/Baiduspider\+/iu', $ua, $match)) {
             $this->name = 'test Bot';
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
