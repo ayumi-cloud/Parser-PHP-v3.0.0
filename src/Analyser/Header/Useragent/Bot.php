@@ -49,6 +49,9 @@ trait Bot
         // Detect 80legs bots based on url in the UA string
         } elseif (preg_match('/80?legs/iu', $ua)) {
             $this->data->browser->name = '80legs';
+            $this->data->os->reset();
+            $this->data->engine->reset();
+            $this->data->device->reset();
 
             $this->data->device->type = Constants\DeviceType::BOT;
 
