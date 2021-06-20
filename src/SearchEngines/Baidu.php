@@ -40,7 +40,6 @@ class Baidu
             $this->name = 'test Bot';
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
-        }
 
         /* Baiduspider Image Bot */
         } elseif (preg_match('/Baiduspider-image\/?([0-9.]*)/u', $ua, $match)) { // Some bots have versions and some do not
