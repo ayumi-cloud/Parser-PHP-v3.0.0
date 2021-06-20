@@ -23,29 +23,33 @@
     result: { browser: { name: AddThis.com }, device: { type: bot } }
     readable: AddThis.com
 -
-    headers: 'User-Agent: AdsBot-Google ( http://www.google.com/adsbot.html)'
-    result: { browser: { name: 'Google Ads Bot' }, device: { type: bot } }
+    headers: 'User-Agent: AdsBot-Google (+http://www.google.com/adsbot.html)'
+    result: { browser: { name: 'Fake Google Bot' }, device: { type: bot } }
     readable: 'Google Ads Bot'
+-
+    headers: 'User-Agent: AdsBot-Google ( http://www.google.com/adsbot.html)'
+    result: { browser: { name: 'Fake Google Bot' }, device: { type: bot } }
+    readable: 'Fake Google Bot'
 -
     headers: 'User-Agent: AdsBot-Google (+http://www.google.com/adsbot.html)'
     result: { browser: { name: 'Google Ads Bot' }, device: { type: bot } }
     readable: 'Google Ads Bot'
 -
     headers: 'User-Agent: AdsBot-Google-Mobile (+http://www.google.com/mobile/adsbot.html) Mozilla (iPhone; U; CPU iPhone OS 3 0 like Mac OS X) AppleWebKit (KHTML, like Gecko) Mobile Safari'
-    result: { browser: { name: 'Google Ads Bot' }, device: { type: bot } }
-    readable: 'Google Ads Bot'
+    result: { browser: { name: 'Google Ads Mobile Bot' }, device: { type: bot } }
+    readable: 'Google Ads Mobile Bot'
 -
     headers: 'User-Agent: AdsBot-Google-Mobile (+http://www.google.com/mobile/adsbot.html) Mozilla (iPhone; U; CPU iPhone OS 3 0 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36'
-    result: { browser: { name: 'Google Ads Bot' }, device: { type: bot } }
-    readable: 'Google Ads Bot'
+    result: { browser: { name: 'Google Ads Mobile Bot' }, device: { type: bot } }
+    readable: 'Google Ads Mobile Bot'
 -
     headers: 'User-Agent: AmorankSpider/0.1; +http://amorank.com/webcrawler.html'
     result: { browser: { name: 'Amorank Spider', version: '0.1' }, device: { type: bot } }
     readable: 'Amorank Spider 0.1'
 -
     headers: 'User-Agent: AppEngine-Google; (+http://code.google.com/appengine; appid: xbmacx)'
-    result: { browser: { name: 'Google App Engine' }, device: { type: bot } }
-    readable: 'Google App Engine'
+    result: { browser: { name: 'Google App Engine Bot' }, device: { type: bot } }
+    readable: 'Google App Engine Bot'
 -
     headers: 'User-Agent: ArchiveTeam ArchiveBot/20140807.01 (wpull 0.37a1) and not Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36'
     result: { browser: { name: ArchiveBot }, device: { type: bot } }
@@ -104,8 +108,8 @@
     readable: Goo
 -
     headers: 'User-Agent: DoCoMo/2.0 SH905i(c100;TB;W24H16) (compatible; Mediapartners-Google/2.1; +http://www.google.com/bot.html)'
-    result: { browser: { name: 'Google Mediapartners', version: '2.1' }, device: { type: bot } }
-    readable: 'Google Mediapartners 2.1'
+    result: { browser: { name: 'Google AdSense Bot', version: '2.1' }, device: { type: bot } }
+    readable: 'Google AdSense Bot 2.1'
 -
     headers: 'User-Agent: ExactSeek Crawler (nutch 1.4)/Nutch-1.4 (ExactSeek Crawler; http://www.exactseek.com)'
     result: { browser: { name: ExactSeek }, device: { type: bot } }
@@ -132,20 +136,20 @@
     readable: 'FeedWrangler 1.0'
 -
     headers: 'User-Agent: FeedBurner/1.0 (http://www.FeedBurner.com)'
-    result: { browser: { name: 'Google FeedBurner', version: '1.0' }, device: { type: bot } }
-    readable: 'Google FeedBurner 1.0'
+    result: { browser: { name: 'Google FeedBurner Bot', version: '1.0' }, device: { type: bot } }
+    readable: 'Google FeedBurner Bot 1.0'
 -
     headers: 'User-Agent: FeedFetcher-Google; ( http://www.google.com/feedfetcher.html)'
-    result: { browser: { name: 'Google Feedfetcher' }, device: { type: bot } }
-    readable: 'Google Feedfetcher'
+    result: { browser: { name: 'Fake Google Bot' }, device: { type: bot } }
+    readable: 'Fake Google Bot'
 -
     headers: 'User-Agent: Feedbin - 9 subscribers'
     result: { browser: { name: Feedbin }, device: { type: bot } }
     readable: Feedbin
 -
     headers: 'User-Agent: Feedfetcher-Google; (+http://www.google.com/feedfetcher.html; 19 subscribers; feed-id=13965549748850348809)'
-    result: { browser: { name: 'Google Feedfetcher' }, device: { type: bot } }
-    readable: 'Google Feedfetcher'
+    result: { browser: { name: 'Google Feedfetcher Bot' }, device: { type: bot } }
+    readable: 'Google Feedfetcher Bot'
 -
     headers: 'User-Agent: FeedlyApp/1.0 (http://www.feedly.com)'
     result: { browser: { name: Feedly, version: '1.0' }, device: { type: bot } }
@@ -168,16 +172,16 @@
     readable: 'Flamingo Search'
 -
     headers: 'User-Agent: Google-Sitemaps/1.0'
-    result: { browser: { name: 'Google Sitemaps', version: '1.0' }, device: { type: bot } }
-    readable: 'Google Sitemaps 1.0'
+    result: { browser: { name: 'Google Sitemaps Bot', version: '1.0' }, device: { type: bot } }
+    readable: 'Google Sitemaps Bot 1.0'
 -
     headers: 'User-Agent: GoogleProducer; (+http://goo.gl/7y4SX)'
-    result: { browser: { name: 'Google Play Newsstand' }, device: { type: bot } }
-    readable: 'Google Play Newsstand'
+    result: { browser: { name: 'Google Play Newsstand Bot' }, device: { type: bot } }
+    readable: 'Google Play Newsstand Bot'
 -
     headers: 'User-Agent: Mediapartners-Google'
-    result: { browser: { name: 'Google Mediapartners' }, device: { type: bot } }
-    readable: 'Google Mediapartners'
+    result: { browser: { name: 'Google AdSense Bot' }, device: { type: bot } }
+    readable: 'Google AdSense Bot'
 -
     headers: 'User-Agent: MetaFeedly/1.0 (http://www.feedly.com)'
     result: { browser: { name: Feedly, version: '1.0' }, device: { type: bot } }
@@ -192,8 +196,8 @@
     readable: 'Google Wireless Transcoder'
 -
     headers: 'User-Agent: Mozilla/5.0 (Android; Mobile; rv:29.0) Gecko/29.0 Firefox/29.0 AppEngine-Google; (+http://code.google.com/appengine; appid: s~oldecreator)'
-    result: { browser: { name: 'Google App Engine' }, device: { type: bot } }
-    readable: 'Google App Engine'
+    result: { browser: { name: 'Google App Engine Bot' }, device: { type: bot } }
+    readable: 'Google App Engine Bot'
 -
     headers: 'User-Agent: Mozilla/5.0 (Linux; U; Android 2.3.4; generic) AppleWebKit/537.4 (KHTML, like Gecko; Google Web Preview) Version/4.0 Mobile Safari/537.4'
     result: { browser: { name: 'Google Web Preview' }, device: { type: bot } }
@@ -208,20 +212,20 @@
     readable: 360spider
 -
     headers: 'User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1626.1 Safari/537.36 AppEngine-Google; (+http://code.google.com/appengine; appid: s~hex-plus)'
-    result: { browser: { name: 'Google App Engine' }, device: { type: bot } }
-    readable: 'Google App Engine'
+    result: { browser: { name: 'Google App Engine Bot' }, device: { type: bot } }
+    readable: 'Google App Engine Bot'
 -
     headers: 'User-Agent: Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko AppEngine-Google; (+http://code.google.com/appengine; appid: s~oowsxs)'
-    result: { browser: { name: 'Google App Engine' }, device: { type: bot } }
-    readable: 'Google App Engine'
+    result: { browser: { name: 'Google App Engine Bot' }, device: { type: bot } }
+    readable: 'Google App Engine Bot'
 -
     headers: 'User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/538.14 (KHTML, like Gecko) BingPreview/1.0b'
     result: { browser: { name: 'Bing Preview', version: '1.0' }, device: { type: bot } }
     readable: 'Bing Preview 1.0'
 -
     headers: 'User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0 AppEngine-Google; (+http://code.google.com/appengine; appid: s~chengzhoukun)'
-    result: { browser: { name: 'Google App Engine' }, device: { type: bot } }
-    readable: 'Google App Engine'
+    result: { browser: { name: 'Google App Engine Bot' }, device: { type: bot } }
+    readable: 'Google App Engine Bot'
 -
     headers: 'User-Agent: Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Nokia; Lumia 520) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Mobile Safari/537.36 Edge/12.0 BingPreview/1.0b'
     result: { browser: { name: 'Bing Preview', version: '1.0' }, device: { type: bot } }
@@ -232,8 +236,8 @@
     readable: 'Google Page Speed'
 -
     headers: 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; Google Web Preview) Chrome/27.0.1453 Safari/537.36'
-    result: { browser: { name: 'Google Web Preview' }, device: { type: bot } }
-    readable: 'Google Web Preview'
+    result: { browser: { name: 'Google Web Preview Bot' }, engine: { name: Webkit, version: '537.4' }, os: { name: Android, version: 2.3.4 }, device: { type: bot, model: 'Google Web Preview' } }
+    readable: 'Google Web Preview Bot on a Google Web Preview running Android 2.3.4'
 -
     headers: 'User-Agent: Mozilla/5.0 (X11; U; Linux i686; xx; rv:1.9.2.18) Gecko/20110622 HeartRails_Capture/1.0.5 (+http://capture.heartrails.com/) Namoroka/3.6.18'
     result: { browser: { name: 'HeartRails Capture', version: 1.0.5 }, device: { type: bot } }
