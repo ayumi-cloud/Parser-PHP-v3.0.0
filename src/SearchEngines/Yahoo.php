@@ -35,6 +35,19 @@ class Yahoo
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
+        /* Inktomi Slurp 1 */
+        } elseif (preg_match('/slurp\@inktomi/u', $ua, $match)) {
+            $this->name = 'Inktomi Slurp';
+            $this->bot = Constants\DeviceType::BOT;
+            $this->found = true;
+
+        /* Inktomi Slurp 2 */
+        } elseif (preg_match('/Slurp\.so\/([0-9.]*)/iu', $ua, $match)) { // ua tests show upper and lower case
+            $this->name = 'Inktomi Slurp';
+            $this->version = new Version([ 'value' => $match[1] ]);
+            $this->bot = Constants\DeviceType::BOT;
+            $this->found = true;
+
         /* Yahoo! Slurp China Bot (needs to be placed before `Yahoo! Slurp Bot`) */
         } elseif (preg_match('/Yahoo\! Slurp China\/?([0-9.]*)/u', $ua, $match)) {
             $this->name = 'Yahoo! Slurp China Bot';

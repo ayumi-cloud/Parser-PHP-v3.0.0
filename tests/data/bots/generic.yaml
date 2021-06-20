@@ -224,8 +224,8 @@
     readable: 'HeartRails Capture 1.0.5'
 -
     headers: 'User-Agent: Mozilla/5.0 (compatible; 008/0.83; http://www.80legs.com/webcrawler.html) Gecko/2008032620'
-    result: { browser: { name: 80legs, version: '0.83' }, device: { type: bot } }
-    readable: '80legs 0.83'
+    result: { browser: { name: 80legs }, device: { type: bot } }
+    readable: '80legs'
 -
     headers: 'User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0) BingPreview/1.0b'
     result: { browser: { name: 'Fake Bing Bot', type: browser }, engine: { name: Trident, version: '6.0' }, os: { name: Windows, version: { value: '6.2', alias: '8' } }, device: { type: bot } }
