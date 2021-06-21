@@ -494,6 +494,25 @@ trait Application
             $this->data->engine->reset();
             $this->data->device->reset();
         }
+
+        /* WebPageTest */
+
+        if (preg_match('/\sPTST(\s|\/)([0-9.]+)/u', $ua, $match)) {
+            $this->data->browser->name = 'WebPageTest';
+            $this->data->browser->version = new Version([ 'value' => $match[2], 'details' => 2 ]);
+            $this->data->browser->type = Constants\BrowserType::APP;
+
+            if ((isset($this->data->browser->family->name)) && (isset($this->data->browser->family->version))) {
+                $this->data->browser->using = $this->data->browser->family;
+            }
+
+            if (isset($this->data->browser->family)) {
+                $this->data->browser->family = null;
+            }
+
+            $this->data->device->reset();
+            $this->data->device->type = Constants\DeviceType::DESKTOP;
+        }
     }
 
     private function detectRemainingApplications($ua)
