@@ -503,7 +503,10 @@ trait Application
             $this->data->browser->type = Constants\BrowserType::APP;
 
             if ((isset($this->data->browser->family->name)) && (isset($this->data->browser->family->version))) {
-                $this->data->browser->using = $this->data->browser->family;
+                $this->data->browser->using = new \WhichBrowser\Model\Using([
+                    'name' => $this->data->browser->family->name,
+                    'version' => new Version([ 'value' => $this->data->browser->family->version, 'details' => 2 ])
+                ]);
             }
 
             if (isset($this->data->browser->family)) {
