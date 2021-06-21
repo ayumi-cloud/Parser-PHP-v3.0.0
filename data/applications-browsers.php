@@ -141,7 +141,9 @@ Applications::$BROWSERS = [
         [ 'name' => 'NetPositive',          'id'    => 'netpositive',      'regexp' =>'/NetPositive\/([0-9.]*)/u' ],
         [ 'name' => 'Nichrome',             'id'    => 'nichrome',    'regexp' => '/Nichrome\/self\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Origyn',               'id'    => 'origyn',      'regexp' =>'/Origyn Web Browser/u' ],
-        [ 'name' => 'Odyssey',              'id'    => 'owb',      'regexp' =>'/OWB\/([0-9.]*)/u' ],
+        [ 'name' => 'Odyssey',              'id'    => 'owb',      'regexp' =>'/OWB\/([0-9.]*)/u' ], // Warning: Origyn needs to be before Odyssey
+        [ 'name' => 'OmniWeb',              'id'    => 'omniweb',      'regexp' =>'/OmniWeb\/v([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],              // see: https://www.omnigroup.com/more/
+        [ 'name' => 'OmniWeb',              'id'    => 'omniweb',      'regexp' =>'/OmniWeb\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ], 
         [ 'name' => 'Open Live Writer',     'id'    => 'live',      'regexp' =>'/Open Live Writer ([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],             // see: http://openlivewriter.org/  
         [ 'name' => 'Orange Browser',       'id'    => 'juzi',      'regexp' =>'/JuziBrowser/u', 'type' => Constants\DeviceType::DESKTOP ],                        // see: http://www.123juzi.com/
         [ 'name' => 'Orca',                 'id'    => 'orca',      'regexp' =>'/Orca\/([0-9.]*)/u' ],
