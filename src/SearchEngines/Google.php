@@ -150,12 +150,6 @@ class Google
             $this->bot = Constants\DeviceType::BOT;
             $this->found = true;
 
-        /* Google Image Proxy Bot */
-        } elseif (preg_match('/GoogleImageProxy/u', $ua, $match)) {
-            $this->name = 'Google Image Proxy Bot';
-            $this->bot = Constants\DeviceType::BOT;
-            $this->found = true;
-
         /* Google Page Speed Insights Bot */
         } elseif (preg_match('/Google Page Speed Insights/u', $ua, $match)) {
             $this->name = 'Google Page Speed Insights Bot';
