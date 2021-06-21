@@ -1742,3 +1742,7 @@
     headers: 'User-Agent: Seznam Bot/2.0 (sklik@firma.seznam.cz;+http://napoveda.sklik.cz/)'
     readable: 'Fake Seznam Bot'
     result: { browser: { name: 'Fake Seznam Bot' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/177.0.3560.1 Safari/537.36 WaiMao_Browser/40.256.139.10 (MyChrome.CN)'
+    readable: 'MyChrome CN'
+    result: { browser: { name: 'MyChrome CN' }, device: { type: bot } }
