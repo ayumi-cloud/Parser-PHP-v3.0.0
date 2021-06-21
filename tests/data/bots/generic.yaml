@@ -1087,10 +1087,6 @@
     readable: 'Google Feedfetcher Bot'
     result: { browser: { name: 'Google Feedfetcher Bot' }, device: { type: bot } }
 -
-    headers: 'User-Agent: Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)'
-    readable: 'Google Image Proxy Bot on Windows XP'
-    result: { browser: { name: 'Google Image Proxy Bot', family: { name: Firefox, version: '11.0' }, type: browser }, engine: { name: Gecko, version: '11.0' }, os: { name: Windows, version: { value: '5.1', alias: XP } }, device: { type: bot } }
--
     headers: 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; Google Page Speed Insights) Chrome/41.0.2272.118 Safari/537.36'
     readable: 'Google Page Speed Insights Bot on Linux'
     result: { browser: { name: 'Google Page Speed Insights Bot', family: { name: Chrome, version: 41 }, type: browser }, engine: { name: Blink }, os: { name: Linux }, device: { type: bot } }
