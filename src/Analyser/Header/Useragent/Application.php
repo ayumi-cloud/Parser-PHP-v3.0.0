@@ -486,6 +486,7 @@ trait Application
         /* Gmail Image Proxy */
 
         if (preg_match('/GoogleImageProxy/u', $ua, $match)) {
+            $this->data->browser->reset();
             $this->data->browser->name = 'Gmail Image Proxy';
             $this->data->browser->mode = 'proxy';
             $this->data->browser->type = Constants\BrowserType::APP_EMAIL;
