@@ -98,7 +98,6 @@ Applications::$OTHERS = [
         [ 'name' => 'Pinterest',            'id'    => 'pinterest',      'regexp' =>'/Pinterest for Android\/([0-9.]+)/u' ],
         [ 'name' => 'Pinterest',            'id'    => 'pinterest',      'regexp' =>'/Pinterest\/(iOS|Android)/u' ],
         [ 'name' => 'Sina Weibo',           'id'    => 'weibo',      'regexp' =>'/weibo__([0-9.]*)/u' ],
-        [ 'name' => 'Tumblr',               'id'    => 'tumblr',      'regexp' =>'/Tumblr\/([0-9.]*)/u' ],
         [ 'name' => 'Twitter',              'id'    => 'twitter',      'regexp' =>'/TwitterAndroid/u' ],
         [ 'name' => 'Twitter',              'id'    => 'twitter',      'regexp' =>'/Twitter for iPhone/u' ],
         [ 'name' => 'WordPress',            'id'    => 'wp-android',      'regexp' =>'/wp-android\/([0-9.]*)/u' ],

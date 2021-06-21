@@ -1746,3 +1746,7 @@
     headers: 'User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/177.0.3560.1 Safari/537.36 WaiMao_Browser/40.256.139.10 (MyChrome.CN)'
     readable: 'MyChrome CN'
     result: { browser: { name: 'MyChrome CN' }, device: { type: bot } }
+-
+    headers: 'User-Agent: Tumblr/14.0.835.186'
+    readable: 'Tumblr Bot 14.0.835.186'
+    result: { browser: { name: 'Tumblr Bot', version: '14.0.835.186' }, device: { type: bot } }
