@@ -482,6 +482,17 @@ trait Application
                 $this->data->device = $device;
             }
         }
+
+        /* Gmail Image Proxy */
+
+        if (preg_match('/GoogleImageProxy/u', $ua, $match)) {
+            $this->data->browser->name = 'Gmail Image Proxy';
+            $this->data->browser->mode = 'proxy';
+            $this->data->browser->type = Constants\BrowserType::APP_EMAIL;
+            $this->data->os->reset();
+            $this->data->engine->reset();
+            $this->data->device->reset();
+        }
     }
 
     private function detectRemainingApplications($ua)
