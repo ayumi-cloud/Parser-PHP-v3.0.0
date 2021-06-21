@@ -191,6 +191,17 @@ trait Bot
                 $this->data->device->type = $Mailru->bot ?? '';
             }
 
+        // Detect fake browser chinese bot
+        } elseif (preg_match('/(WaiMao_Browser|MyChrome\.CN)/u', $ua, $match)) {
+            $this->data->browser->reset();
+            $this->data->os->reset();
+            $this->data->engine->reset();
+            $this->data->device->reset();
+
+            $this->data->browser->name = 'MyChrome CN';
+
+            $this->data->device->type = Constants\DeviceType::BOT;
+
         // Detect based on a predefined list or markers
         } elseif ($bot = Data\Applications::identifyBot($ua)) {
             $this->data->browser = $bot;
