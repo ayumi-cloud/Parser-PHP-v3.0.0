@@ -497,15 +497,21 @@ trait Application
 
         /* WebPageTest */
 
-        if (preg_match('/PTST(\s|\/)([0-9.]+)/u', $ua, $match)) {
+        if (preg_match('/\sPTST(\s|\/)([0-9.]+)/u', $ua, $match)) {
             $this->data->browser->name = 'WebPageTest';
             $this->data->browser->version = new Version([ 'value' => $match[2], 'details' => 2 ]);
             $this->data->browser->type = Constants\BrowserType::APP;
 
-            $this->data->browser->using = new \WhichBrowser\Model\Using([
-                'name' => 'Sony Select SDK',
-                'version' => new Version([ 'value' => $match[2], 'details' => 2 ])
-            ]);
+            if ((isset($this->data->browser->family->name)) && (isset($this->data->browser->family->version))) {
+                $this->data->browser->using = new \WhichBrowser\Model\Family([
+                    'name' => $this->data->browser->family->name,
+                    'version' => new Version([ 'value' => $this->data->browser->family->version, 'details' => 2 ])
+                ]);
+            }
+
+            if (isset($this->data->browser->family)) {
+                $this->data->browser->family = null;
+            }
 
             $this->data->device->reset();
             $this->data->device->type = Constants\DeviceType::DESKTOP;
