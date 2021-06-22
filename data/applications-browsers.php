@@ -26,6 +26,7 @@ Applications::$BROWSERS = [
         [ 'name' => 'Acorn Browse',         'id'    => 'acorn',      'regexp' =>'/Acorn Phoenix ([0-9.]+)/u'  ],
         [ 'name' => 'Acoo Browser',         'id'    => 'acoo',       'regexp' =>'/Acoo Browser/u' ],
         [ 'name' => 'Alienforce',           'id'    => 'alienforce',   'regexp' => '/Alienforce\/?([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ], // see: https://sourceforge.net/projects/alienforce/
+        [ 'name' => 'Adventurer',           'id'    => 'adventurer',    'regexp' => '/Adventurer\/([0-9.]*)/ui', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Amigo Browser',        'id'    => 'amigo',       'regexp' => '/ Amigo\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                       // see: https://amigo.mail.ru/
         [ 'name' => 'AOL Desktop',          'id'    => 'aol',      'regexp' =>'/AOL ([0-9.]*); AOLBuild/i' ],
         [ 'name' => 'AOL Browser',          'id'    => 'america',      'regexp' =>'/America Online Browser (?:[0-9.]*); rev([0-9.]*);/i' ],
