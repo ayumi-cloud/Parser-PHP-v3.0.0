@@ -408,6 +408,7 @@ The `type` property can contain any value from the following list:
 * pos
 * bot
 * projector
+* headless
 
 If the `type` is "mobile", the `subtype` property can contain any value from the following list:
 

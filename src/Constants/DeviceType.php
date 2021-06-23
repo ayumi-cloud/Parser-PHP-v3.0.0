@@ -30,4 +30,5 @@ class DeviceType
     const POS = 'pos';
     const BOT = 'bot';
     const PROJECTOR = 'projector';
+    const HEADLESS = 'headless';
 }
