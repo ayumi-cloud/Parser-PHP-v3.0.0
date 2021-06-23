@@ -223,7 +223,6 @@ Applications::$BROWSERS = [
         [ 'name' => 'Yandex Browser',       'id'    => 'yabrowser',      'regexp' =>'/YaBrowser\/([0-9.]*)/u', 'details' => 2 ],
         [ 'name' => 'Zvu Browser',          'id'    => 'zvu',         'regexp' => '/ Zvu\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                         // see: http://zvu.com/
         [ 'name' => 'ZipZap',               'id'    => 'zipzap',      'regexp' =>'/ZipZap ([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                             // see: http://www.zipzaphome.com/
-        [ 'name' => 'Zombie.js',            'id'    => 'zombie',      'regexp' =>'/Zombie\.js\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                    // see: http://zombie.js.org/
 
         /* Mobile browsers */
         [ 'name' => '1Browser',             'id'    => '1password',      'regexp' =>'/1Password\/([0-9.]*)/u' ],
@@ -332,6 +331,11 @@ Applications::$BROWSERS = [
         /* PDF renderers */
         [ 'name' => 'Prince',               'id'    => 'prince',      'regexp' =>'/Prince\/([0-9.]*)/u' ],
 
+        /* Headless */
+        [ 'name' => 'PhantomJS',            'id'    => 'phantom',      'regexp' =>'/PhantomJS\/([0-9.]*)/u',  'type' => Constants\DeviceType::HEADLESS ],  // see: https://phantomjs.org/
+        [ 'name' => 'SlimerJS',             'id'    => 'slimerjs',     'regexp' => '/ SlimerJS\/([0-9.]*)/u', 'type' => Constants\DeviceType::HEADLESS ],  // see: https://slimerjs.org/
+        [ 'name' => 'Zombie.js',            'id'    => 'zombie',       'regexp' =>'/Zombie\.js\/([0-9.]*)/u', 'type' => Constants\DeviceType::HEADLESS ],  // see: http://zombie.js.org/
+
         /* Unsorted */
         [ 'name' => 'Demobrowser',          'id'    => 'demobrowser',      'regexp' =>'/demobrowser\/([0-9.]*)/u' ],
         [ 'name' => 'Dooble',               'id'    => 'dooble',      'regexp' =>'/Dooble(?:\/([0-9.]*))?/u' ],                                                          // see: http://dooble.sourceforge.net
@@ -381,12 +385,11 @@ Applications::$BROWSERS = [
     ],
 
     Constants\BrowserType::UNKNOWN => [
-        [ 'name' => 'PhantomJS',            'id'    => 'phantom',      'regexp' =>'/PhantomJS\/([0-9.]*)/u' ],
-        [ 'name' => 'Nimbus',               'id'    => 'nimbus',      'regexp' =>'/Nimbus\/([0-9.]*)/u' ],
-        [ 'name' => 'McAfee Web Gateway',   'id'    => 'Webwasher',      'regexp' =>'/Webwasher\/([0-9.]*)/u' ],
+        [ 'name' => 'Nimbus',               'id'    => 'nimbus',       'regexp' =>'/Nimbus\/([0-9.]*)/u' ],
+        [ 'name' => 'McAfee Web Gateway',   'id'    => 'Webwasher',    'regexp' =>'/Webwasher\/([0-9.]*)/u' ],
         [ 'name' => 'Open Sankore',         'id'    => 'sankore',      'regexp' =>'/Open-Sankore\/([0-9.]*)/u', 'type' => Constants\DeviceType::WHITEBOARD ],
-        [ 'name' => 'Adapi',                'id'    => 'adapi',      'regexp' =>'/ ADAPI\/([0-9.]*)/u', 'hidden' => true, 'type' => Constants\DeviceType::SIGNAGE ],
-        [ 'name' => 'BrightSign',           'id'    => 'brightsign',      'regexp' =>'/BrightSign\/([0-9.]*)/u', 'type' => Constants\DeviceType::SIGNAGE ],
-        [ 'name' => 'Coship MMCP',          'id'    => 'coship',      'regexp' =>'/Coship_MMCP_([0-9.]*)/u', 'type' => Constants\DeviceType::SIGNAGE ],
+        [ 'name' => 'Adapi',                'id'    => 'adapi',        'regexp' =>'/ ADAPI\/([0-9.]*)/u', 'hidden' => true, 'type' => Constants\DeviceType::SIGNAGE ],
+        [ 'name' => 'BrightSign',           'id'    => 'brightsign',   'regexp' =>'/BrightSign\/([0-9.]*)/u', 'type' => Constants\DeviceType::SIGNAGE ],
+        [ 'name' => 'Coship MMCP',          'id'    => 'coship',       'regexp' =>'/Coship_MMCP_([0-9.]*)/u', 'type' => Constants\DeviceType::SIGNAGE ],
     ]
 ];
