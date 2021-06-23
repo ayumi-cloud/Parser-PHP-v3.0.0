@@ -308,17 +308,18 @@ Applications::$BROWSERS = [
         [ 'name' => 'Yaani Browser',        'id'    => 'yaani',         'regexp' => '/YaaniBrowser\/([0-9.]*)/u', 'type' => Constants\DeviceType::MOBILE ],                 // see: https://www.yaani.com.tr/
 
         /* Television browsers */
-        [ 'name' => 'AltiBrowser',          'id'    => 'alti',      'regexp' =>'/AltiBrowser\/([0-9.]*)/i' ],
-        [ 'name' => 'Aplix',                'id'    => 'aplix',      'regexp' =>'/Aplix_SANYO_browser\/([0-9](?:.[0-9.]+)?)/u' ],                                    // browser for the Sega Saturn
-        [ 'name' => 'AwoX',                 'id'    => 'awox',      'regexp' =>'/AwoX(?:\/([0-9.]*))? Browser/i' ],
-        [ 'name' => 'Isis',                 'id'    => 'browserserver',      'regexp' =>'/BrowserServer/u' ],
-        [ 'name' => 'Isis',                 'id'    => 'isis',      'regexp' =>'/ISIS\/([0-9.]*)/u', 'details' => 2 ],
-        [ 'name' => 'Netbox',               'id'    => 'netbox',      'regexp' =>'/Netbox\/([0-9.]*)/u', 'type' => Constants\DeviceType::TELEVISION ],
-        [ 'name' => 'Spyglass',             'id'    => 'spyglass',      'regexp' =>'/Spyglass ([0-9.]+); OpenTV/u' ],
-        [ 'name' => 'Oregan Browser',       'id'    => 'oregan',      'regexp' =>'/OreganMediaBrowser(?:\/([0-9.]*))?/u', 'details' => 2 ],
-        [ 'name' => 'Viera Browser',        'id'    => 'viera',      'regexp' =>'/Viera\/([0-9.]*)/u' ],
-        [ 'name' => 'Zetakey',              'id'    => 'zetakey',      'regexp' =>'/Zetakey Webkit\/([0-9.]*)/u', 'type' => Constants\DeviceType::TELEVISION ],
-        [ 'name' => 'Zetakey',              'id'    => 'zetakey',      'regexp' =>'/Zetakey\/([0-9.]*)/u', 'type' => Constants\DeviceType::TELEVISION ],
+        [ 'name' => 'AltiBrowser',          'id'    => 'alti',          'regexp' => '/AltiBrowser\/([0-9.]*)/i' ],
+        [ 'name' => 'Aplix',                'id'    => 'aplix',         'regexp' => '/Aplix_SANYO_browser\/([0-9](?:.[0-9.]+)?)/u' ],                                    // browser for the Sega Saturn
+        [ 'name' => 'AwoX',                 'id'    => 'awox',          'regexp' => '/AwoX(?:\/([0-9.]*))? Browser/i' ],
+        [ 'name' => 'Freebox Browser',      'id'    => 'freebox',       'regexp' => '/ Navigateur web\/([0-9.]*)/u', 'type' => Constants\DeviceType::TELEVISION ], // see: https://www.free.fr/freebox
+        [ 'name' => 'Isis',                 'id'    => 'browserserver', 'regexp' => '/BrowserServer/u' ],
+        [ 'name' => 'Isis',                 'id'    => 'isis',          'regexp' => '/ISIS\/([0-9.]*)/u', 'details' => 2 ],
+        [ 'name' => 'Netbox',               'id'    => 'netbox',        'regexp' => '/Netbox\/([0-9.]*)/u', 'type' => Constants\DeviceType::TELEVISION ],
+        [ 'name' => 'Spyglass',             'id'    => 'spyglass',      'regexp' => '/Spyglass ([0-9.]+); OpenTV/u' ],
+        [ 'name' => 'Oregan Browser',       'id'    => 'oregan',        'regexp' => '/OreganMediaBrowser(?:\/([0-9.]*))?/u', 'details' => 2 ],
+        [ 'name' => 'Viera Browser',        'id'    => 'viera',         'regexp' => '/Viera\/([0-9.]*)/u' ],
+        [ 'name' => 'Zetakey',              'id'    => 'zetakey',       'regexp' => '/Zetakey Webkit\/([0-9.]*)/u', 'type' => Constants\DeviceType::TELEVISION ],
+        [ 'name' => 'Zetakey',              'id'    => 'zetakey',       'regexp' => '/Zetakey\/([0-9.]*)/u', 'type' => Constants\DeviceType::TELEVISION ],
 
         /* Gaming browsers */
         [ 'name' => 'Aplix',                'id'    => 'aplix',      'regexp' =>'/Aplix_SEGASATURN_browser\/([0-9](?:.[0-9.]+)?)/u' ],                                    // browser for the Sega Saturn
