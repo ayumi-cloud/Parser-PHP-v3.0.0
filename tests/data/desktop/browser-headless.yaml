@@ -1,0 +1,8 @@
+-
+    headers: 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 SlimerJS/0.9.5'
+    readable: 'SlimerJS 0.9.5 on Ubuntu'
+    result: { browser: { name: SlimerJS, version: 0.9.5, type: browser }, engine: { name: Gecko, version: '36.0' }, os: { name: Ubuntu }, device: { type: desktop } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.6.0 Safari/534.34'
+    readable: 'PhantomJS 1.6.0 on Ubuntu'
+    result: { browser: { name: SlimerJS, version: 0.9.5, type: browser }, engine: { name: Gecko, version: '36.0' }, os: { name: Ubuntu }, device: { type: desktop } }

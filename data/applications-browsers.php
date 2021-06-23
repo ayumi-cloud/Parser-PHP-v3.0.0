@@ -381,12 +381,13 @@ Applications::$BROWSERS = [
     ],
 
     Constants\BrowserType::UNKNOWN => [
-        [ 'name' => 'PhantomJS',            'id'    => 'phantom',      'regexp' =>'/PhantomJS\/([0-9.]*)/u' ],
-        [ 'name' => 'Nimbus',               'id'    => 'nimbus',      'regexp' =>'/Nimbus\/([0-9.]*)/u' ],
-        [ 'name' => 'McAfee Web Gateway',   'id'    => 'Webwasher',      'regexp' =>'/Webwasher\/([0-9.]*)/u' ],
+        [ 'name' => 'PhantomJS',            'id'    => 'phantom',      'regexp' =>'/PhantomJS\/([0-9.]*)/u', 'type' => Constants\DeviceType::HEADLESS ],  // see: https://phantomjs.org/
+        [ 'name' => 'SlimerJS',             'id'    => 'slimerjs',     'regexp' => '/ SlimerJS\/([0-9.]*)/u', 'type' => Constants\DeviceType::HEADLESS ], // see: https://slimerjs.org/
+        [ 'name' => 'Nimbus',               'id'    => 'nimbus',       'regexp' =>'/Nimbus\/([0-9.]*)/u' ],
+        [ 'name' => 'McAfee Web Gateway',   'id'    => 'Webwasher',    'regexp' =>'/Webwasher\/([0-9.]*)/u' ],
         [ 'name' => 'Open Sankore',         'id'    => 'sankore',      'regexp' =>'/Open-Sankore\/([0-9.]*)/u', 'type' => Constants\DeviceType::WHITEBOARD ],
-        [ 'name' => 'Adapi',                'id'    => 'adapi',      'regexp' =>'/ ADAPI\/([0-9.]*)/u', 'hidden' => true, 'type' => Constants\DeviceType::SIGNAGE ],
-        [ 'name' => 'BrightSign',           'id'    => 'brightsign',      'regexp' =>'/BrightSign\/([0-9.]*)/u', 'type' => Constants\DeviceType::SIGNAGE ],
-        [ 'name' => 'Coship MMCP',          'id'    => 'coship',      'regexp' =>'/Coship_MMCP_([0-9.]*)/u', 'type' => Constants\DeviceType::SIGNAGE ],
+        [ 'name' => 'Adapi',                'id'    => 'adapi',        'regexp' =>'/ ADAPI\/([0-9.]*)/u', 'hidden' => true, 'type' => Constants\DeviceType::SIGNAGE ],
+        [ 'name' => 'BrightSign',           'id'    => 'brightsign',   'regexp' =>'/BrightSign\/([0-9.]*)/u', 'type' => Constants\DeviceType::SIGNAGE ],
+        [ 'name' => 'Coship MMCP',          'id'    => 'coship',       'regexp' =>'/Coship_MMCP_([0-9.]*)/u', 'type' => Constants\DeviceType::SIGNAGE ],
     ]
 ];
