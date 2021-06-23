@@ -662,3 +662,7 @@
     headers: 'User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/533+ (KHTML, like Gecko) Element Browser 5.0'
     result: { browser: { name: 'Element Browser', version: '5.0', type: browser }, engine: { name: Webkit, version: '533' }, os: { name: Windows, version: { value: '6.1', alias: '7' } }, device: { type: desktop } }
     readable: 'Element Browser 5.0 on Windows 7'
+-
+    headers: 'User-Agent: Mozilla/5.0 (Linux; Android 7.0; HUAWEI-M570/001.00 WAP/OBIGO/Q05A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Safari/537.36 Fluid/0.9.6'
+    readable: 'Fluid Browser 0.9.6 on a Huawei M570 running Android 7.0'
+    result: { browser: { name: 'Fluid Browser', family: { name: Chrome, version: 63 }, version: 0.9.6, type: browser }, engine: { name: Blink }, os: { name: Android, version: '7.0' }, device: { type: mobile, subtype: smart, manufacturer: Huawei, model: M570 } }
