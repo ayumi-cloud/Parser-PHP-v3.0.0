@@ -654,3 +654,7 @@
     headers: 'User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 SznProhlizec/6.2.3'
     result: { browser: { name: 'Seznam Browser', using: { name: Chrome, version: '6' }, version: 6.2.3, type: browser }, engine: { name: Blink }, os: { name: Windows, version: { value: '10.0', alias: '10' } }, device: { type: desktop } }
     readable: 'Seznam Browser 6.2.3 on Windows 10'
+-
+    headers: 'User-Agent: Mozilla/5.0 X11 (Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.9 NTENTBrowser/4.2.0.184 Safari/537.36'
+    readable: 'NTENT Browser 4.2.0.184 on Linux'
+    result: { browser: { name: 'NTENT Browser', family: { name: Chrome, version: 54 }, version: 4.2.0.184, type: browser }, engine: { name: Blink }, os: { name: Linux }, device: { type: desktop } }
