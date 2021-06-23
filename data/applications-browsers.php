@@ -197,6 +197,7 @@ Applications::$BROWSERS = [
         [ 'name' => 'Surf',                 'id'    => 'surf',          'regexp' => '/Surf\/([0-9.]*)/u' ],
         [ 'name' => 'Swiftweasel',          'id'    => 'swiftweasel',      'regexp' =>'/Swiftweasel\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],            // see: http://swiftweasel.tuxfamily.org/
         [ 'name' => 'Swiftfox',             'id'    => 'swiftfox',      'regexp' =>'/Swiftfox/u', 'type' => Constants\DeviceType::DESKTOP ],
+        [ 'name' => 'Start Internet',       'id'    => 'startbrowser',  'regexp' => '/ Start\/([0-9.]*)/u', 'type' => Constants\DeviceType::MOBILE ], // see: https://play.google.com/store/apps/details?id=fyi.start.web.browser
         [ 'name' => 'Swing Browser',        'id'    => 'swing',      'regexp' =>'/Swing(?:\(And\))?\/([0-9.]*)/u', 'details' => 3 ],                                    // see: http://swing-browser.com
         [ 'name' => 't-online.de',          'id'    => 'to-browser',      'regexp' =>'/TO-Browser\/TOB([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],              // see: https://www.t-online.de/computer/browser/
         [ 'name' => 't-online.de',          'id'    => 'to-browser',      'regexp' =>'/TO-Browser/u', 'type' => Constants\DeviceType::DESKTOP ], 
