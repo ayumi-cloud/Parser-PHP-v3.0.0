@@ -332,6 +332,7 @@ Applications::$BROWSERS = [
         [ 'name' => 'Prince',               'id'    => 'prince',      'regexp' =>'/Prince\/([0-9.]*)/u' ],
 
         /* Headless */
+        [ 'name' => 'Headless Chrome',      'id'    => 'headless',     'regexp' => '/HeadlessChrome\/([0-9.]*)/u', 'type' => Constants\DeviceType::HEADLESS ],
         [ 'name' => 'PhantomJS',            'id'    => 'phantom',      'regexp' =>'/PhantomJS\/([0-9.]*)/u',  'type' => Constants\DeviceType::HEADLESS ],  // see: https://phantomjs.org/
         [ 'name' => 'SlimerJS',             'id'    => 'slimerjs',     'regexp' => '/ SlimerJS\/([0-9.]*)/u', 'type' => Constants\DeviceType::HEADLESS ],  // see: https://slimerjs.org/
         [ 'name' => 'Zombie.js',            'id'    => 'zombie',       'regexp' =>'/Zombie\.js\/([0-9.]*)/u', 'type' => Constants\DeviceType::HEADLESS ],  // see: http://zombie.js.org/
