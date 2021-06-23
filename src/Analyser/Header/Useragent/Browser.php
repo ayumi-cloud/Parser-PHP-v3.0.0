@@ -423,24 +423,6 @@ trait Browser
             $this->data->browser->channel = null;
         }
 
-        /* Fluid App */
-
-        if (preg_match('/FluidApp Version\/([0-9]+)/u', $ua, $match)) {
-            // Convert `FluidApp Version/2155 to `FluidApp 2.1`
-            $match = $match[1][0] . '.' . $match[1][1];
-            $this->data->browser->version = new Version([ 'value' => $match ]);
-
-            if (preg_match('/Chrome\/([0-9]+)/u', $ua, $match)) {
-                $this->data->browser->using = new Using([ 'name' => 'Chrome', 'version' => new Version([ 'value' => $match[1], 'details' => 1 ]) ]);
-            }
-
-            $this->data->browser->type = Constants\BrowserType::BROWSER;
-            $this->data->browser->stock = false;
-            $this->data->browser->name = 'Fluid App';
-
-            $this->data->browser->channel = null;
-        }
-
         /* Set the browser family */
 
         if ($this->data->isBrowser('Chrome') || $this->data->isBrowser('Chromium')) {
