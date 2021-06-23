@@ -2428,6 +2428,19 @@ trait Browser
                 $this->data->device->type = Constants\DeviceType::MOBILE;
             }
         }
+
+        /* Fluid App */
+
+        if (preg_match('/FluidApp Version\/([0-9]+)/u', $ua, $match)) {
+            $this->data->browser->name = 'Fluid Browser';
+
+            // Convert FluidApp Version/2155 to FluidApp Version 2.1
+            $match = $match[1][0] . '.' . $match[1][1];
+
+            $this->data->browser->version = new Version([ 'value' => $match ]);
+            $this->data->browser->family = null;
+            $this->data->browser->type = Constants\BrowserType::BROWSER;
+        }
     }
 
     private function detectTelevisionBrowsers($ua)
