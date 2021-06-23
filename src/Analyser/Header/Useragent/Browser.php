@@ -426,7 +426,7 @@ trait Browser
         /* Fluid App */
 
         if (preg_match('/FluidApp Version\/([0-9]+)/u', $ua, $match)) {
-            // Convert `FluidApp Version/2155 to `FluidApp 2.1`
+            // Convert `FluidApp Version/2155` to `FluidApp 2.1`
             $match = $match[1][0] . '.' . $match[1][1];
             $this->data->browser->version = new Version([ 'value' => $match ]);
 
