@@ -177,6 +177,7 @@ Applications::$BROWSERS = [
         [ 'name' => 'SalamWeb',             'id'    => 'salam',       'regexp' => '/SalamWeb\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                     // see: https://salamweb.com/
         [ 'name' => 'SalamWeb',             'id'    => 'salam',       'regexp' => '/Salam Browser/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'SeaMonkey',            'id'    => 'seamonkey',    'regexp' =>'/SeaMonkey\/([0-9ab.]*)/i', 'type' => Constants\DeviceType::DESKTOP ],                 // see: https://www.seamonkey-project.org/
+        [ 'name' => 'Seznam Browser',       'id'    => 'seznamapp',   'regexp' => '/SznProhlizec\/([0-9.]*)/u' ], // see: https://play.google.com/store/apps/details?id=cz.seznam.sbrowser&hl=en
         [ 'name' => 'Shiira',               'id'    => 'shiira',      'regexp' => '/Shiira/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Sielo Browser',        'id'    => 'sielo',       'regexp' => '/ Sielo\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                       // see: https://github.com/SieloBrowser/sielo-legacy
         [ 'name' => 'SiteKiosk',            'id'    => 'sitekiosk',   'regexp' => '/SiteKiosk ([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                     // see: https://www.provisio.com/web/us/products/windows-kiosk-software-sitekiosk

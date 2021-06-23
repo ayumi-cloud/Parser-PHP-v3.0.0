@@ -650,3 +650,7 @@
     headers: 'User-Agent: Mozilla/5.0 (Linux; Android 6.0; HM-G552-FL Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Start/52.0.2743.98 Chrome/52.0.2743.98 Mobile Safari/537.36'
     readable: 'START Internet 52.0.2743.98 on a HM-G552-FL running Android 6.0'
     result: { browser: { name: 'START Internet', using: { name: Chrome, version: '52' }, version: 52.0.2743.98, type: browser }, engine: { name: Blink }, os: { name: Android, version: '6.0' }, device: { type: mobile, subtype: smart, model: HM-G552-FL } }
+-
+    headers: 'User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 SznProhlizec/6.2.3'
+    result: { browser: { name: 'Seznam Browser', using: { name: Chrome, version: '6' }, version: 6.2.3, type: browser }, engine: { name: Blink }, os: { name: Windows, version: { value: '10.0', alias: '10' } }, device: { type: desktop } }
+    readable: 'Seznam Browser 6.2.3 on Windows 10'
