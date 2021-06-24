@@ -46,13 +46,7 @@ trait Os
 
     private function detectTesla($ua)
     {
-        if (preg_match('/Tesla(\)|\/)/u', $ua)) {
-            $this->data->os->name = 'Tesla';
-
-            if (preg_match('/Tesla\/([0-9.]*)/u', $ua, $match)) {
-                $this->data->os->version = new Version([ 'value' => $match[1] ]);
-            }
-        }
+        //
     }
 
     /* Darwin */
