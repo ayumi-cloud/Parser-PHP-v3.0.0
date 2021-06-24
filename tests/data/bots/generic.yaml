@@ -1750,3 +1750,11 @@
     headers: 'User-Agent: Tumblr/14.0.835.186'
     readable: 'Tumblr Bot 14.0.835.186'
     result: { browser: { name: 'Tumblr Bot', version: '14.0.835.186' }, device: { type: bot } }
+-
+    headers: 'User-Agent: CF-UC User Agent v.1d.65359'
+    readable: 'CF-UC User Agent 1d.65359'
+    result: { browser: { name: 'CF-UC User Agent', version: '1d.65359' }, device: { type: bot } }
+-
+    headers: 'User-Agent: CF-UC User Agent v.1b.499757'
+    readable: 'CF-UC User Agent 1b.499757'
+    result: { browser: { name: 'CF-UC User Agent', version: '1b.499757' }, device: { type: bot } }
