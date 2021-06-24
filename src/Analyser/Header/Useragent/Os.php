@@ -29,6 +29,7 @@ trait Os
         $this->detectBrew($ua);
         $this->detectQtopia($ua);
         $this->detectOpenTV($ua);
+        $this->detectTesla($ua);
         $this->detectRemainingOperatingSystems($ua);
 
         return $this;
@@ -2351,6 +2352,19 @@ trait Os
                     $device->identified |= $this->data->device->identified;
                     $this->data->device = $device;
                 }
+            }
+        }
+    }
+
+    /* Tesla operating system */
+
+    private function detectTesla($ua)
+    {
+        if (preg_match('/Tesla(\)|\/)/u', $ua)) {
+            $this->data->os->name = 'Tesla';
+
+            if (preg_match('/Tesla\/([0-9.]*)/u', $ua, $match)) {
+                $this->data->os->version = new Version([ 'value' => $match[1] ]);
             }
         }
     }
