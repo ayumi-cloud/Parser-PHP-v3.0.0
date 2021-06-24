@@ -16,5 +16,5 @@
     readable: 'Chromium 75.0.3770.100 on Tesla 2019.32.11'
 -
     headers: 'User-Agent: Mozilla/5.0 (Linux; Android 6.0; Tesla) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.96 Safari/537.36'
-    result: { browser: { name: 'Tesla Browser', family: { name: Chrome, version: 78 }, type: browser }, engine: { name: Blink }, os: { name: Android, version: '6.0' }, device: { type: car, model: Tesla } }
-    readable: 'Tesla Browser on a Tesla running Android 6.0'
+    result: { browser: { name: Chrome, version: '78', type: browser }, engine: { name: Blink }, os: { name: Android, version: '6.0' }, device: { type: tablet, model: Tesla } }
+    readable: 'Chrome 78 on a Tesla running Android 6.0'
