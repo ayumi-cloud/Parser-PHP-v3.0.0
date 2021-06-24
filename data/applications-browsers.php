@@ -28,8 +28,10 @@ Applications::$BROWSERS = [
         [ 'name' => 'Alienforce',           'id'    => 'alienforce',   'regexp' => '/Alienforce\/?([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ], // see: https://sourceforge.net/projects/alienforce/
         [ 'name' => 'Adventurer',           'id'    => 'adventurer',    'regexp' => '/Adventurer\/([0-9.]*)/ui', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Amigo Browser',        'id'    => 'amigo',       'regexp' => '/ Amigo\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                       // see: https://amigo.mail.ru/
-        [ 'name' => 'AOL Desktop',          'id'    => 'aol',      'regexp' =>'/AOL ([0-9.]*); AOLBuild/i' ],
+        [ 'name' => 'AOL Desktop',          'id'    => 'aol',      'regexp' =>'/ AOL\/([0-9.]*)/i', 'type' => Constants\DeviceType::DESKTOP ],
+        [ 'name' => 'AOL Desktop',          'id'    => 'aol',      'regexp' =>'/ AOL ([0-9.]*)/i', 'type' => Constants\DeviceType::DESKTOP ],                    // see: https://discover.aol.com/products-and-services/aol-desktop-for-windows
         [ 'name' => 'AOL Browser',          'id'    => 'america',      'regexp' =>'/America Online Browser (?:[0-9.]*); rev([0-9.]*);/i' ],
+        [ 'name' => 'AOL Shield',           'id'    => 'aolshield',    'regexp' => '/ AOLShield\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ], // see: https://discover.aol.com/products-and-services/aol-shield-browser
         [ 'name' => 'APUS Browser',         'id'    => 'apus',        'regexp' => '/APUSBrowser\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],                  // see: https://www.apusapps.com/en/browser/
         [ 'name' => 'Arachne',              'id'    => 'arachne',      'regexp' =>'/xChaos_Arachne\/[0-9]\.([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],       // see: www.glennmcc.org
         [ 'name' => 'Arora',                'id'    => 'arora',      'regexp' =>'/[Aa]rora\/([0-9.]*)/u' ],                                                             // see: www.arora-browser.org
