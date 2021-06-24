@@ -58,7 +58,7 @@ trait Bot
 
             $this->data->browser->name = 'CF-UC User Agent';
 
-            if (preg_match('/CF-UC User Agent v\.([a-z0-9]+)\.([a-z0-9.]+)/ui', $ua, $match)) {
+            if (preg_match('/CF-UC User Agent v\.([a-z0-9]+)\.([0-9.]+)/ui', $ua, $match)) {
                 $this->data->browser->version = new Version([ 'value' => $match[2] ]);
             }
 
