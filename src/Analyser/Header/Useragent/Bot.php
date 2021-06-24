@@ -51,19 +51,6 @@ trait Bot
 
             $this->data->device->type = Constants\DeviceType::BOT;
 
-        // Detect CF-UC User Agent bot
-        } elseif (preg_match('/CF-UC User Agent/ui', $ua, $match)) {
-            $this->data->browser->reset();
-            $this->data->device->reset();
-
-            $this->data->browser->name = 'CF-UC User Agent';
-
-            if (preg_match('/CF-UC User Agent v\.([a-z0-9]+)\.([a-z0-9.]+)/ui', $ua, $match)) {
-                $this->data->browser->version = new Version([ 'value' => $match[2] ]);
-            }
-
-            $this->data->device->type = Constants\DeviceType::BOT;
-
         // Detect 80legs bots based on url in the UA string
         } elseif (preg_match('/80?legs/iu', $ua)) {
             $this->data->browser->name = '80legs';
