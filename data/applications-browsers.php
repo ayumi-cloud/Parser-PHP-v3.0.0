@@ -325,6 +325,10 @@ Applications::$BROWSERS = [
         [ 'name' => 'Zetakey',              'id'    => 'zetakey',       'regexp' => '/Zetakey Webkit\/([0-9.]*)/u', 'type' => Constants\DeviceType::TELEVISION ],
         [ 'name' => 'Zetakey',              'id'    => 'zetakey',       'regexp' => '/Zetakey\/([0-9.]*)/u', 'type' => Constants\DeviceType::TELEVISION ],
 
+        /* Car browers */
+        [ 'name' => 'Tesla Browser',        'id'    => 'tesla',      'regexp' => '/QtCarBrowser/u', 'type' => Constants\DeviceType::CAR ],                                      // see: https://teslamotorsclub.com/tmc/forums/model-s-user-interface.113/
+        [ 'name' => 'Tesla Browser',        'id'    => 'tesla',      'regexp' => '/TeslaBrowser\/([0-9.]*)/u', 'type' => Constants\DeviceType::CAR ],                           // see: https://www.tesla.com/
+
         /* Gaming browsers */
         [ 'name' => 'Aplix',                'id'    => 'aplix',      'regexp' =>'/Aplix_SEGASATURN_browser\/([0-9](?:.[0-9.]+)?)/u' ],                                    // browser for the Sega Saturn
         [ 'name' => 'Bunjalloo',            'id'    => 'bunjalloo',      'regexp' =>'/Bunjalloo\/([0-9.]*)/u' ],                                                            // browser for the Nintento DS
