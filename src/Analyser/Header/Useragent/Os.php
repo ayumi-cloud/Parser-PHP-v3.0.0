@@ -2365,6 +2365,8 @@ trait Os
 
             if (preg_match('/Tesla\/([0-9.]*)/u', $ua, $match)) {
                 $this->data->os->version = new Version([ 'value' => $match[1] ]);
+            } else {
+                $this->data->os->version = null;
             }
         }
     }
