@@ -1752,9 +1752,9 @@
     result: { browser: { name: 'Tumblr Bot', version: '14.0.835.186' }, device: { type: bot } }
 -
     headers: 'User-Agent: CF-UC User Agent v.1d.65359'
-    readable: 'CF-UC User Agent 1d.65359'
-    result: { browser: { name: 'CF-UC User Agent', version: '1d.65359' }, device: { type: bot } }
+    readable: 'CF-UC User Agent 65359'
+    result: { browser: { name: 'CF-UC User Agent', version: '65359' }, device: { type: bot } }
 -
     headers: 'User-Agent: CF-UC User Agent v.1b.499757'
-    readable: 'CF-UC User Agent 1b.499757'
-    result: { browser: { name: 'CF-UC User Agent', version: '1b.499757' }, device: { type: bot } }
+    readable: 'CF-UC User Agent 499757'
+    result: { browser: { name: 'CF-UC User Agent', version: '499757' }, device: { type: bot } }
