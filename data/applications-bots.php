@@ -49,7 +49,6 @@ Applications::$BOTS = [
     [ 'name' => 'Butterfly',                    'id'    => 'butterfly',      'regexp' => '/Butterfly\/([0-9.]*)/u' ],
     [ 'name' => 'BuzzSumo',                     'id'    => 'buzzsumo',      'regexp' => '/buzzsumo\.com/u' ],
     [ 'name' => 'Bytespider',                   'id'    => 'bytespider',      'regexp' => '/Bytespider/u' ],
-    [ 'name' => 'CF-UC User Agent',             'id'    => 'cfuc',          'regexp' => '/CF-UC User Agent v\.([a-z0-9.]*)/u' ],
     [ 'name' => 'CiteSeerX',                    'id'    => 'heritrix',      'regexp' => '/heritrix\/([0-9.]*)/u' ],
     [ 'name' => 'Clarabot',                     'id'    => 'clarabot',      'regexp' => '/Clarabot\/([0-9.]*)/u' ],
     [ 'name' => 'Cliqzbot',                     'id'    => 'cliqz',      'regexp' => '/Cliqzbot\/([0-9.]*)/u' ],
