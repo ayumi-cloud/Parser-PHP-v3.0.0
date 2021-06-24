@@ -156,6 +156,7 @@ Applications::$BROWSERS = [
         [ 'name' => 'Nichrome',             'id'    => 'nichrome',    'regexp' => '/Nichrome\/self\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],
         [ 'name' => 'Origyn',               'id'    => 'origyn',      'regexp' =>'/Origyn Web Browser/u' ],
         [ 'name' => 'Odyssey',              'id'    => 'owb',      'regexp' =>'/OWB\/([0-9.]*)/u' ], // Warning: Origyn needs to be before Odyssey
+        [ 'name' => 'OhHai Browser',        'id'    => 'ohhai',      'regexp' =>'/OhHaiBrowser\/([0-9.]*)/u' ],                                                            // see: https://ohhaibrowser.com/
         [ 'name' => 'OmniWeb',              'id'    => 'omniweb',      'regexp' =>'/OmniWeb\/v([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],              // see: https://www.omnigroup.com/more/
         [ 'name' => 'OmniWeb',              'id'    => 'omniweb',      'regexp' =>'/OmniWeb\/([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ], 
         [ 'name' => 'Open Live Writer',     'id'    => 'live',      'regexp' =>'/Open Live Writer ([0-9.]*)/u', 'type' => Constants\DeviceType::DESKTOP ],             // see: http://openlivewriter.org/  

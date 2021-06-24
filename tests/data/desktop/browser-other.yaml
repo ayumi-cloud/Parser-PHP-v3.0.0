@@ -670,3 +670,7 @@
     headers: 'User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36 AOLShield/79.0.3945.5'
     result: { browser: { name: 'AOL Shield', family: { name: Chrome, version: 79 }, version: 79.0.3945.5, type: browser }, engine: { name: Blink }, os: { name: Windows, version: { value: '6.1', alias: '7' } }, device: { type: desktop } }
     readable: 'AOL Shield 79.0.3945.5 on Windows 7'
+-
+    headers: 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) OhHaiBrowser/3.4.0 Chrome/80.0.3987.165 Electron/8.2.5 Safari/537.36'
+    result: { browser: { name: 'AOL Shield', family: { name: Chrome, version: 79 }, version: 79.0.3945.5, type: browser }, engine: { name: Blink }, os: { name: Windows, version: { value: '6.1', alias: '7' } }, device: { type: desktop } }
+    readable: 'AOL Shield 79.0.3945.5 on Windows 7'
