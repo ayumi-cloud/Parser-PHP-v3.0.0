@@ -2,6 +2,7 @@
 .github/*
 .phpunit.result.cache
 .vscode
+assets/*
 build/*
 composer.lock
 docs/*
