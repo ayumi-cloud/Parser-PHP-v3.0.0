@@ -4,3 +4,5 @@
 /.gitignore export-ignore
 /.github export-ignore
 /phpunit.xml export-ignore
+/assets export-ignore
+/docs export-ignore
