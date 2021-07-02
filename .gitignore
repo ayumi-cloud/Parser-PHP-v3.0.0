@@ -1,6 +1,7 @@
 .DS_Store
 .github/*
 .phpunit.result.cache
+.idea
 .vscode
 assets/*
 build/*
