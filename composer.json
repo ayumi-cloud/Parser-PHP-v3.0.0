@@ -28,7 +28,7 @@
 
     "require-dev": {
         "symfony/yaml": "^5.3",
-        "phpunit/php-code-coverage": "^8.0",
+        "phpunit/php-code-coverage": "^7.0",
         "phpunit/phpunit": "^8.0",
         "php-coveralls/php-coveralls": "^2.4.3",
         "enso-media/reverse-regex": "^0.2.0",
