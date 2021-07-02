@@ -1,9 +1,9 @@
 <h1 align="center">Summer CMS - Parser Module</h1>
 <p align="center">(Being heavily coded in private repos at the moment - we look forward to publity releasing a candidate release)</p>
   
-<p align="center"><img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/code.svg"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/buttons/stars.svg" alt="stars"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/buttons/php.svg"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/laravel-badge.png" alt="laravel"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/buttons/conduct.svg" alt="conduct"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/buttons/docs.svg" alt="docs"></p>
+<p align="center"><img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/code.svg"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/buttons/stars.svg" alt="stars"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/buttons/php.svg"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/laravel-badge.png" alt="laravel"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/buttons/conduct.svg" alt="conduct"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/buttons/docs.svg" alt="docs"></p>
 
-<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/cover.png"></p>
+<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/cover.png"></p>
 
 ## Summer CMS Modules :eyes:
 
@@ -65,7 +65,7 @@ This project is completely transparent and honest, before we started we contacte
 
 Over years we have coded and created well over a hundred pull requests (under various github accounts) which have been merged to the October core, we have never asked or recevived any money for any of the pull requests. We use the cms for professional purposes and therefore it is beneficial for our companies to have a professional working solution to give to our end-users and clients. In order for us to delivery a high quality product we made the discussion to update the cms with new and exciting features and modernize old and existing features, there are breaking change!
 
-<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/data.jpg"></p>
+<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/data.jpg"></p>
 
 ## Introduction ⭐
 
@@ -114,7 +114,7 @@ There are options to configure the data retention period and the parser module f
 
 The IP anonymization/masking takes place as soon as data is received by the parser module, before any storage or processing takes place.
 
-<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/ip.png"></p>
+<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/ip.png"></p>
 
 ### Sensitive data 📒
 
@@ -138,13 +138,13 @@ The Summer CMS takes privacy and user data seriously, we strongly believe in put
 
 ### General Data Protection Regulation (GDPR) 🔔
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/gdpr.jpg"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/gdpr.jpg"></p>
 
 The General Data Protection Regulation (GDPR) is one of the most wide-ranging pieces of legislation passed by the EU in recent memory. It was introduced to standardise data protection law across the single market and give people in a growing digital economy greater control over how their personal information is used. Summer CMS has a dedicated legal module to easily complie with current laws and sets the `opt-out` as the default and allows webmasters and users can then `opt-in`.
 
 ### ePrivacy Regulation 🔔
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/eprivacy.jpg"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/eprivacy.jpg"></p>
 
 The ePrivacy Regulation will complement the GDPR’s general rules on personal data processing by providing specific rules governing electronic communications.
 
@@ -156,7 +156,7 @@ Summer CMS has a dedicated legal module to easily complie with current laws and 
 
 ### California Consumer Privacy Act (CCPA) 🔔
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/ccpa.jpg"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/ccpa.jpg"></p>
 
 The California Consumer Privacy Act (CCPA) is a law that allows any California consumer to demand to see all the information a company has saved on them, as well as a full list of all the third parties that data is shared with.
 
@@ -168,7 +168,7 @@ Summer CMS has a dedicated legal module to easily complie with current laws and 
 
 ### Strong Customer Authentication (SCA) 🔔
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/sca.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/sca.png"></p>
 
 Strong Customer Authentication (SCA) is a new European regulatory requirement to reduce fraud and make online payments more secure. To accept payments and meet SCA requirements, you need to build additional authentication into your checkout flow.
 
@@ -176,7 +176,7 @@ Summer CMS has a dedicated legal module to easily complie with current laws and 
 
 ### The Second Payment Services Directive (PSD2) 🔔
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/psd2.jpg"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/psd2.jpg"></p>
 
 The Payment Services Directive Two (PSD2) is a piece of legislation designed to force providers of payment services to improve customer authentication processes and to also bring in new regulation around third-party involvement.
 
@@ -184,7 +184,7 @@ Summer CMS has a dedicated legal module to easily complie with current laws and 
 
 ### Federated Learning of Cohorts (FLoC) 🔔
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/floc.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/floc.png"></p>
 
 FLoC enables ad selection without sharing the browsing behaviour of individual users. A site should be able to declare that it does not want to be included in the user's list of sites for cohort calculation. Summer CMS puts it's users privacy first and so sets the `opt-out` as the default, webmasters and users can then `opt-in`. This also passes GDPR/ePrivacy laws.
 
@@ -196,7 +196,7 @@ The second problem is less easily explained away: the technology will share new 
 
 ### Cookies 🔔
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/cookie.svg" width="250" height="250"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/cookie.svg" width="250" height="250"></p>
 
 Cookies in Summer CMS auto detect if the cms is being hosted from a secure connection and sets the following default for https connections:
 
@@ -216,11 +216,11 @@ SameParty | `none` | This is currently an Origin Trial in Chrome 89 and greater 
 
 For example, suppose that owner.example owns a First-Party Set containing {member1.example, member2.example}. Then a `SameParty` cookie set by member1.example **would be sent** to https://member1.example in the following contexts:
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/same_party_table.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/same_party_table.png"></p>
 
 ## Vanilla Code 🍦
 
-<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/vanilla.jpg"></p>
+<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/vanilla.jpg"></p>
 
 Vanilla often refers to **pure** or **plain**. So in terms of programming languages, it means either without the use of **3rd party libraries** or without the use of **frameworks**.
 
@@ -245,7 +245,7 @@ This module uses several Big Data tool sets to analyze large amounts of data col
 ## Citation 📚
 
 <a href="https://zenodo.org/">
-  <img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/buttons/citation.svg" />
+  <img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/buttons/citation.svg" />
 </a>
 
 If you use this parser module for your research, then kindly cite it. Click the above badge for more information regarding the complete citation for this parser module and the diffferent citation formats like: IEEE, APA, BibTeX, CSL, DataCite, Dublin Core, DCAT, JSON, JSON-LD, GeoJSON, MARCXML and Mendeley etc.
@@ -341,43 +341,43 @@ The parser module has been tested in the following browsers:
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/chrome_48x48.png" alt="Chrome"><br>
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/chrome_48x48.png" alt="Chrome"><br>
       ✔
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/firefox_48x48.png" alt="Firefox"><br>
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/firefox_48x48.png" alt="Firefox"><br>
       ✔
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/safari_48x48.png" alt="Safari"><br>
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/safari_48x48.png" alt="Safari"><br>
       9+
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/edge_old_48x48.png" alt="Edge Legacy"><br>
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/edge_old_48x48.png" alt="Edge Legacy"><br>
       ✖ (1)
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/edge_48x48.png" alt="Edge"><br>
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/edge_48x48.png" alt="Edge"><br>
       ✔
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/internet-explorer_9-11_48x48.png" alt="Internet Explorer"><br>
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/internet-explorer_9-11_48x48.png" alt="Internet Explorer"><br>
       ✖ (2)
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/opera_48x48.png" alt="Opera"><br>
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/opera_48x48.png" alt="Opera"><br>
       ✔
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/samsung-internet_48x48.png" alt="Samsung"><br>
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/samsung-internet_48x48.png" alt="Samsung"><br>
       ✔
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/uc_48x48.png" alt="UC"><br>
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/uc_48x48.png" alt="UC"><br>
       ✔
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/vivaldi_48x48.png" alt="Vivaldi"><br>
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/vivaldi_48x48.png" alt="Vivaldi"><br>
       3+
     </td>
   </tr>
@@ -447,7 +447,7 @@ This parser module uses some PSR standards to be the most interoperable possible
 
 We also suggest using Cross-browser testing provided by BrowserStack (*) where a real-browser can't be used in-house.
 
-<p align="center"><img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/browser-stack.png"></p>
+<p align="center"><img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/browser-stack.png"></p>
 
 ## PHP Coding Standards Fixer ⭕
 
@@ -493,7 +493,7 @@ $ composer test
 
 The Summer CMS and all modules use: [Semantic Versioning](https://semver.org/).
 
-<p align="center"><img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/semver.png"></p>
+<p align="center"><img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/semver.png"></p>
 
 Semantic Versioning is a 3-component number in the format of `X.Y.Z` where:
 
@@ -527,4 +527,4 @@ Everyone is permitted to copy and distribute copies of Summer CMS, but changing 
 
 [⬆ back to top](#table-of-contents-)
 
-<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/luv.png"></p>
+<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/luv.png"></p>
