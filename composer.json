@@ -1,9 +1,9 @@
 {
-    "name": "whichbrowser/parser",
+    "name": "summercms/sc-parser-module",
 
-    "description": "Useragent sniffing library for PHP",
-    "keywords": ["useragent","browser","sniffing", "ua"],
-    "license": "MIT",
+    "description": "Parser module (part of several modules making up our Summer CMS).",
+    "keywords": ["parser", "sniffing", "serialization"],
+    "license": "GNU General Public License v3.0",
     "authors": [
         {
             "name": "Ayumi Hamasaki",
