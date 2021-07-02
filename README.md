@@ -447,7 +447,7 @@ This parser module uses some PSR standards to be the most interoperable possible
 
 We also suggest using Cross-browser testing provided by BrowserStack (*) where a real-browser can't be used in-house.
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/browser-stack.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/browser-stack.png"></p>
 
 ## PHP Coding Standards Fixer ⭕
 
@@ -493,7 +493,7 @@ $ composer test
 
 The Summer CMS and all modules use: [Semantic Versioning](https://semver.org/).
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/semver.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/semver.png"></p>
 
 Semantic Versioning is a 3-component number in the format of `X.Y.Z` where:
 
@@ -527,4 +527,4 @@ Everyone is permitted to copy and distribute copies of Summer CMS, but changing 
 
 [⬆ back to top](#table-of-contents-)
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/luv.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/luv.png"></p>
