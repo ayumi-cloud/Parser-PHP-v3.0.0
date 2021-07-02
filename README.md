@@ -328,11 +328,11 @@ If in doubt, feel free to reach out to us!
 
 ## Code of Conduct 💯
 
-In order to ensure that the Summer CMS proposal community is welcoming to all, please review and abide by the [Code of Conduct](https://github.com/summer-cms/sc-parser-module/blob/master/CODE_OF_CONDUCT.md).
+In order to ensure that the Summer CMS proposal community is welcoming to all, please review and abide by the [Code of Conduct](https://github.com/summercms/sc-parser-module/blob/master/CODE_OF_CONDUCT.md).
 
 ## For Future 🔮
 
-Shoutout to people willing to contribute to this project. Please take a look at the [projects board](https://github.com/summer-cms/sc-parser-module/projects) for a list of things to be done.
+Shoutout to people willing to contribute to this project. Please take a look at the [projects board](https://github.com/summercms/sc-parser-module/projects) for a list of things to be done.
 
 ## Browser Support ✅
 
@@ -341,43 +341,43 @@ The parser module has been tested in the following browsers:
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/chrome_48x48.png" alt="Chrome"><br>
+      <img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/browser/chrome_48x48.png" alt="Chrome"><br>
       ✔
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/firefox_48x48.png" alt="Firefox"><br>
+      <img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/browser/firefox_48x48.png" alt="Firefox"><br>
       ✔
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/safari_48x48.png" alt="Safari"><br>
+      <img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/browser/safari_48x48.png" alt="Safari"><br>
       9+
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/edge_old_48x48.png" alt="Edge Legacy"><br>
+      <img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/browser/edge_old_48x48.png" alt="Edge Legacy"><br>
       ✖ (1)
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/edge_48x48.png" alt="Edge"><br>
+      <img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/browser/edge_48x48.png" alt="Edge"><br>
       ✔
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/internet-explorer_9-11_48x48.png" alt="Internet Explorer"><br>
+      <img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/browser/internet-explorer_9-11_48x48.png" alt="Internet Explorer"><br>
       ✖ (2)
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/opera_48x48.png" alt="Opera"><br>
+      <img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/browser/opera_48x48.png" alt="Opera"><br>
       ✔
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/samsung-internet_48x48.png" alt="Samsung"><br>
+      <img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/browser/samsung-internet_48x48.png" alt="Samsung"><br>
       ✔
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/uc_48x48.png" alt="UC"><br>
+      <img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/browser/uc_48x48.png" alt="UC"><br>
       ✔
     </td>
     <td align="center">
-      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/browser/vivaldi_48x48.png" alt="Vivaldi"><br>
+      <img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/browser/vivaldi_48x48.png" alt="Vivaldi"><br>
       3+
     </td>
   </tr>
@@ -447,7 +447,7 @@ This parser module uses some PSR standards to be the most interoperable possible
 
 We also suggest using Cross-browser testing provided by BrowserStack (*) where a real-browser can't be used in-house.
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/browser-stack.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/browser-stack.png"></p>
 
 ## PHP Coding Standards Fixer ⭕
 
@@ -493,7 +493,7 @@ $ composer test
 
 The Summer CMS and all modules use: [Semantic Versioning](https://semver.org/).
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/semver.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/semver.png"></p>
 
 Semantic Versioning is a 3-component number in the format of `X.Y.Z` where:
 
@@ -527,4 +527,4 @@ Everyone is permitted to copy and distribute copies of Summer CMS, but changing 
 
 [⬆ back to top](#table-of-contents-)
 
-<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/luv.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/luv.png"></p>
