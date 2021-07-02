@@ -3,7 +3,7 @@
   
 <p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/code.svg"> <img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/buttons/stars.svg" alt="stars"> <img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/buttons/php.svg"> <img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/laravel-badge.png" alt="laravel"> <img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/buttons/conduct.svg" alt="conduct"> <img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/buttons/docs.svg" alt="docs"></p>
 
-<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/cover.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/cover.png"></p>
 
 ## Summer CMS Modules :eyes:
 
@@ -65,7 +65,7 @@ This project is completely transparent and honest, before we started we contacte
 
 Over years we have coded and created well over a hundred pull requests (under various github accounts) which have been merged to the October core, we have never asked or recevived any money for any of the pull requests. We use the cms for professional purposes and therefore it is beneficial for our companies to have a professional working solution to give to our end-users and clients. In order for us to delivery a high quality product we made the discussion to update the cms with new and exciting features and modernize old and existing features, there are breaking change!
 
-<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/data.jpg"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/data.jpg"></p>
 
 ## Introduction ⭐
 
@@ -114,7 +114,7 @@ There are options to configure the data retention period and the parser module f
 
 The IP anonymization/masking takes place as soon as data is received by the parser module, before any storage or processing takes place.
 
-<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/ip.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/ip.png"></p>
 
 ### Sensitive data 📒
 
@@ -138,13 +138,13 @@ The Summer CMS takes privacy and user data seriously, we strongly believe in put
 
 ### General Data Protection Regulation (GDPR) 🔔
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/gdpr.jpg"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/gdpr.jpg"></p>
 
 The General Data Protection Regulation (GDPR) is one of the most wide-ranging pieces of legislation passed by the EU in recent memory. It was introduced to standardise data protection law across the single market and give people in a growing digital economy greater control over how their personal information is used. Summer CMS has a dedicated legal module to easily complie with current laws and sets the `opt-out` as the default and allows webmasters and users can then `opt-in`.
 
 ### ePrivacy Regulation 🔔
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/eprivacy.jpg"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/eprivacy.jpg"></p>
 
 The ePrivacy Regulation will complement the GDPR’s general rules on personal data processing by providing specific rules governing electronic communications.
 
@@ -156,7 +156,7 @@ Summer CMS has a dedicated legal module to easily complie with current laws and 
 
 ### California Consumer Privacy Act (CCPA) 🔔
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/ccpa.jpg"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/ccpa.jpg"></p>
 
 The California Consumer Privacy Act (CCPA) is a law that allows any California consumer to demand to see all the information a company has saved on them, as well as a full list of all the third parties that data is shared with.
 
@@ -168,7 +168,7 @@ Summer CMS has a dedicated legal module to easily complie with current laws and 
 
 ### Strong Customer Authentication (SCA) 🔔
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/sca.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/sca.png"></p>
 
 Strong Customer Authentication (SCA) is a new European regulatory requirement to reduce fraud and make online payments more secure. To accept payments and meet SCA requirements, you need to build additional authentication into your checkout flow.
 
@@ -176,7 +176,7 @@ Summer CMS has a dedicated legal module to easily complie with current laws and 
 
 ### The Second Payment Services Directive (PSD2) 🔔
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/psd2.jpg"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/psd2.jpg"></p>
 
 The Payment Services Directive Two (PSD2) is a piece of legislation designed to force providers of payment services to improve customer authentication processes and to also bring in new regulation around third-party involvement.
 
@@ -184,7 +184,7 @@ Summer CMS has a dedicated legal module to easily complie with current laws and 
 
 ### Federated Learning of Cohorts (FLoC) 🔔
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/floc.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/floc.png"></p>
 
 FLoC enables ad selection without sharing the browsing behaviour of individual users. A site should be able to declare that it does not want to be included in the user's list of sites for cohort calculation. Summer CMS puts it's users privacy first and so sets the `opt-out` as the default, webmasters and users can then `opt-in`. This also passes GDPR/ePrivacy laws.
 
@@ -196,7 +196,7 @@ The second problem is less easily explained away: the technology will share new 
 
 ### Cookies 🔔
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/cookie.svg" width="250" height="250"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/cookie.svg" width="250" height="250"></p>
 
 Cookies in Summer CMS auto detect if the cms is being hosted from a secure connection and sets the following default for https connections:
 
@@ -216,11 +216,11 @@ SameParty | `none` | This is currently an Origin Trial in Chrome 89 and greater 
 
 For example, suppose that owner.example owns a First-Party Set containing {member1.example, member2.example}. Then a `SameParty` cookie set by member1.example **would be sent** to https://member1.example in the following contexts:
 
-<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/assets/images/same_party_table.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/same_party_table.png"></p>
 
 ## Vanilla Code 🍦
 
-<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/vanilla.jpg"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/vanilla.jpg"></p>
 
 Vanilla often refers to **pure** or **plain**. So in terms of programming languages, it means either without the use of **3rd party libraries** or without the use of **frameworks**.
 
@@ -402,7 +402,7 @@ We are actively inviting new contributors! To start, please read the [contributi
 This project is only possible thanks to the work of many dedicated volunteers. Everyone is encouraged to help in ways large and small. Here are a few ways you can help:
 
 - Read the current content and help us fix any spelling mistakes or grammatical errors.
-- Choose an existing [issue](https://github.com/summer-cms/sc-parser-module/issues) on GitHub and submit a pull request to fix it.
+- Choose an existing [issue](https://github.com/summercms/sc-parser-module/issues) on GitHub and submit a pull request to fix it.
 - Open a new issue to report an opportunity for improvement.
 
 If you find any bugs in the code or have any improvements in mind then feel free to generate a pull request.
