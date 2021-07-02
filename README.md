@@ -341,7 +341,7 @@ The parser module has been tested in the following browsers:
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/summercms/sc-parser-module/tree/master/assets/images/browsers/chrome_48x48.png" alt="Chrome"><br>
+      <img src="https://raw.githubusercontent.com/summercms/sc-parser-module/master/assets/images/browsers/chrome_48x48.png" alt="Chrome"><br>
       ✔
     </td>
     <td align="center">
