@@ -29,7 +29,7 @@
     "require-dev": {
         "symfony/yaml": "^5.3",
         "phpunit/php-code-coverage": "^9.2",
-        "phpunit/phpunit": "^8.5",
+        "phpunit/phpunit": "^9.3",
         "php-coveralls/php-coveralls": "^2.0",
         "enso-media/reverse-regex": "^0.2.0",
         "squizlabs/php_codesniffer": "^3.6",
