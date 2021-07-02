@@ -1,7 +1,7 @@
 <h1 align="center">Summer CMS - Parser Module</h1>
 <p align="center">(Being heavily coded in private repos at the moment - we look forward to publity releasing a candidate release)</p>
   
-<p align="center"><img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/code.svg"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/buttons/stars.svg" alt="stars"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/buttons/php.svg"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/laravel-badge.png" alt="laravel"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/buttons/conduct.svg" alt="conduct"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/buttons/docs.svg" alt="docs"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/code.svg"> <img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/buttons/stars.svg" alt="stars"> <img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/buttons/php.svg"> <img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/laravel-badge.png" alt="laravel"> <img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/buttons/conduct.svg" alt="conduct"> <img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/buttons/docs.svg" alt="docs"></p>
 
 <p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/assets/images/cover.png"></p>
 
@@ -245,7 +245,7 @@ This module uses several Big Data tool sets to analyze large amounts of data col
 ## Citation 📚
 
 <a href="https://zenodo.org/">
-  <img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/buttons/citation.svg" />
+  <img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/buttons/citation.svg" />
 </a>
 
 If you use this parser module for your research, then kindly cite it. Click the above badge for more information regarding the complete citation for this parser module and the diffferent citation formats like: IEEE, APA, BibTeX, CSL, DataCite, Dublin Core, DCAT, JSON, JSON-LD, GeoJSON, MARCXML and Mendeley etc.
@@ -447,7 +447,7 @@ This parser module uses some PSR standards to be the most interoperable possible
 
 We also suggest using Cross-browser testing provided by BrowserStack (*) where a real-browser can't be used in-house.
 
-<p align="center"><img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/browser-stack.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/browser-stack.png"></p>
 
 ## PHP Coding Standards Fixer ⭕
 
@@ -493,7 +493,7 @@ $ composer test
 
 The Summer CMS and all modules use: [Semantic Versioning](https://semver.org/).
 
-<p align="center"><img src="https://github.com/summer-cms/sc-security-module/blob/master/assets/images/semver.png"></p>
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/master/assets/images/semver.png"></p>
 
 Semantic Versioning is a 3-component number in the format of `X.Y.Z` where:
 
