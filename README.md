@@ -295,7 +295,7 @@ The parser module has been optimized to work with CSP 3 and allow backwards comp
 
 ## Issues 🔨
 
-<img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/summer-cms/sc-parser-module?style=plastic"> <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/summer-cms/sc-parser-module">
+<img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/summercms/sc-parser-module"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/summercms/sc-parser-module">
 
 If you face any issue, you can create a new issue in the `Issues` tab and we will be glad to help you out!
 
@@ -314,7 +314,7 @@ We welcome bug reports, false positive alert reports, evasions, usability issues
 
 Please include your installed version and the relevant portions of your audit log.
 
-False negative or common bypasses should [create an issue](https://github.com/summer-cms/sc-parser-module/issues/new) so they can be addressed.
+False negative or common bypasses should [create an issue](https://github.com/summercms/sc-parser-module/issues/new/choose) so they can be addressed.
 
 Do this before submitting a vulnerability:
 
