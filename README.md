@@ -1,522 +1,530 @@
-<img src="https://api.whichbrowser.net/whichbrowser.svg" width="400">
+<h1 align="center">Summer CMS - Parser Module</h1>
+<p align="center">(Being heavily coded in private repos at the moment - we look forward to publity releasing a candidate release)</p>
+  
+<p align="center"><img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/code.svg"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/buttons/stars.svg" alt="stars"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/buttons/php.svg"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/laravel-badge.png" alt="laravel"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/buttons/conduct.svg" alt="conduct"> <img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/buttons/docs.svg" alt="docs"></p>
 
-This is an extremely complicated and almost completely useless browser sniffing library. Useless because you shouldn't use browser sniffing. So stop right now and go read something about feature detecting instead. I'm serious. Go away. You'll thank me later.
+<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/cover.png"></p>
+
+## Summer CMS Modules :eyes:
+
+**Note: This is the parser module for Summer CMS, see here for the full list of [Summer CMS Modules](https://github.com/summer-cms/sc-main/blob/main/README.md#summer-cms-modules-).**
+
+## Table of Contents 📑
+
+- [Transparency](#transparency-)
+- [Introduction](#intro-)
+- [Goals](#goals-soccer)
+- [Privacy Controls](#privacy-controls-sparkles)
+    - [Consent options](#consent-options-%EF%B8%8F)
+    - [Data rentention](#data-rentention-%EF%B8%8F)
+    - [IP anonymization (or IP masking)](#ip-anonymization-or-ip-masking-)
+    - [Sensitive data](#sensitive-data-)
+    - [Encryption](#encryption-)
+- [Privacy as Default](#privacy-as-default-)
+  - [General Data Protection Regulation (GDPR)](#general-data-protection-regulation-gdpr-)
+  - [ePrivacy Regulation](#eprivacy-regulation-)
+  - [California Consumer Privacy Act (CCPA)](#california-consumer-privacy-act-ccpa-)
+  - [Strong Customer Authentication (SCA) ](#strong-customer-authentication-sca-)
+  - [The Second Payment Services Directive (PSD2)](#the-second-payment-services-directive-psd2-)
+  - [Federated Learning of Cohorts (FLoC)](#floc-)
+  - [Cookies](#cookies-)
+    - [SameParty Cookie Attribute](#sameparty-cookie-attribute-)
+- [Vanilla Code](#vanilla-code-)
+- [Naming Prefix](#naming-prefix-%EF%B8%8F)
+- [Requirements](#requirements-)
+- [Big data](#big-data-)
+- [Citation](#citation-)
+- [API's](#apis-gem)
+- [Deprecations and removals](#deprecations-and-removals-)
+- [Enhancements](#enhancements-)
+- [Issues](#issues-)
+- [Troubleshooting](#troubleshooting-)
+    - [Something](#something-)
+- [Reporting a Vulnerability](#reporting-a-vulnerability-)
+- [Code of Conduct](#code-of-conduct-)
+- [For Future](#for-future-)
+- [Browser Support ](#browser-support-)
+   - [Notes](#notes) 
+- [Changelog](#changelog-)
+- [Contributions, Feature Requests and Feedback](#contributions-feature-requests-and-feedback-)
+	- [Testers](#testers-)
+        - [With testing ](#with-testing-)
+        - [Without testing](#without-testing-)
+        - [Gitpod](#gitpod-)
+- [PSR](#psr-%EF%B8%8F)
+- [PHP Coding Standards Fixer](#php-coding-standards-fixer-)
+    - [Installation](#installation-)
+    - [Usage](#usage-)
+    - [Testing](#testing-%EF%B8%8F)
+- [Semantic Versioning](#semantic-versioning-)
+- [Copyright and License](#copyright-and-license-)
+
+## Transparency 📢
+
+This project is completely transparent and honest, before we started we contacted and discussed this project with the authors and admins of the October project. We have given the links to this repo to the authors and we continue to be transparent throughout the whole process! We feel it's important to state this and be open from day one! This repo contains one module, of many other modules all dedicated to different sections of the Summer CMS upgrade proposal. Instead of writing ideas and suggestions, we have taken a pro-active approach and are actively coding a fully working solution! The code is held on private repo's, due to the code being heavily developed and changed on a daily basis. We will release a stable test release to the admins and authors in private for feedback before releasing to the general public for beta-testing. This is a long-term project and we will continue to grow!
+
+Over years we have coded and created well over a hundred pull requests (under various github accounts) which have been merged to the October core, we have never asked or recevived any money for any of the pull requests. We use the cms for professional purposes and therefore it is beneficial for our companies to have a professional working solution to give to our end-users and clients. In order for us to delivery a high quality product we made the discussion to update the cms with new and exciting features and modernize old and existing features, there are breaking change!
+
+<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/data.jpg"></p>
+
+## Introduction ⭐
+
+The parser module can be used either in browser (client-side) or in Laravel php (server-side) environment. The parser module is used by other Summer CMS modules (such as the [Security module](https://github.com/summer-cms/sc-security-module)) and in conjunction with custom Summer CMS API's to help process the data.
+
+## Goals :soccer:
+
+This module aims to identify the following details:
+
+- Browser
+- Layout engine
+- Operating system
+- Device
+- Model
+- Brand
+- Platform
+- Architecture
+- Device pixel ratio (dpr)
+- Device memory
+- Viewport width
+- Geo location
+- Ip address
+- Internet service provider (isp)
+- Autonomous system number (asn)
+- Hostname
+- Host
+- Referer
+- Request
+- Time Zone
+
+(*) Note: The list above is not an extensive and complete list, it is intended to give a broad overview.
+
+## Privacy Issues :sparkles:
+
+The parser module follows strict privacy regulations set out in the GDPR, ePrivacy and California Consumer Privacy Act (CCPA). 
+
+### Consent options ✔️
+
+The parser module allows users to give full consent options set out by the [Legal module](https://github.com/summer-cms/sc-legal-module).
+
+### Data rentention 🗄️
+
+There are options to configure the data retention period and the parser module follows the data retention policy.
+
+### IP anonymization (or IP masking) 🌎
+
+The IP anonymization/masking takes place as soon as data is received by the parser module, before any storage or processing takes place.
+
+<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/ip.png"></p>
+
+### Sensitive data 📒
+
+The following personal data is considered **sensitive** and is subject to specific processing conditions:
+
+- Personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs.
+- Trade-union membership.
+- Genetic data, biometric data processed solely to identify a human being.
+- Health-related data.
+- Data concerning a person’s sex life or sexual orientation.
+
+(*) Currently the parser module doesn't collect any personal data that is considered **sensitive** to be extra compliant to the rules.
+
+### Encryption 🔒
+
+Article 32 of the GDPR includes encryption as an example of an appropriate technical measure, depending on the nature and risks of your processing activities. Encryption is a widely-available measure with relatively low costs of implementation. The data processed by the parser module is encrypted before being stored.
+
+## Privacy as Default 👀
+
+The Summer CMS takes privacy and user data seriously, we strongly believe in putting the user first and being fully transparent! Below lists some major components. However, for a full list see the legal module section here: https://github.com/summercms/sc-legal-module#goals-soccer
+
+### General Data Protection Regulation (GDPR) 🔔
+
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/gdpr.jpg"></p>
+
+The General Data Protection Regulation (GDPR) is one of the most wide-ranging pieces of legislation passed by the EU in recent memory. It was introduced to standardise data protection law across the single market and give people in a growing digital economy greater control over how their personal information is used. Summer CMS has a dedicated legal module to easily complie with current laws and sets the `opt-out` as the default and allows webmasters and users can then `opt-in`.
+
+### ePrivacy Regulation 🔔
+
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/eprivacy.jpg"></p>
+
+The ePrivacy Regulation will complement the GDPR’s general rules on personal data processing by providing specific rules governing electronic communications.
+
+As such, the ePrivacy Regulation will take precedent over the GDPR in situations where both laws apply.
+
+Note that, unlike the GDPR, the ePrivacy Regulation does not apply to just personal data. It also affects, for instance, B2B marketing.
+
+Summer CMS has a dedicated legal module to easily complie with current laws and sets the `opt-out` as the default and allows webmasters and users can then `opt-in`.
+
+### California Consumer Privacy Act (CCPA) 🔔
+
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/ccpa.jpg"></p>
+
+The California Consumer Privacy Act (CCPA) is a law that allows any California consumer to demand to see all the information a company has saved on them, as well as a full list of all the third parties that data is shared with.
+
+Businesses are subject to CCPA if they meet the requirements of having gross annual revenues of more than $25 million; buy, receive or sell the personal information of 50,000 or more consumers, households or devices in California; or derive 50% or more annual revenue from selling consumers' personal information.
+
+The CCPA requires business privacy policies to include information on consumers' privacy rights and how to exercise them: the Right to Know, the Right to Delete, the Right to Opt-Out of Sale and the Right to Non-Discrimination.
+
+Summer CMS has a dedicated legal module to easily complie with current laws and sets the `opt-out` as the default and allows webmasters and users can then `opt-in`.
+
+### Strong Customer Authentication (SCA) 🔔
+
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/sca.png"></p>
+
+Strong Customer Authentication (SCA) is a new European regulatory requirement to reduce fraud and make online payments more secure. To accept payments and meet SCA requirements, you need to build additional authentication into your checkout flow.
+
+Summer CMS has a dedicated legal module to easily complie with current laws and customize secure settings and sca notices.
+
+### The Second Payment Services Directive (PSD2) 🔔
+
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/psd2.jpg"></p>
+
+The Payment Services Directive Two (PSD2) is a piece of legislation designed to force providers of payment services to improve customer authentication processes and to also bring in new regulation around third-party involvement.
+
+Summer CMS has a dedicated legal module to easily complie with current laws and customize secure settings and sca notices.
+
+### Federated Learning of Cohorts (FLoC) 🔔
+
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/floc.png"></p>
+
+FLoC enables ad selection without sharing the browsing behaviour of individual users. A site should be able to declare that it does not want to be included in the user's list of sites for cohort calculation. Summer CMS puts it's users privacy first and so sets the `opt-out` as the default, webmasters and users can then `opt-in`. This also passes GDPR/ePrivacy laws.
+
+FLoC is part of a suite intended to bring targeted ads into a privacy-preserving future. But the core design involves sharing new information with advertisers. Unsurprisingly, this also creates new privacy risks.
+
+The first issue is fingerprinting. Browser fingerprinting is the practice of gathering many discrete pieces of information from a user’s browser to create a unique, stable identifier for that browser.
+
+The second problem is less easily explained away: the technology will share new personal data with trackers who can already identify users. For FLoC to be useful to advertisers, a user’s cohort will necessarily reveal information about their behavior.
+
+### Cookies 🔔
+
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/cookie.svg" width="250" height="250"></p>
+
+Cookies in Summer CMS auto detect if the cms is being hosted from a secure connection and sets the following default for https connections:
+
+Attribute | Default Value | Description
+---|---|---
+Prefix | `__Secure-` | Set to `__Secure-` automatically on `secure` connections and not `__Host-` to allow subdomains.
+Expires | session: `1 day`, modules: `3 months` | The main cms session cookie is set to a `single day`, the cookies for modules are set longer at `3 months`. End-users can change the cookie expiry dates of all cookies using the legal module on the frontend. Allowing Summer CMS to be fully compliant with GDPR and ePrivacy laws.
+Max-Age | lifetime: `120`, expire on close: `false` | This can be setup and changed using the config file `session.lifetime` value. 
+HttpOnly | `true` | Forbids JavaScript from accessing the cookie. This can be setup and changed using the config file `session.http_only` value. 
+Secure | `true` | Cookie is only sent to the server when a request is made with the `https:` scheme (except on localhost) and therefore is more resistent to `man-in-the-middle` attacks. This can be setup and changed using the config file `session.secure` value. 
+SameSite | `Lax` | Controls whether a cookie is sent with cross-origin requests, providing some protection against cross-site request forgery attacks (CSRF). This can be setup and changed using the config file `session.same_site` value. 
+SameParty | `none` | This is currently an Origin Trial in Chrome 89 and greater browsers only. Adding `SameParty` to a cookie that would otherwise be subject to the "[Lax](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-05#section-5.3.7.1)" or "[Lax-allowing-unsafe](https://tools.ietf.org/html/draft-west-cookie-incrementalism-01#section-3.1.1)" enforcement modes of `SameSite` weakens security properties by expanding the set of contexts in which the cookie may be accessed. This can be setup and changed using the config file `session.same_party` value. 
+
+#### SameParty Cookie Attribute 🍪
+
+**A `SameParty` cookie is included in an HTTP request if the origins of the requested URL and all of the ancestor frames in the target browsing context belong to the same First-Party Set.** For example, a top-level navigation will always send `SameParty` cookies. Note that requests are treated the same regardless of the HTTP method (GET, POST, etc.), and the origin of the request initiator does not factor into whether the `SameParty` cookie should be allowed.
+
+For example, suppose that owner.example owns a First-Party Set containing {member1.example, member2.example}. Then a `SameParty` cookie set by member1.example **would be sent** to https://member1.example in the following contexts:
+
+<p align="center"><img src="https://github.com/summercms/sc-parser-module/blob/main/src/assets/images/same_party_table.png"></p>
+
+## Vanilla Code 🍦
+
+<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/vanilla.jpg"></p>
+
+Vanilla often refers to **pure** or **plain**. So in terms of programming languages, it means either without the use of **3rd party libraries** or without the use of **frameworks**.
+
+The `core` files and `modules` in Summer CMS use `Laravel`, an open-source PHP web framework. However, all the styling, javascript and data interchange formats have been written using `vanilla` code. This makes upgrading the code **quick** and **simple** without the constraints of relying solely on a single library or framework! Plus reducing the code size and optimizing the performance by reducing the overheads of loading third-party libraries (such as jQuery as an example). Summer CMS treats all third-party libraries and frameworks as optional extras and developers are welcome to use any of them to enhance their websites and applications using Summer CMS.
+
+The [framework module](https://github.com/summer-cms/sc-framework-module) adds bridges and interconnects different frameworks to Summer CMS with ease to give a customized experience for each framework!
+
+## Naming Prefix ✒️
+
+**Summer CMS uses the `sc-` naming prefix to advoid conflicts.**
+
+## Requirements 🚩
+
+This module has been optimized to work with php `7.4.x` and `8.x` versions - we recommend upgrading from any lower php version.
+
+**A full list of requirements to install Summer CMS, can be found here: [Summer CMS Requirements](https://github.com/summer-cms/sc-main/blob/main/README.md#requirements-).**
+
+## Big data 📊
+
+This module uses several Big Data tool sets to analyze large amounts of data collected from various Big Data sources to help detect and categorize. Some database sizes are in the petabytes and takes a few hours to run and process some models. These models are then used in our tests to improve the parsers detection rate. We also have various non-disclosed test severs running to gather various data and run tests to process the test data. This process helps us to build a more accurate parser module and helps to speed up the build process. We fully rely on using large amounts of data to build an accurate working parser used by some of the other Summer CMS modules!
+
+## Citation 📚
+
+<a href="https://zenodo.org/">
+  <img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/buttons/citation.svg" />
+</a>
+
+If you use this parser module for your research, then kindly cite it. Click the above badge for more information regarding the complete citation for this parser module and the diffferent citation formats like: IEEE, APA, BibTeX, CSL, DataCite, Dublin Core, DCAT, JSON, JSON-LD, GeoJSON, MARCXML and Mendeley etc.
+
+## API's 💎
+
+Below are some of the API's the parser module uses (this is not a complete list):
+
+- [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/)
+- [Content Security Policy Level 3](https://www.w3.org/TR/CSP3/)
+- [Content-Security-Policy-Report-Only](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only)
+- [CSP: report-to](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to)
+- [CSP: trusted-types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types)
+- [Fetch Metadata Request Headers](https://w3c.github.io/webappsec-fetch-metadata/)
+- [User-Agent Client Hints](https://wicg.github.io/ua-client-hints/)
+- [Accept-CH](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH)
+- [Accept-CH Lifetime](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-CH-Lifetime)
+- [Accept-Charset](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Charset)
+- [Accept-Language](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
+- [Access-Control-Allow-Credentials](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
+- [Access-Control-Allow-Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
+- [Access-Control-Allow-Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
+- [Access-Control-Allow-Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+- [Alt-Svc](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Alt-Svc)
+- [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
+- [Device-Memory](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Device-Memory)
+- [DNT](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DNT)
+- [DPR](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DPR)
+- [Expect-CT](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT)
+- [Save-Data](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Save-Data)
+- [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
+- [Vary](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary)
+- [ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag)
+
+## Deprecations and removals ⛔
+
+- [Content Security Policy Level 1](https://www.w3.org/TR/CSP1/)
+- [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/)
+
+The parser module has been optimized to work with CSP 3 and allow backwards compatibility with browsers supporting older CSP versions.
+
+## Enhancements ⭐
+
+- The parser module has been optimized to work a long side modern browsers that support the **back/forward cache** (bfcache) api. To learn more about bfcache, see these resources:
+
+    [Exploring a back/forward cache for Chrome](https://developers.google.com/web/updates/2019/02/back-forward-cache)
+
+## Issues 🔨
+
+<img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/summer-cms/sc-parser-module?style=plastic"> <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/summer-cms/sc-parser-module">
+
+If you face any issue, you can create a new issue in the `Issues` tab and we will be glad to help you out!
+
+## Troubleshooting 👿
+
+### Something 💊
+
+=== TO DO ===
 
 
-WhichBrowser/Parser-PHP
-=======================
+## Reporting a Vulnerability 💥
 
-The PHP version of WhichBrowser for use on a server. Fully compatible with PHP 7.0 or higher, including PHP 8.
+We strive to make the code accessible to a wide audience of beginner and experienced users.
 
-![Build](https://github.com/WhichBrowser/Parser-PHP/workflows/Build/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/WhichBrowser/Parser-PHP/badge.svg?branch=master&service=github)](https://coveralls.io/github/WhichBrowser/Parser-PHP?branch=master)
-[![License](https://poser.pugx.org/whichbrowser/parser/license)](https://packagist.org/packages/whichbrowser/parser)
-[![Latest Stable Version](https://poser.pugx.org/whichbrowser/parser/v/stable)](https://packagist.org/packages/whichbrowser/parser)
+We welcome bug reports, false positive alert reports, evasions, usability issues, and suggestions for new detections. Submit these types of non-vulnerability related issues via Github.
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/whichbrowserlib.svg?style=social)](https://twitter.com/whichbrowserlib)
+Please include your installed version and the relevant portions of your audit log.
 
-Also available:
+False negative or common bypasses should [create an issue](https://github.com/summer-cms/sc-parser-module/issues/new) so they can be addressed.
 
-- [WhichBrowser/Parser-JavaScript](https://github.com/WhichBrowser/Parser-JavaScript)<br>
-  A JavaScript version of WhichBrowser for use with Node.js on the server
+Do this before submitting a vulnerability:
 
-- [WhichBrowser/Server](https://github.com/WhichBrowser/Server)<br>
-  A server written in PHP that provides a JavaScript API for use in the browser
+1) Verify that you have the latest version of Summer CMS.
+2) Validate which Paranoia Level this bypass applies to. If it works in PL4, please send us an email.
+3) If you detected anything that causes unexpected behavior of the engine via manipulation of existing provided rules, please send it by email.
 
----
+We are happy to work with the community to provide CVE identifiers for any discovered security issues if requested.
 
+If in doubt, feel free to reach out to us!
 
-About WhichBrowser
-------------------
+## Code of Conduct 💯
 
-**But why *almost completely useless* and not completely useless?**
-Well, there is always an exception to the rule. There are valid reasons to do browser sniffing: to improve the user experience or to gather intelligence about which browsers are used on your website. My website is html5test.com and I wanted to know which score belongs to which browser. And to do that you need a browser sniffing library.
+In order to ensure that the Summer CMS proposal community is welcoming to all, please review and abide by the [Code of Conduct](https://github.com/summer-cms/sc-parser-module/blob/master/CODE_OF_CONDUCT.md).
 
-**Why is it extremely complicated?**  
-Because everybody lies. Seriously, there is not a single browser that is completely truthful. Almost all browsers say they are Netscape 5 and almost all WebKit browsers say they are based on Gecko. Even Internet Explorer 11 now no longer claims to be IE at all, but instead an unnamed browser that is like Gecko. And it gets worse. That is why it is complicated.
+## For Future 🔮
 
-**What kind of information does it give?**
-You get a nice object which has information about the browser, rendering engine, os and device. It gives you names and versions and even device manufacturer and model. And WhichBrowser is pretty tenacious. It gives you info that others don't. For example:
+Shoutout to people willing to contribute to this project. Please take a look at the [projects board](https://github.com/summer-cms/sc-parser-module/projects) for a list of things to be done.
 
-    JUC (Linux; U; 2.3.6; zh-cn; GT-I8150; 480*800) UCWEB8.7.4.225/145/800  
-    UC Browser 8.7 on a Samsung Galaxy W running Android 2.3.6
+## Browser Support ✅
 
-Android is never mentioned
+The parser module has been tested in the following browsers:
 
-    Mozilla/5.0 (Series40; Nokia501/10.0.2; Profile/MIDP-2.1 Configuration/CLDC-1.1) Gecko/20100401 S40OviBrowser/3.0.0.0.73  
-    Nokia Xpress 3.0.0 on a Nokia Asha 501 running Nokia Asha Platform
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/chrome_48x48.png" alt="Chrome"><br>
+      ✔
+    </td>
+    <td align="center">
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/firefox_48x48.png" alt="Firefox"><br>
+      ✔
+    </td>
+    <td align="center">
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/safari_48x48.png" alt="Safari"><br>
+      9+
+    </td>
+    <td align="center">
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/edge_old_48x48.png" alt="Edge Legacy"><br>
+      ✖ (1)
+    </td>
+    <td align="center">
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/edge_48x48.png" alt="Edge"><br>
+      ✔
+    </td>
+    <td align="center">
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/internet-explorer_9-11_48x48.png" alt="Internet Explorer"><br>
+      ✖ (2)
+    </td>
+    <td align="center">
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/opera_48x48.png" alt="Opera"><br>
+      ✔
+    </td>
+    <td align="center">
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/samsung-internet_48x48.png" alt="Samsung"><br>
+      ✔
+    </td>
+    <td align="center">
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/uc_48x48.png" alt="UC"><br>
+      ✔
+    </td>
+    <td align="center">
+      <img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/browser/vivaldi_48x48.png" alt="Vivaldi"><br>
+      3+
+    </td>
+  </tr>
+</table>
 
-Despite the useragent header claiming to be a Series40 device, we know it's actually running the Asha Platform and we also know that OviBrowser has been renamed to Nokia Xpress.
+### Notes
 
-    Opera/9.80 (X11; Linux zvav; U; zh) Presto/2.8.119 Version/11.10  
-    Opera Mini on a Nokia 5230 running Series60 5.0
+(1) Microsoft announced on 17 August that Edge Legacy will have its life support switched off on 9 March 2021, Summer CMS will support Edge Chromium only.
 
-The useragent header looks like Opera 11.10 on Linux, but we know it's Opera Mini. We can even figure out the real operating system and device model from other headers.
+(2) Internet Explorer version 1-11, Summer CMS will not support due to only supporting `Evergreen` brwosers.
 
+For a full list of browser support with Summer CMS, see here: [Browser Support](https://github.com/summer-cms/sc-main/blob/main/docs/browser_support.md).
 
+## Changelog 🏆
 
-Requirements
------------------
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
-WhichBrowser requires with PHP 7.0 or higher and supports PHP 8. WhichBrowser is compatible with the PSR-4 autoloading standard and follows PSR-1 and PSR-2 coding style.
+## Contributions, Feature Requests and Feedback ✨
 
+We are actively inviting new contributors! To start, please read the [contribution guide](CONTRIBUTING.md).
 
-How to install it
------------------
+This project is only possible thanks to the work of many dedicated volunteers. Everyone is encouraged to help in ways large and small. Here are a few ways you can help:
 
-You can install WhichBrowser by using Composer - the standard package manager for PHP. The package is called `whichbrowser/parser`.
+- Read the current content and help us fix any spelling mistakes or grammatical errors.
+- Choose an existing [issue](https://github.com/summer-cms/sc-parser-module/issues) on GitHub and submit a pull request to fix it.
+- Open a new issue to report an opportunity for improvement.
 
-    composer require whichbrowser/parser
+If you find any bugs in the code or have any improvements in mind then feel free to generate a pull request.
 
-You can easily update WhichBrowser by running a simple command.
+**Note:** Please use Unit Testing and Coding Best Practices in order to have a valid pull request 😉
 
-    composer update whichbrowser/parser
+Patches and pull requests are encouraged. All code should follow the [PSR-1](https://www.php-fig.org/psr/psr-1/) and [PSR-2](https://www.php-fig.org/psr/psr-2/) style guidelines. **Please include unit tests whenever possible!**
 
-You should run this command as often as possible. You might even want to consider setting up a cron job for this purpose.
+### Testers 😺
 
+Get the `composer.json` file from the admins and install.
 
+### With testing 🔺
 
-
-How to use it
--------------
-
-The first step require the Composer autoloader:
-
-```php
-<?php
-
-    require 'vendor/autoload.php';
+```
+composer update
 ```
 
-The second step is to create a new `WhichBrowser\Parser` object. This object will contain all the information the library could find about the browser. The object has a required parameter, either the headers send by the browser, or a useragent string. Using the headers is preferable, because it will allow a better detection, but if you have just the useragent string, this will also work.
+### Without testing 🔻
 
-For example:
-
-```php
-$result = new WhichBrowser\Parser(getallheaders());
+```
+composer update --no-dev
 ```
 
-or:
+### Gitpod 🐥
 
-```php
-$result = new WhichBrowser\Parser($_SERVER['HTTP_USER_AGENT']);
+Summer CMS has experimental support for [Gitpod](https://www.gitpod.io/), a pre-configured development environment that runs in your browser. To use Gitpod, click the button below and sign in with GitHub. Gitpod also offers a browser add-on, though it is not required.
+
+[![Edit with Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/summercms/sc-parser-module)
+
+## PSR ♻️
+
+This parser module uses some PSR standards to be the most interoperable possible:
+
+- [PSR-1](https://www.php-fig.org/psr/psr-1/) Basic Coding Standard.
+- [PSR-2](https://www.php-fig.org/psr/psr-2/) Coding Style Guide.
+- [PSR-6](https://www.php-fig.org/psr/psr-6/) Caching Interface.
+- [PSR-7](https://www.php-fig.org/psr/psr-7/) Standard interfaces to represent http requests, responses and uris.
+- [PSR-16](https://www.php-fig.org/psr/psr-16/) Common Interface for Caching Libraries.
+- [PSR-17](https://www.php-fig.org/psr/psr-17/) Standard factories to create PSR-7 objects.
+- [PSR-18](https://www.php-fig.org/psr/psr-18/) Standard interface to send a http request and return a response.
+
+We also suggest using Cross-browser testing provided by BrowserStack (*) where a real-browser can't be used in-house.
+
+<p align="center"><img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/browser-stack.png"></p>
+
+## PHP Coding Standards Fixer ⭕
+
+The PHP Coding Standards Fixer (PHP CS Fixer) tool fixes your code to follow standards; whether you want to follow PHP coding standards as defined in the PSR-1, PSR-2, etc., or other community driven ones like the Symfony one.
+
+### Installation 🔹
+
+The recommended way to install PHP CS Fixer is to use [Composer](https://getcomposer.org/download/) in a dedicated `composer.json` file in your project, for example in the
+`tools/php-cs-fixer` directory:
+
+```bash
+$ mkdir --parents tools/php-cs-fixer
+$ composer require --working-dir=tools/php-cs-fixer friendsofphp/php-cs-fixer
 ```
 
+For more details and other installation methods, see: [PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer).
 
-The variable `$result` now contains an object which you can query for information. There are various ways to access the information.
+### Usage 🔸
 
+Assuming you installed PHP CS Fixer as instructed above, you can run the following command to fix the files PHP files in the `src` directory:
 
-First of all, you can call to `toString()` function to get a human readable identification:
-
-```php
-"You are using " . $result->toString();
-// You are using Chrome 27 on OS X Mountain Lion 10.8
+```bash
+$ tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src
 ```
 
-Another possiblity is to query the object:
+(*) Change the above command to the correct folder location.
 
-```php
-$result->isType('desktop');
-// true
+### Testing ⚙️
 
-$result->isType('mobile', 'tablet', 'media', 'gaming:portable');
-// false
+The Parser module uses the following:
 
-$result->isBrowser('Maxthon', '<', '4.0.5');
-// false
+- A [PHPUnit](https://phpunit.de) test suite.
+- A coding style compliance test suite using [PHP CS Fixer](http://cs.sensiolabs.org/).
+- A code analysis compliance test suite using [PHPStan](https://github.com/phpstan/phpstan).
 
-$result->isOs('iOS', '>=', '8');
-// false
+To run the tests, run the following command from the project folder.
 
-$result->isOs('OS X');
-// true
-
-$result->isEngine('Blink');
-// true
+```bash
+$ composer test
 ```
 
-You can also access these properties directly:
+## Semantic Versioning 🎁
 
-```php
-$result->browser->toString();
-// Chrome 27  
+The Summer CMS and all modules use: [Semantic Versioning](https://semver.org/).
 
-$result->engine->toString();
-// Blink
+<p align="center"><img src="https://github.com/summer-cms/sc-security-module/blob/master/src/assets/images/semver.png"></p>
 
-$result->os->toString();
-// OS X Mountain Lion 10.8
-```
+Semantic Versioning is a 3-component number in the format of `X.Y.Z` where:
 
-Or access parts of these properties directly:
+- X stands for a major version.
+- Y stands for a minor version.
+- Z stands for a patch.
 
-```php
-$result->browser->name;
-// Chrome
+The goal of Semantic Versioning is to bring some sanity to the management of rapidly moving software release targets. As discussed above, 3 numbers i.e, `Major`, `Minor` and `Patch` are required to identify a software version. For example, if we take version `5.12.2`, then it has a `major` version of 5, a `minor` version of 12 and a `patch` version of 2.
 
-$result->browser->name . ' ' . $result->browser->version->toString();
-// Chrome 27
+Below are some scenarios when Summer CMS creates a new version release:
 
-$result->browser->version->value;
-// 27.0.1453.110
+- Bump the value of X when breaking the existing API.
+- Bump the value of Y when implementing new features in a backward-compatible way.
+- Bump the value of Z when fixing bugs.
 
-$result->engine->name;
-// Blink
-```
+Pre-release metadata is identified by appending a hyphen to the end of the Semantic Versioning sequence. Thus a pre-release for version 1.0.0 could be `1.0.0-alpha.1`. Then if another build is needed, it would become `1.0.0-alpha.2` and so on. Note that names cannot contain leading zeros, but hyphens are allowed in names for pre-release identifiers.
 
-Finally you can also query versions directly:
+Summer CMS uses the following pre-release metadata:
 
-```php
-$result->browser->version->is('>', 26);
-// true
+| Version     | Description        |
+| ----------- | ------------------ |
+| 3.3.x-aplha | The alpha phase of the release life cycle is the first phase of software testing. |
+| 3.3.x-beta  | The beta phase follows after the alpha phase. A Beta phase generally begins when the software is feature complete but likely to contain a number of known or unknown bugs. |
+| 3.3.x-rc    | A release candidate (RC), is a beta version with potential to becoming a stable product and is ready to release unless significant bugs emerge. |
 
-$result->os->version->is('<', '10.7.4');
-// false
-```
+## Copyright and License 📄
 
-Options
--------
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-It is possible to set additional options by passing an array as the second parameter when creating the `Parser` object.
+Everyone is permitted to copy and distribute copies of Summer CMS, but changing and hard forking are not allowed.
 
-### Disabling detection of bots
+[⬆ back to top](#table-of-contents-)
 
-In some cases you may want to disable the detection of bots. This allows the bot the deliberately fool WhichBrowser, so you can pick up the identity of useragent what the bot tries to mimic. This is especially handy when you want to use WhichBrowser to switch between different variants of your website and want to make sure crawlers see the right variant of the website. For example, a bot that mimics a mobile device will see the mobile variant of you site.
-
-```php
-$result = new WhichBrowser\Parser(getallheaders(), [ 'detectBots' => false ]);
-```
-
-Enable result caching
----------------------
-
-WhichBrowser supports PSR-6 compatible cache adapters for caching results between requests. Using a cache is especially useful if you use WhichBrowser on every page of your website and a user visits multiple pages. During the first visit the headers will be parsed and the result will be cached. Upon further visits, the cached results will be used, which is much faster than having to parse the headers again and again.
-
-There are adapters available for other types of caches, such as APC, Doctrine, Memcached, MongoDB, Redis and many more. The configuration of these adapters all differ from each other, but once configured, all you have to do is pass it as an option when creating the `Parser` object, or use the `setCache()` function to set it afterwards. WhichBrowser has been tested to work with the adapters provided by [PHP Cache](http://php-cache.readthedocs.org/en/latest/). For a list of other packages that provide adapters see [Packagist](https://packagist.org/providers/psr/cache-implementation).
-
-For example, if you want to enable a memcached based cache you need to install an extra composer package:
-
-    composer require cache/memcached-adapter
-
-And change the call to WhichBrowser/Parser as follows:
-
-```php
-$client = new \Memcached();
-$client->addServer('localhost', 11211);
-
-$pool = new \Cache\Adapter\Memcached\MemcachedCachePool($client);
-
-$result = new WhichBrowser\Parser(getallheaders(), [ 'cache' => $pool ]);
-```
-
-or
-
-```php
-$client = new \Memcached();
-$client->addServer('localhost', 11211);
-
-$pool = new \Cache\Adapter\Memcached\MemcachedCachePool($client);
-
-$result = new WhichBrowser\Parser();
-$result->setCache($pool);
-$result->analyse(getallheaders());
-```
-
-You can also specify after how many seconds a cached result should be discarded. The default value is 900 seconds or 15 minutes. If you think WhichBrowser uses too much memory for caching, you should lower this value. You can do this by setting the `cacheExpires` option or passing it as a second parameter to the `setCache()` function.
-
-
-API reference
--------------
-
-### The Parser object
-
-After a new `WhichBrowser\Parser` object is created, it contains a number of properties and functions. All of these properties are guaranteed to be present.
-
-**Properties:**
-
-* `browser`  
-  an object that contains information about the browser itself
-* `engine`  
-  an object that contains information about the rendering engine
-* `os`  
-  an object that contains information about the operating system
-* `device`  
-  an object that contains information about the device
-
-**Functions:**
-
-`getType()`  
-Returns the `type` and `subtype` property of the `device` object. If a subtype is present it is concatenated to the type and seperated by a semicolor, for example: `mobile:smart` or `gaming:portable`. If the subtype is not applicable, it just return the type, for example: `desktop` or `ereader`.
-
-`isType($type [,$type [,$type [,$type]]])`  
-If a single argument is used, the function returns `true` if the argument matches the `type` propery of `device` object. The argument can optionally also provide a subtype by concatenating it to the type and seperating it with a semicolon. It can use multiple arguments in which case the function returns `true` if one of the arguments matches. If none of the arguments matches, it returns `false`
-
-`isMobile()`  
-Return `true` if the browser is a mobile device, like a phone, tablet, ereader, camera, portable media player, watch or portable gaming console. Otherwise it returns `false`.
-
-`isBrowser($name [, $comparison, $version])`  
-Is used to query the `name` and `version` property of the `browser` object. The funcion can contain a single argument to a simple comparison based on `name`, or three arguments to compare both `name` and `version`. The first argument always contains the name of the browser. The second arguments is a string that can container either `<`, `<=`, `=`, `=>` or `>`. The third is an integer, float or string that contains the version. You can use versions like `10`, `10.7` or `'10.7.4'`. For more information about how version comparisons are performed, please see the `is()` function of the `Version` object.
-
-`isEngine($name [, $comparison, $version])`  
-Is used to query the `name` and `version` property of the `engine` object. This function works in exactly the same way as `isBrowser`.
-
-`isOs($name [, $comparison, $version])`  
-Is used to query the `name` and `version` property of the `os` object. This function works in exactly the same way as `isBrowser`.
-
-`isDetected()`  
-Is there actually some browser detected, or did we fail to detect anything?
-
-`toString()`  
-Get a human readable representation of the detected browser, including operating system and device information.
-
-
-### The browser object
-
-An object of the `WhichBrowser\Model\Browser` class is used for the `browser` property of the main `WhichBrowser\Parser` object and contains a number of properties. If a property is not applicable in this situation it will be null or undefined.
-
-**Properties:**
-
-* `name`  
-  a string containing the name of the browser
-* `alias`  
-  a string containing an alternative name of the browser
-* `version`  
-  a version object containing information about the version of the browser
-* `stock`  
-  a boolean, true if the browser is the default browser of the operating system, false otherwise
-* `channel`  
-  a string containing the distribution channel, ie. 'Nightly' or 'Next'.
-* `mode`  
-  a string that can contain the operating mode of the browser, ie. 'proxy'.
-* `hidden`  
-  a boolean that is true if the browser does not have a name and is the default of the operating system.
-* `family`  
-  an object that contains information about to which family this browser belongs
-* `using`  
-  an object that contains information about to which kind of webview this browser uses
-
-**Functions:**
-
-`isFamily($name)`  
-Does the family of this browser have this name, or does the browser itself have this name.
-
-`isUsing($name)`  
-Is the browser using a webview using with the provided name.
-
-`getName()`  
-Get the name of the browser
-
-`getVersion()`  
-Get the version of the browser
-
-`toString()`  
-Get a human readable representation of the detected browser
-
-
-### The engine object
-
-An object of the `WhichBrowser\Model\Engine` class is used for the `engine` property of the main `WhichBrowser\Parser` object and contains a number of properties. If a property is not applicable in this situation it will be null or undefined.
-
-**Properties:**
-
-* `name`  
-  a string containing the name of the rendering engine
-* `version`  
-  a version object containing information about the version of the rendering engine
-
-**Functions:**
-
-`getName()`  
-Get the name of the rendering engine
-
-`getVersion()`  
-Get the version of the rendering engine
-
-`toString()`  
-Get a human readable representation of the detected rendering engine
-
-
-### The os object
-
-An object of the `WhichBrowser\Model\Os` class is used for the `os` property of the main `WhichBrowser\Parser` object and contains a number of properties. If a property is not applicable in this situation it will be null or undefined.
-
-**Properties:**
-
-* `name`  
-  a string containing the name of the operating system
-* `version`  
-  a version object containing information about the version of the operating system
-* `family`  
-  an object that contains information about to which family this operating system belongs
-
-**Functions:**
-
-`isFamily($name)`  
-Does the family of this operating system have this name, or does the operating system itself have this name.
-
-`getName()`  
-Get the name of the operating system
-
-`getVersion()`  
-Get the version of the operating system
-
-`toString()`  
-Get a human readable representation of the detected operating system
-
-
-### The device object
-
-An object of the `WhichBrowser\Model\Device` class is used for the `device` property of the main `WhichBrowser\Parser` object and contains a number of properties. If a property is not applicable in this situation it will be null or undefined.
-
-**Properties:**
-
-* `type`  
-  a string containing the type of the browser.
-* `subtype`  
-  a string containing the subtype of the browser.
-* `identified`  
-  a boolean that is true if the device has been positively identified.
-* `manufacturer`  
-  a string containing the manufacturer of the device, ie. 'Apple' or 'Samsung'.
-* `model`  
-  as string containing the model of the device, ie. 'iPhone' or 'Galaxy S4'.
-
-The `type` property can contain any value from the following list:
-
-* desktop
-* mobile
-* pda
-* dect
-* tablet
-* gaming
-* ereader
-* media
-* headset
-* watch
-* emulator
-* television
-* monitor
-* camera
-* printer
-* signage
-* whiteboard
-* devboard
-* inflight
-* appliance
-* gps
-* car
-* pos
-* bot
-* projector
-* headless
-
-If the `type` is "mobile", the `subtype` property can contain any value from the following list:
-
-* feature
-* smart
-
-If the `type` is "gaming", the `subtype` property can contain any value from the following list:
-
-* console
-* portable
-
-**Functions:**
-
-`getManufacturer()`  
-Get the name of the manufacturer
-
-`getModel()`  
-Get the name of the model
-
-`toString()`  
-Get a human readable representation of the detected device
-
-
-### The family object
-
-An object of the `WhichBrowser\Model\Family` class is used for the `family` property of the `WhichBrowser\Model\Browser` and `WhichBrowser\Model\Os` object and contains a number of properties. If a property is not applicable in this situation it will be null or undefined.
-
-**Properties:**
-
-* `name`  
-  a string containing the name of the family
-* `version`  
-  a version object containing information about the version of the family
-
-**Functions:**
-
-`getName()`  
-Get the name of the family
-
-`getVersion()`  
-Get the version of the family
-
-`toString()`  
-Get a human readable representation of the family
-
-
-### The using object
-
-An object of the `WhichBrowser\Model\Using` class is used for the `using` property of the `WhichBrowser\Model\Browser` object and contains a number of properties. If a property is not applicable in this situation it will be null or undefined.
-
-**Properties:**
-
-* `name`  
-  a string containing the name of the webview
-* `version`  
-  a version object containing information about the version of the webview
-
-**Functions:**
-
-`getName()`  
-Get the name of the webview
-
-`getVersion()`  
-Get the version of the webview
-
-`toString()`  
-Get a human readable representation of the webview
-
-
-### The version object
-
-An object of the `WhichBrowser\Model\Version` class is used for the `version` property of the `browser`, `engine` and `os` object and contains a number of properties and functions. If a property is not applicable in this situation it will be null or undefined.
-
-**Properties:**
-
-* `value`  
-  a string containing the original version number.
-* `alias`  
-  a string containing an alias for the version number, ie. 'XP' for Windows '5.1'.
-* `nickname`  
-  a string containing a nickname for the version number, ie. 'Mojave' for OS X '10.14'.
-* `details`  
-  an integer containing the number of digits of the version number that should be printed.
-
-**Functions:**
-
-`is($version)` or `is($comparison, $version)`  
-Using this function it is easy to compare a version to another version. If you specify only one argument, this function will return if the versions are the same. You can also specify two arguments, in that case the first argument contains the comparison operator, such as `<`, `<=`, `=`, `=>` or `>`. The second argument is the version you want to compare it to. You can use versions like `10`, `10.7` or `'10.7.4'`, but be aware that `10` is not the same as `10.0`. For example if our OS version is `10.7.4`:
-
-```php
-$result->os->version->is('10.7.4');
-// true
-
-$result->os->version->is('10.7');
-// true
-
-$result->os->version->is('10');
-// true
-
-$result->os->version->is('10.0');
-// false
-
-$result->os->version->is('>', '10');
-// false
-
-$result->os->version->is('>', '10.7');
-// false
-
-$result->os->version->is('>', '10.7.3');
-// true
-```
+<p align="center"><img src="https://github.com/summer-cms/sc-parser-module/blob/main/src/assets/images/luv.png"></p>
