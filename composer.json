@@ -3,18 +3,16 @@
 
     "description": "Useragent sniffing library for PHP",
     "keywords": ["useragent","browser","sniffing", "ua"],
-    "homepage": "http://whichbrowser.net",
     "license": "MIT",
     "authors": [
         {
-            "name": "Niels Leenheer",
-            "email": "niels@leenheer.nl",
+            "name": "Ayumi Hamasaki",
             "role": "Developer"
         }
     ],
 
     "require": {
-        "php": ">=5.4.0",
+        "php": "^7.1 || ^8.0",
         "psr/cache": "^1.0"
     },
 
@@ -29,12 +27,12 @@
     },
 
     "require-dev": {
-        "symfony/yaml": "~3.4 || ~4.0",
-        "phpunit/php-code-coverage": "^5.0 || ^7.0",
-        "phpunit/phpunit": "^6.0 || ^8.0",
+        "symfony/yaml": "^5.3",
+        "phpunit/php-code-coverage": "^9.2",
+        "phpunit/phpunit": "^8.4|^9.3.3",
         "php-coveralls/php-coveralls": "^2.0",
-        "icomefromthenet/reverse-regex" : "0.0.6.3",
-        "squizlabs/php_codesniffer": "^3.5",
+        "icomefromthenet/reverse-regex" : "^0.1.0",
+        "squizlabs/php_codesniffer": "^3.6",
         "cache/array-adapter": "^1.1"
     },
 
