@@ -234,7 +234,7 @@ The [framework module](https://github.com/summer-cms/sc-framework-module) adds b
 
 ## Requirements 🚩
 
-This module has been optimized to work with php `7.4.x` and `8.x` versions - we recommend upgrading from any lower php version.
+This module has been optimized to work with php `7.4.x` and `8.x.x` versions - we recommend upgrading from any lower php version.
 
 **A full list of requirements to install Summer CMS, can be found here: [Summer CMS Requirements](https://github.com/summer-cms/sc-main/blob/main/README.md#requirements-).**
 
