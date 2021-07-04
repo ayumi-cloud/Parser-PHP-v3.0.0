@@ -10,7 +10,7 @@
     backupGlobals="false"
 >
     <testsuites>
-        <testsuite name="WhichBrowser tests">
+        <testsuite name="Summer CMS tests">
             <directory suffix="Test.php">tests/unit</directory>
         </testsuite>
     </testsuites>
