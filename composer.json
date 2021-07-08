@@ -42,5 +42,9 @@
         },
 
         "files": [ "tests/src/polyfills.php" ]
-    }
+    },
+    
+    "repositories": [
+        {"type": "composer", "url": "https://summer-cms.repo.repman.io"}
+    ] 
 }
