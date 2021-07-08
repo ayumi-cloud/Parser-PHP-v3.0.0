@@ -3,7 +3,7 @@
 
     "description": "Parser module (part of several modules making up our Summer CMS).",
     "keywords": ["parser", "sniffing", "serialization"],
-    "license": "GNU General Public License v3.0",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Ayumi Hamasaki",
